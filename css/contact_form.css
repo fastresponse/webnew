@@ -80,7 +80,7 @@ input[type="submit"],
 /* wide */
 @media only screen and (min-width: 800px) {
   #contact-form-div {
-    display: none;
+    /*display: none;*/
     font-size: 100%;
   }
   #contact-form {

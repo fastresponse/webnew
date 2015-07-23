@@ -14,18 +14,18 @@
     <title><?= $title ?></title>
     <meta name="description" content="<?= $description ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="<?= $incdir ?>apple-touch-icon.png">
 
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/contact_form.css">
+    <link rel="stylesheet" href="<?= $incdir ?>css/normalize.min.css">
+    <link rel="stylesheet" href="<?= $incdir ?>css/main.css">
+    <link rel="stylesheet" href="<?= $incdir ?>css/contact_form.css">
 
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  <script src="<?= $incdir ?>js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   </head>
   <body>
     <div class="header-container">
       <header class="wrapper">
-        <img src="/images/headers/header_main_left.png" alt="Fast Response School Of Health Care Education" id="logo-img" />
+        <a href="/"><img src="/images/headers/header_main_left.png" alt="Fast Response School Of Health Care Education" id="logo-img" /></a>
         <div id="menu-button">
           <div></div>
           <div></div>
@@ -33,7 +33,7 @@
         </div>
         <nav>
           <ul>
-            <li><a href="#contact-us-link">Contact Us</a></li>
+            <li><a href="contact_us.php">Contact Us</a></li>
             <li><a href="#">Career Courses</a></li>
             <li><a href="#">Continuing Education</a></li>
             <li><a href="#">Student Resources</a></li>
