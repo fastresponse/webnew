@@ -1,5 +1,9 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     color: #222;
     font-size: 1em;
@@ -61,13 +65,13 @@ body {
 }
 
 .wrapper {
-    width: 90%;
-    margin: 0 5%;
+    width: 96%;
+    margin: 0 2%;
 }
 
 /* ===================
     ALL: Orange Theme
-   =================== */
+   ===================
 
 .header-container {
     border-bottom: 20px solid #e44d26;
@@ -87,10 +91,145 @@ body {
 .title {
     color: white;
 }
+*/
+
+/* ===================
+    COLOR SCHEME
+   ===================*/
+
+.header-container {
+    border-bottom: 20px solid #050f0a;
+}
+
+nav li, nav a {
+  background: #050f0a;
+}
+
+.footer-container,
+.main aside {
+    border-top: 20px solid #050f0a;
+}
+
+.header-container,
+.footer-container,
+.main aside {
+    background: #0a1e3c;
+}
+
+html,
+.main-container {
+  background: #e2e2e2;
+}
+
+.title {
+    color: white;
+}
+
+a {
+    color: #dd0033;
+}
+.footer-container a {
+    color: white;
+}
+
+/* ==============
+    STRUCTURE
+   ============== */
+/*
+body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+body > header,
+body > footer {
+  padding: 0 10px;
+  background: #0a1e3c;
+  border-color: #050f0a;
+}
+body > header {
+  border-bottom: 20px solid;
+  order: 1;
+}
+body > footer {
+  border-top 20px solid;
+  order: 3;
+}
+body > #middle {
+  flex: 1;
+  order: 2;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+#middle > aside {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+main {
+  flex: 3;
+  order: 2;
+  display: flex;
+  flex-flow: column nowrap;
+}
+#sidebar-primary {
+  order: 1;
+}
+#sidebar-secondary {
+  order: 3;
+}
+
+#middle > aside > section {
+  width: 100%;
+  border-top: 20px solid #050f0a;
+}
+main > section {
+  flex: 2;
+}
+@media only screen and (min-width: 800px) {
+  body > #middle,
+  main {
+    flex-direction: row;
+  }
+}
+*/
 
 /* ==============
     MOBILE: Menu
    ============== */
+
+#logo-img {
+    /*max-width: 100%;*/
+    width: 84%;
+}
+
+#menu-button {
+    /*width: 50px;*/
+    height: 30px;
+    background-color: #bbbbbb;
+    border-radius: 3px;
+    margin: 0 auto 10px;
+    padding: 5px 0;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 14%;
+}
+#menu-button > div {
+    background-color: #555555;
+    border-radius: 1px;
+    width: 40px;
+    height: 2px;
+    box-shadow: 0 1px 0 rgba(0,0,0, 0.25);
+    margin: 3px auto;
+}
+
+nav {
+    display: none;
+}
 
 nav ul {
     margin: 0;
@@ -101,14 +240,14 @@ nav ul {
 nav a {
     display: block;
     margin-bottom: 10px;
-    padding: 15px 0;
+    padding: 15px 3px;
 
     text-align: center;
     text-decoration: none;
     font-weight: bold;
 
     color: white;
-    background: #e44d26;
+    /*background: #e44d26;*/
 }
 
 nav a:hover,
@@ -125,21 +264,171 @@ nav a:hover {
    ============== */
 
 .main {
-    padding: 30px 0;
+    padding: 10px 0;
 }
 
 .main article h1 {
-    font-size: 2em;
+    font-size: 1.65em;
+}
+.main aside header {
+    flex: 1 1 100%;
+    text-align: center;
+    align-self: flex-start;
 }
 
-.main aside {
+aside {
     color: white;
-    padding: 0px 5% 10px;
+    padding: 0px 7px 10px;
+    margin-top: 5px;
+    font-size: small;
+    line-height: 1.4em;
+    background: #eeeeee !important;
+    color: #222 !important;
+    border: 2px solid;
 }
+aside h3 {
+    margin: 5px auto 10px;
+    text-align: center;
+    font-size: large;
+}
+
+aside > div {
+    /*display: none;*/
+}
+
+#contact-info {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+}
+#contact-info a {
+    text-decoration: none;
+}
+#contact-info > header {
+    flex: 1 1 100%;
+    text-align: center;
+}
+#contact-info > div {
+    padding: 4px;
+    flex: 1 0 50%;
+}
+#contact-info > div:first-of-type {
+}
+
+#office-hours {
+    text-align: right;
+}
+
+#contact-info .button a {
+    font-size: 130%;
+    border: solid 1px #dd0033;
+    border-radius: 7px;
+    padding: 4px 6px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border-color:#222;
+    color:#222;
+    background-color:#bbb;
+    font-weight:bold;
+}
+#announcements {
+    text-align: center;
+}
+#announcements > div {
+    margin-top: 8px;
+    line-height: 1.2em;
+}
+#announcements > div:first-child {
+    margin-top: 0;
+}
+#announcements > div > a {
+    text-decoration: none;
+}
+#fb-feed {
+    text-align: center;
+}
+.fb-page,
+.fb-page > * {
+    width: 100%;
+}
+
+#slideshow {
+    display: none;
+}
+
+article {
+    margin-top: 30px;
+}
+article > section {
+    display: list-item;
+    margin-left: 8%;
+}
+article > section > h3 {
+    margin-bottom: 0;
+}
+article > section > p {
+    margin: 0;
+}
+
+
+#career_courses section {
+    display: block;
+}
+#continuing_ed section {
+    display: block;
+}
+
+#testimonials {
+    display: none;
+}
+
+
+
 
 .footer-container footer {
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
+    font-size: 90%;
+    line-height: 1.2em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#address {
+    order: 1;
+}
+#address .phone,
+#office-hours .phone {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+#address .phone a,
+#office-hours .phone a {
+    padding: 8px 6px;
+    background-color: #bbb;
+    color: #222;
+    font-weight: bold;
+    border-radius: 7px;
+}
+#office-hours {
+    order: 2;
+}
+#legal-footer {
+    order: 3;
+    flex: 1 100%;
+    margin-top: 10px;
+}
+#legal-footer > div:first-child {
+    margin-bottom: 10px;
+}
+#social-media-footer {
+    order: 4;
+    flex: 1 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* ===============
@@ -172,27 +461,143 @@ nav a:hover {
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 550px) {
 
 /* ====================
     INTERMEDIATE: Menu
    ==================== */
 
+    .header-container header {
+    }
+
+    #logo-img {
+        width: 75%;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    nav ul li {
+        flex: 1 1 0;
+        margin: 0 5px;
+    }
+    nav ul li:first-child {
+        margin-left: 0;
+    }
+    nav ul li:last-child {
+        margin-right: 0;
+    }
     nav a {
-        float: left;
-        width: 27%;
-        margin: 0 1.7%;
-        padding: 25px 2%;
         margin-bottom: 0;
     }
 
-    nav li:first-child a {
-        margin-left: 0;
+
+/* ====================
+    INTERMEDIATE: Main
+   ==================== */
+    
+    #asides,
+    #articles,
+    #testimonials {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .main aside {
+        box-sizing: border-box;
+        font-size: medium;
+    }
+    .main aside header {
+        align-self: center;
     }
 
-    nav li:last-child a {
-        margin-right: 0;
+    #asides {
+        padding: 0 10%;
     }
+    #asides > * {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    #slideshow {
+        display: none;
+        text-align: center;
+        flex: 3;
+        margin-right: 10px;
+        height: 100%;
+        padding: 15px;
+    }
+    #slideshow img {
+        width: 100%;
+        border-radius: 7px;
+    }
+    #contact-info {
+        flex-flow: row wrap;
+        align-items: center;
+        flex: 2;
+    }
+    #contact-info > div {
+        font-weight: bold;
+        width: 100%;
+    }
+    #contact-info .button,
+    #contact-info .button a {
+        width: 100%;
+    }
+
+    #career_courses section {
+        display: block;
+    }
+    #continuing_ed section {
+        display: block;
+    }
+
+    #articles article {
+        flex: 1 0 50%;
+    }
+    #announcements {
+        flex: 1 0 100%;
+        flex-direction: column;
+    }
+    #announcements > div {
+        align-self: flex-start;
+    }
+    #fb-feed {
+        flex: 1 0 100%;
+    }
+    
+    #testimonials > article {
+        flex: 0 0 48%;
+        height: 250px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+        font-size: large;
+    }
+    #testimonials > article:nth-child(3n+1) {
+        background-color: purple;
+    }
+    #testimonials > article:nth-child(3n+2) {
+        background-color: green;
+    }
+
 
 /* ========================
     INTERMEDIATE: IE Fixes
@@ -207,7 +612,7 @@ nav a:hover {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 800px) {
 
 /* ====================
     WIDE: CSS3 Effects
@@ -224,28 +629,131 @@ nav a:hover {
     WIDE: Menu
    ============ */
 
-    .title {
-        float: left;
+    .header-container header {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    #logo-img {
+        max-width: 25%;
+        min-width: 300px;
+        flex: 0 1 auto;
     }
 
     nav {
-        float: right;
-        width: 38%;
-    }
+        flex: 1 1 auto;
+    } 
+
+
 
 /* ============
     WIDE: Main
    ============ */
 
+    body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-container {
+        flex-grow: 1;
+        overflow: auto;
+    }
+
+    .main {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    #asides {
+        flex: 0 1 22%;
+        margin-right: 15px;
+        min-width: 270px;
+        flex-flow: column nowrap;
+        padding: 0;
+    }
+    #asides > aside {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+    #articles {
+        flex: 1;
+    }
+    #articles article {
+        padding: 0 10px;
+    }
+    #continuing_ed {
+        border-left: dashed 1px grey;
+    }
+    #testimonials {
+        flex: 1 0 100%;
+        justify-content: space-around;
+    }
+    #testimonials > article {
+        flex: 0 0 32%;
+        height: 250px;
+        background-color: red;
+    }
+    #testimonials > article:nth-child(3n+1) {
+        background-color: purple;
+    }
+    #testimonials > article:nth-child(3n+2) {
+        background-color: green;
+    }
+
+
     .main article {
-        float: left;
-        width: 57%;
     }
 
     .main aside {
-        float: right;
-        width: 28%;
+      font-size: small;
     }
+    .main aside header {
+      font-size: medium;
+    }
+    #slideshow {
+      display: block;
+    }
+    #contact-info {
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+    #contact-info .button {
+      font-size: 90%;
+    }
+
+    .footer-container {
+        flex-shrink: 0;
+        width: 100%;
+    }
+    .footer-container footer {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    #address {
+        text-align: left;
+        order: 0;
+    }
+    #legal-footer {
+        flex: 1;
+        order: 1;
+        margin: 0 20px;
+    }
+    #legal-footer > div {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    #office-hours {
+        order: 2;
+    }
+    #social-media-footer {
+        order: 3;
+        flex: 1 100%;
+    }
+    
 }
 
 @media only screen and (min-width: 1140px) {
@@ -255,7 +763,7 @@ nav a:hover {
    =============== */
 
     .wrapper {
-        width: 1026px; /* 1140px - 10% for margins */
+        /*width: 1026px;*/ /* 1140px - 10% for margins */
         margin: 0 auto;
     }
 }
@@ -306,6 +814,9 @@ nav a:hover {
 
 .clearfix {
     *zoom: 1;
+}
+.nowrap {
+    white-space: nowrap;
 }
 
 /* ==========================================================================

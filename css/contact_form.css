@@ -1,0 +1,147 @@
+/* default: mobile */
+
+#contact-form-div {
+}
+
+#contact-form-div h2 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-section-program,
+.form-section-zip,
+.form-section-comments {
+  display: none;
+}
+
+label, .filler {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-top: 7px;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 25%;
+}
+label[for="form-source"],
+label[for="form-comments"] {
+  text-align: left;
+  padding-right: 0;
+  margin-top: 14px;
+  width: 100%;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="submit"],
+select,
+textarea,
+#form-call {
+  box-sizing: border-box;
+  margin-top: 7px;
+  color: black;
+  width: 70%;
+}
+
+#form-source,
+#form-comments {
+  margin-top: 0;
+}
+.form-section-emt {
+  margin-top: 14px;
+}
+label[for="form-emt"] {
+  width: auto;
+}
+input[type="submit"],
+#form-call {
+  margin: 20px auto 0;
+  line-height: 1.5em;
+  width: 80%;
+  display: block;
+}
+#loading,
+#output {
+  display: none;
+}
+
+/* intermediate */
+@media only screen and (min-width: 480px) {
+  .form-section-program,
+  .form-section-zip,
+  .form-section-comments {
+    display: inline-block;
+  }
+  #contact-form-div {
+    font-size: 125%;
+  }
+}
+
+/* wide */
+@media only screen and (min-width: 800px) {
+  #contact-form-div {
+    display: none;
+    font-size: 100%;
+  }
+  #contact-form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start
+  }
+  #contact-form > * {
+    box-sizing: border-box;
+  }
+  label {
+    flex: 0 15%;
+    text-align: right;
+    padding-right: 5px;
+  }
+  .filler {
+    display: none;
+  }
+  label[for="form-source"],
+  label[for="form-comments"] {
+    text-align: right;
+    padding-right: 5px;
+    margin-top: 7px;
+  }
+  label[for="form-emt"] {
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="submit"],
+  select,
+  textarea,
+  #form-call {
+    flex: 0 35%;
+  }
+  #form-comments, #form-source {
+    margin-top: 7px;
+  }
+  input[type="submit"] {
+  }
+  hr#form-separator {
+  }
+
+  /*
+  .form-section-name { order: 0; }
+  .form-section-email { order: 2; }
+  .form-section-phone { order: 4; }
+  .form-section-zip { order: 6; }
+
+  .form-section-program { order: 1; }
+  .form-section-source { order: 3; }
+  .form-section-comments { order: 5; }
+  .form-section-submit { order: 7; }
+  */
+  
+}
+
+/* max width */
+@media only screen and (min-width: 1140px) {
+}
+
+/* print styles */
+@media print {
+}
