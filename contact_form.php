@@ -144,7 +144,7 @@
 </form>
 
 <form style="display: inline;" method="get" action="tel://1-800-637-7387">
-  <button id="form-call" class="form-section-call" type="button">Talk to an Admissions Representative</button>
+  <button id="form-call" class="form-section-call" type="button">Talk to an Admissions Representative Now</button>
 </form>
 
 <hr id="form-separator" />

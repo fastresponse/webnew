@@ -739,6 +739,12 @@ article > section > p {
         flex-flow: row wrap;
         justify-content: space-between;
     }
+    .footer-container footer > div {
+        margin: 0 30px 0 0;
+    }
+    .footer-container footer > div:last-child {
+        margin-right: 0;
+    }
 
     #address {
         text-align: left;
@@ -747,18 +753,24 @@ article > section > p {
     #legal-footer {
         flex: 1;
         order: 1;
-        margin: 0 20px;
+        margin-top: 0;
     }
     #legal-footer > div {
         margin-bottom: 10px;
-        text-align: center;
     }
     #office-hours {
-        order: 2;
+        order: 1;
     }
     #social-media-footer {
-        order: 3;
         flex: 1 100%;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+    #social-media-footer > div {
+        margin-right: 20px;
+    }
+    #social-media-footer > div:last-child {
+        margin-right: 0;
     }
     
 }
