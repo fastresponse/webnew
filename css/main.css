@@ -301,9 +301,6 @@ aside > div {
     flex-flow: row wrap;
     align-items: flex-end;
 }
-#contact-info a {
-    text-decoration: none;
-}
 #contact-info > header {
     flex: 1 1 100%;
     text-align: center;
@@ -319,11 +316,12 @@ aside > div {
     text-align: right;
 }
 
-#contact-info .button a {
+.button a {
+    text-decoration: none;
     font-size: 130%;
     border: solid 1px #dd0033;
     border-radius: 7px;
-    padding: 4px 6px;
+    padding: 5px 8px;
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -397,8 +395,9 @@ article > section > p {
 }
 
 #address {
-    order: 1;
+    order: 0;
 }
+/*
 #address .phone,
 #office-hours .phone {
     margin-top: 15px;
@@ -412,8 +411,30 @@ article > section > p {
     font-weight: bold;
     border-radius: 7px;
 }
+*/
 #office-hours {
+    order: 1;
+}
+#phone-buttons {
     order: 2;
+    /*
+    width: 300px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    */
+}
+#phone-buttons .button a {
+    font-size: 15px;
+}
+#phone-buttons .button {
+    /*
+    margin-left: 20px;
+    flex: 0 40%;
+    */
+}
+#phone-buttons .button:first-child {
+    margin-left: 0;
 }
 #legal-footer {
     order: 3;
@@ -424,8 +445,6 @@ article > section > p {
     margin-bottom: 10px;
 }
 #social-media-footer {
-    order: 4;
-    flex: 1 100%;
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
@@ -748,22 +767,17 @@ article > section > p {
 
     #address {
         text-align: left;
-        order: 0;
     }
     #legal-footer {
         flex: 1;
-        order: 1;
         margin-top: 0;
     }
     #legal-footer > div {
         margin-bottom: 10px;
     }
     #office-hours {
-        order: 1;
     }
     #social-media-footer {
-        flex: 1 100%;
-        justify-content: flex-start;
         margin-top: 0;
     }
     #social-media-footer > div {
