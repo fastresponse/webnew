@@ -450,6 +450,34 @@ article > section > p {
     justify-content: space-between;
 }
 
+
+
+/* ===============
+    Page Specific
+   =============== */
+
+
+#career_courses > section > h3,
+#continuing_ed > section > h3 {
+  margin-bottom: 0;
+}
+#career_courses > section > ul,
+#continuing_ed > section > ul {
+  margin-top: 0;
+  margin-left: 0;
+  padding-left: 20px;
+  line-height: 1.2em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+#career_courses > section > ul > li,
+#continuing_ed > section > ul > li {
+  margin-right: 30px;
+}
+
+
+
 /* ===============
     ALL: IE Fixes
    =============== */
@@ -584,9 +612,14 @@ article > section > p {
     #continuing_ed section {
         display: block;
     }
+    #continuing_ed {
+        border-left: dashed 1px grey;
+    }
 
     #articles article {
         flex: 1 0 50%;
+        padding: 0 10px;
+        margin-top: 0;
     }
     #announcements {
         flex: 1 0 100%;

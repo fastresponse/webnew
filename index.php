@@ -59,27 +59,48 @@
     <header><h1>Career Courses</h1></header>
     <section>
       <h3>Emergency Medical Technician</h3>
-      <p>A brief description.</p>
+      <ul>
+        <li>Point 1.</li>
+        <li>Point 2 but longer.</li>
+        <li>This is point 3. It's long.</li>
+        <li>Point 4.</li>
+      </ul>
     </section>
     <section>
       <h3>Certified Phlebotomy Technician</h3>
-      <p>A brief description.</p>
+      <ul>
+        <li>Point 1.</li>
+        <li>Point 2.</li>
+        <li>This is point 3. It's long.</li>
+      </ul>
     </section>
     <section>
       <h3>Pharmacy Technician</h3>
-      <p>A brief description.</p>
+      <ul>
+        <li>Point 1.</li>
+        <li>Point 2.</li>
+      </ul>
     </section>
     <section>
       <h3>Clinical Medical Assistant</h3>
-      <p>A brief description.</p>
+      <ul>
+        <li>Point 1.</li>
+        <li>Point 2.</li>
+      </ul>
     </section>
     <section>
       <h3>Paramedic</h3>
-      <p>A brief description.</p>
+      <ul>
+        <li>Point 1.</li>
+        <li>Point 2.</li>
+      </ul>
     </section>
     <section>
       <h3>Sterile Processing Technician</h3>
-      <p>A brief description.</p>
+      <ul>
+        <li>Point 1.</li>
+        <li>Point 2.</li>
+      </ul>
     </section>
   </article>
 
@@ -87,35 +108,59 @@
     <header><h1>Continuing Education</h1></header>
     <section>
       <h3>Basic Life Support</h3>
-      <p>A brief description.</p>
+      <ul>
+        <li>Point 1.</li>
+        <li>Point 2.</li>
+      </ul>
     </section>
     <section>
       <h3>Advanced Cardiovascular Life Support</h3>
-      <p>A brief description.</p>
+      <ul>
+        <li>Point 1.</li>
+        <li>Point 2.</li>
+      </ul>
     </section>
     <section>
       <h3>Pediatric Advanced Life Support</h3>
-      <p>A brief description.</p>
+      <ul>
+        <li>Point 1.</li>
+        <li>Point 2.</li>
+      </ul>
     </section>
     <section>
       <h3>ECG Basic</h3>
-      <p>A brief description.</p>
+      <ul>
+        <li>Point 1.</li>
+        <li>Point 2.</li>
+      </ul>
     </section>
     <section>
       <h3>ECG Technician</h3>
-      <p>A brief description.</p>
+      <ul>
+        <li>Point 1.</li>
+        <li>Point 2.</li>
+      </ul>
     </section>
     <section>
       <h3>EMT Refresher</h3>
-      <p>A brief description.</p>
+      <ul>
+        <li>Point 1.</li>
+        <li>Point 2.</li>
+      </ul>
     </section>
     <section>
       <h3>EMT Skills Verification</h3>
-      <p>A brief description.</p>
+      <ul>
+        <li>Point 1.</li>
+        <li>Point 2.</li>
+      </ul>
     </section>
     <section>
       <h3>International Trauma Life Support</h3>
-      <p>A brief description.</p>
+      <ul>
+        <li>Point 1.</li>
+        <li>Point 2.</li>
+      </ul>
     </section>
   </article>
 </section>
