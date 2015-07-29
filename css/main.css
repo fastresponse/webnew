@@ -127,6 +127,8 @@ html,
 
 a {
     color: #dd0033;
+    color: #d70000;
+    color: #0000b3;
 }
 .footer-container a {
     color: white;
@@ -265,6 +267,8 @@ nav a:hover {
 
 .main {
     padding: 20px 0 10px;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 .main article h1 {
@@ -274,6 +278,26 @@ nav a:hover {
     flex: 1 1 100%;
     text-align: center;
     align-self: flex-start;
+}
+
+
+#sidebar-secondary {
+    display: block;
+    float: right;
+    max-width: 30%;
+    clear: both;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+#sidebar-secondary #contact-info {
+    display: block;
+    font-size: 78%;
+}
+#sidebar-secondary #contact-info .button a {
+    padding: 10px 10px;
+}
+#sidebar-secondary #contact-info #phone {
+    margin-bottom: 10px;
 }
 
 aside {
@@ -292,8 +316,12 @@ aside h3 {
     font-size: large;
 }
 
-aside > div {
-    /*display: none;*/
+aside ul {
+    padding-left: 0;
+    margin: 0;
+}
+aside li {
+    list-style-type: none;
 }
 
 #contact-info {
@@ -452,31 +480,6 @@ article > section > p {
 
 
 
-/* ===============
-    Page Specific
-   =============== */
-
-
-#career_courses > section > h3,
-#continuing_ed > section > h3 {
-  margin-bottom: 0;
-}
-#career_courses > section > ul,
-#continuing_ed > section > ul {
-  margin-top: 0;
-  margin-left: 0;
-  padding-left: 20px;
-  line-height: 1.2em;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
-#career_courses > section > ul > li,
-#continuing_ed > section > ul > li {
-  margin-right: 30px;
-}
-
-
 
 /* ===============
     ALL: IE Fixes
@@ -554,12 +557,16 @@ article > section > p {
     INTERMEDIATE: Main
    ==================== */
     
-    #asides,
-    #articles,
+    #sidebar-primary,
+    #bottom-bar,
+    #content,
     #testimonials {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
+    }
+    #testimonials {
+        flex: 1 100%;
     }
     .main aside {
         box-sizing: border-box;
@@ -569,29 +576,41 @@ article > section > p {
         align-self: center;
     }
 
-    #asides {
+    #sidebar-secondary {
+        display: block;
+        float: right;
+        max-width: 22%;
+    }
+    #sidebar-secondary #testimonials {
+        flex-flow: column nowrap;
+    }
+    #sidebar-secondary #contact-info {
+        display: block;
+        font-size: 78%;
+    }
+    #sidebar-secondary #contact-info .button a {
+        padding: 10px 10px;
+    }
+    #sidebar-secondary #contact-info #phone {
+        margin-bottom: 10px;
+    }
+    #sidebar-primary {
         padding: 0 10%;
     }
-    #asides > * {
+    #sidebar-primary > *,
+    #bottom-bar > * {
+      /*
         display: flex;
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
+      */
         flex: 1;
     }
+    #bottom-bar > #testimonials {
+        flex: 1 100%;
+    }
 
-    #slideshow {
-        display: none;
-        text-align: center;
-        flex: 3;
-        margin-right: 10px;
-        height: 100%;
-        padding: 15px;
-    }
-    #slideshow img {
-        width: 100%;
-        border-radius: 7px;
-    }
     #contact-info {
         flex-flow: row wrap;
         align-items: center;
@@ -616,7 +635,7 @@ article > section > p {
         border-left: dashed 1px grey;
     }
 
-    #articles article {
+    #content article {
         flex: 1 0 50%;
         padding: 0 10px;
         margin-top: 0;
@@ -632,22 +651,38 @@ article > section > p {
         flex: 1 0 100%;
     }
     
-    #testimonials > article {
-        flex: 0 0 48%;
-        height: 250px;
-        background-color: red;
+    .testimonial {
+        flex: 1;
+        margin-left: 10px;
+        margin-top: 10px;
+        padding: 5px;
+        background-color: #0a1e3c;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-flow: column;
         color: white;
-        font-weight: bold;
-        font-size: large;
+        font-size: small;
     }
-    #testimonials > article:nth-child(3n+1) {
-        background-color: purple;
+    #sidebar-secondary .testimonial {
+        margin-left: 0;
     }
-    #testimonials > article:nth-child(3n+2) {
-        background-color: green;
+    #bottom-bar .testimonial:first-child {
+        margin-left: 0;
+    }
+    .testimonial img {
+        width: 90px;
+        height: 60px;
+        border: 1px solid #e2e2e2;
+        margin-bottom: 5px;
+        align-self: center;
+    }
+    .testimonial .text {
+        font-size: medium;
+        margin-bottom: 5px;
+    }
+    .testimonial .source {
+    }
+    .testimonial .title {
+        font-style: italic;
     }
 
 
@@ -718,28 +753,45 @@ article > section > p {
     .main {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         align-items: flex-start;
     }
-    #asides {
+    #sidebar-primary {
         flex: 0 1 22%;
         margin-right: 15px;
         min-width: 270px;
         flex-flow: column nowrap;
         padding: 0;
     }
-    #asides > aside {
+    #bottom-bar {
+        flex: 1 100%;
+        flex-flow: row wrap;
+        padding: 0;
+    }
+    #sidebar-primary > aside {
         flex: 1 1 100%;
         margin-right: 0;
     }
-    #articles {
+    #slideshow {
+        display: block;
+        text-align: center;
+        flex: 3;
+        margin-right: 10px;
+        height: 100%;
+        padding: 15px;
+    }
+    #slideshow img {
+        width: 100%;
+        border-radius: 7px;
+    }
+    #content {
         flex: 1;
     }
-    #articles article {
+    #content article {
         padding: 0 10px;
         margin-top: 0;
     }
-    #articles article header h1 {
+    #content article header h1 {
         margin-top: 0;
     }
     #continuing_ed {
@@ -749,18 +801,6 @@ article > section > p {
         flex: 1 0 100%;
         justify-content: space-around;
     }
-    #testimonials > article {
-        flex: 0 0 32%;
-        height: 250px;
-        background-color: red;
-    }
-    #testimonials > article:nth-child(3n+1) {
-        background-color: purple;
-    }
-    #testimonials > article:nth-child(3n+2) {
-        background-color: green;
-    }
-
 
     .main article {
     }
@@ -770,9 +810,6 @@ article > section > p {
     }
     .main aside header {
       font-size: medium;
-    }
-    #slideshow {
-      display: block;
     }
     #contact-info {
       flex-flow: row wrap;
@@ -822,14 +859,16 @@ article > section > p {
     
 }
 
-@media only screen and (min-width: 1140px) {
+/* original max width: 1140 - 10% = 1026 */
+
+@media only screen and (min-width: 1300px) {
 
 /* ===============
     Maximal Width
    =============== */
 
     .wrapper {
-        /*width: 1026px;*/ /* 1140px - 10% for margins */
+        width: 1170px; /* 1140px - 10% for margins */
         margin: 0 auto;
     }
 }
@@ -880,6 +919,15 @@ article > section > p {
 
 .clearfix {
     *zoom: 1;
+}
+.bold {
+    font-weight: bold;
+}
+.underline {
+    text-decoration: underline;
+}
+.red {
+    color: #ff0000;
 }
 .nowrap {
     white-space: nowrap;

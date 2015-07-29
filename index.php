@@ -1,14 +1,13 @@
 <?php
   $incdir = './';
-
   $title = 'Fast Response';
   $page_header = 'Fast Response School of<br />Health Care Education';
   $description = '';
-
+  $css = array('index.css');
 ?>
 <?php require_once($incdir . 'header.php'); ?>
 
-<div id="asides">
+<div id="sidebar-primary">
   <aside id="slideshow">
     <img src="/slideshow/frontpage/slide01.jpg" alt="" />
   </aside>
@@ -54,7 +53,12 @@
   </aside>
 </div>
 
-<section id="articles">
+<section id="content">
+
+  <div id="banner" style="flex: 1 100%; order: -1; margin-bottom: 15px; text-align: center;">
+    <div style="border: 2px dashed red; border-radius: 7px; padding: 5px 8px; text-align: center; font-size: 120%; display: inline-block; min-width: 75%; margin: 0 auto;">This is a banner message.</div>
+  </div>
+
   <article id="career_courses" class="collapsible start-closed-mobile">
     <header><h1>Career Courses</h1></header>
     <section>
@@ -165,10 +169,12 @@
   </article>
 </section>
 
-<section id="testimonials">
-  <article>Testimonial 1</article>
-  <article>Testimonial 2</article>
-  <article>Testimonial 3</article>
-</section>
+<div id="bottom-bar">
+  <section id="testimonials">
+    <?php testimonial(1); ?>
+    <?php testimonial(2); ?>
+    <?php testimonial(3); ?>
+  </section>
+</div>
 
 <?php require_once($incdir . 'footer.php'); ?>

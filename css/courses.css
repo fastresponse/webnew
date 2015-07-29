@@ -1,0 +1,60 @@
+#content {
+  order: 0;
+}
+#sidebar-primary {
+  order: 1;
+}
+#bottom-bar {
+  order: 2;
+}
+
+#start_dates li,
+#links li,
+#course_approvals li {
+  margin-top: 5px;
+}
+
+article {
+  margin-top: 0;
+}
+article h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 550px) {
+  #sidebar-primary,
+  #bottom-bar {
+    padding: 0;
+  }
+  #sidebar-primary > *,
+  #bottom-bar > * {
+    flex: 1 49%;
+    margin-right: 1%;
+  }
+  #sidebar-primary > *:nth-child(2n+1),
+  #bottom-bar > *:nth-child(2n+1) {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #sidebar-primary {
+    order: 0;
+  }
+  #content {
+    order: 1;
+  }
+  #bottom-bar {
+    order: 2;
+  }
+  #testimonials {
+    flex-direction: column;
+  }
+  #testimonials > div {
+    margin-top: 5px;
+  }
+  #testimonials > div:first-of-type {
+    margin-top: 0;
+  }
+}

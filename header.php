@@ -2,6 +2,19 @@
   if (!isset($title)) $title = '';
   if (!isset($page_header)) $page_header = '';
   if (!isset($description)) $description = '';
+  if (!isset($css)) $css = null;
+
+  function testimonial($num) {
+    $out = <<<END
+<div class="testimonial">
+  <img src="" alt="" />
+  <div class="text">Testimonial $num text goes here.</div>
+  <div class="source">FirstName LastName</div>
+  <div class="title">Title of person</div>
+</div>
+END;
+    echo $out;
+  }
 ?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -18,7 +31,9 @@
 
     <link rel="stylesheet" href="<?= $incdir ?>css/normalize.min.css">
     <link rel="stylesheet" href="<?= $incdir ?>css/main.css">
-    <link rel="stylesheet" href="<?= $incdir ?>css/contact_form.css">
+    <?php foreach ($css as $file): ?>
+      <link rel="stylesheet" href="<?= $incdir ?>css/<?= $file ?>">
+    <?php endforeach; ?>
 
   <script src="<?= $incdir ?>js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   </head>
