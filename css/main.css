@@ -414,13 +414,25 @@ article > section > p {
 
 .footer-container footer {
     color: white;
-    padding: 10px 0;
+    padding: 10px 0 5px;
     font-size: 90%;
-    line-height: 1.2em;
+    line-height: 1.1em;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
+
+.footer-container > footer > div {
+    flex: 1 48%;
+    margin-bottom: 15px;
+}
+.footer-container > footer > div:nth-child(odd) {
+    text-align: left;
+}
+.footer-container > footer > div:nth-child(even) {
+    text-align: right;
+}
+
 
 #address {
     order: 0;
@@ -445,39 +457,32 @@ article > section > p {
 }
 #phone-buttons {
     order: 2;
-    /*
-    width: 300px;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    */
+    flex-flow: column;
+    /*align-items: center;*/
+    align-items: flex-start;
 }
 #phone-buttons .button a {
     font-size: 15px;
 }
-#phone-buttons .button {
-    /*
-    margin-left: 20px;
-    flex: 0 40%;
-    */
+#social-media-footer {
+    order: 3;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
-#phone-buttons .button:first-child {
-    margin-left: 0;
+#social-media-footer img {
+    height: 1.5em;
+    width: 1.5em;
 }
 #legal-footer {
-    order: 3;
+    order: 4;
     flex: 1 100%;
-    margin-top: 10px;
+    font-size: 85%;
 }
 #legal-footer > div:first-child {
     margin-bottom: 10px;
 }
-#social-media-footer {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
 
 
 
@@ -501,15 +506,25 @@ article > section > p {
 
 
 
-
-
-
-
-
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+
+@media only screen and (max-width: 549px) {
+  .hide-mobile {
+      display: none !important;
+  }
+}
+@media only screen and (min-width: 550px) and (max-width: 799px) {
+  .hide-tablet {
+      display: none !important;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .hide-desktop {
+      display: none !important;
+  }
+}
 
 @media only screen and (min-width: 550px) {
 
@@ -540,6 +555,7 @@ article > section > p {
     }
     nav ul li {
         flex: 1 1 0;
+        display: flex;
         margin: 0 5px;
     }
     nav ul li:first-child {
@@ -550,6 +566,7 @@ article > section > p {
     }
     nav a {
         margin-bottom: 0;
+        flex: 1;
     }
 
 
@@ -576,10 +593,33 @@ article > section > p {
         align-self: center;
     }
 
+    #banner {
+        flex: 1 100%;
+        order: -1;
+        margin: 15px 0 30px;
+        text-align: center;
+    }
+    #banner > div {
+        display: inline-block;
+        min-width: 80%;
+        margin: 0 auto;
+        padding: 5px 8px;
+        border: 2px solid red;
+        border-radius: 7px;
+        text-align: center;
+        font-size: 120%;
+        box-shadow: 5px 5px 15px red;
+        background-color: white;
+    }
+    #banner a {
+      color: red;
+      text-decoration: none;
+    }
+
     #sidebar-secondary {
         display: block;
         float: right;
-        max-width: 22%;
+        /*max-width: 22%;*/
     }
     #sidebar-secondary #testimonials {
         flex-flow: column nowrap;
@@ -669,13 +709,16 @@ article > section > p {
         margin-left: 0;
     }
     .testimonial img {
+        /*
         width: 90px;
         height: 60px;
+        */
+        width: 90%;
         border: 1px solid #e2e2e2;
         margin-bottom: 5px;
         align-self: center;
     }
-    .testimonial .text {
+    .testimonial .quote {
         font-size: medium;
         margin-bottom: 5px;
     }
@@ -683,6 +726,9 @@ article > section > p {
     }
     .testimonial .title {
         font-style: italic;
+    }
+    .footer-container > footer > div {
+        flex: initial;
     }
 
 
@@ -692,6 +738,7 @@ article > section > p {
 
     nav ul li {
         display: inline;
+        display: flex;
     }
 
     .oldie nav a {
@@ -755,6 +802,9 @@ article > section > p {
         justify-content: space-between;
         flex-flow: row wrap;
         align-items: flex-start;
+    }
+    #banner {
+        margin-top: 0;
     }
     #sidebar-primary {
         flex: 0 1 22%;
@@ -825,7 +875,7 @@ article > section > p {
     }
     .footer-container footer {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row;
         justify-content: space-between;
     }
     .footer-container footer > div {
@@ -841,20 +891,6 @@ article > section > p {
     #legal-footer {
         flex: 1;
         margin-top: 0;
-    }
-    #legal-footer > div {
-        margin-bottom: 10px;
-    }
-    #office-hours {
-    }
-    #social-media-footer {
-        margin-top: 0;
-    }
-    #social-media-footer > div {
-        margin-right: 20px;
-    }
-    #social-media-footer > div:last-child {
-        margin-right: 0;
     }
     
 }
@@ -926,12 +962,16 @@ article > section > p {
 .underline {
     text-decoration: underline;
 }
+.italic {
+    font-style: italic;
+}
 .red {
     color: #ff0000;
 }
 .nowrap {
     white-space: nowrap;
 }
+
 
 /* ==========================================================================
    Print styles

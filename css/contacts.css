@@ -1,0 +1,28 @@
+
+dl {
+  /*display: flex;*/
+}
+
+dl dl {
+  margin-top: 10px;
+}
+
+dt {
+  flex: 1;
+  margin-top: 10px;
+}
+dd {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.border {
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 1px dotted black;
+  border-radius: 5px;
+}
+
+#all_contacts {
+  line-height: 1.1em;
+}

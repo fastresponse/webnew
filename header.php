@@ -4,17 +4,7 @@
   if (!isset($description)) $description = '';
   if (!isset($css)) $css = null;
 
-  function testimonial($num) {
-    $out = <<<END
-<div class="testimonial">
-  <img src="" alt="" />
-  <div class="text">Testimonial $num text goes here.</div>
-  <div class="source">FirstName LastName</div>
-  <div class="title">Title of person</div>
-</div>
-END;
-    echo $out;
-  }
+  include_once($incdir . 'php/testimonials.php');
 ?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->

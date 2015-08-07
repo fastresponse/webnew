@@ -13,24 +13,27 @@
     </div>
 
     <div id="office-hours" class="">
+      <span class="bold">Admissions Hours</span><br />
       Mon - Thu: 8 - 7<br />
       Fri: 8 - 5<br />
       Sat: 9 - 5
     </div>
 
     <div id="phone-buttons">
+      <div class="bold">Call Now</div>
       <div class="phone button"><a href="tel:510-849-4009">510-849-4009</a></div>
       <div class="phone button"><a href="tel:800-637-7387">800-637-7387</a></div>
-      <div id="social-media-footer">
-        <div><a href="//www.yelp.com/biz/fast-response-school-of-health-care-education-berkeley">Yelp <img src="/images/buttons/yelp-icon.png" alt="Yelp Reviews" /></a></div>
-        <div><a href="//www.facebook.com/FastResponseSchool">Facebook <img src="/images/buttons/PG_facebook_button.png" alt="Our Facebook Page" /></a></div>
-        <div><a href="//twitter.com/_FastResponse">Twitter <img src="/images/buttons/twitter_logo_blue.png" alt="Our Twitter Page" style="height: 18px; width: 22px; margin: 5px 3px;" /></a></div>
-      </div>
+    </div>
+
+    <div id="social-media-footer">
+      <div><a href="//www.yelp.com/biz/fast-response-school-of-health-care-education-berkeley">Yelp <img src="/images/buttons/yelp-icon.png" alt="Yelp Reviews" /></a></div>
+      <div><a href="//www.facebook.com/FastResponseSchool">Facebook <img src="/images/buttons/PG_facebook_button.png" alt="Our Facebook Page" /></a></div>
+      <div><a href="//twitter.com/_FastResponse">Twitter <img src="/images/buttons/twitter_logo_blue.png" alt="Our Twitter Page" /></a></div>
     </div>
 
     <div id="legal-footer">
-      <div id="approval-footer">This school has been approved by the <a href="http://www.bppe.ca.gov/about_us/contact.shtml"><span class="nowrap">Bureau of Private and Postsecondary Education.</span></a></div>
-      <div id="copyright-footer">&copy; 2009-<?= date('Y') ?> Fast Response. <span class="nowrap">All Rights Reserved.</span> <span class="nowrap">All prices and content subject to change.</span></div>
+      <div id="approval-footer">This school has been approved by the <a href="http://www.bppe.ca.gov/about_us/contact.shtml">Bureau of Private and Postsecondary Education.</a></div>
+      <div id="copyright-footer">&copy; 2009-<?= date('Y') ?> Fast Response. All Rights Reserved. All prices and content subject to change.</span></div>
     </div>
 
   </footer>

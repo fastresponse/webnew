@@ -44,12 +44,65 @@ function enable_collapse() {
   collapsibles.filter(':not(.start-closed-'+type+')').find('.collapsible-closed').hide();
 }
 
+function enable_collapse2() {
+  var width = $(window).width();
+  var collapsibles = $('.collapsible');
+  var triggers = collapsibles.find('.trigger');
+  var col_headers = collapsibles.children('header');
+  var type;
+
+  if (width >= 800) {
+    //type = 'desktop';
+    triggers.unbind('click');
+    return;
+  }
+  else if (width >= 550) {
+    type = 'tablet';
+  }
+  else {
+    type = 'mobile';
+  }
+
+  // create open/close icons
+  /*
+  * triangle up: &#x25B2;
+  * triangle down: &#x25BC;
+  * triangle right: &#x25B6;
+  * triangle left: &#x25C0;
+  */
+
+  triggers.each(function() {
+    var $opened = $('<span></span>').attr('class', 'collapsible-opened').append(' &#x25B2;');
+    var $closed = $('<span></span>').attr('class', 'collapsible-closed').append(' &#x25B6;');
+    var text = $(this).attr('data-trigger-text');
+    if (text && text.length) {
+      $(this).text(text);
+    }
+    $(this).append($opened, $closed);
+    $(this).css('cursor', 'pointer');
+  });
+
+  triggers.click(function() {
+    if ( $(window).width() >= 800) return;
+    var main = $(this).closest('.collapsible');
+    main.children(':not(.trigger, .stay-open)').slideToggle('fast');
+    $(this).find('.collapsible-opened').toggle();
+    $(this).find('.collapsible-closed').toggle();
+  });
+
+  // process start-closed classes
+  // do this here instead of in CSS so it's only hidden if JS is enabled to reshow it
+  collapsibles.filter('.start-closed-'+type).children(':not(.trigger, .stay-open)').hide();
+  collapsibles.filter('.start-closed-'+type).find('.collapsible-opened').hide();
+  collapsibles.filter(':not(.start-closed-'+type+')').find('.collapsible-closed').hide();
+}
+
 $(document).ready(function() {
 
   $('#menu-button').click(function() {
     $('nav').slideToggle('fast');
   });
 
-  enable_collapse();
+  enable_collapse2();
 
 });

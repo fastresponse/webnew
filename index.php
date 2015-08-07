@@ -24,7 +24,7 @@
 
 <?php if (false): ?>
   <aside id="announcements" class="collapsible">
-    <header><h3>News And Announcements</h3></header>
+    <header><h3 class="trigger">News And Announcements</h3></header>
     <div>Paramedic Academy Applications due <span class="nowrap">Jul 20th</span></div>
     <div>Pharmacy Technician classes in 2015 - <span class="nowrap">Now Enrolling</span></div>
     <div>Discounted Prices for all Active Military Personnel and Veterans</div>
@@ -32,7 +32,7 @@
 <?php endif; ?>
 
   <aside id="fb-feed" class="collapsible start-closed-mobile start-closed-tablet">
-    <header><h3>News And Announcements</h3></header>
+    <header class="stay-open"><h3 class="trigger">News And Announcements</h3></header>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -41,7 +41,7 @@
       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="fb-page" data-href="https://www.facebook.com/FastResponseSchool" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true" data-hide-cta="true" data-width="500">
+    <div class="fb-page" data-href="https://www.facebook.com/FastResponseSchool" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true" data-hide-cta="true" data-width="300">
       <div class="fb-xfbml-parse-ignore">
         <blockquote cite="https://www.facebook.com/FastResponseSchool">
           <a href="https://www.facebook.com/FastResponseSchool">
@@ -55,52 +55,51 @@
 
 <section id="content">
 
-  <div id="banner" style="flex: 1 100%; order: -1; margin-bottom: 15px; text-align: center;">
-    <div style="border: 2px dashed red; border-radius: 7px; padding: 5px 8px; text-align: center; font-size: 120%; display: inline-block; min-width: 75%; margin: 0 auto;">This is a banner message.</div>
+  <div id="banner" class="hide-mobile">
+    <div class="bold italic"><a href="/courses/cma/">Evening Medical Assistant classes now available</a></div>
   </div>
 
   <article id="career_courses" class="collapsible start-closed-mobile">
-    <header><h1>Career Courses</h1></header>
+    <header class="stay-open"><h1 class="trigger">Career Courses</h1></header>
     <section>
-      <h3>Emergency Medical Technician</h3>
+      <h3><a href="courses/emt/">Emergency Medical Technician</a></h3>
       <ul>
-        <li>Point 1.</li>
-        <li>Point 2 but longer.</li>
-        <li>This is point 3. It's long.</li>
-        <li>Point 4.</li>
+        <li>Work in an ambulance, fire department, or hospital emergency department</li>
+        <li>Full-time: 5 weeks, Part-time: 9 weeks</li>
+        <li><span class="bold red underline">96%</span> student success rate on national exam</li>
       </ul>
     </section>
     <section>
-      <h3>Certified Phlebotomy Technician</h3>
+      <h3><a href="courses/cpt/">Certified Phlebotomy Technician</a></h3>
       <ul>
-        <li>Point 1.</li>
-        <li>Point 2.</li>
-        <li>This is point 3. It's long.</li>
+        <li>Work in hospitals and laboratories</li>
+        <li>Full-time: 2 weeks, Part-time: 4 weeks</li>
+        <li><span class="bold red underline">91%</span> student success rate on national exam</li>
       </ul>
     </section>
     <section>
-      <h3>Pharmacy Technician</h3>
-      <ul>
-        <li>Point 1.</li>
-        <li>Point 2.</li>
-      </ul>
-    </section>
-    <section>
-      <h3>Clinical Medical Assistant</h3>
+      <h3><a href="courses/phm/">Pharmacy Technician</a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
       </ul>
     </section>
     <section>
-      <h3>Paramedic</h3>
+      <h3><a href="courses/cma/">Clinical Medical Assistant</a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
       </ul>
     </section>
     <section>
-      <h3>Sterile Processing Technician</h3>
+      <h3><a href="courses/paramedic/">Paramedic</a></h3>
+      <ul>
+        <li>Point 1.</li>
+        <li>Point 2.</li>
+      </ul>
+    </section>
+    <section>
+      <h3><a href="courses/spt/">Sterile Processing Technician</a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
@@ -109,58 +108,58 @@
   </article>
 
   <article id="continuing_ed" class="collapsible start-closed-mobile">
-    <header><h1>Continuing Education</h1></header>
+    <header class="stay-open"><h1 class="trigger">Continuing Education</h1></header>
     <section>
-      <h3>Basic Life Support</h3>
+      <h3><a href="/courses/bls/">Basic Life Support</a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
       </ul>
     </section>
     <section>
-      <h3>Advanced Cardiovascular Life Support</h3>
+      <h3><a href="/courses/acls/">Advanced Cardiovascular Life Support</a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
       </ul>
     </section>
     <section>
-      <h3>Pediatric Advanced Life Support</h3>
+      <h3><a href="/courses/pals/">Pediatric Advanced Life Support</a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
       </ul>
     </section>
     <section>
-      <h3>ECG Basic</h3>
+      <h3><a href="/courses/ecg-b/">ECG Basic</a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
       </ul>
     </section>
     <section>
-      <h3>ECG Technician</h3>
+      <h3><a href="/courses/ecg-t/">ECG Technician</a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
       </ul>
     </section>
     <section>
-      <h3>EMT Refresher</h3>
+      <h3><a href="/courses/emt-r/">EMT Refresher</a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
       </ul>
     </section>
     <section>
-      <h3>EMT Skills Verification</h3>
+      <h3><a href="/courses/emt-s/">EMT Skills Verification</a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
       </ul>
     </section>
     <section>
-      <h3>International Trauma Life Support</h3>
+      <h3><a href="/courses/itls/">International Trauma Life Support</a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
@@ -171,9 +170,7 @@
 
 <div id="bottom-bar">
   <section id="testimonials">
-    <?php testimonial(1); ?>
-    <?php testimonial(2); ?>
-    <?php testimonial(3); ?>
+    <?php testimonials($handle, array('EMT'), 3); ?>
   </section>
 </div>
 
