@@ -111,14 +111,13 @@ nav li, nav a {
 }
 
 .header-container,
-.footer-container,
-.main aside {
+.footer-container {
     background: #0a1e3c;
 }
 
 html,
 .main-container {
-  background: #e2e2e2;
+  background: #f5f5f5;
 }
 
 .title {
@@ -306,7 +305,7 @@ aside {
     margin-top: 5px;
     font-size: small;
     line-height: 1.4em;
-    background: #eeeeee !important;
+    background: #eeeeee;
     color: #222 !important;
     border: 2px solid;
 }

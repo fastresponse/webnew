@@ -6,6 +6,11 @@ dl {
 dl dl {
   margin-top: 10px;
 }
+dl dl dt {
+}
+dl dl dd {
+  margin-left: 15px;
+}
 
 dt {
   flex: 1;
@@ -14,6 +19,7 @@ dt {
 dd {
   flex: 1;
   margin-left: 15px;
+  margin-left: 0;
 }
 
 .border {
@@ -23,6 +29,70 @@ dd {
   border-radius: 5px;
 }
 
-#all_contacts {
+.form-separator {
+  border-top: 2px solid #888;
+}
+
+#all_contacts,
+#contact-form-div {
   line-height: 1.1em;
+}
+#all_contacts > h2 {
+  margin-top: 0;
+  text-align: center;
+}
+#all_contacts > dl > div > dt {
+  font-weight: bold;
+}
+#all_contacts > dl dl > dt {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 480px) {
+  #all_contacts,
+  #contact-form-div {
+    font-size: 125%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #all_contacts,
+  #contact-form-div {
+    font-size: 90%;
+  }
+  #contact-form-div {
+  }
+  hr {
+    width: 100%;
+  }
+  #all_contacts > dl {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  #all_contacts > dl > div {
+    flex: 1 48%;
+    margin-bottom: 10px;
+  }
+  #all_contacts > dl > div:nth-child(odd) {
+    margin-right: 4%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  hr {
+    display: none;
+  }
+  #contact-form-div {
+    flex: 1 48%;
+    margin-left: 0;
+    margin-right: 4%;
+  }
+  #all_contacts {
+    flex: 1 48%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

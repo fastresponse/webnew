@@ -39,6 +39,76 @@
   </footer>
 </div>
 
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "LocalBusiness",
+  "name" : "Fast Response",
+  "alternateName" : "Fast Response School of Health Care Education",
+  "url" : "http://www.fastresponse.org",
+  "logo" : "http://www.fastresponse.org/logo.png",
+  "telephone" : "+1-510-849-4009",
+  "faxNumber" : "+1-866-290-2739",
+  "email" : "info@fastresponse.org",
+  "address" : {
+    "@type" : "PostalAddress",
+    "streetAddress" : "2075 Allston Way, Ste B",
+    "addressLocality" : "Berkeley",
+    "addressRegion" : "CA",
+    "postalCode" : "94704",
+    "addressCountry" : "US"
+  },
+  "openingHours" : [
+    "Mo-Th 08:00-18:00",
+    "Fr 08:00-17:00"
+  ],
+  "department" : {
+    "@type" : "LocalBusiness",
+    "name" : "Admissions",
+    "telephone" : "+1-800-637-7387",
+    "email" : "admissions@fastresponse.org",
+    "openingHours" : [
+      "Mo-Th 08:00-19:00",
+      "Fr 08:00-17:00",
+      "Sa 09:00-17:00"
+    ]
+  },
+  "contactPoint" : [{
+    "@type" : "ContactPoint",
+    "contactType" : "Customer Service",
+    "telephone" : "+1-510-849-4009",
+    "faxNumber" : "+1-866-290-2739",
+    "email" : "info@fastresponse.org",
+    "areaServed" : "US"
+  }],
+  "sameAs" : [
+    "http://www.facebook.com/FastResponseSchool",
+    "http://www.twitter.com/_FastResponse",
+    "http://www.yelp.com/biz/fast-response-school-of-health-care-education-berkeley"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "WebSite",
+  "name" : "Fast Response",
+  "alternateName" : "Fast Response School of Health Care Education",
+  "url" : "http://www.fastresponse.org"
+}
+</script>
+<?php if (false): ?>
+<script>
+{
+  "potentialAction" : {
+    "@type": "SearchAction",
+    "target": "http://www.fastresponse.org/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<?php endif; ?>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?= $incdir ?>js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
 

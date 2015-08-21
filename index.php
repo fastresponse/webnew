@@ -56,7 +56,7 @@
 <section id="content">
 
   <div id="banner" class="hide-mobile">
-    <div class="bold italic"><a href="/courses/cma/">Evening Medical Assistant classes now available</a></div>
+    <div class="bold italic"><a href="/courses/cma/">Evening Medical Assistant classes begin Sept 21<sup>st</sup></a></div>
   </div>
 
   <article id="career_courses" class="collapsible start-closed-mobile">

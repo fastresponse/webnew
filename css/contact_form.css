@@ -5,14 +5,8 @@
 }
 
 #contact-form-div h2 {
-  margin: 0 auto;
+  margin-top: 0;
   text-align: center;
-}
-
-.form-section-program,
-.form-section-zip,
-.form-section-comments {
-  display: none;
 }
 
 label, .filler {
@@ -61,20 +55,28 @@ input[type="submit"],
   width: 80%;
   display: block;
 }
+
+#privacyterms {
+  margin-top: 1em;
+  text-align: center;
+}
+
 #loading,
 #output {
   display: none;
 }
 
+.form-section-zip,
+.form-section-emt,
+.form-section-comments {
+  display: none;
+}
+
 /* intermediate */
 @media only screen and (min-width: 480px) {
-  .form-section-program,
   .form-section-zip,
   .form-section-comments {
     display: inline-block;
-  }
-  #contact-form-div {
-    font-size: 125%;
   }
 }
 
@@ -122,8 +124,6 @@ input[type="submit"],
     margin-top: 7px;
   }
   input[type="submit"] {
-  }
-  hr#form-separator {
   }
 
   /*

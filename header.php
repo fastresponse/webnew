@@ -17,7 +17,13 @@
     <title><?= $title ?></title>
     <meta name="description" content="<?= $description ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" size="228x228" href="<?= $incdir ?>icon.png">
     <link rel="apple-touch-icon" href="<?= $incdir ?>apple-touch-icon.png">
+    <meta name="msapplication-square70x70logo" content="icon\_smalltile.png">
+    <meta name="msapplication-square150x150logo" content="icon\_mediumtile.png">
+    <meta name="msapplication-wide310x150logo" content="icon\_widetile.png">
+    <meta name="msapplication-square310x310logo" content="icon\_largetile.png">
 
     <link rel="stylesheet" href="<?= $incdir ?>css/normalize.min.css">
     <link rel="stylesheet" href="<?= $incdir ?>css/main.css">
@@ -25,7 +31,7 @@
       <link rel="stylesheet" href="<?= $incdir ?>css/<?= $file ?>">
     <?php endforeach; ?>
 
-  <script src="<?= $incdir ?>js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="<?= $incdir ?>js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   </head>
   <body>
     <div class="header-container">
@@ -39,10 +45,9 @@
         <nav>
           <ul>
             <li><a href="contact_us.php">Contact Us</a></li>
-            <li><a href="#">Career Courses</a></li>
-            <li><a href="#">Continuing Education</a></li>
-            <li><a href="#">Student Resources</a></li>
             <li><a href="#">About Us</a></li>
+            <li><a href="#">Directions</a></li>
+            <li><a href="#">Student Resources</a></li>
           </ul>
         </nav>
       </header>

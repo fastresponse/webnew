@@ -9,6 +9,7 @@
     'Medical Assistant',
     'Sterile Processing',
     'Paramedic',
+    'Other',
   );
 
   $sources = array(
@@ -97,7 +98,8 @@
 
 <div id="contact-form-div">
 <a name="contact-us-link"></a>
-<h2>Contact Fast Response</h2>
+<h2>Program Inquiries</h2>
+<div class="border">
 <form id="contact-form" action="/php/ajax/ajax.course_contact_emailer.php" method="post" onsubmit="return validate(this);">
 
   <label for="form-program" class="form-section-program">Program</label>
@@ -130,24 +132,28 @@
   <div class="filler form-section-comments"></div>
   <textarea cols="28" rows="3" id="form-comments" class="form-section-comments" name="comments" style="vertical-align: top;"></textarea>
 
-<?php if ($course_name == 'Paramedic'): ?>
   <div class="filler form-section-emt"></div>
   <input type="checkbox" id="form-emt" class="form-section-emt" name="emt" value="I am currently an EMT." required="required" />
   <label for="form-emt" class="form-section-emt">I am currently an EMT.</label>
-<?php endif; ?>
 
   <label id="loading" class="form-section-submit"></label>
   <div id="output" class="form-section-submit"></div>
-  <input type="submit" id="form-submit" class="form-section-submit" name="submit" title="Submit" value="Email Our Admissions Department" />
+  <input type="submit" id="form-submit" class="form-section-submit" name="submit" title="Submit" value="Email Admissions" />
 
   <input type="hidden" id="city" name="city" value="" />
 </form>
 
+<!--
 <form style="display: inline;" method="get" action="tel://1-800-637-7387">
   <button id="form-call" class="form-section-call" type="button">Talk to an Admissions Representative Now</button>
 </form>
+-->
 
-<hr id="form-separator" />
+<div id="privacyterms">
+  <a href="#">Privacy Policy</a> <span class="bold">|</span> <a href="#">Terms and Conditions</a>
+</div>
+
+</div>
 
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>');</script>
 
@@ -236,3 +242,5 @@ $(document).ready(function() {
 /* ]]> */
 </script>  
 </div>
+
+
