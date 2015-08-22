@@ -3,23 +3,19 @@
   $title = 'Emergency Medical Technician';
   $page_header = 'Emergency Medical Technician';
   $description = '';
+  $course_code = 'EMT';
   $css = array('courses.css');
 ?>
 <?php require_once($incdir . 'header.php'); ?>
 
 <div id="sidebar-primary">
-<!--
-  <aside id="slideshow">
-    <img src="/slideshow/emt/slide01.jpg" alt="" />
-  </aside>
--->
   <aside id="contact-info">
     <header><h3>Contact Us</h3></header>
     <div id="phone">
       <div class="button"><a href="tel://510-849-4009"><span class="nowrap"><span class="hide-mobile">510-849-4009</span><span class="hide-tablet hide-desktop">Call</span></span></a></div>
     </div>
     <div id="email">
-      <div class="button"><a href="contact_us.php"><span class="nowrap"><span class="hide-mobile">Send an </span>Email</span></a></div>
+    <div class="button"><a href="<?= $incdir ?>contact_us.php"><span class="nowrap"><span class="hide-mobile">Send an </span>Email</span></a></div>
     </div>
   </aside>
   <aside id="test_results">

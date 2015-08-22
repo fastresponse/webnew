@@ -169,7 +169,7 @@
 </section>
 
 <div id="bottom-bar">
-  <section id="testimonials">
+  <section id="testimonials" class="space-out-3">
     <?php testimonials($handle, array('EMT'), 3); ?>
   </section>
 </div>

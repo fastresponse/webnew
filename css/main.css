@@ -483,6 +483,10 @@ article > section > p {
     margin-bottom: 10px;
 }
 
+.collapsible-opened {
+    font-size: 90%;
+}
+
 
 
 /* ===============
@@ -637,6 +641,9 @@ article > section > p {
         padding: 0 10%;
     }
     #sidebar-primary > *,
+    #bottom-bar {
+        margin-top: 10px;
+    }
     #bottom-bar > * {
       /*
         display: flex;
@@ -646,9 +653,41 @@ article > section > p {
       */
         flex: 1;
     }
+    .space-out-2 > *,
+    #sidebar-primary > *,
+    #bottom-bar > * {
+      flex: 1 49%;
+      margin-right: 1%;
+    }
+    .space-out-2 > *:nth-child(even),
+    .space-out-2 > *:last-child,
+    #sidebar-primary > *:nth-child(even),
+    #bottom-bar > *:nth-child(even),
+    #sidebar-primary > *:last-child,
+    #bottom-bar > *:last-child {
+      margin-right: 0;
+    }
+
+    .space-out-3 > * {
+      flex: 1 32%;
+      margin-right: 1%;
+    }
+    .space-out-3 > *:nth-child(3n+0),
+    .space-out-3 > *:last-child {
+      margin-right: 0;
+    }
+
     #bottom-bar > #testimonials {
         flex: 1 100%;
     }
+    /*
+    #bottom-bar > #testimonials > * {
+        margin-left: 10px;
+    }
+    #bottom-bar > #testimonials > *:first-child {
+        margin-left: 0;
+    }
+    */
 
     #contact-info {
         flex-flow: row wrap;
@@ -692,8 +731,6 @@ article > section > p {
     
     .testimonial {
         flex: 1;
-        margin-left: 10px;
-        margin-top: 10px;
         padding: 5px;
         background-color: #0a1e3c;
         display: flex;
@@ -702,9 +739,6 @@ article > section > p {
         font-size: small;
     }
     #sidebar-secondary .testimonial {
-        margin-left: 0;
-    }
-    #bottom-bar .testimonial:first-child {
         margin-left: 0;
     }
     .testimonial img {
@@ -719,12 +753,24 @@ article > section > p {
     }
     .testimonial .quote {
         font-size: medium;
-        margin-bottom: 5px;
     }
     .testimonial .source {
+        margin-bottom: 5px;
+        text-align: right;
+    }
+    .testimonial .name {
+        display: block;
+        font-size: medium;
+    }
+    .testimonial .name:before {
+        content: '-';
     }
     .testimonial .title {
         font-style: italic;
+        margin-left: 5px;
+    }
+    .testimonial .date {
+        margin-left: 5px;
     }
     .footer-container > footer > div {
         flex: initial;
@@ -969,6 +1015,9 @@ article > section > p {
 }
 .nowrap {
     white-space: nowrap;
+}
+.small-print {
+    font-size: 90%;
 }
 
 

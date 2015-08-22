@@ -32,8 +32,10 @@ article h1 {
     flex: 1 49%;
     margin-right: 1%;
   }
-  #sidebar-primary > *:nth-child(2n+1),
-  #bottom-bar > *:nth-child(2n+1) {
+  #sidebar-primary > *:nth-child(even),
+  #bottom-bar > *:nth-child(even),
+  #sidebar-primary > *:last-child,
+  #bottom-bar > *:last-child {
     margin-right: 0;
   }
 }
