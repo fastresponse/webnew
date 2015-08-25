@@ -36,7 +36,7 @@
   <body>
     <div class="header-container">
       <header class="wrapper">
-        <a href="/"><img src="/images/headers/header_main_left.png" alt="Fast Response School Of Health Care Education" id="logo-img" /></a>
+      <a href="/"><img src="<?= $incdir ?>img/fr-logo-transparent.png" alt="Fast Response School Of Health Care Education" id="logo-img" /></a>
         <div id="menu-button">
           <div></div>
           <div></div>
@@ -44,10 +44,11 @@
         </div>
         <nav>
           <ul>
-            <li><a href="contact_us.php">Contact Us</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Directions</a></li>
-            <li><a href="#">Student Resources</a></li>
+            <li><a href="<?= $incdir ?>">Home</a></li>
+            <li><a href="<?= $incdir ?>contact/">Contact Us</a></li>
+            <li><a href="<?= $incdir ?>about/">About Us</a></li>
+            <li><a href="<?= $incdir ?>location/">Location</a></li>
+            <li><a href="<?= $incdir ?>students/">Student Resources</a></li>
           </ul>
         </nav>
       </header>

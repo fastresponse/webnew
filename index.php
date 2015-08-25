@@ -110,56 +110,58 @@
   <article id="continuing_ed" class="collapsible start-closed-mobile">
     <header class="stay-open"><h1 class="trigger">Continuing Education</h1></header>
     <section>
-      <h3><a href="/courses/bls/">Basic Life Support</a></h3>
+      <h3><a href="courses/bls/">Basic <span class="nowrap">Life Support</span></a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
       </ul>
     </section>
     <section>
-      <h3><a href="/courses/acls/">Advanced Cardiovascular Life Support</a></h3>
+      <h3><a href="courses/acls/">Advanced Cardiovascular <span class="nowrap">Life Support</span></a></h3>
+      <ul>
+        <li>For hospital and EMS personnel</li>
+        <li>Must be renewed every 2 years</li>
+        <li>Initial certification: 2 days, Renewal: 1 day</li>
+        <li>AHA ACLS card provided on-site after completion</li>
+      </ul>
+    </section>
+    <section>
+      <h3><a href="courses/pals/">Pediatric Advanced <span class="nowrap">Life Support</span></a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
       </ul>
     </section>
     <section>
-      <h3><a href="/courses/pals/">Pediatric Advanced Life Support</a></h3>
+      <h3><a href="courses/ecg-b/">ECG Basic</a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
       </ul>
     </section>
     <section>
-      <h3><a href="/courses/ecg-b/">ECG Basic</a></h3>
+      <h3><a href="courses/ecg-t/">ECG Technician</a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
       </ul>
     </section>
     <section>
-      <h3><a href="/courses/ecg-t/">ECG Technician</a></h3>
+      <h3><a href="courses/emt-r/">EMT Refresher</a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
       </ul>
     </section>
     <section>
-      <h3><a href="/courses/emt-r/">EMT Refresher</a></h3>
+      <h3><a href="courses/emt-s/">EMT Skills Verification</a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>
       </ul>
     </section>
     <section>
-      <h3><a href="/courses/emt-s/">EMT Skills Verification</a></h3>
-      <ul>
-        <li>Point 1.</li>
-        <li>Point 2.</li>
-      </ul>
-    </section>
-    <section>
-      <h3><a href="/courses/itls/">International Trauma Life Support</a></h3>
+      <h3><a href="courses/itls/">International Trauma <span class="nowrap">Life Support</span></a></h3>
       <ul>
         <li>Point 1.</li>
         <li>Point 2.</li>

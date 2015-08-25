@@ -26,9 +26,9 @@
     </div>
 
     <div id="social-media-footer">
-      <div><a href="//www.yelp.com/biz/fast-response-school-of-health-care-education-berkeley">Yelp <img src="/images/buttons/yelp-icon.png" alt="Yelp Reviews" /></a></div>
-      <div><a href="//www.facebook.com/FastResponseSchool">Facebook <img src="/images/buttons/PG_facebook_button.png" alt="Our Facebook Page" /></a></div>
-      <div><a href="//twitter.com/_FastResponse">Twitter <img src="/images/buttons/twitter_logo_blue.png" alt="Our Twitter Page" /></a></div>
+      <div><a href="//www.yelp.com/biz/fast-response-school-of-health-care-education-berkeley">Yelp <img src="<?= $incdir ?>img/yelp-logo.png" alt="Yelp Reviews" /></a></div>
+      <div><a href="//www.facebook.com/FastResponseSchool">Facebook <img src="<?= $incdir ?>img/facebook-logo.png" alt="Our Facebook Page" /></a></div>
+      <div><a href="//twitter.com/_FastResponse">Twitter <img src="<?= $incdir ?>img/twitter-logo.png" alt="Our Twitter Page" /></a></div>
     </div>
 
     <div id="legal-footer">
@@ -46,7 +46,7 @@
   "name" : "Fast Response",
   "alternateName" : "Fast Response School of Health Care Education",
   "url" : "http://www.fastresponse.org",
-  "logo" : "http://www.fastresponse.org/logo.png",
+  "logo" : "http://www.fastresponse.org/img/fr-logo-darkblue.png",
   "telephone" : "+1-510-849-4009",
   "faxNumber" : "+1-866-290-2739",
   "email" : "info@fastresponse.org",

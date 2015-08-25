@@ -31,6 +31,29 @@
       <li>November 2nd, 2015 - Full Time (open)</li>
     </ul>
   </aside>
+  <aside id="details" class="collapsible start-closed-mobile">
+    <header class="stay-open"><h3 class="trigger">Course Details</h3></header>
+    <p class="underline">Full Time</p>
+    <ul>
+      <li>Tue - Fri: 8:30 AM - 5:00 PM</li>
+      <li>Mon: Optional tutoring</li>
+      <li>Five weeks of instruction</li>
+    </ul>
+    <hr />
+    <p class="underline">Part Time</p>
+    <ul>
+      <li>Mon, Tue, Thu: 6:00 PM - 10:00 PM</li>
+      <li>Sat: 8:30 AM - 5:00 PM</li>
+      <li>Wed: Optional tutoring</li>
+      <li>Nine weeks of instruction</li>
+    </ul>
+    <hr />
+    <p>Both courses include:</p>
+    <ul>
+      <li>168 hours of instruction and skills practice</li>
+      <li>24-32 hours of field externship</li>
+    </ul>
+  </aside>
   <aside id="links">
     <header><h3>Links</h3></header>
     <ul>
