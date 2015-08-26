@@ -12,17 +12,15 @@
 label, .filler {
   display: inline-block;
   box-sizing: border-box;
-  margin-top: 7px;
+  margin-top: 12px;
   text-align: left;
-  padding-left: 15px;
-  padding-right: 15px;
   width: 25%;
 }
 label[for="form-source"],
 label[for="form-comments"] {
   text-align: left;
   padding-right: 0;
-  margin-top: 14px;
+  margin-top: 7px;
   width: 100%;
 }
 input[type="text"],
@@ -40,7 +38,7 @@ textarea,
 
 #form-source,
 #form-comments {
-  margin-top: 0;
+  margin-top: 4px;
 }
 .form-section-emt {
   margin-top: 14px;
@@ -85,7 +83,6 @@ input[type="submit"],
   #contact-form-div {
     /*display: none;*/
     font-size: 100%;
-    margin-right: 50px;
   }
   #contact-form {
     display: flex;
@@ -96,16 +93,18 @@ input[type="submit"],
     box-sizing: border-box;
   }
   label {
+    /*
     flex: 0 25%;
     text-align: right;
+    */
     padding-right: 5px;
   }
   .filler {
-    display: none;
+    /*display: none;*/
   }
   label[for="form-source"],
   label[for="form-comments"] {
-    text-align: right;
+    /*text-align: right;*/
     padding-right: 5px;
     margin-top: 7px;
   }
@@ -141,7 +140,7 @@ input[type="submit"],
 }
 
 /* max width */
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 1000px) {
 }
 
 /* print styles */

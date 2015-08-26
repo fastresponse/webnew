@@ -528,6 +528,11 @@ article > section > p {
       display: none !important;
   }
 }
+@media only screen and (min-width: 1000px) {
+  .hide-desktop-large {
+      display: none !important;
+  }
+}
 
 @media only screen and (min-width: 550px) {
 

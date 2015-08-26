@@ -28,6 +28,14 @@
 
 <section id="content">
   <article>
+    <div id="sidebar-secondary">
+      <aside>
+        <header><h3>Test box</h3></header>
+        <h4>This is only here to show what it looks like if we put information in this sidebar.</h4>
+        <div>We need to decide whether we want to use this sidebar for CEU pages. In mobile format, it appears below the left sidebar but above the boxes at the bottom.</div>
+      </aside>
+    </div>
+
     <div class="collapsible start-closed-mobile">
       <header class="stay-open"><h1><?= $page_header ?></h1></header>
       <p class="stay-open">Our Advanced Cardiovascular Life Support (ACLS) course offers challenging and useful skills that make a difference in saving lives. A lively, low-stress class environment, with a focus on a team approach to medical emergencies has proven to be an essential and rewarding experience for all participants.</p>

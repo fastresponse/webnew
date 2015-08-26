@@ -1,10 +1,13 @@
 
 dl {
   /*display: flex;*/
+  margin: 0 auto;
 }
 
 dl dl {
   margin-top: 10px;
+}
+dl > div > dt {
 }
 dl dl dt {
 }
@@ -22,9 +25,17 @@ dd {
   margin-left: 0;
 }
 
+h2 {
+  margin-top: 0;
+  text-align: center;
+}
+h4 {
+  margin-top: 0;
+}
+
 .border {
   padding: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   border: 1px dotted black;
   border-radius: 5px;
 }
@@ -33,66 +44,130 @@ dd {
   border-top: 2px solid #888;
 }
 
-#all_contacts,
-#contact-form-div {
+section {
   line-height: 1.1em;
 }
-#all_contacts > h2 {
-  margin-top: 0;
-  text-align: center;
-}
-#all_contacts > dl > div > dt {
+
+#contact_information > dl > div > dt {
   font-weight: bold;
 }
-#all_contacts > dl dl > dt {
+#contact_information > dl dl > dt {
   text-decoration: underline;
 }
 
+#transit ul,
+#parking ul {
+  padding-left: 20px;
+}
+
+#parking ul ul div:first-child {
+  text-decoration: underline;
+}
+#map {
+  text-align: center;
+}
+#map a {
+  display: inline-block;
+  width: 90%;
+}
+#map img {
+  margin: 1% auto;
+  width: 100%;
+}
+
 @media only screen and (min-width: 480px) {
-  #all_contacts,
-  #contact-form-div {
+  .main > section {
     font-size: 125%;
     margin-left: 10%;
     margin-right: 10%;
   }
-}
-
-@media only screen and (min-width: 800px) {
-  #all_contacts,
-  #contact-form-div {
-    font-size: 90%;
+  #contact_information {
+    margin: 0;
   }
-  #contact-form-div {
-  }
-  hr {
-    width: 100%;
-  }
-  #all_contacts > dl {
+  #contact_information > dl {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
-  #all_contacts > dl > div {
+  #frontdesk,
+  #admissions {
+    flex: 1 49%;
+  }
+  #frontdesk {
+    margin-right: 2%;
+  }
+  #departments {
+    flex: 1 100%;
+  }
+  #departments dl {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #departments dl > div {
+    flex: 1 50%;
+    margin: 10px 0 0;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  section {
+    font-size: 90%;
+  }
+  hr {
+    width: 100%;
+  }
+  #contact_information > dl {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  #contact_information > dl > div {
     flex: 1 48%;
     margin-bottom: 10px;
   }
-  #all_contacts > dl > div:nth-child(odd) {
+  #contact_information > dl > div:nth-child(odd) {
     margin-right: 4%;
+  }
+  #contact_information > dl > div:last-child {
+    margin-right: 0;
+  }
+  #location {
+    width: 100%;
   }
 }
 
 @media only screen and (min-width: 1000px) {
-  hr {
-    display: none;
-  }
-  #contact-form-div {
-    flex: 1 48%;
-    margin-left: 0;
-    margin-right: 4%;
-  }
-  #all_contacts {
+  .main > section {
+    font-size: 80%;
     flex: 1 48%;
     margin-left: 0;
     margin-right: 0;
+  }
+  .main > section:nth-of-type(odd) {
+    margin-right: 2%;
+  }
+  #contact_form,
+  #location {
+    flex: 1 33%;
+  }
+  #contact_information,
+  #commuter {
+    flex: 1 65%;
+  }
+  #contact_information {
+    align-self: stretch;
+  }
+  #contact_information > dl > div {
+    flex: 1 32%;
+    margin-right: 1%;
+  }
+  #contact_information > dl > div:nth-child(odd) {
+    margin-right: 1%;
+  }
+  #contact_information > dl > div:nth-child(3n+0) {
+    margin-right: 0;
+  }
+  #departments dl {
+    display: block;
   }
 }

@@ -109,16 +109,16 @@
   </select>
 
   <label for="form-name" class="form-section-name">Name</label>
-  <input type="text" id="form-name" class="form-section-name" name="name" required="required" />
+  <input type="text" id="form-name" class="form-section-name" name="name" placeholder="Firstname Lastname" required="required" />
 
   <label for="form-email" class="form-section-email">Email</label>
-  <input type="email" id="form-email" class="form-section-email" name="email" required="required" />
+  <input type="email" id="form-email" class="form-section-email" name="email" placeholder="you@email.com" required="required" />
 
   <label for="form-phone" class="form-section-phone">Phone</label>
-  <input type="tel" id="form-phone" class="form-section-phone" name="phone" required="required" />
+  <input type="tel" id="form-phone" class="form-section-phone" name="phone" placeholder="555-555-5555" required="required" />
 
   <label for="form-zip" class="form-section-zip">Zip Code</label>
-  <input type="text" id="form-zip" class="form-section-zip" name="zip" onkeyup="return zipValidate(this, '#zipcheck', <?= $zip_radius ?>);" />
+  <input type="text" id="form-zip" class="form-section-zip" name="zip" placeholder="9XXXX" onkeyup="return zipValidate(this, '#zipcheck', <?= $zip_radius ?>);" />
   <div id="zipcheck" class="form-section-zip"></div>
 
   <label for="form-source" class="form-section-source">Where did you first hear about us?</label>

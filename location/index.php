@@ -17,13 +17,6 @@
       <div class="button"><a href="<?= $incdir ?>contact_us.php"><span class="nowrap"><span class="hide-mobile">Send an </span>Email</span></a></div>
     </div>
   </aside>
-  <aside>
-    <header><h3>Address</h3></header>
-    <div>Fast Response School of Health Care Education</div>
-    <div>2075 Allston Way</div>
-    <div>Suite B</div>
-    <div>Berkeley, CA 94704</div>
-  </aside>
 </div>
 
 <section id="content">
@@ -38,6 +31,14 @@
           <img src="http://maps.googleapis.com/maps/api/staticmap?center=2075+Allston+Way,Suite+B,Berkeley,CA,94704&amp;zoom=14&amp;markers=color:red%7Clabel:F%7C2075+Allston+Way,Berkeley,CA&amp;size=300x210&amp;sensor=false" alt="Map of our area" width="300" height="210" />
         </a>
       </div>
+      <p style="line-height: 1.1em;">
+        Fast Response School of Health Care Education<br />
+        2075 Allston Way<br />
+        Suite B<br />
+        Berkeley, CA 94704<br />
+      </p>
+      <p>510-849-4009</p>
+
     </div>
   </article>
 </section>
