@@ -24,6 +24,19 @@
     <div class="button"><a href="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4106&pcatID=4105" target="_blank"><span class="nowrap">Initial Certification</span></span></a></div>
     <div class="button"><a href="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4107&pcatID=4105" target="_blank"><span class="nowrap">Renewal</span></span></a></div>
   </aside>
+  <aside id="faqs" class="collapsible start-closed-mobile">
+    <header class="stay-open"><h3 class="trigger">FAQs</h3></header>
+    <dl>
+      <dt>Question 1.</dt>
+      <dd>Answer 1.</dd>
+      <dt>Question 2.</dt>
+      <dd>Answer 2.</dd>
+      <dt>Question 3.</dt>
+      <dd>Answer 3.</dd>
+      <dt>Question 4.</dt>
+      <dd>Answer 4.</dd>
+    </dl>
+  </aside>
 </div>
 
 <section id="content">
@@ -32,7 +45,7 @@
       <aside>
         <header><h3>Test box</h3></header>
         <h4>This is only here to show what it looks like if we put information in this sidebar.</h4>
-        <div>We need to decide whether we want to use this sidebar for CEU pages. In mobile format, it appears below the left sidebar but above the boxes at the bottom.</div>
+        <div>We need to decide whether we want to use this sidebar for CEU pages. It can be hidden in mobile format.</div>
       </aside>
     </div>
 

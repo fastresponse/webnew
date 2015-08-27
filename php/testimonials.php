@@ -3,6 +3,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/php/dbconn.php');
 if (empty($handle))
   $handle = db_connect();
 
+
 // create an array of bitmask values for reference later, i.e.:
 // 'EMT' => 1,
 // 'CPT' => 2,
@@ -45,6 +46,7 @@ function testimonial_query($handle = null, $categories = null) {
 
   return $results;
 };
+
 
 function testimonials($handle, $categories, $limit = 1) {
   $rows = testimonial_query($handle, $categories);

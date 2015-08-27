@@ -386,7 +386,7 @@ article {
     margin-top: 30px;
 }
 article > section {
-    display: list-item;
+    /*display: list-item;*/
     margin-left: 8%;
 }
 article > section > h3 {
