@@ -55,9 +55,17 @@ section {
   text-decoration: underline;
 }
 
-#transit ul,
-#parking ul {
+#commuter ul {
   padding-left: 20px;
+}
+#commuter ul:last-child {
+  margin-bottom: 0;
+}
+#commuter li {
+  margin-top: 7px;
+}
+#commuter li:first-of-type {
+  margin-top: 0;
 }
 
 #parking ul ul div:first-child {

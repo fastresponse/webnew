@@ -1,65 +1,67 @@
 <?php
   $incdir = '../../';
+  $course_name = 'EMT';
   $title = 'Emergency Medical Technician';
   $page_header = 'Emergency Medical Technician';
   $description = '';
-  $css = array('landing.css');
+  $css = array('landing.css', 'contact_form.css');
+  
+  $picdir = $incdir . 'img/emt/';
+  $piclist = array_values(
+    array_diff(
+      scandir( realpath($picdir), 0),
+      array('..', '.', 'Thumbs.db')
+    )
+  );
+  $i = 0;
+  $max_left = 3;
+  $max_right = 7;
 ?>
 <?php require_once($incdir . 'header.php'); ?>
 
+<div id="top-bar" class="bg-darkblue">
+  <img src="<?= $incdir ?>img/fr-logo-darkblue.png" alt="" />
+  <h3 style="text-align: center;">Career training in Berkeley, CA</h3>
+
+  <div id="phone">
+    <div class="button"><a href="tel://800-637-7378"><span class="nowrap">Call</span></a></div>
+  </div>
+  <div id="email">
+    <div class="button"><a href="contact_us.php"><span class="nowrap">Email</span></a></div>
+  </div>
+
+</div>
+
 <div id="sidebar-primary">
-  <aside style="background-color: #0a1e3c;">
-    <img src="/images/headers/header_main_left.png" alt="" />
-  </aside>
   <aside id="contact-info">
     <header><h3>Contact Us</h3></header>
-    <div id="phone">
-      <div class="button"><a href="tel://510-849-4009"><span class="nowrap"><span class="hide-mobile">510-849-4009</span><span class="hide-tablet hide-desktop">Call</span></span></a></div>
-    </div>
-    <div id="email">
-      <div class="button"><a href="contact_us.php"><span class="nowrap"><span class="hide-mobile">Send an </span>Email</span></a></div>
-    </div>
+    <?php
+      $hide_form_title = true;
+      $hide_form_call_button = false;
+      include($incdir . 'contact/contact_form.php');
+    ?>
   </aside>
-  <aside>
-    <img src="/slideshow/emt/slide02.jpg" alt="" />
+  <?php for (; $i < count($piclist) && $i < $max_left; $i++): ?>
+  <aside class="side-image">
+    <img src="<?= $picdir . $piclist[$i] ?>" alt="" />
   </aside>
-  <aside>
-    <img src="/slideshow/emt/slide03.jpg" alt="" />
-  </aside>
-  <aside>
-    <img src="/slideshow/emt/slide04.jpg" alt="" />
-  </aside>
-  <aside>
-    <img src="/slideshow/emt/slide05.jpg" alt="" />
-  </aside>
-  <aside>
-    <img src="/slideshow/emt/slide06.jpg" alt="" />
-  </aside>
+  <?php endfor; ?>
 </div>
 
 <section id="content">
   <article>
     <div id="sidebar-secondary">
-      <aside>
-        <img src="/slideshow/emt/slide07.jpg" alt="" />
+      <?php for (; $i < count($piclist) && $i < $max_left+$max_right; $i++): ?>
+      <aside class="side-image">
+        <img src="<?= $picdir . $piclist[$i] ?>" alt="" />
       </aside>
-      <aside>
-        <img src="/slideshow/emt/slide08.jpg" alt="" />
-      </aside>
-      <aside>
-        <img src="/slideshow/emt/slide09.jpg" alt="" />
-      </aside>
-      <aside>
-        <img src="/slideshow/emt/slide10.jpg" alt="" />
-      </aside>
-      <aside>
-        <img src="/slideshow/emt/slide11.jpg" alt="" />
-      </aside>
+      <?php endfor; ?>
     </div>
 
     <div class="collapsible start-closed-mobile">
-      <header class="stay-open"><h1>Accelerated EMT Program</h1></header>
+      <header class="stay-open"><h1>Fast Response<br />Accelerated EMT Program</h1></header>
       <h4 class="stay-open" style="margin: 0;">Training that will set you apart from the rest!</h4>
+      <img class="stay-open" src="<?= $picdir . $piclist[0] ?>" alt="" />
       <p class="stay-open">In only 5 weeks, you can become one of the best EMTs in the Bay Area. After your guaranteed externship you'll have the education and experience to take the National Registry EMT exam, where Fast Response students outperform the national average by XX%. Our graduates are highly sought-after by leading Bay Area ambulance companies, making you fully-qualified, job ready, and exceedingly employable.</p>
       <p class="stay-open">Master the life-saving skills of an EMT and become somebody's hero!</p>
       <p class="hide-desktop hide-tablet trigger bold red underline" style="text-align: center;" data-trigger-text="Continue Reading"></p>

@@ -1,6 +1,8 @@
 <?php
   if (!isset($course_name)) $course_name = '';
   if (!isset($zip_radius)) $zip_radius = '50';
+  if (!isset($hide_form_title)) $hide_form_title = false;
+  if (!isset($hide_form_call_button)) $hide_form_call_button = true;
 
   $programs = array(
     'EMT',
@@ -98,7 +100,9 @@
 
 <div id="contact-form-div">
 <a name="contact-us-link"></a>
+<?php if (!$hide_form_title): ?>
 <h2>Program Inquiries</h2>
+<?php endif; ?>
 <div class="border">
 <form id="contact-form" action="/php/ajax/ajax.course_contact_emailer.php" method="post" onsubmit="return validate(this);">
 
@@ -143,11 +147,12 @@
   <input type="hidden" id="city" name="city" value="" />
 </form>
 
-<!--
-<form style="display: inline;" method="get" action="tel://1-800-637-7387">
-  <button id="form-call" class="form-section-call" type="button">Talk to an Admissions Representative Now</button>
+<?php if (!$hide_form_call_button): ?>
+<form method="get" action="tel://1-800-637-7387">
+  <!--<button id="form-call" class="form-section-call" type="button">Call Admissions Now</button>-->
+  <input type="submit" id="form-call" class="form-section-call" name="call" title="Call" value="Call Admissions Now" />
 </form>
--->
+<?php endif; ?>
 
 <div id="privacyterms">
   <a href="#">Privacy Policy</a> <span class="bold">|</span> <a href="#">Terms and Conditions</a>
@@ -155,12 +160,12 @@
 
 </div>
 
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>');</script>
+<script>window.jQuery || document.write('<script src="<?= $incdir ?>js/vendor/jquery-1.11.3.min.js"><\/script>');</script>
 
-<script src="/js/contactform.js"></script>
+<script src="<?= $incdir ?>/js/contactform.js"></script>
 
 <!-- for conversion tracking code -->
-<script src="/js/frlib2.js"></script>
+<script src="<?= $incdir ?>/js/frlib2.js"></script>
 
 <script>  
 /* <![CDATA[ */    
