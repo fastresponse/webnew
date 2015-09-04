@@ -5,6 +5,8 @@
   $description = '';
   $course_code = 'EMT';
   $css = array('courses.css');
+
+  $form_course_name = 'EMT';
 ?>
 <?php require_once($incdir . 'header.php'); ?>
 
@@ -15,7 +17,7 @@
       <div class="button"><a href="tel://510-849-4009"><span class="nowrap"><span class="hide-mobile">510-849-4009</span><span class="hide-tablet hide-desktop">Call</span></span></a></div>
     </div>
     <div id="email">
-    <div class="button"><a href="<?= $incdir ?>contact_us.php"><span class="nowrap"><span class="hide-mobile">Send an </span>Email</span></a></div>
+    <div class="button"><a href="<?= $incdir ?>contact/?p=<?= urlencode($form_course_name) ?>"><span class="nowrap"><span class="hide-mobile">Send an </span>Email</span></a></div>
     </div>
   </aside>
   <aside id="test_results">
@@ -79,7 +81,10 @@
     <div id="sidebar-secondary">
       <aside id="testimonials">
         <header><h3>Success Stories</h3></header>
-        <?php testimonials($handle, array('EMT'), 2); ?>
+          <?php
+            include_once($incdir . 'php/testimonials.php');
+            testimonials($handle, array('EMT'), 2);
+          ?>
       </aside>
     </div>
 

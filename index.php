@@ -3,6 +3,7 @@
   $title = 'Fast Response';
   $page_header = 'Fast Response School of<br />Health Care Education';
   $description = '';
+  $canonical = 'http://www.fastresponse.org/';
   $css = array('index.css');
 ?>
 <?php require_once($incdir . 'header.php'); ?>
@@ -183,7 +184,10 @@
 
 <div id="bottom-bar">
   <section id="testimonials" class="space-out-3">
-    <?php testimonials($handle, array('EMT'), 3); ?>
+    <?php
+      include_once($incdir . 'php/testimonials.php');
+      testimonials($handle, array('EMT'), 3);
+    ?>
   </section>
 </div>
 

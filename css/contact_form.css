@@ -52,6 +52,11 @@ input[type="submit"],
   line-height: 1.5em;
   width: 80%;
   display: block;
+  height: 40px;
+  box-shadow: rgb(140, 140, 140) 3px 5px;
+}
+#form-call {
+  margin-top: 10px;
 }
 
 #privacyterms {
@@ -71,10 +76,14 @@ input[type="submit"],
 }
 
 /* intermediate */
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 550px) {
   .form-section-zip,
   .form-section-comments {
     display: inline-block;
+  }
+  input[type="submit"],
+  #form-call {
+    height: 60px;
   }
 }
 

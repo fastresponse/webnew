@@ -1,5 +1,20 @@
 <?php
-  if (!isset($course_name)) $course_name = '';
+
+  $query_args = array();
+  parse_str($_SERVER['QUERY_STRING'], $query_args);
+  $allowed_args = array( 'p' );
+  foreach ($allowed_args as $arg) {
+    if (!array_key_exists($arg, $query_args)) continue;
+    switch ($arg) {
+      case 'p':
+        $form_course_name = $query_args['p'];
+      break;
+
+      default:
+    }
+  }
+
+  if (!isset($form_course_name)) $form_course_name = '';
   if (!isset($zip_radius)) $zip_radius = '50';
   if (!isset($hide_form_title)) $hide_form_title = false;
   if (!isset($hide_form_call_button)) $hide_form_call_button = true;
@@ -99,7 +114,7 @@
 ?>
 
 <div id="contact-form-div">
-<a name="contact-us-link"></a>
+<a name="contact-form-link"></a>
 <?php if (!$hide_form_title): ?>
 <h2>Program Inquiries</h2>
 <?php endif; ?>
@@ -109,7 +124,7 @@
   <label for="form-program" class="form-section-program">Program</label>
   <select id="form-program" class="form-section-program" name="program" required="required">
     <option value="">&ndash; Select a program &ndash;</option>
-    <?= array_to_option_html($programs, $course_name); ?>
+    <?= array_to_option_html($programs, $form_course_name); ?>
   </select>
 
   <label for="form-name" class="form-section-name">Name</label>

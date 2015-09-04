@@ -3,8 +3,6 @@
   if (!isset($page_header)) $page_header = '';
   if (!isset($description)) $description = '';
   if (!isset($css)) $css = null;
-
-  include_once($incdir . 'php/testimonials.php');
 ?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -17,6 +15,10 @@
     <title><?= $title ?></title>
     <meta name="description" content="<?= $description ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <?php if (isset($canonical)): ?>
+    <link rel="canonical" href="<?= $canonical ?>">
+    <?php endif; ?>
 
     <link rel="icon" size="228x228" href="<?= $incdir ?>icon.png">
     <link rel="apple-touch-icon" href="<?= $incdir ?>apple-touch-icon.png">
@@ -45,9 +47,14 @@
         <nav>
           <ul>
             <li><a href="<?= $incdir ?>">Home</a></li>
-            <li><a href="<?= $incdir ?>contact/">Contact Us</a></li>
+            <?php
+              $contact_url = $incdir . 'contact/';
+              if (isset($form_course_name)) {
+                $contact_url .= '?p=' . urlencode($form_course_name);
+              }
+            ?>
+            <li><a href="<?= $contact_url ?>">Contact Us</a></li>
             <li><a href="<?= $incdir ?>about/">About Us</a></li>
-            <!--<li><a href="<?= $incdir ?>location/">Location</a></li>-->
             <li><a href="<?= $incdir ?>students/">Student Resources</a></li>
           </ul>
         </nav>
