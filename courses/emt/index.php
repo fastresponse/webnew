@@ -21,8 +21,8 @@
     </div>
   </aside>
   <aside id="test_results">
-    <header><h3>Our Success Rate - <span class="bold red underline">96%</span></h3></header>
-    <p>In 2015*, <span class="bold underline red">96%</span> of our graduates passed the National Registration licensing test, making them eligible for immediate employment.</p>
+    <header><h3>Our Success Rate - <span class="testscore">96%</span></h3></header>
+    <p>In 2015*, <span class="testscore">96%</span> of our graduates passed the National Registration licensing test, making them eligible for immediate employment.</p>
     <div>* As of July 9th, 2015</div>
   </aside>
   <aside id="start_dates">
@@ -33,7 +33,7 @@
       <li>November 2nd, 2015 - Full Time (open)</li>
     </ul>
   </aside>
-  <aside id="details" class="collapsible start-closed-mobile">
+  <aside id="details" class="collapsible-mobile-start collapsible-tablet">
     <header class="stay-open"><h3 class="trigger">Course Details</h3></header>
     <p class="underline">Full Time</p>
     <ul>
@@ -88,7 +88,7 @@
       </aside>
     </div>
 
-    <div class="collapsible start-closed-mobile">
+    <div class="collapsible-mobile-start collapsible-tablet">
       <header class="stay-open"><h1>Accelerated EMT Program</h1></header>
       <h4 class="stay-open" style="margin: 0;">Training that will set you apart from the rest!</h4>
       <p class="stay-open">In only 5 weeks, you can become one of the best EMTs in the Bay Area. After your guaranteed externship you'll have the education and experience to take the National Registry EMT exam, where Fast Response students outperform the national average by XX%. Our graduates are highly sought-after by leading Bay Area ambulance companies, making you fully-qualified, job ready, and exceedingly employable.</p>

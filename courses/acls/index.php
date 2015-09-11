@@ -24,7 +24,7 @@
     <div class="button"><a href="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4106&pcatID=4105" target="_blank"><span class="nowrap">Initial Certification</span></span></a></div>
     <div class="button"><a href="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4107&pcatID=4105" target="_blank"><span class="nowrap">Renewal</span></span></a></div>
   </aside>
-  <aside id="faqs" class="collapsible start-closed-mobile">
+  <aside id="faqs" class="collapsible-mobile-start collapsible-tablet">
     <header class="stay-open"><h3 class="trigger">FAQs</h3></header>
     <dl>
       <dt>Question 1.</dt>
@@ -49,7 +49,7 @@
       </aside>
     </div>
 
-    <div class="collapsible start-closed-mobile">
+    <div class="collapsible-mobile-start collapsible-tablet">
       <header class="stay-open"><h1><?= $page_header ?></h1></header>
       <p class="stay-open">Our Advanced Cardiovascular Life Support (ACLS) course offers challenging and useful skills that make a difference in saving lives. A lively, low-stress class environment, with a focus on a team approach to medical emergencies has proven to be an essential and rewarding experience for all participants.</p>
       <p class="hide-desktop hide-tablet trigger bold red underline" style="text-align: center;" data-trigger-text="Continue Reading"></p>
@@ -85,7 +85,7 @@
 </section>
 
 <div id="bottom-bar">
-  <aside id="details" class="collapsible start-closed-mobile">
+  <aside id="details" class="collapsible-mobile-start collapsible-tablet">
     <header class="stay-open"><h3 class="trigger">Course Details</h3></header>
     <p class="underline">Initial Certification</p>
     <ul>
@@ -106,7 +106,7 @@
       <li>Course price: <span class="price">$190.00</span></li>
     </ul>
   </aside>
-  <aside id="books" class="collapsible start-closed-mobile">
+  <aside id="books" class="collapsible-mobile-start collapsible-tablet">
     <header class="stay-open"><h3 class="trigger">Books</h3></header>
     <p class="underline">AHA ACLS Provider Manual with Pocket Reference Card Set</p>
     <ul>

@@ -7,14 +7,29 @@
 ?>
 <?php require_once($incdir . 'header.php'); ?>
 
+<div id="sidebar-primary">
+  <aside id="slideshow">
+    <img src="/slideshow/frontpage/slide01.jpg" alt="" />
+  </aside>
+
+  <aside id="contact-info">
+    <header><h3>Contact Us</h3></header>
+    <div id="phone">
+      <div class="button"><a href="tel://510-849-4009"><span class="nowrap">510-849-4009</span></a></div>
+    </div>
+    <div id="email">
+      <div class="button"><a href="contact_us.php"><span class="nowrap">Send an Email</span></a></div>
+    </div>
+  </aside>
+</div>
+
 <section id="content">
 
   <header><h1>Student Resources</h1></header>
 
-  <article id="admissions" class="collapsible start-closed-mobile start-closed-tablet">
+  <article id="admissions" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
     <header class="stay-open"><h1 class="trigger">Admissions</h1></header>
     <section>
-      <h3></h3>
       <dl>
         <dt><a href="/pdf/admissions/Immunization Form - All Classes.pdf" target="_blank">Immunization Form - General</a></dt>
         <dd>Checklist for required immunizations. To be filled out by a licensed nurse or physician.</dd>
@@ -43,28 +58,19 @@
     </section>
   </article>
 
-  <article id="current_students" class="collapsible start-closed-mobile">
-    <header class="stay-open"><h1 class="trigger">Current Students</h1></header>
+  <article id="emt" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+    <header class="stay-open"><h1 class="trigger">Emergency Medical Technician</h1></header>
     <section>
-      <h3>EMT</h3>
+      <h3>Current Students</h3>
       <dl>
         <dt><a href="#">EMT Skills Videos</a></dt>
       </dl>
     </section>
-  </article>
-
-  <article id="externship" class="collapsible start-closed-mobile start-closed-tablet">
-    <header class="stay-open"><h1 class="trigger">Externship</h1></header>
-    <section>
-      <h3>General</h3>
+    <section class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+      <h3 class="trigger">Externship</h3>
       <dl>
         <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
-      </dl>
-    </section>
 
-    <section class="collapsible start-closed-mobile start-closed-tablet">
-      <h3 class="trigger">EMT</h3>
-      <dl>
         <dt><a href="/pdf/externship/emt/EMT Externship Expectations.pdf" target="_blank">Externship Expectations</a></dt>
 
         <dt><a href="/pdf/externship/emt/Clinical_and_Field_Patient_Contact_Log.pdf" target="_blank">Clinical and Field Patient Contact Log</a></dt>
@@ -86,140 +92,124 @@
         <dd>You must fill out a student agreement for each ride-along externship you attend.</dd>
       </dl>
     </section>
-  </article>
-
-  <article id="graduates" class="collapsible start-closed-mobile">
-    <header class="stay-open"><h1 class="trigger">Graduates</h1></header>
     <section>
-      <h3></h3>
+      <h3>Graduates</h3>
       <dl>
         <dt><a href="#">Career Resources from Fast Response</a></dt>
       </dl>
     </section>
   </article>
 
-  <!--
-  <article id="career_courses" class="collapsible start-closed-mobile">
-    <header class="stay-open"><h1 class="trigger">Career Courses</h1></header>
+  <article id="phlebotomy" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+    <header class="stay-open"><h1 class="trigger">Phlebotomy</h1></header>
     <section>
-      <h3>Emergency Medical Technician</h3>
+      <h3>Current Students</h3>
       <dl>
-        <dt><a href="#">Immunizations Checklist</a></dt>
-        <dd>To be filled out by a licensed nurse or physician.</dd>
-
-        <dt><a href="#">Externship Requirements Checklist</a></dt>
-
-        <dt><a href="#">Externship Expectations</a></dt>
-        <dd>Please read this document carefully. It is your responsibility to understand everything that is required of you on your externships.</dd>
-
-        <dt><a href="#">Clinical and Field Patient Contact Log</a></dt>
-        <dd>You need a minimum of 10 logged patient contacts. You may use the same form for both clinical and field sites.</dd>
+        <dt></dt>
       </dl>
     </section>
     <section>
-      <h3>Certified Phlebotomy Technician</h3>
+      <h3>Externship</h3>
       <dl>
         <dt></dt>
-        <dd></dd>
       </dl>
     </section>
     <section>
-      <h3>Paramedic</h3>
+      <h3>Graduates</h3>
       <dl>
         <dt></dt>
-        <dd></dd>
-      </dl>
-    </section>
-    <section>
-      <h3>Pharmacy Technician</h3>
-      <dl>
-        <dt></dt>
-        <dd></dd>
-      </dl>
-    </section>
-    <section>
-      <h3>Clinical Medical Assistant</h3>
-      <dl>
-        <dt></dt>
-        <dd></dd>
-      </dl>
-    </section>
-    <section>
-      <h3>Sterile Processing Technician</h3>
-      <dl>
-        <dt></dt>
-        <dd></dd>
       </dl>
     </section>
   </article>
 
-  <article id="continuing_ed" class="collapsible start-closed-mobile left-divider">
-    <header class="stay-open"><h1 class="trigger">Continuing Education</h1></header>
+  <article id="medical_assistant" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+    <header class="stay-open"><h1 class="trigger">Medical Assistant</h1></header>
     <section>
-      <h3>Basic Life Support</h3>
+      <h3>Current Students</h3>
       <dl>
         <dt></dt>
-        <dd></dd>
       </dl>
     </section>
     <section>
-      <h3>Advanced Cardiovascular Life Support</h3>
+      <h3>Externship</h3>
       <dl>
         <dt></dt>
-        <dd></dd>
       </dl>
     </section>
     <section>
-      <h3>Pediatric Advanced Life Support</h3>
+      <h3>Graduates</h3>
       <dl>
         <dt></dt>
-        <dd></dd>
-      </dl>
-    </section>
-    <section>
-      <h3>ECG Basic</h3>
-      <dl>
-        <dt></dt>
-        <dd></dd>
-      </dl>
-    </section>
-    <section>
-      <h3>ECG Technician</h3>
-      <dl>
-        <dt></dt>
-        <dd></dd>
-      </dl>
-    </section>
-    <section>
-      <h3>EMT Refresher</h3>
-      <dl>
-        <dt></dt>
-        <dd></dd>
-      </dl>
-    </section>
-    <section>
-      <h3>EMT Skills Verification</h3>
-      <dl>
-        <dt></dt>
-        <dd></dd>
-      </dl>
-    </section>
-    <section>
-      <h3>International Trauma Life Support</h3>
-      <dl>
-        <dt></dt>
-        <dd></dd>
-      </dl>
-    </section>
-    <section>
-      <h3>First Aid</h3>
-      <dl>
-        <dt></dt>
-        <dd></dd>
       </dl>
     </section>
   </article>
-  -->
+
+  <article id="pharm_tech" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+    <header class="stay-open"><h1 class="trigger">Pharmacy Technician</h1></header>
+    <section>
+      <h3>Current Students</h3>
+      <dl>
+        <dt></dt>
+      </dl>
+    </section>
+    <section>
+      <h3>Externship</h3>
+      <dl>
+        <dt></dt>
+      </dl>
+    </section>
+    <section>
+      <h3>Graduates</h3>
+      <dl>
+        <dt></dt>
+      </dl>
+    </section>
+  </article>
+
+  <article id="sterile_processing" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+    <header class="stay-open"><h1 class="trigger">Sterile Processing</h1></header>
+    <section>
+      <h3>Current Students</h3>
+      <dl>
+        <dt></dt>
+      </dl>
+    </section>
+    <section>
+      <h3>Externship</h3>
+      <dl>
+        <dt></dt>
+      </dl>
+    </section>
+    <section>
+      <h3>Graduates</h3>
+      <dl>
+        <dt></dt>
+      </dl>
+    </section>
+  </article>
+
+  <article id="paramedic" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+    <header class="stay-open"><h1 class="trigger">Paramedic</h1></header>
+    <section>
+      <h3>Current Students</h3>
+      <dl>
+        <dt></dt>
+      </dl>
+    </section>
+    <section>
+      <h3>Externship</h3>
+      <dl>
+        <dt></dt>
+      </dl>
+    </section>
+    <section>
+      <h3>Graduates</h3>
+      <dl>
+        <dt></dt>
+      </dl>
+    </section>
+  </article>
+
 </section>
 
 <div id="bottom-bar">

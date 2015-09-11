@@ -1,13 +1,8 @@
 function enable_collapse() {
   var width = $(window).width();
-  var collapsibles = $('.collapsible');
-  var col_headers = collapsibles.children('header');
   var type;
-
   if (width >= 800) {
-    //type = 'desktop';
-    col_headers.unbind('click');
-    return;
+    type = 'desktop';
   }
   else if (width >= 550) {
     type = 'tablet';
@@ -16,52 +11,12 @@ function enable_collapse() {
     type = 'mobile';
   }
 
-  // append open/close icon
-  // define default visibility via css
-  /*
-  * triangle up: &#x25B2;
-  * triangle down: &#x25BC;
-  * triangle right: &#x25B6;
-  * triangle left: &#x25C0;
-  */
-  var $opened = $('<span></span>').attr('class', 'collapsible-opened').append(' &#x25B2;');
-  var $closed = $('<span></span>').attr('class', 'collapsible-closed').append(' &#x25B6;');
-  col_headers.find('h1,h2,h3,h4,h5').append($opened, $closed);
-  col_headers.css('cursor', 'pointer');
+  var collapsibles = $('.collapsible-'+type+', .collapsible-'+type+'-start');
 
-  col_headers.click(function() {
-    if ( $(window).width() >= 800) return;
-    var main = $(this).parent();
-    main.children(':not(header)').slideToggle('fast');
-    main.find('.collapsible-opened').toggle();
-    main.find('.collapsible-closed').toggle();
-  });
-
-  // process start-closed classes
-  // do this here instead of in CSS so it's only hidden if JS is enabled to reshow it
-  collapsibles.filter('.start-closed-'+type).children(':not(header)').hide();
-  collapsibles.filter('.start-closed-'+type).find('.collapsible-opened').hide();
-  collapsibles.filter(':not(.start-closed-'+type+')').find('.collapsible-closed').hide();
-}
-
-function enable_collapse2() {
-  var width = $(window).width();
-  var collapsibles = $('.collapsible');
   var triggers = collapsibles.find('.trigger');
-  var col_headers = collapsibles.children('header');
-  var type;
 
-  if (width >= 800) {
-    //type = 'desktop';
-    triggers.unbind('click');
-    return;
-  }
-  else if (width >= 550) {
-    type = 'tablet';
-  }
-  else {
-    type = 'mobile';
-  }
+  // in case this is called for window resizing
+  triggers.unbind('click');
 
   // create open/close icons
   /*
@@ -79,12 +34,10 @@ function enable_collapse2() {
       $(this).text(text);
     }
     $(this).append($opened, $closed);
-    $(this).css('cursor', 'pointer');
   });
 
   triggers.click(function() {
-    if ( $(window).width() >= 800) return;
-    var main = $(this).closest('.collapsible');
+    var main = $(this).closest('.collapsible-'+type+', .collapsible-'+type+'-start');
     main.children(':not(.trigger, .stay-open)').slideToggle('fast');
     $(this).find('.collapsible-opened').toggle();
     $(this).find('.collapsible-closed').toggle();
@@ -92,9 +45,9 @@ function enable_collapse2() {
 
   // process start-closed classes
   // do this here instead of in CSS so it's only hidden if JS is enabled to reshow it
-  collapsibles.filter('.start-closed-'+type).children(':not(.trigger, .stay-open)').hide();
-  collapsibles.filter('.start-closed-'+type).find('.collapsible-opened').hide();
-  collapsibles.filter(':not(.start-closed-'+type+')').find('.collapsible-closed').hide();
+  collapsibles.filter('.collapsible-'+type+'-start').children(':not(.trigger, .stay-open)').hide();
+  collapsibles.filter('.collapsible-'+type+'-start').find('.collapsible-opened').hide();
+  collapsibles.filter(':not(.collapsible-'+type+'-start)').find('.collapsible-closed').hide();
 }
 
 $(document).ready(function() {
@@ -103,6 +56,6 @@ $(document).ready(function() {
     $('nav').slideToggle('fast');
   });
 
-  enable_collapse2();
+  enable_collapse();
 
 });

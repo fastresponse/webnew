@@ -124,7 +124,7 @@
 <section id="commuter">
   <header><h2>Commuter Information</h2></header>
 
-  <div id="transit" class="border collapsible start-closed-mobile start-closed-tablet">
+  <div id="transit" class="border collapsible-mobile-start collapsible-tablet-start">
     <header class="stay-open"><h4 class="trigger">Public Transit</h4></header>
     <ul>
       <li><strong>BART:</strong> Fast Response is located a quarter of a block from the <a href="http://www.bart.gov/stations/dbrk/index.aspx">Downtown Berkeley</a> BART station. This station is served by the Red and Orange lines, with trains arriving every 15 minutes or less through most of the day. Taking BART is the best option to avoid parking hassles!</li>
@@ -134,7 +134,7 @@
     </ul>
   </div>
 
-  <div id="parking" class="border collapsible start-closed-mobile start-closed-tablet">
+  <div id="parking" class="border collapsible-mobile-start collapsible-tablet-start">
     <header class="stay-open"><h4 class="trigger">Parking</h4></header>
     <ul>
       <li><strong>Parking Validation:</strong> Sorry, we do not validate parking.</li>

@@ -137,6 +137,18 @@ a {
   background: #0a1e3c;
 }
 
+.price {
+  border: 1px dotted red;
+  border-radius: 6px;
+  padding: 1px;
+}
+
+.testscore {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 /* ==============
     STRUCTURE
    ============== */
@@ -262,6 +274,10 @@ nav a:visited {
 
 nav a:hover {
     text-decoration: underline;
+}
+
+.trigger {
+    cursor: pointer;
 }
 
 /* ==============
