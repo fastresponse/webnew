@@ -39,7 +39,7 @@
 }
 
 #top-bar {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   color: white !important;
   padding-bottom: 10px;
 }
@@ -103,20 +103,32 @@ p:last-child {
     display: block;
     margin: 0 auto;
   }
+  #top-bar > h3 {
+    font-size: 140%;
+  }
 }
 
 @media only screen and (min-width: 800px) {
   #top-bar {
+    position: relative;
+    height: 110px;
+    padding-left: 285px;
     width: 100%;
   }
   #top-bar > img {
+    position: absolute;
+    left: 0;
+    height: 110px;
     max-width: 50%;
     vertical-align: bottom;
   }
   #top-bar > h3 {
     display: inline-block;
-    width: 49%;
+    height: 110px;
+    line-height: 110px;
+    width: 100%;
     vertical-align: bottom;
+    font-size: 120%;
   }
   #top-bar > #phone,
   #top-bar > #email {

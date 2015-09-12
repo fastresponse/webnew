@@ -24,9 +24,9 @@
         <dd>Mon - Thu: 8 AM - 6 PM</dd>
         <dd>Fri: 8 AM - 5 PM</dd>
 		  <dt>Phone</dt>
-        <dd>1-510-849-4009</dd>
+        <dd><a href="tel://" class="nowrap">510-849-4009</a></dd>
 		  <dt>Fax</dt>
-        <dd>1-866-290-2739</dd>
+        <dd>866-290-2739</dd>
 		  <dt>Email</dt>
         <dd><a href="mailto: info@fastresponse.org">info@fastresponse.org</a></dd>
 		  <dt>Address</dt>
@@ -47,11 +47,11 @@
         <dd>Fri: 8 AM - 5 PM</dd>
         <dd>Sat: 9 AM - 5 PM</dd>
 		  <dt>Phone</dt>
-        <dd>1-510-809-3654</dd>
+        <dd><a href="tel://" class="nowrap">510-809-3654</a></dd>
 		  <dt>Toll Free</dt>
-        <dd>1-800-637-7387</dd>
+        <dd><a href="tel://" class="nowrap">800-637-7387</a></dd>
 		  <dt>Fax</dt>
-        <dd>1-866-572-3363</dd>
+        <dd>866-572-3363</dd>
 		  <dt>Email</dt>
         <dd><a href="mailto: admissions@fastresponse.org">admissions@fastresponse.org</a></dd>
 	  </dl></dd>
@@ -145,37 +145,37 @@
       <ul>
 	      <li>
 	        <div>Standard Parking</div>
-	        <div>2020 Kittredge St between Harold and Milvia <a href="tel://" class="nowrap">(510) 665-1662</a></div>
+	        <div>2020 Kittredge St between Harold and Milvia <a href="tel://" class="nowrap">510-665-1662</a></div>
 	        <div>$2.50 per hour. In by 8:30am, out by 6:00pm: $8.00 for the day.</div>
 	        <div>Hours: Su-Th 6am-12am, Fr-Sa 6am-2am</div>
 	      </li>
 	      <li>
 	        <div>Allston Way Garage (Great Western)/Standard Parking</div>
-	        <div>2061 Allston Way between Milvia and Shattuck <a href="tel://" class="nowrap">(510) 981-9443</a></div>
+	        <div>2061 Allston Way between Milvia and Shattuck <a href="tel://" class="nowrap">510-981-9443</a></div>
 	        <div>$2.50 per hour, $14.50 per day. In by 8:30am, out by 6:00pm: $8.00 for the day.</div>
 	        <div>Hours: Mo-Th 6am-12am, Fr 6am-2am, Sa 8am-2am, <span class="nowrap">Su 8am-12am</span></div>
 	      </li>
 	      <li>
 	        <div>Center Street Garage - Parking Concepts Inc. (PCI)</div>
-	        <div>2025 Center St. between Milvia St. and Shattuck Ave. <a href="tel://" class="nowrap">(510) 649-9822</a></div>
+	        <div>2025 Center St. between Milvia St. and Shattuck Ave. <a href="tel://" class="nowrap">510-649-9822</a></div>
 	        <div>$1.00 first hour, $2.00 each hour after. $15.00 per day max.</div>
 	        <div>Hours: Mo-Fr 5a-12a, Sa 7a-12a, Sun 12p-12p</div>
 	      </li> 
 	      <li>
 	        <div>Golden Bear Garage - Ampco System Parking</div>
-	        <div>1995 University Ave. Enter on Bonita Ave. <a href="tel://" class="nowrap">(510) 848-2262</a></div>
+	        <div>1995 University Ave. Enter on Bonita Ave. <a href="tel://" class="nowrap">510-848-2262</a></div>
 	        <div>$3.00 per hour, $14.00 per day max. In by 9:30am, out by 6:30pm: $10.00 for the day.</div>
 	        <div>Hours: Mo-Th 6am-10pm, Fr 8am-10pm, Sa 8am-6pm, <span class="nowrap">Sun CLOSED</span></div>
 	      </li>
 	      <li>
 	        <div>Oxford Street Surface Lot - Parking Concepts, Inc. (PCI)</div>
-	        <div>Oxford St. between Allston Way and Kittredge St <a href="tel://" class="nowrap">(510) 843-1788</a></div>
+	        <div>Oxford St. between Allston Way and Kittredge St <a href="tel://" class="nowrap">510-843-1788</a></div>
 	        <div>$2.00 first hour, $4.00 second hour, $8.00 third hour. $20 max.</div>
 	        <div>Hours: Mo-Th 7am-1am, Fr-Sa 7am-2am, <span class="nowrap">Su 8am-10pm</span></div>
 	      </li>
 	      <li>
 	        <div>Promenade Garage - Douglas Parking</div>
-	        <div>1936 Addison St. between MLK Jr. Way and Milvia St. <a href="tel://" class="nowrap">(510) 849-4959</a></div>
+	        <div>1936 Addison St. between MLK Jr. Way and Milvia St. <a href="tel://" class="nowrap">510-849-4959</a></div>
 	        <div>$3.00 per hour, $10.00 per day.</div>
 	        <div>Hours: Mo-Sa 7:30am-7pm</div>
 	      </li>

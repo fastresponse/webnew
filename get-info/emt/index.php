@@ -24,7 +24,7 @@
 
 <div id="top-bar" class="bg-darkblue">
   <img src="<?= $incdir ?>img/fr-logo-darkblue.png" alt="" />
-  <h3>Career training in Berkeley, CA</h3>
+  <h3 style="width: 100%;">Career training in Berkeley, CA</h3>
   <div id="phone">
     <div class="button"><a href="tel://800-637-7378"><span class="nowrap">Call<span class="hide-mobile"> 800-637-7378</span></span></a></div>
   </div>

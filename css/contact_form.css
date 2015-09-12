@@ -48,7 +48,7 @@ label[for="form-emt"] {
 }
 input[type="submit"],
 #form-call {
-  margin: 20px auto 0;
+  margin: 20px auto 10px;
   line-height: 1.5em;
   width: 80%;
   display: block;
@@ -93,7 +93,7 @@ input[type="submit"],
     /*display: none;*/
     font-size: 100%;
   }
-  #contact-form {
+  form {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start

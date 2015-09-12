@@ -855,7 +855,6 @@ article > section > p {
 
     body {
         width: 100%;
-        height: 100vh;
         display: flex;
         flex-direction: column;
     }
@@ -965,6 +964,14 @@ article > section > p {
     
 }
 
+/* only fix the footer to the bottom of the screen if it's tall enough */
+@media only screen and (min-height: 800px) {
+  body {
+    height: 100vh;
+  }
+}
+
+
 /* original max width: 1140 - 10% = 1026 */
 
 @media only screen and (min-width: 1300px) {
@@ -974,7 +981,7 @@ article > section > p {
    =============== */
 
     .wrapper {
-        width: 1170px; /* 1140px - 10% for margins */
+        width: 1170px; /* 1300px - 10% for margins */
         margin: 0 auto;
     }
 }
