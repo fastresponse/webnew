@@ -20,20 +20,39 @@
     <link rel="canonical" href="<?= $canonical ?>">
     <?php endif; ?>
 
-    <link rel="icon" size="228x228" href="<?= $incdir ?>icon.png">
-    <link rel="apple-touch-icon" href="<?= $incdir ?>apple-touch-icon.png">
-    <meta name="msapplication-square70x70logo" content="icon\_smalltile.png">
-    <meta name="msapplication-square150x150logo" content="icon\_mediumtile.png">
-    <meta name="msapplication-wide310x150logo" content="icon\_widetile.png">
-    <meta name="msapplication-square310x310logo" content="icon\_largetile.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="<?= $incdir ?>icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="<?= $incdir ?>icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?= $incdir ?>icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?= $incdir ?>icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?= $incdir ?>icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?= $incdir ?>icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?= $incdir ?>icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?= $incdir ?>icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= $incdir ?>icons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="<?= $incdir ?>icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="<?= $incdir ?>icons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="<?= $incdir ?>icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="<?= $incdir ?>icons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="<?= $incdir ?>icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="<?= $incdir ?>manifest.json">
+    <meta name="apple-mobile-web-app-title" content="Fast Response">
+    <meta name="application-name" content="Fast Response">
+    <meta name="msapplication-TileColor" content="#f5f5f5">
+    <meta name="msapplication-TileImage" content="<?= $incdir ?>icons/mstile-144x144.png">
+    <meta name="msapplication-config" content="<?= $incidr ?>browserconfig.xml" />
+    <meta name="theme-color" content="#f5f5f5">
 
     <link rel="stylesheet" href="<?= $incdir ?>css/normalize.min.css">
     <link rel="stylesheet" href="<?= $incdir ?>css/main.css">
     <?php foreach ($css as $file): ?>
       <link rel="stylesheet" href="<?= $incdir ?>css/<?= $file ?>">
     <?php endforeach; ?>
+    <link rel="stylesheet" href="<?= $incdir ?>js/vendor/jquery.bxslider/jquery.bxslider.css">
 
     <script src="<?= $incdir ?>js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <script src="<?= $incdir ?>js/vendor/jquery-1.11.3.min.js"></script>
+
   </head>
   <body>
     <div class="header-container">

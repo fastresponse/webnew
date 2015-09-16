@@ -28,6 +28,31 @@
       <li><a href="<?= $incdir ?>pdf/BPPE Performance Fact Sheets 2014.pdf">Performance Fact Sheets 2014</a></li>
     </ul>
   </aside>
+  <aside id="postsec">
+    <header><h3>Postsecondary Courses</h3></header>
+    <ul>
+      <li><a href="#">Emergency Medical Technician</a></li>
+      <li><a href="#">Certified Phlebotomy Technician</a></li>
+      <li><a href="#">Pharmacy Technician</a></li>
+      <li><a href="#">Clinical Medical Assistant</a></li>
+      <li><a href="#">Paramedic</a></li>
+      <li><a href="#">Sterile Processing Technician</a></li>
+    </ul>
+  </aside>
+  <aside id="ceu">
+    <header><h3>Continuing Education Courses</h3></header>
+    <ul>
+	    <li><a href="#">Healthcare Provider CPR (BLS)</a></li>
+	    <li><a href="#">Advanced Cardiac Life Support (ACLS)</a></li>
+	    <li><a href="#">Pediatric Advanced Life Support (PALS)</a></li>
+	    <li><a href="#">ECG Basic Arrhythmia Recognition</a></li>
+	    <li><a href="#">ECG Technician</a></li>
+	    <li><a href="#">EMT Refresher</a></li>
+      <li><a href="#">EMT Skills Verification</a></li>
+      <li><a href="#">International Trauma Life Support</a></li>
+      <li><a href="#">First Aid</a></li>
+    </ul>
+  </aside>
 </div>
 
 <section id="content">
@@ -43,27 +68,7 @@
 	    <p>Our Phlebotomy Technician program is approved by the State of California Department of Health Services, and our Emergency Medical Technician program is approved by the State of California Emergency Medical Services Authority.</p>
 	    <p>As a School of Health Care Education, our curriculum is approved by The Department of Health Services California Laboratory Field Services, California Emergency Medical Services Authority (EMSA), and registered with The Bureau of Private Postsecondary Vocational Education. To maintain this status, we must uphold the same standards as a Junior College, University or Vocational School, but we can offer comparable training in a shorter period of time, providing you with superior training while you begin or augment your career in the medical field.</p>
 	    <p>In addition to providing training at our main campus in Berkeley, we also teach in a variety of healthcare and corporate settings in the greater Bay Area. We contract with hospitals, businesses, schools, daycares, community organizations, and individuals.</p>
-	    <p>Since 1989, Fast Response School of Health Care Education has been the Bay Area's premier community and professional training center, offering certifications in:</p>
-	    <div>
-	      <p class="underline">POSTSECONDARY COURSES</p>
-	      <ul>
-	        <li>Emergency Medical Technician</li>
-	        <li>Certified Phlebotomy Technician</li>
-          <li>Pharmacy Technician</li>
-	        <li>Clinical Medical Assistant</li>
-	        <li>Paramedic</li>
-	        <li>Sterile Processing Technician</li>
-	      </ul>
-	      <p class="underline">CEU COURSES</p>
-	      <ul>
-	        <li>AHA Healthcare Provider CPR (BLS)</li>
-	        <li>AHA Advanced Cardiac Life Support (ACLS)</li>
-	        <li>AHA Pediatric Advanced Life Support (PALS)</li>
-	        <li>ECG Basic Arrhythmia Recognition</li>
-	        <li>ECG Technician</li>
-	        <li>EMT Refresher</li>
-	      </ul>
-	    </div>
+	    <p>Since 1989, Fast Response School of Health Care Education has been the Bay Area's premier community and professional training center, offering certifications in many postsecondary and continuing education courses.</p>
 	    <p>We promote an energetic, diverse, and challenging atmosphere where you are given the attention needed to lay the groundwork for success in today's exciting healthcare industry.  Our Instructors are all certified or licensed medical professionals with years of field and teaching experience.  Our school administrators are invested in the success of every student.  Fast Response is a fifty percent woman-owned business, with women and minorities making up a large percentage of our staff.</p>
       <hr />
       <h4>Our Mission</h4>
