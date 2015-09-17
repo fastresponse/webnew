@@ -55,6 +55,15 @@ article h1 {
   #bottom-bar {
     order: 2;
   }
+  #content-bottom {
+    display: flex;
+  }
+  #content-bottom > * {
+    flex: 1 49%;
+  }
+  #content-bottom > *:nth-child(odd) {
+    margin-right: 2%;
+  }
   #testimonials {
     flex-direction: column;
   }

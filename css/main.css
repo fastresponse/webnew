@@ -377,6 +377,44 @@ aside li {
     background-color:#bbb;
     font-weight:bold;
 }
+.contact-btn input,
+.registration-btn input {
+  width: 100%;
+  padding: 6px 8px;
+  /*
+  border-radius: 7px;
+  border-color: rgb(175, 175, 175);
+  */
+  font-weight: bold;
+  text-align: center;
+  color: rgb(34, 34, 34);
+  box-shadow: rgb(140, 140, 140) 2px 4px;
+}
+.registration-btn {
+  margin-top: 10px;
+}
+.registration-btn:first-of-type {
+}
+
+.reg-notice h3 {
+  color: red;
+  margin: 5px auto;
+}
+.reg-notice ul {
+  list-style-position: inside;
+}
+.reg-notice li {
+  list-style-type: disc;
+}
+.reg-notice p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+.reg-notice p:last-of-type {
+  margin-bottom: 0;
+}
+
 #announcements {
     text-align: center;
 }
@@ -478,11 +516,21 @@ article > section > p {
     order: 2;
     display: flex;
     flex-flow: column;
-    /*align-items: center;*/
+    /*
+    align-items: center;
     align-items: flex-start;
+    */
 }
 #phone-buttons .button a {
     font-size: 15px;
+}
+#phone-buttons input {
+    padding: 3px 6px;
+    font-size: 15px;
+    box-shadow: none;
+}
+#phone-buttons form {
+    margin-top: 1px;
 }
 #social-media-footer {
     order: 3;

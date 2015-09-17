@@ -14,10 +14,17 @@
   <aside id="contact-info">
     <header><h3>Contact Us</h3></header>
     <div id="phone">
-      <div class="button"><a href="tel://510-849-4009"><span class="nowrap"><span class="hide-mobile">510-849-4009</span><span class="hide-tablet hide-desktop">Call</span></span></a></div>
+      <!--<div class="button"><a href="tel://510-849-4009"><span class="nowrap"><span class="hide-mobile">510-849-4009</span><span class="hide-tablet hide-desktop">Call</span></span></a></div>-->
+      <form action="tel:+15108494009" method="get" class="contact-btn">
+        <input type="submit" class="phone-btn" name="btn" value="510-849-4009" />
+      </form>
     </div>
     <div id="email">
-    <div class="button"><a href="<?= $incdir ?>contact/?p=<?= urlencode($form_course_name) ?>"><span class="nowrap"><span class="hide-mobile">Send an </span>Email</span></a></div>
+      <!--<div class="button"><a href="<?= $incdir ?>contact/?p=<?= urlencode($form_course_name) ?>"><span class="nowrap"><span class="hide-mobile">Send an </span>Email</span></a></div>-->
+      <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
+        <input type="submit" class="email-btn" name="btn" value="Send an Email" />
+        <input type="hidden" name="p" value="<?= urlencode($form_course_name) ?>" />
+      </form>
     </div>
   </aside>
   <aside id="test_results">

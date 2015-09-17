@@ -30,9 +30,10 @@
 .main aside.side-image {
   border: none;
   padding: 0;
+  margin: 0;
 }
 .main aside.side-image img {
-  margin-top: 5px;
+  /*margin-top: 5px;*/
 }
 .main aside.side-image img:first-child {
   margin-top: 0;

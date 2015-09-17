@@ -5,26 +5,62 @@
   $description = '';
   $course_code = 'ACLS';
   $css = array('courses.css');
+  $form_course_name = 'ACLS';
 ?>
 <?php require_once($incdir . 'header.php'); ?>
 
 <div id="sidebar-primary">
-  <aside id="contact-info">
-    <header><h3>Contact Us</h3></header>
-    <div id="phone">
-      <div class="button"><a href="tel://510-849-4009"><span class="nowrap"><span class="hide-mobile">510-849-4009</span><span class="hide-tablet hide-desktop">Call</span></span></a></div>
-    </div>
-    <div id="email">
-    <div class="button"><a href="<?= $incdir ?>contact_us.php"><span class="nowrap"><span class="hide-mobile">Send an </span>Email</span></a></div>
-    </div>
-  </aside>
   <aside id="registration">
     <header><h3>Online Registration</h3></header>
+    <!--
     <div class="button"><a href="http://www.ssreg.com/fastresponse/calendar.asp?page=Calendar" target="_blank"><span class="nowrap">View Calendar</span></span></a></div>
     <div class="button"><a href="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4106&pcatID=4105" target="_blank"><span class="nowrap">Initial Certification</span></span></a></div>
     <div class="button"><a href="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4107&pcatID=4105" target="_blank"><span class="nowrap">Renewal</span></span></a></div>
+    -->
+    <form action="http://www.ssreg.com/fastresponse/calendar.asp?page=Calendar" method="get" class="registration-btn" target="_blank">
+      <input type="submit" class="calendar-btn" name="btn" value="View Calendar" />
+      <input type="hidden" name="page" value="Calendar" />
+    </form>
+    <form action="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4106&pcatID=4105" method="get" class="registration-btn" target="_blank">
+      <input type="submit" class="register-btn" name="btn" value="Initial Certification" />
+      <input type="hidden" name="catID" value="4106" />
+      <input type="hidden" name="pcatID" value="4105" />
+    </form>
+    <form action="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4107&pcatID=4105" method="get" class="registration-btn" target="_blank">
+      <input type="submit" class="register-btn" name="btn" value="Renewal" />
+      <input type="hidden" name="catID" value="4107" />
+      <input type="hidden" name="pcatID" value="4105" />
+    </form>
+    <hr />
+    <div class="reg-notice">
+      <header><h3>Attention!</h3></header>
+      <p><span class="nowrap">If you are employed by one of</span> <span class="nowrap">the following medical facilities:</span></p>
+      <ul>
+        <li>Alta Bates Medical Center (RNs only)</li>
+        <li>Alameda County Medical Center</li>
+        <li>WestMed Ambulance</li>
+        <li>Pro Transport-1</li>
+      </ul>
+      <p>Then you <span class="underline red">must</span> register by phone.</p>
+    </div>
   </aside>
-  <aside id="faqs" class="collapsible-mobile-start collapsible-tablet">
+ <aside id="contact-info">
+    <header><h3>Contact Us</h3></header>
+    <div id="phone">
+      <!--<div class="button"><a href="tel://510-849-4009"><span class="nowrap"><span class="hide-mobile">510-849-4009</span><span class="hide-tablet hide-desktop">Call</span></span></a></div>-->
+      <form action="tel:+15108494009" method="get" class="contact-btn">
+        <input type="submit" class="phone-btn" name="btn" value="510-849-4009" />
+      </form>
+    </div>
+    <div id="email">
+      <!--<div class="button"><a href="<?= $incdir ?>contact_us.php"><span class="nowrap"><span class="hide-mobile">Send an </span>Email</span></a></div>-->
+      <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
+        <input type="submit" class="email-btn" name="btn" value="Send an Email" />
+        <input type="hidden" name="p" value="<?= urlencode($form_course_name) ?>" />
+      </form>
+    </div>
+  </aside> 
+  <aside id="faqs" style="display: none" class="collapsible-mobile-start collapsible-tablet">
     <header class="stay-open"><h3 class="trigger">FAQs</h3></header>
     <dl>
       <dt>Question 1.</dt>
@@ -41,6 +77,7 @@
 
 <section id="content">
   <article>
+    <!--
     <div id="sidebar-secondary">
       <aside>
         <header><h3>Test box</h3></header>
@@ -48,6 +85,7 @@
         <div>We need to decide whether we want to use this sidebar for CEU pages. It can be hidden in mobile format.</div>
       </aside>
     </div>
+    -->
 
     <div class="collapsible-mobile-start collapsible-tablet">
       <header class="stay-open"><h1><?= $page_header ?></h1></header>
@@ -57,30 +95,12 @@
       <p>Please read through our <a href="/school/policies/ceu.php">Continuing Education Policies</a> before registering.</p>
     </div>
 
-    <!--
-    <aside id="content-bottom">
-      <header class="stay-open"><h3 class="trigger">Books</h3></header>
-      <p class="underline">AHA ACLS Provider Manual with Pocket Reference Card Set</p>
-      <ul>
-        <li><span class="bold red">Required</span></li>
-	      <li><span class="isbn-label">AHA item #:</span> 901014</li>
-	      <li><span class="isbn-label">ISBN:</span> 1616690100</li>
-	      <li><span class="isbn-label">ISBN-13:</span> 9781616690106</li>
-        <li>Our price: <span class="price">$52.75</span>.
-        <li>A previously purchased book can be used as long as it meets the current (2010) AHA guidelines.</li>
-        <li class="red">This book must be used <span class="bold">during class</span>, per AHA requirements. Students without a book will not receive a certification card.</li>
-      </ul>
-      <hr />
-      <p class="underline">Fast Response ACLS Study Guide</p>
-      <ul>
-        <li><span class="bold yellow">Recommended</span></li>
-        <li>Provided <span class="price">free</span> by Fast Response.</li>
-        <li><a href="/pdfs/ACLS - Study Guide.pdf" target="_blank">Click here to download</a>.</li>
-      </ul>
-      <hr />
-      <div class="small-print">On-site book purchase is available Mon - Fri. Books may be purchased elsewhere at student discretion.</div>
-    </aside>
-    -->
+    <div id="content-bottom">
+      <div style="background: yellow; min-height: 200px;"/></div>
+      <div style="background: yellow; min-height: 200px;"/></div>
+      <img src="" alt="" style="min-height: 150px;"/>
+      <img src="" alt="" style="min-height: 150px;"/>
+    </div>
   </article>
 </section>
 

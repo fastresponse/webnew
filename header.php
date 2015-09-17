@@ -47,7 +47,7 @@
     <?php foreach ($css as $file): ?>
       <link rel="stylesheet" href="<?= $incdir ?>css/<?= $file ?>">
     <?php endforeach; ?>
-    <link rel="stylesheet" href="<?= $incdir ?>js/vendor/jquery.bxslider/jquery.bxslider.css">
+    <!--<link rel="stylesheet" href="<?= $incdir ?>js/vendor/jquery.bxslider/jquery.bxslider.css">-->
 
     <script src="<?= $incdir ?>js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
