@@ -98,8 +98,8 @@
     <div id="content-bottom">
       <div style="background: yellow; min-height: 200px;"/></div>
       <div style="background: yellow; min-height: 200px;"/></div>
-      <img src="" alt="" style="min-height: 150px;"/>
-      <img src="" alt="" style="min-height: 150px;"/>
+      <img src="" alt="" style="min-height: 200px;"/>
+      <img src="" alt="" style="min-height: 200px;"/>
     </div>
   </article>
 </section>

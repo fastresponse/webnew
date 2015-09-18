@@ -55,7 +55,7 @@ function testimonials($handle, $categories, $limit = 1) {
 
   foreach ($rows as $row) {
     $row['quote'] = html_entity_decode($row['quote']);
-    $classes = 'testimonial ' . str_replace(',' , ' ' , $row['categories']);
+    $classes = 'testimonial clearfix ' . str_replace(',' , ' ' , $row['categories']);
 
     $out = <<<END
 <div class="$classes">

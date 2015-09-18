@@ -389,6 +389,7 @@ aside li {
   text-align: center;
   color: rgb(34, 34, 34);
   box-shadow: rgb(140, 140, 140) 2px 4px;
+  box-shadow: rgba(140, 140, 140, 0.7) 2px 4px;
 }
 .registration-btn {
   margin-top: 10px;

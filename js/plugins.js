@@ -22,3 +22,19 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+
+;$.fn.load_placeholders = function(srclist) {
+  return this.each(function() {
+    var src = $(this).data('src');
+    if (!src && srclist.length > 0) {
+      src = srclist.shift();
+    }
+    if (src) {
+      var $img = $('<img/>', {
+        src: src,
+        alt: ''
+      });
+      $(this).replaceWith($img);
+    }
+  });
+}

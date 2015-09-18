@@ -78,7 +78,7 @@ p:last-child {
   margin-bottom: 0;
 }
 
-.form-section-program {
+#contact-form-div .form-section-program {
   display: none;
 }
 
@@ -100,12 +100,26 @@ p:last-child {
     align-content: flex-start;
   }
   #content img {
-    width: 65%;
+    max-width: 65%;
+    max-height: 180px;
+    width: auto;
+    height: auto;
     display: block;
     margin: 0 auto;
   }
+  #content .testimonial {
+    display: block;
+  }
+  #content .testimonial img {
+    float: left;
+    margin-right: 5px;
+  }
   #top-bar > h3 {
     font-size: 140%;
+  }
+  #top-bar .contact-btn input {
+    font-weight: bold;
+    font-size: 135%;
   }
 }
 

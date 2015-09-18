@@ -9,45 +9,46 @@
   text-align: center;
 }
 
-label, .filler {
+#contact-form-div label,
+#contact-form-div .filler {
   display: inline-block;
   box-sizing: border-box;
   margin-top: 12px;
   text-align: left;
   width: 25%;
 }
-label[for="form-source"],
-label[for="form-comments"] {
+#contact-form-div label[for="form-source"],
+#contact-form-div label[for="form-comments"] {
   text-align: left;
   padding-right: 0;
   margin-top: 7px;
   width: 100%;
 }
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="submit"],
-select,
-textarea,
-#form-call {
+#contact-form-div input[type="text"],
+#contact-form-div input[type="email"],
+#contact-form-div input[type="tel"],
+#contact-form-div input[type="submit"],
+#contact-form-div select,
+#contact-form-div textarea,
+#contact-form-div #form-call {
   box-sizing: border-box;
   margin-top: 7px;
   color: black;
   width: 70%;
 }
 
-#form-source,
-#form-comments {
+#contact-form-div #form-source,
+#contact-form-div #form-comments {
   margin-top: 4px;
 }
-.form-section-emt {
+#contact-form-div .form-section-emt {
   margin-top: 14px;
 }
-label[for="form-emt"] {
+#contact-form-div label[for="form-emt"] {
   width: auto;
 }
-input[type="submit"],
-#form-call {
+#contact-form-div input[type="submit"],
+#contact-form-div #form-call {
   margin: 20px auto 10px;
   line-height: 1.5em;
   width: 80%;
@@ -55,34 +56,34 @@ input[type="submit"],
   height: 40px;
   box-shadow: rgb(140, 140, 140) 3px 5px;
 }
-#form-call {
+#contact-form-div #form-call {
   margin-top: 10px;
 }
 
-#privacyterms {
+#contact-form-div #privacyterms {
   margin-top: 1em;
   text-align: center;
 }
 
-#loading,
-#output {
+#contact-form-div #loading,
+#contact-form-div #output {
   display: none;
 }
 
-.form-section-zip,
-.form-section-emt,
-.form-section-comments {
+#contact-form-div .form-section-zip,
+#contact-form-div .form-section-emt,
+#contact-form-div .form-section-comments {
   display: none;
 }
 
 /* intermediate */
 @media only screen and (min-width: 550px) {
-  .form-section-zip,
-  .form-section-comments {
+  #contact-form-div .form-section-zip,
+  #contact-form-div .form-section-comments {
     display: inline-block;
   }
-  input[type="submit"],
-  #form-call {
+  #contact-form-div input[type="submit"],
+  #contact-form-div #form-call {
     height: 60px;
   }
 }
@@ -93,57 +94,58 @@ input[type="submit"],
     /*display: none;*/
     font-size: 100%;
   }
-  form {
+  #contact-form-div form {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start
   }
-  #contact-form > * {
+  #contact-form-div #contact-form > * {
     box-sizing: border-box;
   }
-  label {
+  #contact-form-div label {
     /*
     flex: 0 25%;
     text-align: right;
     */
     padding-right: 5px;
   }
-  .filler {
+  #contact-form-div .filler {
     /*display: none;*/
   }
-  label[for="form-source"],
-  label[for="form-comments"] {
+  #contact-form-div label[for="form-source"],
+  #contact-form-div label[for="form-comments"] {
     /*text-align: right;*/
     padding-right: 5px;
     margin-top: 7px;
   }
-  label[for="form-emt"] {
+  #contact-form-div label[for="form-emt"] {
   }
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="submit"],
-  select,
-  textarea,
-  #form-call {
+  #contact-form-div input[type="text"],
+  #contact-form-div input[type="email"],
+  #contact-form-div input[type="tel"],
+  #contact-form-div input[type="submit"],
+  #contact-form-div select,
+  #contact-form-div textarea,
+  #contact-form-div #form-call {
     flex: 0 75%;
   }
-  #form-comments, #form-source {
+  #contact-form-div #form-comments,
+  #contact-form-div #form-source {
     margin-top: 7px;
   }
-  input[type="submit"] {
+  #contact-form-div input[type="submit"] {
   }
 
   /*
-  .form-section-name { order: 0; }
-  .form-section-email { order: 2; }
-  .form-section-phone { order: 4; }
-  .form-section-zip { order: 6; }
+  #contact-form-div .form-section-name { order: 0; }
+  #contact-form-div .form-section-email { order: 2; }
+  #contact-form-div .form-section-phone { order: 4; }
+  #contact-form-div .form-section-zip { order: 6; }
 
-  .form-section-program { order: 1; }
-  .form-section-source { order: 3; }
-  .form-section-comments { order: 5; }
-  .form-section-submit { order: 7; }
+  #contact-form-div .form-section-program { order: 1; }
+  #contact-form-div .form-section-source { order: 3; }
+  #contact-form-div .form-section-comments { order: 5; }
+  #contact-form-div .form-section-submit { order: 7; }
   */
   
 }
