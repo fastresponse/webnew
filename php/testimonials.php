@@ -48,43 +48,120 @@ function testimonial_query($handle = null, $categories = null) {
 };
 
 
-function testimonials($handle, $categories, $limit = 1) {
-  $rows = testimonial_query($handle, $categories);
-  shuffle($rows);
-  $rows = array_slice($rows, 0, $limit);
+function format_testimonials($rows) {
 
-  foreach ($rows as $row) {
+  $classes = 'testimonial';
+
+  foreach ($rows as &$row) {
     $row['quote'] = html_entity_decode($row['quote']);
-    $classes = 'testimonial clearfix ' . str_replace(',' , ' ' , $row['categories']);
+    $rowclasses = $classes;
+    if (isset($row['video']) && !empty($row['video'])) {
+      $rowclasses .= ' video';
+    }
+    $rowclasses .= ' ' . str_replace(',' , ' ' , $row['categories']);
+    $row['display_vertical'] = '';
+    $row['display_horizontal'] = '';
 
-    $out = <<<END
-<div class="$classes">
+    // -- begin: different classes for styling each orientation -- //
+    $vert = <<<END
+<div class="$rowclasses vertical">
+END;
+    $row['display_vertical'] .= $vert;
+
+    $horiz = <<<END
+<div class="$rowclasses horizontal">
+END;
+    $row['display_horizontal'] .= $horiz;
+
+    // -- common: image -- //
+
+    $both = <<<END
   <img src="{$row['image']}" alt="" />
+END;
+    $row['display_vertical'] .= $both;
+    $row['display_horizontal'] .= $both;
+
+    // -- horiz only: extra div around everything but the img -- //
+
+    $horiz = <<<END
+  <div class="body">
+END;
+    $row['display_horizontal'] .= $horiz;
+
+    // -- common: start the div that holds source (name/title/date/etc) -- //
+
+    $both = <<<END
   <div class="source">
     <span class="name">{$row['name']}</span>
 END;
+    $row['display_vertical'] .= $both;
+    $row['display_horizontal'] .= $both;
+
+    // -- common: conditionals: title and date -- //
 
     if (isset($row['title']) && !empty($row['title'])) {
-      $out .= <<<END
+      $both = <<<END
     <span class="title">{$row['title']}</span>
 END;
+      $row['display_vertical'] .= $both;
+      $row['display_horizontal'] .= $both;
     }
 
     if (isset($row['date']) && !empty($row['date'])) {
-      $out .= <<<END
+      $both = <<<END
     <span class="date">{$row['date']}</span>
 END;
+      $row['display_vertical'] .= $both;
+      $row['display_horizontal'] .= $both;
     }
-    $out .= <<<END
+
+    // -- common: close source div, add actual quote text -- //
+
+    $both = <<<END
   </div>
   <div class="quote">{$row['quote']}</div>
+END;
+    $row['display_vertical'] .= $both;
+    $row['display_horizontal'] .= $both;
+
+    // -- horiz only: close the extra div -- //
+
+    $horiz = <<<END
+  </div>
+END;
+    $row['display_horizontal'] .= $horiz;
+
+    // -- common: close the outside div and end -- //
+
+    $both = <<<END
 </div>
 END;
+    $row['display_vertical'] .= $both;
+    $row['display_horizontal'] .= $both;
 
-    echo $out;
   }
+
+  return $rows;
 }
 
+function get_testimonials($handle, $categories) {
+  $rows = testimonial_query($handle, $categories);
+  shuffle($rows);
+
+  return format_testimonials($rows);
+}
+
+function display(&$arr, $num = null, $type = '') {
+  if ($num < 1 || $num > count($arr)) $num = count($arr);
+
+  $display = 'display';
+  if (strlen($type)) $display .= '_' . $type;
+
+  for ($i = 0; $i < $num; $i++) {
+    $tmp = array_shift($arr);
+    echo $tmp[$display];
+  }
+}
 ?>
 
 <!--

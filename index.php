@@ -192,7 +192,8 @@
   <section id="testimonials" class="space-out-3">
     <?php
       include_once($incdir . 'php/testimonials.php');
-      testimonials($handle, array('EMT'), 3);
+      $testimonials = get_testimonials($handle, array('EMT'));
+      display($testimonials, 3, 'vertical');
     ?>
   </section>
 </div>

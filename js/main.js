@@ -50,6 +50,29 @@ function enable_collapse() {
   collapsibles.filter(':not(.collapsible-'+type+'-start)').find('.collapsible-closed').hide();
 }
 
+/*
+$.fn.enable_collapse = function() {
+  return this.each(function() {
+    var triggers = $(this).find('.trigger');
+    triggers.each(function() {
+      var $opened = $('<span></span>').attr('class', 'collapsible-opened').append(' &#x25B2;');
+      var $closed = $('<span></span>').attr('class', 'collapsible-closed').append(' &#x25B6;');
+      var text = $(this).attr('data-trigger-text');
+      if (text && text.length) {
+        $(this).text(text);
+      }
+      $(this).append($opened, $closed);
+    });
+    triggers.click(function() {
+      var main = $(this).closest('.collapsible-'+type+', .collapsible-'+type+'-start');
+      main.children(':not(.trigger, .stay-open)').slideToggle('fast');
+      $(this).find('.collapsible-opened').toggle();
+      $(this).find('.collapsible-closed').toggle();
+    });
+  });
+};
+*/
+
 $(document).ready(function() {
 
   $('#menu-button').click(function() {

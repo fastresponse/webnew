@@ -93,7 +93,8 @@
         <header><h3>Success Stories</h3></header>
           <?php
             include_once($incdir . 'php/testimonials.php');
-            testimonials($handle, array('EMT'), 2);
+            $testimonials = get_testimonials($handle, array('EMT'));
+            display($testimonials, 2, 'vertical');
           ?>
       </aside>
     </div>
