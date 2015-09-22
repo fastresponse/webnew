@@ -192,8 +192,18 @@
   <section id="testimonials" class="space-out-3">
     <?php
       include_once($incdir . 'php/testimonials.php');
-      $testimonials = get_testimonials($handle, array('EMT'));
-      display($testimonials, 3, 'vertical');
+      $emp_testimonials = get_testimonials($handle, array('employer'));
+      $emt_para_testimonials =
+        get_testimonials($handle, array('EMT', 'student')) +
+        get_testimonials($handle, array('Paramedic', 'student'));
+      $other_testimonials =
+        get_testimonials($handle, array('CMA', 'student')) +
+        get_testimonials($handle, array('CPT', 'student')) +
+        get_testimonials($handle, array('SPT', 'student')) +
+        get_testimonials($handle, array('PHM', 'student'));
+      display($emp_testimonials, 1, 'vertical');
+      display($emt_para_testimonials, 1, 'vertical');
+      display($other_testimonials, 1, 'vertical');
     ?>
   </section>
 </div>

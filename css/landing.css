@@ -28,7 +28,7 @@
 }
 
 .cta-bg {
-  background: url("../img/form-top.png") no-repeat scroll center bottom transparent;
+  background: url("../img/form-top.svg") no-repeat scroll center bottom transparent;
   padding: 0.5em 0 0.7em;
   margin: 0 0 0.4em;
   color: white;
@@ -59,6 +59,10 @@
   text-align: center;
 }
 
+.testimonial.employer img {
+  border: none;
+}
+
 img {
   max-width: 100%;
 }
@@ -69,6 +73,16 @@ article {
 article h1 {
   text-align: center;
   margin-top: 0;
+}
+
+.main aside {
+  padding: 5px;
+  border-top-width: 2px;
+}
+
+aside.click-to-top {
+  border: none;
+  box-shadow: none;
 }
 
 p:last-child {
@@ -174,21 +188,10 @@ p:last-child {
     order: 2;
   }
 
-  .main aside {
-    padding: 5px;
-    border-top-width: 2px;
-  }
   aside > img {
     width: 100%;
   }
-
-  #testimonials {
-    flex-direction: column;
-  }
-  #testimonials > div {
+  .testimonial-sidebar > .testimonial + .testimonial {
     margin-top: 5px;
-  }
-  #testimonials > div:first-of-type {
-    margin-top: 0;
   }
 }

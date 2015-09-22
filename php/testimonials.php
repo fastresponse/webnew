@@ -152,7 +152,8 @@ function get_testimonials($handle, $categories) {
 }
 
 function display(&$arr, $num = null, $type = '') {
-  if ($num < 1 || $num > count($arr)) $num = count($arr);
+  if (!$num || $num == 'all' || $num < 1 || $num > count($arr))
+    $num = count($arr);
 
   $display = 'display';
   if (strlen($type)) $display .= '_' . $type;

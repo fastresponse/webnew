@@ -919,7 +919,8 @@ article > section > p {
         display: flex;
         justify-content: space-between;
         flex-flow: row wrap;
-        align-items: flex-start;
+        /*align-items: flex-start;*/
+        align-items: stretch;
     }
     #banner {
         margin-top: 0;
@@ -930,6 +931,7 @@ article > section > p {
         min-width: 270px;
         flex-flow: column nowrap;
         padding: 0;
+        justify-content: flex-start;
     }
     #bottom-bar {
         flex: 1 100%;
@@ -937,8 +939,14 @@ article > section > p {
         padding: 0;
     }
     #sidebar-primary > aside {
-        flex: 1 1 100%;
+        /*flex: 1 1 100%;*/
+        flex: 0;
         margin-right: 0;
+    }
+    #sidebar-primary > .bottom-of-sidebar {
+        flex: 1;
+        display: flex;
+        flex-flow: column-reverse;
     }
     #slideshow {
         display: block;
