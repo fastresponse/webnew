@@ -133,6 +133,7 @@ p:last-child {
   }
   .testimonial.horizontal .body {
     flex: 1;
+    margin-left: 5px;
   }
   .testimonial.horizontal .source,
   .testimonial.horizontal .name {

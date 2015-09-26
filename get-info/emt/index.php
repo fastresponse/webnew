@@ -39,7 +39,7 @@
       include($incdir . 'contact/contact_form.php');
     ?>
   </aside>
-  <aside class="testimonial-sidebar">
+  <aside class="testimonial-sidebar testimonial-container" data-num=2 data-type="vertical" data-categories="EMT,student">
     <?php
       include_once($incdir . 'php/testimonials.php');
       $emp_testimonials = get_testimonials($handle, array('EMT', 'employer'));
@@ -141,6 +141,23 @@ $(document).ready(function() {
     type = 'desktop';
 
     $('.image-placeholder').load_placeholders(srclist);
+
+    $('.testimonial-container').each(function() {
+      var num = $(this).data('num');
+      var type = $(this).data('type');
+      var cat = $(this).data('categories');
+      cat = cat.split(',');
+      $.ajax({
+        type: "POST",
+        url: "<?= $incdir ?>php/ajax.testimonials.php",
+        dataType: "json",
+        data: ,
+        success: function(data, textStatus, jqxhr) {
+        },
+        error: function(jqxhr, textStatus, errorThrown) {
+        }
+      });
+    });
 
     $('.testimonial-interstitial').bxSlider({
       pause: 10000,

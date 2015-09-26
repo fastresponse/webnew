@@ -95,6 +95,12 @@ function basic_query(
   return $data;
 }
 
+/* In MySQL, a column of type SET is handled internally like a bitmask.
+ * The FIND_IN_SET operator works for single values, but if you want to
+ * check for combinations of values it may be faster to do it via the
+ * bitwise & operator. These functions rely on the SQL server assigning
+ * earlier values to lower bits.
+ */
 function query_set_values($dbh, $column, $table) {
   $query = "SHOW COLUMNS FROM `$table` LIKE '$column'";
   $results = db_query($dbh, $query, array());
@@ -114,6 +120,15 @@ function query_set_values($dbh, $column, $table) {
   // array('one', 'two', 'three', 'four')
 
   return $values;
+}
+function query_set_value_bit_array($dbh, $column, $table) {
+  $set_values = query_set_values($dbh, $column, $table);
+  $set_values = array_flip($set_values);
+  $tmp_arr = array();
+  foreach ($set_values as $key => $val) {
+    $tmp_arr[$key] = (1 << $val);
+  }
+  return $tmp_arr;
 }
 
 function db_insert($dbh, $statement, $params) {
