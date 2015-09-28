@@ -187,6 +187,23 @@
 
 var formid = '#contact-form';
 
+var currently_submitting = false;
+
+$(document).ready(function() {
+  var programid = '#form-program';
+  var emtid = '#form-section-emt';
+
+  $(programid).change(function() {
+    if ($(this).val() == 'Paramedic') {
+      $(emtid).show();
+      $(emtid + ' input').attr("required", "required");
+    }
+    else {
+      $(emtid).hide();
+      $(emtid + ' input').removeAttr("required");
+    }
+  });
+});
 $(document).ready(function() {
   var form = $(formid);
   var output = $('#output');
@@ -207,6 +224,10 @@ $(document).ready(function() {
 
   form.submit(function(event) {
     event.preventDefault();
+
+    if (currently_submitting) return;
+
+    currently_submitting = true;
 
     output.show();
     output.html('');
@@ -229,6 +250,8 @@ $(document).ready(function() {
       // data.output: html to display
 	    success: function(data, textStatus, jqxhr) {
 
+        currently_submitting = false;
+
         // jQuery docs say to do the following, but it errors because PHP's
         // json_encode() isn't quoting the names of 'name' : 'value' pairs
         //   data = $.parseJSON(data);
@@ -249,6 +272,9 @@ $(document).ready(function() {
 	    },
 
       error: function(jqxhr, textStatus, errorThrown) {
+
+        currently_submitting = false;
+
         displayOutput(
           "<div class=\"error\">There was a problem sending your message. " +
           "Please try again later.</div>\n"
