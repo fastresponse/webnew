@@ -5,7 +5,7 @@ if (!isset($handle))
 
 
 $num = filter_input(INPUT_POST, 'num', FILTER_SANITIZE_NUMBER_INT);
-$type = filter_input(INPUT_POST, 'type', FILTER_SANITIZE_STRING);
+$direction = filter_input(INPUT_POST, 'direction', FILTER_SANITIZE_STRING);
 $categories = filter_input(INPUT_POST, 'categories', FILTER_SANITIZE_STRING, FILTER_REQUIRE_ARRAY);
 
 if (!$categories) $categories = array('student');
@@ -158,7 +158,7 @@ if (!$num || $num < 1 || $num > count($arr))
   $num = count($arr);
 
 $display = 'display';
-if ($type && strlen($type)) $display .= '_' . $type;
+if ($direction && strlen($direction)) $display .= '_' . $direction;
 
 $out = array();
 for ($i = 0; $i < $num; $i++) {
@@ -167,8 +167,6 @@ for ($i = 0; $i < $num; $i++) {
 
 header('Content-Type: application/json');
 
-//echo json_encode($out);
-$out = json_encode($out, JSON_PRETTY_PRINT);
-echo $out;
+echo json_encode($out, JSON_PRETTY_PRINT);
 
 ?>
