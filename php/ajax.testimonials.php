@@ -5,7 +5,7 @@ if (!isset($handle))
 
 
 $num = filter_input(INPUT_POST, 'num', FILTER_SANITIZE_NUMBER_INT);
-$direction = filter_input(INPUT_POST, 'direction', FILTER_SANITIZE_STRING);
+$orientation = filter_input(INPUT_POST, 'orientation', FILTER_SANITIZE_STRING);
 $categories = filter_input(INPUT_POST, 'categories', FILTER_SANITIZE_STRING, FILTER_REQUIRE_ARRAY);
 
 if (!$categories) $categories = array('student');
@@ -158,7 +158,7 @@ if (!$num || $num < 1 || $num > count($arr))
   $num = count($arr);
 
 $display = 'display';
-if ($direction && strlen($direction)) $display .= '_' . $direction;
+if ($orientation && strlen($orientation)) $display .= '_' . $orientation;
 
 $out = array();
 for ($i = 0; $i < $num; $i++) {

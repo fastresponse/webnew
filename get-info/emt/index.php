@@ -39,8 +39,10 @@
       include($incdir . 'contact/contact_form.php');
     ?>
   </aside>
-  <aside class="testimonial-sidebar testimonial-container" data-num=2 data-direction="vertical" data-categories="EMT,student">
-    <div class="hide-desktop hide-tablet"><h3 class="red">Click to Read Testimonials</h3></div>
+  <aside>
+    <div id="testimonial-sidebar" class="testimonial-container">
+      <h3 class="red click-load hide-desktop hide-tablet">Click to Read Testimonials</h3>
+    </div>
   </aside>
   <aside class="bottom-of-sidebar click-to-top">
     <div class="button"><a href="#top-of-page">Back to top</a></div>
@@ -61,11 +63,11 @@
     <p class="stay-open">In only 5 weeks, you can become one of the best EMTs in the Bay Area. After your guaranteed externship you'll have the education and experience to take the National Registry EMT exam, where Fast Response students outperform the national average by XX%. Our graduates are highly sought-after by leading Bay Area ambulance companies, making you fully-qualified, job ready, and exceedingly employable.</p>
     <p class="stay-open">Master the life-saving skills of an EMT and become somebody's hero!</p>
     <p class="hide-desktop hide-tablet trigger bold red underline" style="text-align: center;" data-trigger-text="Continue Reading"></p>
-    <div class="testimonial-interstitial testimonial-container" data-num=0 data-direction="horizontal" data-categories="EMT,employer" data-slide=1></div>
+    <div id="interstitial1" class="testimonial-interstitial testimonial-container"></div>
     <p>Emergency Medical Technicians (EMTs) are health care professionals who critically assess, evaluate and treat medical and trauma patients. EMTs may work on ambulances, in fire departments or hospital emergency departments, or on search and rescue teams.</p>
     <p>EMT is considered an entry-level medical responder. While some EMTs may choose to remain at this level of certification, we view the EMT certification as the first step into a broad array of career options. An EMT certification is required prior to obtaining a paramedic license and also may be required for certain fire service positions. EMT patient contact experience is also considered highly desirable when applying for Physician's Assistant (PA) programs. EMT certification is a fast and accessible option for individuals who are interested in medicine but not sure where to start.</p>
     <div class="image-placeholder" data-src="<?= $incdir ?>img/fr-logo-black.png"></div>
-<p>Our extensive, five-week EMT course provides the most effective and expedient platform for our graduates to excel as compassionate, critical-thinking EMTs. Students immediately put their skills into practice in our simulated clinical, residential, and ambulance settings. Students will receive hands-on training with actual field medical equipment, supervised by an experienced cadre of paramedics and EMTs. These instructors bring a wide variety of EMT experience to the classroom and skills lab to expand our students' learning opportunities.</p>
+    <p>Our extensive, five-week EMT course provides the most effective and expedient platform for our graduates to excel as compassionate, critical-thinking EMTs. Students immediately put their skills into practice in our simulated clinical, residential, and ambulance settings. Students will receive hands-on training with actual field medical equipment, supervised by an experienced cadre of paramedics and EMTs. These instructors bring a wide variety of EMT experience to the classroom and skills lab to expand our students' learning opportunities.</p>
     <p>We've contracted with local ambulance companies and hospital emergency departments to provide a guaranteed 24-hour clinical and field externship to every student. Externship is a great way to gain more experience and confidence with patient contact in the field. In addition, students will often have the opportunity to participate in mass casualty incident (MCI) or active shooter drills, arranged in conjunction with local EMS agencies and hospitals.</p>
     <div class="image-placeholder"></div>
     <p>The Fast Response EMT course features Basic Life Support (BLS / CPR) certification, free tutoring, NREMT test preparation, and a maximum student to instructor skills training ratio of 9:1.</p>
@@ -75,9 +77,11 @@
 <div id="bottom-bar">
 </div>
 
-<script src="<?= $incdir ?>js/vendor/jquery.bxslider/jquery.bxslider.min.js"></script>
-
 <script>
+<?php // variable translate section, PHP -> Javascript ?>
+
+var course_code = "<?= $course_code ?>";
+
 var piclist = [
 <?php 
   require_once($incdir . 'php/file_list.php');
@@ -87,103 +91,13 @@ var piclist = [
   "<?= $piclink ?>",
 <?php endforeach; ?>
 ];
+</script>
 
-var tOpts = {
-  'testimonial-sidebar' : {
-    'mobile' : {
-      'num' : 0,
-      'direction' : 'horizontal',
-      'categories' : 'EMT,employer',
-      'slide' : 1
-    },
-    'tablet' : {
-    },
-    'desktop' : {
-    }
-  },
-  'interstitial1' : {
-    'mobile' : {
-    },
-    'tablet' : {
-    },
-    'desktop' : {
-    }
-  }
-};
+<script src="../testimonialOpts.js"></script>
 
-function load_images_until(container, srclist, checkfunc, donefunc) {
-  var done_callback = (typeof(donefunc) === "function");
+<script src="<?= $incdir ?>js/vendor/jquery.bxslider/jquery.bxslider.min.js"></script>
 
-  if (srclist.length < 1) {
-    if (done_callback) {
-      donefunc();
-    }
-    return;
-  }
-
-  $('<img/>', {
-    src: srclist.shift(),
-    alt: ''
-  }).appendTo(container).load(function() {
-    if (checkfunc($(this)) === false) {
-      srclist.unshift($(this).attr('src'));
-      $(this).remove();
-      if (done_callback) {
-        donefunc();
-      }
-    }
-    else {
-      load_images_until(container, srclist, checkfunc, donefunc);
-    }
-  });
-}
-
-function load_images_num(container, srclist, num) {
-  if (num > srclist.length) num = srclist.length;
-  if (num < 1) return;
-
-  for(var i = 0; i < num; i++) {
-    $('<img/>', {
-      src: srclist.shift(),
-      alt: ''
-    }).appendTo(container);
-  }
-}
-
-function load_testimonials(container) {
-  var num = container.data('num');
-  var direction = container.data('direction');
-  var cat = container.data('categories').split(',');
-  var domOb = container;
-  var sliderOpts = {
-    pause: 10000,
-    controls: false,
-    pager: false,
-    moveSlides: 1,
-    slideMargin: 5,
-    autoHover: true,
-    auto: true
-  };
-
-  $.ajax({
-    type: "POST",
-    url: "<?= $incdir ?>php/ajax.testimonials.php",
-    dataType: "json",
-    data: {'num': num, 'direction':direction, 'categories':cat},
-    domOb: domOb,
-    success: function(data, textStatus, jqxhr) {
-      this.domOb.html(data);
-      if (this.domOb.data('slide')) {
-        var opt = sliderOpts;
-        opt.mode = this.data.direction;
-        this.domOb.bxSlider(opt);
-      }
-    },
-    error: function(jqxhr, textStatus, errorThrown) {
-    }
-  });
-}
-
+<script>
 $(document).ready(function() {
   var width = $(window).width();
   var srclist = piclist.slice(0); // clones array
@@ -191,118 +105,17 @@ $(document).ready(function() {
 
   if (width >= 800) {
     type = 'desktop';
-
     $('.image-placeholder').load_placeholders(srclist);
-
-    $('.testimonial-container').each(function() {
-      load_testimonials($(this))
-    });
-
-    /*
-    $('.testimonial-container').each(function() {
-      var num = $(this).data('num');
-      var direction = $(this).data('direction');
-      var cat = $(this).data('categories').split(',');
-      var domOb = $(this);
-      $.ajax({
-        type: "POST",
-        url: "<?= $incdir ?>php/ajax.testimonials.php",
-        dataType: "json",
-        data: {'num': num, 'direction':direction, 'categories':cat},
-        domOb: domOb,
-        success: function(data, textStatus, jqxhr) {
-          this.domOb.html(data);
-          if (this.domOb.data('slide')) {
-            var opt = sliderOpts;
-            opt.mode = this.data.direction;
-            this.domOb.bxSlider(opt);
-          }
-        },
-        error: function(jqxhr, textStatus, errorThrown) {
-        }
-      });
-    });
-    */
-   
-    /*
-    $('.testimonial-interstitial').bxSlider({
-      pause: 10000,
-      controls: false,
-      pager: false,
-      moveSlides: 1,
-      slideMargin: 5,
-      autoHover: true,
-      auto: true
-    });
-    */
-
-    /*
-    $('.testimonial-sidebar').bxSlider({
-      pause: 10000,
-      controls: false,
-      pager: false,
-      moveSlides: 1,
-      slideMargin: 5,
-      autoHover: true,
-      auto: true,
-      mode: 'vertical'
-    });
-    */
-
-    /*
-    load_images_until( $('#image-placeholder-primary'), srclist,
-      function($img) {
-        var sidebar_height = $('#sidebar-primary').height();
-        var content_height = $('#content').height();
-        var leeway = 50; // pixels
-
-        if (content_height >= sidebar_height) {
-          return true;
-        }
-
-        if (sidebar_height > content_height && (sidebar_height - content_height) <= leeway) {
-          return true;
-        }
-
-        return false;
-      },
-      function() {
-        $('#image-placeholder-primary').bxSlider({
-          auto: true,
-          autoHover: true,
-          pause: 10000,
-          mode: 'vertical',
-          //minSlides: 3,
-          //maxSlides: 3,
-          moveSlides: 1,
-          slideMargin: 5,
-          adaptiveHeight: true,
-          pager: false,
-          controls: false
-        });
-      }
-    );
-    */
-
   }
   else if (width >= 550) {
     type = 'tablet';
     $('.image-placeholder').load_placeholders(srclist);
-    load_images_num( $('#image-placeholder-primary'), srclist, 3);
-    $('.testimonial-sidebar').each(function() {
-      load_testimonials($(this))
-    });
   }
   else {
     type = 'mobile';
-    load_images_num( $('#image-placeholder-primary'), srclist, 1);
-
-    $('.testimonial-sidebar').click(function() {
-      load_testimonials($(this))
-    });
-
   }
 
+  $('.testimonial-container').load_testimonials( testimonialOpts[type] );
 });
 </script>
 

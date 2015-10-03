@@ -38,6 +38,10 @@ video {
     vertical-align: middle;
 }
 
+img {
+  max-width: 100%;
+}
+
 fieldset {
     border: 0;
     margin: 0;
@@ -196,8 +200,8 @@ main {
 #sidebar-primary {
   order: 1;
 }
-#sidebar-secondary {
-  order: 3;
+#sidebar-secondary > * {
+  display: none;
 }
 
 #middle > aside > section {
@@ -308,15 +312,8 @@ nav a:hover {
     margin-left: 15px;
     margin-bottom: 10px;
 }
-#sidebar-secondary #contact-info {
-    display: block;
-    font-size: 78%;
-}
-#sidebar-secondary #contact-info .button a {
-    padding: 10px 10px;
-}
-#sidebar-secondary #contact-info #phone {
-    margin-bottom: 10px;
+#sidebar-secondary > * {
+    display: none;
 }
 
 aside {
@@ -463,11 +460,15 @@ article > section > p {
     display: block;
 }
 
-#testimonials {
-    display: none;
+.testimonial-bg {
+  background-color: #0a1e3c;
 }
-
-
+.testimonial .date {
+  white-space: nowrap;
+}
+.testimonial.employer img {
+  border: none;
+}
 
 
 .footer-container footer {
@@ -654,12 +655,12 @@ article > section > p {
     #sidebar-primary,
     #bottom-bar,
     #content,
-    #testimonials {
+    #sidebar-secondary > * {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
     }
-    #testimonials {
+    #sidebar-secondary > * {
         flex: 1 100%;
     }
     .main aside {
@@ -698,7 +699,7 @@ article > section > p {
         float: right;
         /*max-width: 22%;*/
     }
-    #sidebar-secondary #testimonials {
+    #sidebar-secondary > * {
         flex-flow: column nowrap;
     }
     #sidebar-secondary #contact-info {
@@ -973,7 +974,7 @@ article > section > p {
     #continuing_ed {
         border-left: dashed 1px grey;
     }
-    #testimonials {
+    #sidebar-secondary > * {
         flex: 1 0 100%;
         justify-content: space-around;
     }
