@@ -8,15 +8,14 @@
   margin-left: 0;
   padding-left: 20px;
   line-height: 1.2em;
-  /*
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  */
 }
 #career_courses > section > ul > li,
 #continuing_ed > section > ul > li {
   margin-right: 30px;
 }
 
-
+@media only screen and (min-width: 800px) {
+  #bottom-bar {
+    flex-wrap: nowrap;
+  }
+}

@@ -39,9 +39,11 @@
       include($incdir . 'contact/contact_form.php');
     ?>
   </aside>
-  <aside>
-    <div id="testimonial-sidebar" class="testimonial-container">
-      <h3 class="red click-load hide-desktop hide-tablet">Click to Read Testimonials</h3>
+  <aside class="testimonial-column">
+    <div class="testimonial-bg">
+      <div id="testimonial-sidebar" class="testimonial-container">
+        <h3 class="red underline click-load hide-desktop hide-tablet">Click to Read Testimonials</h3>
+      </div>
     </div>
   </aside>
   <aside class="bottom-of-sidebar click-to-top">
@@ -60,10 +62,14 @@
       $nextdate = get_next_course_date($handle, $course_code)['date_display'];
     ?>
     <h4 class="stay-open red">Next class: <span class="nowrap"><?= $nextdate ?></span></h4>
-    <p class="stay-open">In only 5 weeks, you can become one of the best EMTs in the Bay Area. After your guaranteed externship you'll have the education and experience to take the National Registry EMT exam, where Fast Response students outperform the national average by XX%. Our graduates are highly sought-after by leading Bay Area ambulance companies, making you fully-qualified, job ready, and exceedingly employable.</p>
+    <p class="stay-open">In only 5 weeks, you can become one of the best EMTs in the Bay Area. After your guaranteed externship you'll have the education and experience to take the National Registry EMT exam, where Fast Response students outperform the national average by a significant margin. Our graduates are highly sought-after by leading Bay Area ambulance companies, making you fully-qualified, job ready, and exceedingly employable.</p>
     <p class="stay-open">Master the life-saving skills of an EMT and become somebody's hero!</p>
     <p class="hide-desktop hide-tablet trigger bold red underline" style="text-align: center;" data-trigger-text="Continue Reading"></p>
-    <div id="interstitial1" class="testimonial-interstitial testimonial-container"></div>
+    <div class="testimonial-row">
+      <div class="testimonial-bg">
+        <div id="interstitial1" class="testimonial-interstitial testimonial-container"></div>
+      </div>
+    </div>
     <p>Emergency Medical Technicians (EMTs) are health care professionals who critically assess, evaluate and treat medical and trauma patients. EMTs may work on ambulances, in fire departments or hospital emergency departments, or on search and rescue teams.</p>
     <p>EMT is considered an entry-level medical responder. While some EMTs may choose to remain at this level of certification, we view the EMT certification as the first step into a broad array of career options. An EMT certification is required prior to obtaining a paramedic license and also may be required for certain fire service positions. EMT patient contact experience is also considered highly desirable when applying for Physician's Assistant (PA) programs. EMT certification is a fast and accessible option for individuals who are interested in medicine but not sure where to start.</p>
     <div class="image-placeholder" data-src="<?= $incdir ?>img/fr-logo-black.png"></div>

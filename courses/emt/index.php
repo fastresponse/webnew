@@ -85,27 +85,35 @@
       <li>National Registry of Emergency Medical Technicians</li>
     </ul>
   </aside>
-  <aside>
-    <div id="testimonial-bottom" class="testimonial-container">
-      <h3 class="red click-load hide-desktop hide-tablet">Click to Read Testimonials</h3>
+  <aside class="hide-desktop hide-tablet testimonial-column">
+    <div class="testimonial-bg">
+      <div id="testimonial-bottom" class="testimonial-container">
+        <h3 class="red underline click-load">Click to Read Testimonials</h3>
+      </div>
     </div>
   </aside>
 </div>
 
 <section id="content">
   <article>
-    <div id="sidebar-secondary">
-      <aside class="testimonial-bg">
-        <div id="testimonial-sidebar-1" class="testimonial-container"></div>
+    <div id="sidebar-secondary" class="hide-mobile">
+      <aside class="testimonial-column">
+        <div class="testimonial-bg">
+          <div id="testimonial-sidebar-1" class="testimonial-container"></div>
+        </div>
       </aside>
-      <aside>
-        <div id="testimonial-sidebar-2" class="testimonial-container"></div>
+      <aside class="testimonial-column">
+        <div class="testimonial-bg">
+          <div id="testimonial-sidebar-2" class="testimonial-container"></div>
+        </div>
       </aside>
     </div>
 
     <div class="collapsible-mobile-start collapsible-tablet">
-      <header class="stay-open"><h1>Emergency Medical Technician</h1></header>
-      <h4 class="stay-open" style="margin: 0;">Training that will set you <span class="nowrap">apart from the rest!</span></h4>
+      <header class="stay-open">
+        <h1>Emergency Medical Technician</h1>
+        <h4>Training that will set you <span class="nowrap">apart from the rest!</span></h4>
+      </header>
       <p class="stay-open">In only 5 weeks, you can become one of the best EMTs in the Bay Area. After your guaranteed externship you'll have the education and experience to take the National Registry EMT exam, where Fast Response students outperform the national average by a significant margin. Our graduates are highly sought-after by leading Bay Area ambulance companies, making you fully-qualified, job ready, and exceedingly employable.</p>
       <p class="stay-open">Master the life-saving skills of an EMT and become somebody's hero!</p>
       <p class="hide-desktop hide-tablet trigger bold red underline" style="text-align: center;" data-trigger-text="Continue Reading"></p>

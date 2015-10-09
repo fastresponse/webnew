@@ -165,7 +165,7 @@ $.fn.load_placeholders = function(srclist) {
 };
 
 $.fn.load_testimonials = function(opts) {
-  var defaultOpts = {
+  var defaultSliderOpts = {
     pause: 12000,
     controls: false,
     pager: false,
@@ -186,7 +186,7 @@ $.fn.load_testimonials = function(opts) {
     if (localOpts.load == 'none') return; // skip
 
     if (localOpts.hasOwnProperty('sliderOpts') && localOpts.sliderOpts) {
-      sliderOpts = $.extend({}, defaultOpts, localOpts.sliderOpts);
+      sliderOpts = $.extend({}, defaultSliderOpts, localOpts.sliderOpts);
     }
     else {
       sliderOpts = false;
@@ -199,7 +199,7 @@ $.fn.load_testimonials = function(opts) {
       "data" : {
         "num" : localOpts.num,
         "orientation" : localOpts.orientation,
-        "categories" : localOpts.categories.split(','),
+        "categories" : localOpts.categories,
       },
       "domOb" : domOb,
       "sliderOpts" : sliderOpts,
@@ -210,6 +210,8 @@ $.fn.load_testimonials = function(opts) {
         }
       },
       "error" : function(jqxhr, textStatus, errorThrown) {
+        console.log("Error: "+textStatus+"; "+errorThrown);
+        console.log(jqxhr);
       }
     };
 

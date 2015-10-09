@@ -188,6 +188,50 @@
   </article>
 </section>
 
+<div id="bottom-bar" class="space-out-3">
+  <aside class="testimonial-column hide-mobile">
+    <div class="testimonial-bg">
+      <div id="testimonial-1" class="testimonial-container"></div>
+    </div>
+  </aside>
+  <aside class="testimonial-column hide-mobile">
+    <div class="testimonial-bg">
+      <div id="testimonial-2" class="testimonial-container"></div>
+    </div>
+  </aside>
+  <aside class="testimonial-column hide-tablet">
+    <div class="testimonial-bg">
+      <div id="testimonial-3" class="testimonial-container"><h3 class="red click-load hide-desktop hide-tablet">Click to Read Testimonials</h3></div>
+    </div>
+  </aside>
+</div>
+
+<script src="testimonialOpts.js"></script>
+
+<script src="<?= $incdir ?>js/vendor/jquery.bxslider/jquery.bxslider.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  var width = $(window).width();
+  var type;
+
+  if (width >= 800) {
+    type = 'desktop';
+    //$('.image-placeholder').load_placeholders(srclist);
+  }
+  else if (width >= 550) {
+    type = 'tablet';
+    //$('.image-placeholder').load_placeholders(srclist);
+  }
+  else {
+    type = 'mobile';
+  }
+
+  $('.testimonial-container').load_testimonials( testimonialOpts[type] );
+});
+</script>
+
+<?php if (false): ?>
 <div id="bottom-bar">
   <section id="testimonials" class="space-out-3">
     <?php
@@ -207,5 +251,6 @@
     ?>
   </section>
 </div>
+<?php endif; ?>
 
 <?php require_once($incdir . 'footer.php'); ?>

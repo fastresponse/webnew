@@ -4,7 +4,7 @@ var testimonialOpts = {
       "load" : "click",
       "num" : 0,
       "orientation" : "vertical",
-      "categories" : course_code,
+      "categories" : [course_code],
       "sliderOpts" : {
         "mode" : "horizontal"
       }
@@ -18,16 +18,17 @@ var testimonialOpts = {
       "load" : "auto",
       "num" : 0,
       "orientation" : "vertical",
-      "categories" : course_code+",student",
+      "categories" : [course_code+",student"],
       "sliderOpts" : {
-        "mode" : "horizontal"
+        "mode" : "horizontal",
+        "slideMargin" : 4
       }
     },
     "interstitial1" : {
       "load" : "auto",
       "num" : 0,
       "orientation" : "horizontal",
-      "categories" : course_code+",employer",
+      "categories" : [course_code+",employer"],
       "sliderOpts" : {
         "mode" : "horizontal",
         "adaptiveHeight" : false,
@@ -40,7 +41,7 @@ var testimonialOpts = {
       "load" : "auto",
       "num" : 0,
       "orientation" : "vertical",
-      "categories" : course_code+",student",
+      "categories" : [course_code+",student"],
       "sliderOpts" : {
         "mode" : "vertical",
         "minSlides" : 2,
@@ -51,7 +52,7 @@ var testimonialOpts = {
       "load" : "auto",
       "num" : 0,
       "orientation" : "horizontal",
-      "categories" : course_code+",employer",
+      "categories" : [course_code+",employer"],
       "sliderOpts" : {
         "mode" : "horizontal"
       }

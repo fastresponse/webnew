@@ -331,6 +331,9 @@ aside h3 {
     text-align: center;
     font-size: large;
 }
+aside h3.click-load {
+    margin-bottom: 5px;
+}
 
 aside ul {
     padding-left: 0;
@@ -460,15 +463,118 @@ article > section > p {
     display: block;
 }
 
+
+
+
+aside.testimonial-column {
+  border-top-width: 2px;
+}
+.testimonial-column {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 5px;
+}
+.testimonial-row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.testimonial-column > div,
+.testimonial-row > div {
+  flex: 1 1 100%;
+}
 .testimonial-bg {
   background-color: #0a1e3c;
 }
+.testimonial-container {
+  /*display: flex;*/
+}
+.testimonial {
+  flex: 1 1 100%;
+  padding: 5px;
+  background-color: #0a1e3c;
+  display: flex;
+  flex-flow: column;
+  color: white;
+  font-size: small;
+}
+.testimonial img {
+    /*
+    width: 90px;
+    height: 60px;
+    */
+    width: 90%;
+    border: 1px solid #e2e2e2;
+    margin-bottom: 5px;
+    align-self: center;
+}
+.testimonial .quote {
+    font-size: medium;
+}
+.testimonial .source {
+    margin-bottom: 5px;
+    text-align: right;
+}
+.testimonial .name {
+    display: block;
+    font-size: medium;
+}
+.testimonial .name:before {
+    content: '-';
+}
+.testimonial .title {
+    font-style: italic;
+    margin-left: 5px;
+    display: block;
+}
 .testimonial .date {
-  white-space: nowrap;
+    white-space: nowrap;
+    margin-left: 5px;
 }
 .testimonial.employer img {
   border: none;
 }
+.testimonial.horizontal {
+  flex-flow: row;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.testimonial.horizontal img {
+  width: auto;
+  max-height: 100%;
+  margin: 0 5px 0 0;
+}
+.testimonial.horizontal.video img {
+  max-height: 200px;
+}
+.testimonial.horizontal .body {
+  flex: 1;
+  margin-left: 5px;
+}
+.testimonial.horizontal .source,
+.testimonial.horizontal .name {
+  text-align: center;
+  font-size: 110%;
+  font-weight: bold;
+}
+.testimonial.horizontal .name:before {
+  content: '';
+}
+/*
+.testimonial + .testimonial {
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+  border-left: none;
+  border-right: none;
+}
+.testimonial.horizontal + .testimonial.horizontal {
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  border-top: none;
+  border-bottom: none;
+}
+*/
+
 
 
 .footer-container footer {
@@ -729,20 +835,22 @@ article > section > p {
         flex: 1;
     }
     .space-out-2 > *,
-    #sidebar-primary > *,
-    #bottom-bar > * {
+    #sidebar-primary > * {
       flex: 1 49%;
       margin-right: 1%;
     }
     .space-out-2 > *:nth-child(even),
     .space-out-2 > *:last-child,
     #sidebar-primary > *:nth-child(even),
-    #bottom-bar > *:nth-child(even),
-    #sidebar-primary > *:last-child,
-    #bottom-bar > *:last-child {
+    #sidebar-primary > *:last-child {
       margin-right: 0;
     }
 
+    .space-out-3 {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
     .space-out-3 > * {
       flex: 1 32%;
       margin-right: 1%;
@@ -751,18 +859,6 @@ article > section > p {
     .space-out-3 > *:last-child {
       margin-right: 0;
     }
-
-    #bottom-bar > #testimonials {
-        flex: 1 100%;
-    }
-    /*
-    #bottom-bar > #testimonials > * {
-        margin-left: 10px;
-    }
-    #bottom-bar > #testimonials > *:first-child {
-        margin-left: 0;
-    }
-    */
 
     #contact-info {
         flex-flow: row wrap;
@@ -815,37 +911,6 @@ article > section > p {
     }
     #sidebar-secondary .testimonial {
         margin-left: 0;
-    }
-    .testimonial img {
-        /*
-        width: 90px;
-        height: 60px;
-        */
-        width: 90%;
-        border: 1px solid #e2e2e2;
-        margin-bottom: 5px;
-        align-self: center;
-    }
-    .testimonial .quote {
-        font-size: medium;
-    }
-    .testimonial .source {
-        margin-bottom: 5px;
-        text-align: right;
-    }
-    .testimonial .name {
-        display: block;
-        font-size: medium;
-    }
-    .testimonial .name:before {
-        content: '-';
-    }
-    .testimonial .title {
-        font-style: italic;
-        margin-left: 5px;
-    }
-    .testimonial .date {
-        margin-left: 5px;
     }
     .footer-container > footer > div {
         flex: initial;

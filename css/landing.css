@@ -113,33 +113,6 @@ p:last-child {
     width: auto;
     margin: 0 auto;
   }
-  .testimonial.horizontal {
-    flex-flow: row;
-    align-items: center;
-    width: 90%;
-    margin: 0 auto;
-  }
-  .testimonial.horizontal img {
-    width: auto;
-    max-height: 100%;
-    margin: 0 5px 0 0;
-  }
-  .testimonial.horizontal.video img {
-    max-height: 200px;
-  }
-  .testimonial.horizontal .body {
-    flex: 1;
-    margin-left: 5px;
-  }
-  .testimonial.horizontal .source,
-  .testimonial.horizontal .name {
-    text-align: center;
-    font-size: 110%;
-    font-weight: bold;
-  }
-  .testimonial.horizontal .name:before {
-    content: '';
-  }
   #top-bar > h3 {
     font-size: 140%;
   }
@@ -187,8 +160,5 @@ p:last-child {
 
   aside > img {
     width: 100%;
-  }
-  .testimonial-sidebar > .testimonial + .testimonial {
-    margin-top: 5px;
   }
 }

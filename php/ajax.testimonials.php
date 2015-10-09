@@ -143,12 +143,20 @@ END;
 }
 
 function get_testimonials($handle, $categories) {
-  $rows = testimonial_query($handle, $categories);
-  if (!$rows || !count($rows)) return null;
+  $t = array();
 
-  shuffle($rows);
+  foreach ($categories as $combo) {
+    $combo_cats = explode(',', $combo);
 
-  return format_testimonials($rows);
+    $rows = testimonial_query($handle, $combo_cats);
+    if (!$rows || !count($rows)) continue;
+
+    $t = $t + $rows;
+  }
+
+  shuffle($t);
+
+  return format_testimonials($t);
 }
 
 $arr = get_testimonials($handle, $categories);
