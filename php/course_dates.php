@@ -112,7 +112,8 @@ function get_next_course_date($handle, $course_code, $course_type = null) {
 function format_course_dates($arr) {
   foreach ($arr as &$row) {
     $row['status_display'] = ($row['status'] ? ' ('.$row['status'].')' : '');
-    $row['full_display'] = $row['showdate'] . ' - ' . $row['type'] . $row['status_display'];
+    //$row['full_display'] = $row['showdate'] . ' - ' . $row['type'] . $row['status_display'];
+    $row['full_display'] = "{$row['showdate']} - <span class='class-type'>{$row['type']}</span> <span class='class-status'>{$row['status_display']}</span>";
     $row['date_display'] = $row['showdate'] . $row['status_display'];
   }
   return $arr;

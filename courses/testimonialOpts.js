@@ -6,6 +6,12 @@ var testimonialOpts = {
     "testimonial-sidebar-2" : {
       "load" : "none"
     },
+    "testimonial-interstitial-1" : {
+      "load" : "none"
+    },
+    "testimonial-interstitial-2" : {
+      "load" : "none"
+    },
     "testimonial-bottom" : {
       "load" : "click",
       "num" : 0,
@@ -19,18 +25,24 @@ var testimonialOpts = {
   },
   "tablet" : {
     "testimonial-sidebar-1" : {
+      "load" : "none"
+    },
+    "testimonial-sidebar-2" : {
+      "load" : "none"
+    },
+    "testimonial-interstitial-1" : {
       "load" : "auto",
       "num" : 0,
-      "orientation" : "vertical",
+      "orientation" : "horizontal",
       "categories" : [course_code+",employer"],
       "sliderOpts" : {
         "mode" : "horizontal"
       }
     },
-    "testimonial-sidebar-2" : {
+    "testimonial-interstitial-2" : {
       "load" : "auto",
       "num" : 0,
-      "orientation" : "vertical",
+      "orientation" : "horizontal",
       "categories" : [course_code+",student"],
       "sliderOpts" : {
         "mode" : "horizontal"
@@ -60,6 +72,12 @@ var testimonialOpts = {
         "mode" : "horizontal"
         //"mode" : "vertical"
       }
+    },
+    "testimonial-interstitial-1" : {
+      "load" : "none"
+    },
+    "testimonial-interstitial-2" : {
+      "load" : "none"
     },
     "testimonial-bottom" : {
       "load" : "none"

@@ -20,6 +20,10 @@ html {
     text-shadow: none;
 }
 
+header {
+    text-align: center;
+}
+
 hr {
     display: block;
     height: 1px;
@@ -777,6 +781,26 @@ aside.testimonial-column {
         align-self: center;
     }
 
+    .tablet-row-1 {
+        flex: 1 100% !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+    .tablet-row-2 {
+        flex: 1 49% !important;
+        margin-right: 1% !important;
+        margin-left: 0 !important;
+    }
+    .tablet-row-3 {
+        flex: 1 32% !important;
+        margin-right: 1% !important;
+        margin-left: 0 !important;
+    }
+    .tablet-row-2:nth-child(2n+0),
+    .tablet-row-3:nth-child(3n+0) {
+        margin-right: 0 !important;
+    }
+
     #banner {
         flex: 1 100%;
         order: -1;
@@ -864,6 +888,9 @@ aside.testimonial-column {
         flex-flow: row wrap;
         align-items: center;
         flex: 2;
+    }
+    #contact-info.tablet-row-3 {
+        flex-flow: column nowrap;
     }
     #contact-info > div {
         font-weight: bold;
