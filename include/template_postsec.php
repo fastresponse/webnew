@@ -1,14 +1,37 @@
 <?php
+
+if (!isset($incdir))
   $incdir = '../../';
-  $title = 'Emergency Medical Technician';
-  $page_header = 'Emergency Medical Technician';
-  $description = '';
-  $course_code = 'EMT';
+
+if (!isset($picdir) && isset($course_code))
+  $picdir = $incdir . 'img/' . strtolower($course_code) . '/';
+
+if (!isset($sections))
+  $sections = array();
+
+if (!isset($css))
   $css = array('courses.css');
-  $form_course_name = 'EMT';
-  $picdir = $incdir . 'img/emt/';
+else
+  $css = array('courses.css') + $css;
+
+
+function output_course_data($what) {
+  $method = 'a';
+  global $sections;
+
+  switch ($method) {
+  case 'a':
+    echo $sections[$what];
+    break;
+  case 'b':
+    $filename = str_replace(' ', '_', strtolower($what)) . '.php';
+    include(getcwd() . DIRECTORY_SEPARATOR . $filename);
+    break;
+  default:
+  }
+}
 ?>
-<?php require_once($incdir . 'header.php'); ?>
+<?php require_once($incdir . 'include/header.php'); ?>
 
 <div id="sidebar-primary">
   <aside id="contact-info" class="tablet-row-3">
@@ -27,69 +50,54 @@
       </form>
     </div>
   </aside>
+
+  <?php if ($sections['test results']): ?>
   <aside id="test_results" class="tablet-row-3">
-    <header><h3>Our Success Rate - <span class="testscore">93%</span></h3></header>
-    <p>In 2015*, <span class="testscore">93%</span> of our graduates passed the National Registration licensing test, making them eligible for immediate employment.</p>
-    <div>* As of October 2nd, 2015</div>
+    <?php output_course_data('test results') ?>
   </aside>
+  <?php endif; ?>
+
+  <?php
+    include_once($incdir . 'php/course_dates.php');
+    $course_dates_list = get_course_dates($handle, $course_code);
+
+    if (is_array($course_dates_list) && count($course_dates_list)):
+  ?>
   <aside id="start_dates" class="tablet-row-3">
     <header><h3>Class Start Dates</h3></header>
     <ul>
-    <?php
-      include_once($incdir . 'php/course_dates.php');
-      foreach (get_course_dates($handle, $course_code) as $row):
-    ?>
+    <?php foreach ($course_dates_list as $row): ?>
       <li><?= $row['full_display'] ?></li>
     <?php endforeach; ?>
     </ul>
   </aside>
+  <?php endif; ?>
+
+  <?php if ($sections['course details']): ?>
   <aside id="details" class="collapsible-mobile-start collapsible-tablet tablet-row-1">
     <header class="stay-open"><h3 class="trigger">Course Details</h3></header>
-    <div class="tablet-row-2">
-      <p class="underline">Full Time</p>
-      <ul>
-        <li>Tue - Fri: 8:30 AM - 5:00 PM</li>
-        <li>Mon: 1:00 PM - 5:00 PM Optional tutoring</li>
-        <li>Five weeks of instruction</li>
-      </ul>
-    </div>
-    <hr class="hide-tablet" />
-    <div class="tablet-row-2">
-      <p class="underline">Part Time</p>
-      <ul>
-        <li>Mon, Tue, Thu: 6:00 PM - 10:00 PM</li>
-        <li>Sat: 8:30 AM - 5:00 PM</li>
-        <li>Mon: 1:00 PM - 5:00 PM Optional tutoring</li>
-        <li>Nine weeks of instruction</li>
-      </ul>
-    </div>
-    <hr class="tablet-row-1" />
-    <div class="tablet-row-1">
-      <p>Both courses include:</p>
-      <ul>
-        <li>168 hours of instruction and skills practice</li>
-        <li>24-32 hours of field externship</li>
-      </ul>
-    </div>
+    <?php output_course_data('course details') ?>
   </aside>
+  <?php endif; ?>
+
+  <?php if ($sections['links']): ?>
   <aside id="links" class="tablet-row-2">
     <header><h3>Links</h3></header>
     <ul>
-      <li><a href="#">EMT Course Information Packet</a></li>
-      <li><a href="#">School Catalog</a></li>
-      <li><a href="#">Immunizations Requirements</a></li>
-      <li><a href="#">EMT Skills Videos</a></li>
+      <?php output_course_data('links') ?>
     </ul>
   </aside>
+  <?php endif; ?>
+
+  <?php if ($sections['course approvals']): ?>
   <aside id="course_approvals" class="tablet-row-2">
     <header><h3>Approved By</h3></header>
     <ul>
-      <li>CA Bureau for Private Postsecondary Education</li>
-      <li>CA Emergency Medical Services Authority</li>
-      <li>Alameda County EMS Agency</li>
-      <li>National Registry of Emergency Medical Technicians</li>
+      <?php output_course_data('course approvals') ?>
     </ul>
   </aside>
+  <?php endif; ?>
+
   <aside class="hide-desktop hide-tablet testimonial-column">
     <div class="testimonial-bg">
       <div id="testimonial-bottom" class="testimonial-container">
@@ -160,7 +168,7 @@ var piclist = [
 ];
 </script>
 
-<script src="../testimonialOpts.js"></script>
+<script src="<?= $incdir ?>config/testimonialOpts_postsec.js"></script>
 
 <script src="<?= $incdir ?>js/vendor/jquery.bxslider/jquery.bxslider.min.js"></script>
 
@@ -186,4 +194,4 @@ $(document).ready(function() {
 });
 </script>
 
-<?php require_once($incdir . 'footer.php'); ?>
+<?php require_once($incdir . 'include/footer.php'); ?>

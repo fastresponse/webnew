@@ -15,13 +15,11 @@
   <aside id="contact-info">
     <header><h3>Contact Us</h3></header>
     <div id="phone">
-      <!--<div class="button"><a href="tel://510-849-4009"><span class="nowrap">510-849-4009</span></a></div>-->
       <form action="tel:+15108494009" method="get" class="contact-btn">
         <input type="submit" class="phone-btn" name="btn" value="510-849-4009" />
       </form>
     </div>
     <div id="email">
-      <!--<div class="button"><a href="contact_us.php"><span class="nowrap">Send an Email</span></a></div>-->
       <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
         <input type="submit" class="email-btn" name="btn" value="Send an Email" />
       </form>
@@ -117,7 +115,7 @@
     <section>
       <h3>Externship</h3>
       <dl>
-        <dt></dt>
+        <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
       </dl>
     </section>
     <section>
@@ -139,7 +137,7 @@
     <section>
       <h3>Externship</h3>
       <dl>
-        <dt></dt>
+        <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
       </dl>
     </section>
     <section>
@@ -161,7 +159,7 @@
     <section>
       <h3>Externship</h3>
       <dl>
-        <dt></dt>
+        <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
       </dl>
     </section>
     <section>
@@ -183,7 +181,7 @@
     <section>
       <h3>Externship</h3>
       <dl>
-        <dt></dt>
+        <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
       </dl>
     </section>
     <section>

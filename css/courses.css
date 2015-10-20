@@ -10,8 +10,13 @@
 
 #start_dates li,
 #links li,
-#course_approvals li {
-  margin-top: 5px;
+#course_approvals li,
+#postsec li,
+#ceu li {
+  margin-top: 8px;
+}
+#start_dates .class-type {
+  white-space: nowrap;
 }
 
 #registration .button {
@@ -44,7 +49,16 @@ article h1 {
     margin-right: 0;
   }
 
-  #details {
+  #content-bottom {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #contact-info {
+    flex-flow: column nowrap;
+  }
+  #details,
+  #books,
+  #registration {
     display: flex;
     flex-flow: row wrap;
   }
@@ -62,12 +76,21 @@ article h1 {
   }
   #content-bottom {
     display: flex;
+    flex-flow: row wrap;
   }
   #content-bottom > * {
     flex: 1 49%;
   }
   #content-bottom > *:nth-child(odd) {
     margin-right: 2%;
+  }
+  #contact-info {
+    flex-flow: row wrap;
+  }
+  #details,
+  #books,
+  #registration {
+    display: block;
   }
   #testimonials {
     flex-direction: column;

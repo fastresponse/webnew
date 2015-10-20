@@ -5,6 +5,7 @@ article *:last-child {
 #content {
   display: block;
   /*flex: 1 100%;*/
+  margin-top: 3em;
 }
 #content > header {
   flex: 1 100%;
@@ -17,11 +18,15 @@ article *:last-child {
 #content > article {
   padding: 10px;
   margin-bottom: 35px;
-  border: 1px dotted black;
+  border: 2px dotted black;
   border-radius: 6px;
 }
 #content > article > header > h1 {
   margin: 0;
+}
+
+#admissions > section {
+  margin-top: 1em;
 }
 
 #content > article > section {
@@ -47,13 +52,31 @@ article *:last-child {
 }
 
 @media only screen and (max-width: 549px) {
+  #content > article > header > h1 {
+    font-size: 135%;
+  }
   article > section {
     margin-left: 2%;
   }
 }
 
 @media only screen and (min-width: 550px) {
+  #sidebar-primary {
+    padding: 0 25%;
+  }
+  #content > header > h1 {
+    font-size: 300%;
+  }
 }
 
 @media only screen and (min-width: 800px) {
+  #sidebar-primary {
+    padding: 0;
+  }
+  #content {
+    margin-top: 0;
+  }
+  #content > header > h1 {
+    font-size: 220%;
+  }
 }

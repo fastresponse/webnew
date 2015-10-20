@@ -157,7 +157,8 @@ $.fn.load_placeholders = function(srclist) {
     if (src) {
       var $img = $('<img/>', {
         src: src,
-        alt: ''
+        alt: '',
+        class: $(this).attr('class')
       });
       $(this).replaceWith($img);
     }
