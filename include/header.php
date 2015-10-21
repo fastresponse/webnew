@@ -3,6 +3,7 @@
   if (!isset($page_header)) $page_header = '';
   if (!isset($description)) $description = '';
   if (!isset($css)) $css = null;
+  if (!isset($hide_header)) $hide_header = false;
 ?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -55,6 +56,7 @@
 
   </head>
   <body>
+    <?php if (!$hide_header): ?>
     <div class="header-container">
       <header class="wrapper">
       <a href="<?= $incdir ?>"><img src="<?= $incdir ?>img/fr-logo-transparent.png" alt="Fast Response School Of Health Care Education" id="logo-img" /></a>
@@ -79,6 +81,7 @@
         </nav>
       </header>
     </div>
+    <?php endif; ?>
 
     <div class="main-container">
       <a name="top-of-page"></a>

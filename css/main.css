@@ -367,6 +367,29 @@ aside li {
     text-align: right;
 }
 
+#banner {
+    flex: 1 100%;
+    order: -1;
+    margin: 15px 0 30px;
+    text-align: center;
+}
+#banner > div {
+    display: inline-block;
+    min-width: 80%;
+    margin: 0 auto;
+    padding: 5px 8px;
+    border: 2px solid red;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 120%;
+    box-shadow: 5px 5px 15px red;
+    background-color: white;
+}
+#banner a {
+  color: red;
+  text-decoration: none;
+}
+
 .button a {
     text-decoration: none;
     font-size: 130%;
@@ -842,29 +865,6 @@ img.image-placeholder {
     }
     .main aside header {
         align-self: center;
-    }
-
-    #banner {
-        flex: 1 100%;
-        order: -1;
-        margin: 15px 0 30px;
-        text-align: center;
-    }
-    #banner > div {
-        display: inline-block;
-        min-width: 80%;
-        margin: 0 auto;
-        padding: 5px 8px;
-        border: 2px solid red;
-        border-radius: 7px;
-        text-align: center;
-        font-size: 120%;
-        box-shadow: 5px 5px 15px red;
-        background-color: white;
-    }
-    #banner a {
-      color: red;
-      text-decoration: none;
     }
 
     #sidebar-secondary {

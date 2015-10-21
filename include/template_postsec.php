@@ -17,10 +17,16 @@ if ($landing_page) {
   if (!isset($show_next_date)) {
     $show_next_date = true;
   }
+  if (!isset($hide_header)) {
+    $hide_header = true;
+  }
 }
 else {
   $basecss = array('courses.css');
 }
+
+if (!isset($show_next_date))
+  $show_next_date = false;
 
 if (!isset($css))
   $css = $basecss;
@@ -28,21 +34,21 @@ else
   $css = $basecss + $css;
 
 
-function output_course_data($what) {
-  $method = 'a';
+/*
+function load_course_data() {
   global $sections;
 
-  switch ($method) {
-  case 'a':
-    echo $sections[$what];
-    break;
-  case 'b':
+  $arr = array(
+    'Test Results', 'Course Details', 'Links',
+    'Course Approvals', 'Above Fold', 'Below Fold'
+  );
+
+  foreach ($arr as $what) {
     $filename = str_replace(' ', '_', strtolower($what)) . '.php';
-    include(getcwd() . DIRECTORY_SEPARATOR . $filename);
-    break;
-  default:
+    $sections[$what] = file_get_contents(getcwd() . DIRECTORY_SEPARATOR . $filename);
   }
 }
+*/
 ?>
 <?php require_once($incdir . 'include/header.php'); ?>
 
@@ -105,7 +111,7 @@ function output_course_data($what) {
 
   <?php if ($sections['test results']): ?>
   <aside id="test_results" class="tablet-row-3">
-    <?php output_course_data('test results') ?>
+    <?= $sections['test results'] ?>
   </aside>
   <?php endif; ?>
 
@@ -128,7 +134,7 @@ function output_course_data($what) {
   <?php if ($sections['course details']): ?>
   <aside id="details" class="collapsible-mobile-start collapsible-tablet tablet-row-1">
     <header class="stay-open"><h3 class="trigger">Course Details</h3></header>
-    <?php output_course_data('course details') ?>
+    <?= $sections['course details'] ?>
   </aside>
   <?php endif; ?>
 
@@ -136,7 +142,7 @@ function output_course_data($what) {
   <aside id="links" class="tablet-row-2">
     <header><h3>Links</h3></header>
     <ul>
-      <?php output_course_data('links') ?>
+      <?= $sections['links'] ?>
     </ul>
   </aside>
   <?php endif; ?>
@@ -145,7 +151,7 @@ function output_course_data($what) {
   <aside id="course_approvals" class="tablet-row-2">
     <header><h3>Approved By</h3></header>
     <ul>
-      <?php output_course_data('course approvals') ?>
+      <?= $sections['course approvals'] ?>
     </ul>
   </aside>
   <?php endif; ?>
@@ -228,16 +234,15 @@ $(document).ready(function() {
 
   if (width >= 800) {
     type = 'desktop';
-    $('.image-placeholder').load_placeholders( imageOpts[type], srclist );
   }
   else if (width >= 550) {
     type = 'tablet';
-    $('.image-placeholder').load_placeholders( imageOpts[type], srclist );
   }
   else {
     type = 'mobile';
   }
 
+  $('.image-placeholder').load_placeholders( imageOpts[type], srclist );
   $('.testimonial-container').load_testimonials( testimonialOpts[type] );
 });
 </script>

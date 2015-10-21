@@ -5,7 +5,7 @@
   $description = '';
   $css = array('courses.css');
 ?>
-<?php require_once($incdir . 'header.php'); ?>
+<?php require_once($incdir . 'include/header.php'); ?>
 
 <div id="sidebar-primary">
   <aside id="contact-info">
@@ -18,7 +18,6 @@
     <div id="email">
       <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
         <input type="submit" class="email-btn" name="btn" value="Send an Email" />
-        <input type="hidden" name="p" value="<?= urlencode($form_course_name) ?>" />
       </form>
     </div>
   </aside>
@@ -36,34 +35,36 @@
   <aside id="postsec">
     <header><h3>Postsecondary Courses</h3></header>
     <ul>
-      <li><a href="#">Emergency Medical Technician</a></li>
-      <li><a href="#">Certified Phlebotomy Technician</a></li>
-      <li><a href="#">Pharmacy Technician</a></li>
-      <li><a href="#">Clinical Medical Assistant</a></li>
-      <li><a href="#">Paramedic</a></li>
-      <li><a href="#">Sterile Processing Technician</a></li>
+      <li><a href="<?= $incdir ?>courses/emt/">Emergency Medical Technician</a></li>
+      <li><a href="<?= $incdir ?>courses/cpt/">Certified Phlebotomy Technician</a></li>
+      <li><a href="<?= $incdir ?>courses/phm/">Pharmacy Technician</a></li>
+      <li><a href="<?= $incdir ?>courses/cma/">Clinical Medical Assistant</a></li>
+      <li><a href="<?= $incdir ?>courses/paramedic/">Paramedic</a></li>
+      <li><a href="<?= $incdir ?>courses/spt/">Sterile Processing Technician</a></li>
     </ul>
   </aside>
   <aside id="ceu">
     <header><h3>Continuing Education Courses</h3></header>
     <ul>
-	    <li><a href="#">Healthcare Provider CPR (BLS)</a></li>
-	    <li><a href="#">Advanced Cardiac Life Support (ACLS)</a></li>
-	    <li><a href="#">Pediatric Advanced Life Support (PALS)</a></li>
-	    <li><a href="#">ECG Basic Arrhythmia Recognition</a></li>
-	    <li><a href="#">ECG Technician</a></li>
-	    <li><a href="#">EMT Refresher</a></li>
-      <li><a href="#">EMT Skills Verification</a></li>
-      <li><a href="#">International Trauma Life Support</a></li>
-      <li><a href="#">First Aid</a></li>
+	    <li><a href="<?= $incdir ?>courses/bls/">Healthcare Provider CPR (BLS)</a></li>
+	    <li><a href="<?= $incdir ?>courses/acls/">Advanced Cardiac Life Support (ACLS)</a></li>
+	    <li><a href="<?= $incdir ?>courses/pals/">Pediatric Advanced Life Support (PALS)</a></li>
+	    <li><a href="<?= $incdir ?>courses/ecg-b/">ECG Basic Arrhythmia Recognition</a></li>
+	    <li><a href="<?= $incdir ?>courses/ecg-t/">ECG Technician</a></li>
+	    <li><a href="<?= $incdir ?>courses/emt-r/">EMT Refresher</a></li>
+      <li><a href="<?= $incdir ?>courses/emt-s/">EMT Skills Verification</a></li>
+      <li><a href="<?= $incdir ?>courses/itls/">International Trauma Life Support</a></li>
+      <li><a href="<?= $incdir ?>courses/first-aid/">First Aid</a></li>
     </ul>
   </aside>
 </div>
 
 <section id="content">
   <article>
+    <!--
     <div id="sidebar-secondary">
     </div>
+    -->
 
     <div class="collapsible-mobile-start collapsible-tablet">
       <header class="stay-open">
@@ -88,5 +89,4 @@
 <div id="bottom-bar">
 </div>
 
-<?php require_once($incdir . 'footer.php'); ?>
-
+<?php require_once($incdir . 'include/footer.php'); ?>

@@ -92,6 +92,9 @@ article h1 {
   #registration {
     display: block;
   }
+  #content > article > .testimonial-row {
+    display: none;
+  }
   #testimonials {
     flex-direction: column;
   }

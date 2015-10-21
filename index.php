@@ -6,7 +6,7 @@
   $canonical = 'http://www.fastresponse.org/';
   $css = array('index.css');
 ?>
-<?php require_once($incdir . 'header.php'); ?>
+<?php require_once($incdir . 'include/header.php'); ?>
 
 <div id="sidebar-primary">
   <aside id="slideshow">
@@ -17,7 +17,7 @@
     <header><h3>Contact Us</h3></header>
     <div id="phone">
       <!--<div class="button"><a href="tel://510-849-4009"><span class="nowrap">510-849-4009</span></a></div>-->
-      <form action="tel:+15108494009" method="get" class="contact-btn">
+      <form action="tel: +15108494009" method="get" class="contact-btn">
         <input type="submit" class="phone-btn" name="btn" value="510-849-4009" />
       </form>
     </div>
@@ -62,8 +62,8 @@
 
 <section id="content">
 
-  <div id="banner" class="hide-mobile">
-    <div class="bold italic"><a href="<?= $incdir ?>courses/cma/">Evening Medical Assistant classes begin Sept 21<sup>st</sup></a></div>
+  <div id="banner" class="">
+    <div class="bold italic"><a href="courses/phm/">Pharmacy Technician classes - <span class="nowrap">Now Enrolling for 2016</span></a></div>
   </div>
 
   <article id="career_courses" class="collapsible-mobile-start collapsible-tablet">
@@ -231,26 +231,4 @@ $(document).ready(function() {
 });
 </script>
 
-<?php if (false): ?>
-<div id="bottom-bar">
-  <section id="testimonials" class="space-out-3">
-    <?php
-      include_once($incdir . 'php/testimonials.php');
-      $emp_testimonials = get_testimonials($handle, array('employer'));
-      $emt_para_testimonials =
-        get_testimonials($handle, array('EMT', 'student')) +
-        get_testimonials($handle, array('Paramedic', 'student'));
-      $other_testimonials =
-        get_testimonials($handle, array('CMA', 'student')) +
-        get_testimonials($handle, array('CPT', 'student')) +
-        get_testimonials($handle, array('SPT', 'student')) +
-        get_testimonials($handle, array('PHM', 'student'));
-      display($emp_testimonials, 1, 'vertical');
-      display($emt_para_testimonials, 1, 'vertical');
-      display($other_testimonials, 1, 'vertical');
-    ?>
-  </section>
-</div>
-<?php endif; ?>
-
-<?php require_once($incdir . 'footer.php'); ?>
+<?php require_once($incdir . 'include/footer.php'); ?>
