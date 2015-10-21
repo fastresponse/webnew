@@ -680,6 +680,10 @@ aside.testimonial-column {
     margin-bottom: 0;
 }
 
+p.trigger {
+    text-align: center;
+}
+
 .collapsible-opened {
     font-size: 90%;
 }

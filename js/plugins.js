@@ -148,12 +148,24 @@ $.fn.load_images_num = function(srclist, num) {
   });
 }
 
-$.fn.load_placeholders = function(srclist) {
+$.fn.load_placeholders = function(opts, srclist) {
   return this.each(function() {
-    var src = $(this).data('src');
+    var localOpts = opts[ $(this).attr('id') ];
+    var src;
+
+    if (localOpts.load == 'none') return; // skip
+
+    if (localOpts.hasOwnProperty('src')) {
+      src = localOpts.src;
+    }
+    else {
+      src = $(this).data('src');
+    }
+
     if (!src && srclist.length > 0) {
       src = srclist.shift();
     }
+
     if (src) {
       var $img = $('<img/>', {
         src: src,

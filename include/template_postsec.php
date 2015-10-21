@@ -9,10 +9,23 @@ if (!isset($picdir) && isset($course_code))
 if (!isset($sections))
   $sections = array();
 
+if (!isset($landing_page))
+  $landing_page = false;
+
+if ($landing_page) {
+  $basecss = array('landing.css', 'contact_form.css');
+  if (!isset($show_next_date)) {
+    $show_next_date = true;
+  }
+}
+else {
+  $basecss = array('courses.css');
+}
+
 if (!isset($css))
-  $css = array('courses.css');
+  $css = $basecss;
 else
-  $css = array('courses.css') + $css;
+  $css = $basecss + $css;
 
 
 function output_course_data($what) {
@@ -33,7 +46,46 @@ function output_course_data($what) {
 ?>
 <?php require_once($incdir . 'include/header.php'); ?>
 
+<?php if ($landing_page): ?>
+<div id="top-bar" class="bg-darkblue">
+  <img src="<?= $incdir ?>img/fr-logo-darkblue.png" alt="Fast Response" />
+  <h3 style="width: 100%;">Career training in Berkeley, CA</h3>
+  <div id="phone">
+    <form action="tel:+18006377378" method="get" class="contact-btn">
+      <input type="submit" class="phone-btn" name="btn" value="800-637-7378" />
+    </form>
+  </div>
+  <div id="email">
+    <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
+      <input type="submit" class="email-btn" name="btn" value="Send an Email" />
+      <input type="hidden" name="p" value="<?= urlencode($form_course_name) ?>" />
+    </form>
+  </div>
+</div>
+<?php endif; ?>
+
 <div id="sidebar-primary">
+<?php if ($landing_page): ?>
+  <aside id="contact-info">
+    <header><h3 class="cta-bg">Get Info Now!</h3></header>
+    <?php
+      $hide_form_title = true;
+      $hide_form_call_button = false;
+      include($incdir . 'contact/contact_form.php');
+    ?>
+  </aside>
+  <aside class="testimonial-column">
+    <div class="testimonial-bg">
+      <div id="testimonial-sidebar-1" class="testimonial-container">
+        <h3 class="red underline click-load hide-desktop hide-tablet">Click to Read Testimonials</h3>
+      </div>
+    </div>
+  </aside>
+  <aside class="bottom-of-sidebar click-to-top">
+    <div class="button"><a href="#top-of-page">Back to top</a></div>
+  </aside>
+
+<?php else: ?>
   <aside id="contact-info" class="tablet-row-3">
     <header><h3>Contact Us</h3></header>
     <div id="phone">
@@ -105,11 +157,13 @@ function output_course_data($what) {
       </div>
     </div>
   </aside>
+<?php endif; ?>
 </div>
 
 <section id="content">
-  <article>
-    <div id="sidebar-secondary" class="hide-mobile hide-tablet">
+  <article class="collapsible-mobile-start collapsible-tablet">
+    <?php if (!$landing_page): ?>
+    <div id="sidebar-secondary" class="hide-mobile hide-tablet stay-open">
       <aside class="testimonial-column">
         <div class="testimonial-bg">
           <div id="testimonial-sidebar-1" class="testimonial-container"></div>
@@ -121,32 +175,26 @@ function output_course_data($what) {
         </div>
       </aside>
     </div>
+    <?php endif; ?>
 
-    <div class="collapsible-mobile-start collapsible-tablet">
-      <header class="stay-open">
-        <h1>Emergency Medical Technician</h1>
-        <h4>Training that will set you <span class="nowrap">apart from the rest!</span></h4>
-      </header>
-      <p class="stay-open">In only 5 weeks, you can become one of the best EMTs in the Bay Area. After your guaranteed externship you'll have the education and experience to take the National Registry EMT exam, where Fast Response students outperform the national average by a significant margin. Our graduates are highly sought-after by leading Bay Area ambulance companies, making you fully-qualified, job ready, and exceedingly employable.</p>
-      <p class="stay-open">Master the life-saving skills of an EMT and become somebody's hero!</p>
-      <p class="hide-desktop hide-tablet trigger bold red underline" style="text-align: center;" data-trigger-text="Continue Reading"></p>
-      <div class="testimonial-row hide-mobile hide-desktop">
-        <div class="testimonial-bg">
-          <div id="testimonial-interstitial-1" class="testimonial-container testimonial-interstitial"></div>
-        </div>
-      </div>
-      <p>Emergency Medical Technicians (EMTs) are health care professionals who critically assess, evaluate and treat medical and trauma patients. EMTs may work on ambulances, in fire departments or hospital emergency departments, or on search and rescue teams.</p>
-      <p>EMT is considered an entry-level medical responder. While some EMTs may choose to remain at this level of certification, we view the EMT certification as the first step into a broad array of career options. An EMT certification is required prior to obtaining a paramedic license and also may be required for certain fire service positions. EMT patient contact experience is also considered highly desirable when applying for Physician's Assistant (PA) programs. EMT certification is a fast and accessible option for individuals who are interested in medicine but not sure where to start.</p>
-      <p>Our extensive, five-week EMT course provides the most effective and expedient platform for our graduates to excel as compassionate, critical-thinking EMTs. Students immediately put their skills into practice in our simulated clinical, residential, and ambulance settings. Students will receive hands-on training with actual field medical equipment, supervised by an experienced cadre of paramedics and EMTs. These instructors bring a wide variety of EMT experience to the classroom and skills lab to expand our students' learning opportunities.</p>
-      <div class="testimonial-row hide-mobile hide-desktop">
-        <div class="testimonial-bg">
-          <div id="testimonial-interstitial-2" class="testimonial-container testimonial-interstitial"></div>
-        </div>
-      </div>
-      <!--<div class="image-placeholder" data-src=""></div>-->
-      <p>We've contracted with local ambulance companies and hospital emergency departments to provide a guaranteed 24-hour clinical and field externship to every student. Externship is a great way to gain more experience and confidence with patient contact in the field. In addition, students will often have the opportunity to participate in mass casualty incident (MCI) or active shooter drills, arranged in conjunction with local EMS agencies and hospitals.</p>
-      <p>The Fast Response EMT course features Basic Life Support (BLS / CPR) certification, free tutoring, NREMT test preparation, and a maximum student to instructor skills training ratio of 9:1.</p>
-    </div>
+    <header class="stay-open">
+      <h1><?= $page_header ?></h1>
+      <?php if (isset($sub_header)): ?><h4><?= $sub_header ?></h4><?php endif; ?>
+    </header>
+
+    <?php if ($show_next_date): ?>
+    <?php
+      include_once($incdir . 'php/course_dates.php');
+      $nextdate = get_next_course_date($handle, $course_code)['date_display'];
+    ?>
+    <h4 class="stay-open red">Next class: <span class="nowrap"><?= $nextdate ?></span></h4>
+    <?php endif; ?>
+
+    <?= $sections['above fold'] ?>
+    <?php if (isset($sections['trigger'])): ?>
+    <p class="hide-desktop hide-tablet trigger bold red underline" data-trigger-text="<?= $sections['trigger'] ?>"></p>
+    <?php endif; ?>
+    <?= $sections['below fold'] ?>
   </article>
 </section>
 
@@ -168,7 +216,7 @@ var piclist = [
 ];
 </script>
 
-<script src="<?= $incdir ?>config/testimonialOpts_postsec.js"></script>
+<script src="<?= $incdir ?>config/<?= ($landing_page ? 'landing' : 'postsec') ?>.js"></script>
 
 <script src="<?= $incdir ?>js/vendor/jquery.bxslider/jquery.bxslider.min.js"></script>
 
@@ -180,11 +228,11 @@ $(document).ready(function() {
 
   if (width >= 800) {
     type = 'desktop';
-    $('.image-placeholder').load_placeholders(srclist);
+    $('.image-placeholder').load_placeholders( imageOpts[type], srclist );
   }
   else if (width >= 550) {
     type = 'tablet';
-    $('.image-placeholder').load_placeholders(srclist);
+    $('.image-placeholder').load_placeholders( imageOpts[type], srclist );
   }
   else {
     type = 'mobile';

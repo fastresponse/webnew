@@ -206,7 +206,7 @@
   </aside>
 </div>
 
-<script src="testimonialOpts.js"></script>
+<script src="<?= $incdir ?>config/index.js"></script>
 
 <script src="<?= $incdir ?>js/vendor/jquery.bxslider/jquery.bxslider.min.js"></script>
 
