@@ -1,16 +1,20 @@
 <?php
 
-if (!isset($incdir))
+if (!isset($incdir)) {
   $incdir = '../../';
+}
 
-if (!isset($picdir) && isset($course_code))
+if (!isset($picdir) && isset($course_code)) {
   $picdir = $incdir . 'img/' . strtolower($course_code) . '/';
+}
 
-if (!isset($sections))
+if (!isset($sections)) {
   $sections = array();
+}
 
-if (!isset($landing_page))
+if (!isset($landing_page)) {
   $landing_page = false;
+}
 
 if ($landing_page) {
   $basecss = array('landing.css', 'contact_form.css');
@@ -25,14 +29,16 @@ else {
   $basecss = array('courses.css');
 }
 
-if (!isset($show_next_date))
+if (!isset($show_next_date)) {
   $show_next_date = false;
+}
 
-if (!isset($css))
+if (!isset($css)) {
   $css = $basecss;
-else
+}
+else {
   $css = $basecss + $css;
-
+}
 
 /*
 function load_course_data() {

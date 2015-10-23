@@ -1,20 +1,25 @@
 <?php
 
-if (!isset($incdir))
+if (!isset($incdir)) {
   $incdir = '../../';
+}
 
-if (!isset($picdir) && isset($course_code))
+if (!isset($picdir) && isset($course_code)) {
   $picdir = $incdir . 'img/' . strtolower($course_code) . '/';
+}
 
-if (!isset($sections))
+if (!isset($sections)) {
   $sections = array();
+}
 
 $basecss = array('courses.css');
 
-if (!isset($css))
+if (!isset($css)) {
   $css = $basecss;
-else
+}
+else {
   $css = $basecss + $css;
+}
 
 ?>
 <?php require_once($incdir . 'include/header.php'); ?>
@@ -171,5 +176,4 @@ $(document).ready(function() {
 });
 </script>
 
-<?php require_once($incdir . 'footer.php'); ?>
-
+<?php require_once($incdir . 'include/footer.php'); ?>
