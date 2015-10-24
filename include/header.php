@@ -40,7 +40,7 @@
     <meta name="application-name" content="Fast Response">
     <meta name="msapplication-TileColor" content="#f5f5f5">
     <meta name="msapplication-TileImage" content="<?= $incdir ?>icons/mstile-144x144.png">
-    <meta name="msapplication-config" content="<?= $incidr ?>browserconfig.xml" />
+    <meta name="msapplication-config" content="<?= $incdir ?>browserconfig.xml" />
     <meta name="theme-color" content="#f5f5f5">
 
     <link rel="stylesheet" href="<?= $incdir ?>css/normalize.min.css">

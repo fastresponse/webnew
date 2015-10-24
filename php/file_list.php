@@ -2,6 +2,8 @@
 
 function get_file_list($dir = null) {
 
+  global $incdir, $course_code;
+
   if ($dir && !is_dir($dir)) {
     $dir = null;
   }
@@ -18,7 +20,7 @@ function get_file_list($dir = null) {
     }
   }
 
-  if ($dir === null) return null;
+  if ($dir === null) return array();
 
   $exclude = array('..', '.', 'Thumbs.db');
 
