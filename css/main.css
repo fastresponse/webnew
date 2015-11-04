@@ -339,8 +339,15 @@ aside ul {
     padding-left: 0;
     margin: 0;
 }
+aside ul ul,
+aside ul.sub {
+    margin-left: 25px;
+}
 aside li {
     list-style-type: none;
+}
+aside li.sub {
+    margin-top: 1em;
 }
 
 #contact-info {
@@ -714,6 +721,9 @@ p.trigger {
 img.image-placeholder {
     border: 2px solid black;
     padding: 2px;
+    display: block;
+    margin: 0 auto;
+    max-height: 18em;
 }
 
 

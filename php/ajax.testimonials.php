@@ -71,11 +71,13 @@ END;
 
     // -- common: image -- //
 
-    $both = <<<END
-  <img src="{$row['image']}" alt="" />
+    if (isset($row['image']) && !empty($row['image'])) {
+      $both = <<<END
+<img src="{$row['image']}" alt="" />
 END;
-    $row['display_vertical'] .= $both;
-    $row['display_horizontal'] .= $both;
+      $row['display_vertical'] .= $both;
+      $row['display_horizontal'] .= $both;
+    }
 
     // -- horiz only: extra div around everything but the img -- //
 
@@ -160,17 +162,21 @@ function get_testimonials($handle, $categories) {
 }
 
 $arr = get_testimonials($handle, $categories);
-if (!$arr) return;
 
-if (!$num || $num < 1 || $num > count($arr))
-  $num = count($arr);
+if (!$arr || !count($arr)) {
+  $out = "";
+}
+else {
+  if (!$num || $num < 1 || $num > count($arr))
+    $num = count($arr);
 
-$display = 'display';
-if ($orientation && strlen($orientation)) $display .= '_' . $orientation;
+  $display = 'display';
+  if ($orientation && strlen($orientation)) $display .= '_' . $orientation;
 
-$out = array();
-for ($i = 0; $i < $num; $i++) {
-  $out[] = $arr[$i][$display];
+  $out = array();
+  for ($i = 0; $i < $num; $i++) {
+    $out[] = $arr[$i][$display];
+  }
 }
 
 header('Content-Type: application/json');

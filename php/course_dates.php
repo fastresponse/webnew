@@ -49,11 +49,16 @@ function get_course_dates($handle, $course_code, $course_type = null) {
     $args
   );
 
-  if ($prev_limit == 1) {
-    $prev = array( $prev );
+  if ($prev === false) {
+    $prev = array();
   }
   else {
-    $prev = array_reverse($prev);
+    if ($prev_limit == 1) {
+      $prev = array( $prev );
+    }
+    else {
+      $prev = array_reverse($prev);
+    }
   }
 
   $next = basic_query($handle,

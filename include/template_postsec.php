@@ -33,6 +33,10 @@ if (!isset($show_next_date)) {
   $show_next_date = false;
 }
 
+if (!isset($code_for_course_dates)) {
+  $code_for_course_dates = $course_code;
+}
+
 if (!isset($css)) {
   $css = $basecss;
 }
@@ -98,7 +102,20 @@ function load_course_data() {
   </aside>
 
 <?php else: ?>
-  <aside id="contact-info" class="tablet-row-3">
+  <?php
+    $n = 3;
+    $d = 1;
+
+    include_once($incdir . 'php/course_dates.php');
+    $course_dates_list = get_course_dates($handle, $code_for_course_dates);
+    $show_start_dates = (is_array($course_dates_list) && count($course_dates_list));
+
+    $show_test_results = ($sections['test results'] ? true : false);
+
+    if (!$show_test_results || !$show_start_dates) { $n = 2; }
+    if (!($show_test_results || $show_start_dates)) { $d = 2; }
+  ?>
+  <aside id="contact-info" class="tablet-row-<?= $n ?>">
     <header><h3>Contact Us</h3></header>
     <div id="phone">
       <!--<div class="button"><a href="tel://510-849-4009"><span class="nowrap"><span class="hide-mobile">510-849-4009</span><span class="hide-tablet hide-desktop">Call</span></span></a></div>-->
@@ -115,19 +132,14 @@ function load_course_data() {
     </div>
   </aside>
 
-  <?php if ($sections['test results']): ?>
-  <aside id="test_results" class="tablet-row-3">
+  <?php if ($show_test_results): ?>
+  <aside id="test_results" class="tablet-row-<?= $n ?>">
     <?= $sections['test results'] ?>
   </aside>
   <?php endif; ?>
 
-  <?php
-    include_once($incdir . 'php/course_dates.php');
-    $course_dates_list = get_course_dates($handle, $course_code);
-
-    if (is_array($course_dates_list) && count($course_dates_list)):
-  ?>
-  <aside id="start_dates" class="tablet-row-3">
+  <?php if ($show_start_dates): ?>
+  <aside id="start_dates" class="tablet-row-<?= $n ?>">
     <header><h3>Class Start Dates</h3></header>
     <ul>
     <?php foreach ($course_dates_list as $row): ?>
@@ -138,10 +150,14 @@ function load_course_data() {
   <?php endif; ?>
 
   <?php if ($sections['course details']): ?>
-  <aside id="details" class="collapsible-mobile-start collapsible-tablet tablet-row-1">
+    <aside id="details" class="collapsible-mobile-start collapsible-tablet tablet-row-<?= $d ?>">
     <header class="stay-open"><h3 class="trigger">Course Details</h3></header>
     <?= $sections['course details'] ?>
   </aside>
+  <?php endif; ?>
+
+  <?php if (($n+$d) % 2 == 1): ?>
+  <aside style="display: none;"></aside>
   <?php endif; ?>
 
   <?php if ($sections['links']): ?>

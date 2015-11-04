@@ -48,7 +48,6 @@ else {
         <p><span class="nowrap">If you are employed by one of</span> <span class="nowrap">the following medical facilities:</span></p>
         <ul>
           <li>Alta Bates Medical Center (RNs only)</li>
-          <li>Alameda County Medical Center</li>
           <li>WestMed Ambulance</li>
           <li>Pro Transport-1</li>
         </ul>
@@ -111,11 +110,28 @@ else {
       <div id="image-placeholder-1" class="image-placeholder tablet-row-2"></div>
       <div id="image-placeholder-2" class="image-placeholder tablet-row-2"></div>
 
+      <?php
+        $n = 0;
+        if (isset($sections['course details'])) $n++;
+        if (isset($sections['extra'])) $n++;
+        if (isset($sections['books'])) $n++;
+      ?>
+
       <?php if (isset($sections['course details'])): ?>
       <aside id="details" class="collapsible-mobile-start collapsible-tablet tablet-row-1">
         <header class="stay-open"><h3 class="trigger">Course Details</h3></header>
         <?= $sections['course details'] ?>
       </aside>
+      <?php endif; ?>
+
+      <?php if (isset($sections['extra'])): ?>
+      <aside id="extra" class="collapsible-mobile-start collapsible-tablet tablet-row-1">
+        <?= $sections['extra'] ?>
+      </aside>
+      <?php endif; ?>
+
+      <?php if ($n % 2 == 1): ?>
+      <aside style="display: none;"></aside>
       <?php endif; ?>
 
       <?php if (isset($sections['books'])): ?>

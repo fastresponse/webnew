@@ -61,10 +61,20 @@
 
 <section id="content">
   <article>
-    <!--
-    <div id="sidebar-secondary">
+    <div id="sidebar-secondary" class="hide-mobile">
+      <aside>
+        <header><h3>Approved By</h3></header>
+        <ul>
+          <li>CA Bureau for Private Postsecondary Education</li>
+          <li>CA Emergency Medical Services Authority</li>
+          <li>Alameda County EMS Agency</li>
+          <li>National Registry of Emergency Medical Technicians</li>
+          <li>National Center for Competency Testing</li>
+          <li>California Department of Public Health, Laboratory Field Services</li>
+          <li>American Heart Association</li>
+        </ul>
+      </aside>
     </div>
-    -->
 
     <div class="collapsible-mobile-start collapsible-tablet">
       <header class="stay-open">

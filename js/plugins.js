@@ -179,7 +179,7 @@ $.fn.load_placeholders = function(opts, srclist) {
 
 $.fn.load_testimonials = function(opts) {
   var defaultSliderOpts = {
-    pause: 12000,
+    pause: 9000,
     controls: false,
     pager: false,
     minSlides: 1,
@@ -217,9 +217,14 @@ $.fn.load_testimonials = function(opts) {
       "domOb" : domOb,
       "sliderOpts" : sliderOpts,
       "success" : function(data, textStatus, jqxhr) {
-        this.domOb.html(data);
-        if (this.sliderOpts) {
-          this.domOb.bxSlider( this.sliderOpts );
+        if (data.length == 0) {
+          this.domOb.closest('.testimonial-column, .testimonial-row').hide();
+        }
+        else {
+          this.domOb.html(data);
+          if (this.sliderOpts) {
+            this.domOb.bxSlider( this.sliderOpts );
+          }
         }
       },
       "error" : function(jqxhr, textStatus, errorThrown) {

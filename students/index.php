@@ -62,6 +62,15 @@
     </section>
   </article>
 
+  <article id="career_services" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+    <header class="stay-open"><h1 class="trigger">Student Career Services</h1></header>
+    <section>
+      <dl>
+        <dt></dt>
+      </dl>
+    </section>
+  </article>
+
   <article id="emt" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
     <header class="stay-open"><h1 class="trigger">Emergency Medical Technician</h1></header>
     <section>

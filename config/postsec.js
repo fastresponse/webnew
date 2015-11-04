@@ -104,7 +104,7 @@ var imageOpts = {
   },
   "desktop" : {
     "image-placeholder-1" : {
-      "load" : "none"
+      "load" : "auto"
     },
     "image-placeholder-2" : {
       "load" : "none"
