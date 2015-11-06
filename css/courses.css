@@ -81,8 +81,8 @@ article h1 {
   #content-bottom > * {
     flex: 1 49%;
   }
-  #content-bottom > *:nth-child(odd) {
-    margin-right: 2%;
+  #content-bottom > *:nth-of-type(2n+0) {
+    margin-left: 2%;
   }
   #contact-info {
     flex-flow: row wrap;

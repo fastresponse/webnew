@@ -718,6 +718,25 @@ p.trigger {
     font-size: 90%;
 }
 
+#placeholder-box {
+    flex: 1 100% !important;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+#placeholder-box.contains-1 > img {
+    flex: none;
+}
+#placeholder-box.contains-2 > img {
+    flex: 1 49%;
+}
+#placeholder-box > img {
+    margin: 0 0 0 2%;
+}
+#placeholder-box > img:first-child {
+    margin: 0;
+}
+
 img.image-placeholder {
     border: 2px solid black;
     padding: 2px;
@@ -771,6 +790,10 @@ img.image-placeholder {
   .collapsible-tablet .trigger,
   .collapsible-tablet-start .trigger {
       cursor: pointer;
+  }
+  #contact-info.tablet-row-1 {
+      padding-left: 20%;
+      padding-right: 20%;
   }
   #contact-info.tablet-row-3 {
       flex-flow: column nowrap;

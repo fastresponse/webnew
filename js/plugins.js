@@ -23,6 +23,17 @@
 
 // Place any jQuery/helper plugins in here.
 
+
+$.fn.removeClassRegex = function(regex) {
+  return this.each(function() {
+    $(this).attr('class', function(index, css) {
+      if (!css) return '';
+      var re = new RegExp('(^|\\s)' + regex, 'g');
+      return css.replace(re, '');
+    });
+  });
+};
+
 $.fn.load_images = function(opts) {
   /* opts = {
    *   "num" : n,
@@ -151,9 +162,17 @@ $.fn.load_images_num = function(srclist, num) {
 $.fn.load_placeholders = function(opts, srclist) {
   return this.each(function() {
     var localOpts = opts[ $(this).attr('id') ];
+    var $thisparent = $(this).parent();
     var src;
 
-    if (localOpts.load == 'none') return; // skip
+    if (localOpts.load == 'none') {
+      $(this).remove();
+      $thisparent
+        .removeClassRegex('contains-\\d+')
+        .addClass( 'contains-'+ ($thisparent.children().length) )
+      ;
+      return; // skip
+    }
 
     if (localOpts.hasOwnProperty('src')) {
       src = localOpts.src;
@@ -174,6 +193,14 @@ $.fn.load_placeholders = function(opts, srclist) {
       });
       $(this).replaceWith($img);
     }
+    else {
+      $(this).remove();
+    }
+
+    $thisparent
+      .removeClassRegex('contains-\\d+')
+      .addClass( 'contains-'+ ($thisparent.children().length) )
+    ;
   });
 };
 
@@ -190,7 +217,11 @@ $.fn.load_testimonials = function(opts) {
     auto: true,
     adaptiveHeight: true
   };
-  return this.each(function() {
+
+  var deferred = new $.Deferred();
+  var subcalls = [];
+
+  this.each(function() {
     var localOpts = opts[ $(this).attr('id') ];
     var sliderOpts;
     var ajaxOpts;
@@ -234,7 +265,7 @@ $.fn.load_testimonials = function(opts) {
     };
 
     if (localOpts.load == 'auto') {
-      $.ajax(ajaxOpts);
+      subcalls.push( $.ajax(ajaxOpts) );
     }
     if (localOpts.load == 'click') {
       domOb.find('.click-load').click(function() {
@@ -243,6 +274,12 @@ $.fn.load_testimonials = function(opts) {
     }
     
   });
+
+  $.when.apply($, subcalls).done(function() {
+    deferred.resolve();
+  });
+
+  return deferred;
 };
 
 /*

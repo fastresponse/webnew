@@ -264,8 +264,11 @@ $(document).ready(function() {
     type = 'mobile';
   }
 
-  $('.image-placeholder').load_placeholders( imageOpts[type], srclist );
-  $('.testimonial-container').load_testimonials( testimonialOpts[type] );
+  $.when(
+    $('.testimonial-container').load_testimonials( testimonialOpts[type] )
+  ).then(function() {
+    $('.image-placeholder').load_placeholders( imageOpts[type], srclist );
+  });
 });
 </script>
 

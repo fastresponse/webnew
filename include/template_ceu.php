@@ -57,7 +57,11 @@ else {
   </aside>
   <aside style="display: none;"><!-- why is this here -->
   </aside>
-  <aside id="contact-info" class="tablet-row-2">
+  <?php
+    if (isset($sections['course approvals'])) $r = 2;
+    else $r = 1;
+  ?>
+  <aside id="contact-info" class="tablet-row-<?= $r ?>">
     <header><h3>Contact Us</h3></header>
     <div id="phone">
       <form action="tel: +15108494009" method="get" class="contact-btn">
@@ -66,7 +70,7 @@ else {
     </div>
     <div id="email">
       <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
-        <input type="submit" class="email-btn" name="btn" value="Send an Email" />
+        <input type="submit" class="email-btn" value="Send an Email" />
         <input type="hidden" name="p" value="<?= urlencode($form_course_name) ?>" />
       </form>
     </div>
@@ -107,8 +111,38 @@ else {
     </div>
 
     <div id="content-bottom">
-      <div id="image-placeholder-1" class="image-placeholder tablet-row-2"></div>
-      <div id="image-placeholder-2" class="image-placeholder tablet-row-2"></div>
+      <div id="placeholder-box">
+        <div id="image-placeholder-1" class="image-placeholder"></div>
+        <div id="image-placeholder-2" class="image-placeholder"></div>
+      </div>
+
+<?php if (false): ?>
+      <?php
+        $order = array();
+        /*
+         * $order = array(
+         *   null,
+         *   'course details', 'books',
+         *   'extra',
+         * );
+         */
+        for ($i = 0; $i < count($order); $i++) {
+          if ($order[$i] === null) continue;
+          $id = str_replace(' ', '_', strtolower($order[$i]));
+          $t = $order[$i]; //sentence_case($order[$i]);
+          if ($i % 3 === 0) {
+            $r = 1;
+          }
+          else {
+            $r = 2;
+          }
+      ?>
+      <aside id="<?= $id ?>" class="collapsible-mobile collapsible-tablet tablet-row-<?= $r ?>">
+      </aside>
+      <?php
+        }
+      ?>
+<?php endif; ?>
 
       <?php
         $n = 0;
@@ -130,7 +164,7 @@ else {
       </aside>
       <?php endif; ?>
 
-      <?php if ($n % 2 == 1): ?>
+      <?php if (false && $n % 2 == 1): ?>
       <aside style="display: none;"></aside>
       <?php endif; ?>
 
