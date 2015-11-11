@@ -58,9 +58,11 @@ article h1 {
   }
   #details,
   #books,
+  #extra,
   #registration {
     display: flex;
     flex-flow: row wrap;
+    align-content: flex-start;
   }
 }
 

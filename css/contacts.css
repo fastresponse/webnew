@@ -12,7 +12,8 @@ dl > div > dt {
 dl dl dt {
 }
 dl dl dd {
-  margin-left: 15px;
+  /*margin-left: 15px;*/
+  font-size: 82%;
 }
 
 dt {
@@ -118,13 +119,33 @@ section {
 }
 
 @media only screen and (min-width: 800px) {
-  section {
+  .main > section {
     font-size: 90%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .main > section:nth-of-type(odd) {
+    margin-right: 2%;
   }
   hr {
     width: 100%;
   }
+  dl dl dd {
+    font-size: 90%;
+  }
+  #contact_form,
+  #location {
+    flex: 1 33%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  #contact_information,
+  #commuter {
+    flex: 1 65%;
+  }
   #contact_information > dl {
+    flex: 1 100%;
+    margin: 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -144,26 +165,36 @@ section {
   }
 }
 
+@media only screen and (min-width: 800px) and (max-width: 999px) {
+  #contact_information > dl > div {
+    /* restructure it to be horizontal or something */
+  }
+  /*
+  #contact_form,
+  #location {
+    flex: 1 45%;
+  }
+  #contact_information,
+  #commuter {
+    flex: 1 45%;
+  }
+  */
+}
+
 @media only screen and (min-width: 1000px) {
+  dl dl dd {
+    font-size: 100%;
+  }
   .main > section {
     font-size: 80%;
     flex: 1 48%;
     margin-left: 0;
     margin-right: 0;
   }
-  .main > section:nth-of-type(odd) {
-    margin-right: 2%;
-  }
-  #contact_form,
-  #location {
-    flex: 1 33%;
-  }
-  #contact_information,
-  #commuter {
-    flex: 1 65%;
-  }
   #contact_information {
     align-self: stretch;
+    display: flex;
+    flex-flow: column;
   }
   #contact_information > dl > div {
     flex: 1 32%;

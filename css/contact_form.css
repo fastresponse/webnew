@@ -91,13 +91,21 @@
 /* wide */
 @media only screen and (min-width: 800px) {
   #contact-form-div {
-    /*display: none;*/
     font-size: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  #contact-form-div > div {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
   }
   #contact-form-div form {
+    flex: 1;
     display: flex;
     flex-flow: row wrap;
-    align-items: flex-start
+    align-items: flex-start;
+    align-content: space-between;
   }
   #contact-form-div #contact-form > * {
     box-sizing: border-box;

@@ -10,7 +10,7 @@ $form_course_name = 'ECG-T';
 
 $sections = array(
 
-  'registration' => <<<'HTML'
+  'registration buttons' => <<<'HTML'
 <form action="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4115" method="get" class="registration-btn" target="_blank">
   <input type="submit" class="register-btn" name="btn" value="Register for ECG Technician" />
   <input type="hidden" name="catID" value="4115" />

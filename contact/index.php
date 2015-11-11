@@ -11,7 +11,7 @@
 <?php include_once('./contact_form.php'); ?>
 </section>
 
-<hr class="form-separator hide-desktop-large" />
+<hr class="form-separator hide-desktop hide-desktop-large" />
 
 <section id="contact_information">
 	<h2>Contact Information</h2>
@@ -31,10 +31,10 @@
         <dd><a href="mailto: info@fastresponse.org">info@fastresponse.org</a></dd>
 		  <dt>Address</dt>
 		    <dd>
-		    Fast Response School of<br />
-		    Health Care Education<br />
-		    2075 Allston Way, Suite B<br />
-		    Berkeley, CA 94704<br />
+		      <span class="nowrap">Fast Response School of</span><br />
+		      <span class="nowrap">Health Care Education</span><br />
+		      <span class="nowrap">2075 Allston Way, Suite B</span><br />
+		      <span class="nowrap">Berkeley, CA 94704</span><br />
 		    </dd>
     </dl></dd>
     </div>
@@ -119,7 +119,7 @@
   </div>
 </section>
 
-<hr class="form-separator hide-desktop-large" />
+<hr class="form-separator hide-desktop hide-desktop-large" />
 
 <section id="commuter">
   <header><h2>Commuter Information</h2></header>

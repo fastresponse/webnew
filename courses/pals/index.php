@@ -10,7 +10,7 @@ $form_course_name = 'PALS';
 
 $sections = array(
 
-  'registration' => <<<'HTML'
+  'registration buttons' => <<<'HTML'
 <form action="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4109&pcatID=4108" method="get" class="registration-btn" target="_blank">
   <input type="submit" class="register-btn" name="btn" value="Initial Certification" />
   <input type="hidden" name="catID" value="4109" />

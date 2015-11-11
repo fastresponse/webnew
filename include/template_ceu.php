@@ -26,15 +26,18 @@ else {
 
 <div id="sidebar-primary">
   <aside id="registration" class="tablet-row-1">
+  <?php if (isset($sections['registration'])): ?>
+    <?= $sections['registration'] ?>
+  <?php else: ?>
     <header><h3>Online Registration</h3></header>
     <div class="tablet-row-2">
       <form action="http://www.ssreg.com/fastresponse/calendar.asp?page=Calendar" method="get" class="registration-btn" target="_blank">
         <input type="submit" class="calendar-btn" name="btn" value="View Calendar" />
         <input type="hidden" name="page" value="Calendar" />
       </form>
-      <?= $sections['registration'] ?>
-      <hr />
+      <?= $sections['registration buttons'] ?>
       <?php if ($sections['required books']): ?>
+      <hr />
       <div class="book-notice">
         <header><h4>There are required books <span class="nowrap">for this class.</span></h4></header>
         <p>Please see the books section for details.</p>
@@ -54,6 +57,7 @@ else {
         <p>Then you <span class="underline red">must</span> register by phone.</p>
       </div>
     </div>
+  <?php endif; ?>
   </aside>
   <aside style="display: none;"><!-- why is this here -->
   </aside>

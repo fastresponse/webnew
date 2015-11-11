@@ -10,7 +10,7 @@ $form_course_name = 'BLS';
 
 $sections = array(
 
-  'registration' => <<<'HTML'
+  'registration buttons' => <<<'HTML'
 <form action="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4103&pcatID=4102" method="get" class="registration-btn" target="_blank">
   <input type="submit" class="register-btn" name="btn" value="Initial Certification" />
   <input type="hidden" name="catID" value="4103" />
@@ -74,8 +74,8 @@ HTML
   ,
 
   'extra' => <<<'HTML'
+<header class="stay-open"><h3 class="trigger">eLearning</h3></header>
 <div class="tablet-row-1">
-  <header class="stay-open"><h3 class="trigger">eLearning</h3></header>
   <p>
   <ul>
     <li>Official AHA BLS Online Course.</li>
