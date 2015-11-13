@@ -68,6 +68,7 @@
         <nav>
           <ul>
             <li><a href="<?= $incdir ?>">Home</a></li>
+            <li><a href="<?= $incdir ?>courses/">Courses</a></li>
             <?php
               $contact_url = $incdir . 'contact/';
               if (isset($form_course_name)) {

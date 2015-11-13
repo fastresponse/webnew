@@ -89,9 +89,11 @@
 
   <div id="map" class="border">
     <header><h4>Area Map</h4></header>
-    <a target="_blank" href="https://www.google.com/maps/place/Fast+Response+School+of+Health+Care+Education,+2075+Allston+Way,+Berkeley,+CA+94704/">
-      <img src="http://maps.googleapis.com/maps/api/staticmap?center=2075+Allston+Way,Suite+B,Berkeley,CA,94704&amp;zoom=14&amp;markers=color:red%7Clabel:F%7C2075+Allston+Way,Berkeley,CA&amp;size=300x210&amp;sensor=false" alt="Map of our area" data-width="300" data-height="210" />
-    </a>
+    <div class="center-box">
+      <a target="_blank" href="https://www.google.com/maps/place/Fast+Response+School+of+Health+Care+Education,+2075+Allston+Way,+Berkeley,+CA+94704/">
+        <img src="http://maps.googleapis.com/maps/api/staticmap?center=2075+Allston+Way,Suite+B,Berkeley,CA,94704&amp;zoom=14&amp;markers=color:red%7Clabel:F%7C2075+Allston+Way,Berkeley,CA&amp;size=300x350&amp;sensor=false" alt="Map of our area" data-width="300" data-height="350" />
+      </a>
+    </div>
   </div>
 
   <div id="google_directions" class="border">
@@ -110,7 +112,7 @@
     <header><h4>Mapquest Directions</h4></header>
     <form onSubmit="openMapquest();">
       <label>From:</label>
-      <input type="text" placeholder="Starting address" onFocus="setText(this, 'entering');" onBlur="setText(this, 'done');" />
+      <input type="text" placeholder="Starting address" />
       <br />
       <label>To:</label>
       <input type="text" value="2075 Allston Way, Suite B, Berkeley, CA 94704" />

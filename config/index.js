@@ -81,3 +81,12 @@ var testimonialOpts = {
     }
   }
 };
+
+var imageOpts = {
+  "mobile" : {
+  },
+  "tablet" : {
+  },
+  "desktop" : {
+  }
+};

@@ -18,13 +18,13 @@
     <div id="phone">
       <!--<div class="button"><a href="tel://510-849-4009"><span class="nowrap">510-849-4009</span></a></div>-->
       <form action="tel: +15108494009" method="get" class="contact-btn">
-        <input type="submit" class="phone-btn" name="btn" value="510-849-4009" />
+        <input type="submit" class="phone-btn" value="510-849-4009" />
       </form>
     </div>
     <div id="email">
       <!--<div class="button"><a href="<?= $incdir ?>contact/"><span class="nowrap">Send an Email</span></a></div>-->
       <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
-        <input type="submit" class="email-btn" name="btn" value="Send an Email" />
+        <input type="submit" class="email-btn" value="Send an Email" />
       </form>
     </div>
   </aside>
@@ -66,126 +66,10 @@
     <div class="bold italic"><a href="courses/phm/">Pharmacy Technician classes - <span class="nowrap">Now Enrolling for 2016</span></a></div>
   </div>
 
-  <article id="career_courses" class="collapsible-mobile-start collapsible-tablet">
-    <header class="stay-open"><h1 class="trigger">Career Courses</h1></header>
-    <section>
-      <h3><a href="courses/emt/">Emergency Medical Technician</a></h3>
-      <ul>
-        <li>Work in an ambulance, fire department, or hospital emergency department</li>
-        <li>Full-time: 5 weeks, Part-time: 9 weeks</li>
-        <li><span class="testscore">93%</span> student success rate on national exam</li>
-      </ul>
-    </section>
-    <section>
-      <h3><a href="courses/cpt/">Certified Phlebotomy Technician</a></h3>
-      <ul>
-        <li>Work in hospitals and laboratories</li>
-        <li>Full-time: 2 weeks, Part-time: 4 weeks</li>
-        <li><span class="testscore">91%</span> student success rate on national exam</li>
-      </ul>
-    </section>
-    <section>
-      <h3><a href="courses/phm/">Pharmacy Technician</a></h3>
-      <ul>
-        <li>Work in retail and hospital pharmacies</li>
-        <li>13 weeks of instruction</li>
-      </ul>
-    </section>
-    <section>
-      <h3><a href="courses/cma/">Clinical Medical Assistant</a></h3>
-      <ul>
-        <li>Work in a variety of hospital and laboratory settings</li>
-        <li>12 weeks of instruction</li>
-        <li>Phlebotomy included</li>
-        <li>Day and evening classes available</li>
-      </ul>
-    </section>
-    <section>
-      <h3><a href="courses/paramedic/">Paramedic</a></h3>
-      <ul>
-        <li>Work in an ambulance, fire department, or hospital emergency department</li>
-        <li>10 months of instruction</li>
-      </ul>
-    </section>
-    <section>
-      <h3><a href="courses/spt/">Sterile Processing Technician</a></h3>
-      <ul>
-        <li>Work in hospitals and laboratories</li>
-        <li>10 weeks of instruction</li>
-      </ul>
-    </section>
-  </article>
+<?php include_once($incdir . 'include/course_list_postsec.php'); ?>
 
-  <article id="continuing_ed" class="collapsible-mobile-start collapsible-tablet">
-    <header class="stay-open"><h1 class="trigger">Continuing Education</h1></header>
-    <section>
-      <h3><a href="courses/bls/">Basic <span class="nowrap">Life Support</span></a></h3>
-      <ul>
-        <li>Initial certification: 5 hours, <span class="price">$50.00</span></li>
-        <li>Renewal: 3.5 hours, <span class="price">$45.00</span></li>
-        <li>Online class w/ in-person skills testing available</li>
-        <li>AHA BLS card provided at course completion</li>
-      </ul>
-    </section>
-    <section>
-      <h3><a href="courses/acls/">Advanced Cardiovascular <span class="nowrap">Life Support</span></a></h3>
-      <ul>
-        <li>Initial certification: 2 days, <span class="price">$245.00</span></li>
-        <li>Renewal: 1 day, <span class="price">$175.00</span></li>
-        <li>AHA ACLS card provided at course completion</li>
-      </ul>
-    </section>
-    <section>
-      <h3><a href="courses/pals/">Pediatric Advanced <span class="nowrap">Life Support</span></a></h3>
-      <ul>
-        <li>Initial certification: 2 days, <span class="price">$245.00</span></li>
-        <li>Renewal: 1 day, <span class="price">$175.00</span></li>
-        <li>AHA PALS card provided at course completion</li>
-      </ul>
-    </section>
-    <section>
-      <h3><a href="courses/ecg-b/">ECG Basic</a></h3>
-      <ul>
-        <li>2 days, <span class="price">$215.00</span></li>
-        <li>14 CEUs</li>
-      </ul>
-    </section>
-    <section>
-      <h3><a href="courses/ecg-t/">ECG Technician</a></h3>
-      <ul>
-        <li>5 days, <span class="price">$1300.00</span></li>
-      </ul>
-    </section>
-    <section>
-      <h3><a href="courses/emt-r/">EMT Refresher</a></h3>
-      <ul>
-        <li>3 days, <span class="price">$350.00</span></li>
-        <li>Skills check-off included</li>
-        <li>24 CEUs</li>
-      </ul>
-    </section>
-    <section>
-      <h3><a href="courses/emt-s/">EMT Skills Verification</a></h3>
-      <ul>
-        <li>Class held by appointment only</li>
-        <li>3 hours, <span class="price">$90.00</span></li>
-      </ul>
-    </section>
-    <section>
-      <h3><a href="courses/itls/">International Trauma <span class="nowrap">Life Support</span></a></h3>
-      <ul>
-        <li>Initial certification: 2 days, <span class="price">$300.00</span></li>
-        <li>Renewal: 1 day, <span class="price">$185.00</span></li>
-      </ul>
-    </section>
-    <section>
-      <h3><a href="courses/first-aid/">First Aid</a></h3>
-      <ul>
-        <li>For groups of 6 or more</li>
-        <li>5 hour class</li>
-      </ul>
-    </section>
-  </article>
+<?php include_once($incdir . 'include/course_list_ceu.php'); ?>
+
 </section>
 
 <div id="bottom-bar" class="space-out-3">
@@ -217,17 +101,19 @@ $(document).ready(function() {
 
   if (width >= 800) {
     type = 'desktop';
-    //$('.image-placeholder').load_placeholders(srclist);
   }
   else if (width >= 550) {
     type = 'tablet';
-    //$('.image-placeholder').load_placeholders(srclist);
   }
   else {
     type = 'mobile';
   }
 
-  $('.testimonial-container').load_testimonials( testimonialOpts[type] );
+  $.when(
+    $('.testimonial-container').load_testimonials( testimonialOpts[type] )
+  ).then(function() {
+    //$('.image-placeholder').load_placeholders( imageOpts[type], srclist );
+  });
 });
 </script>
 
