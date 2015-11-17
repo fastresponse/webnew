@@ -119,13 +119,23 @@
 <h2>Program Inquiries</h2>
 <?php endif; ?>
 <div class="border">
-<form id="contact-form" action="/php/ajax/ajax.course_contact_emailer.php" method="post" onsubmit="return validate(this);">
+<form id="contact-form" action="<?= $incdir ?>php/ajax.course_contact_emailer.php" method="post" onsubmit="return validate(this);">
 
   <label for="form-program" class="form-section-program">Program</label>
   <select id="form-program" class="form-section-program" name="program" required="required">
     <option value="">&ndash; Select a program &ndash;</option>
     <?= array_to_option_html($programs, $form_course_name); ?>
   </select>
+
+  <!--
+  <div class="filler form-section-emt"></div>
+  <input type="checkbox" id="form-emt" class="form-section-emt" name="emt" value="I am currently an EMT." />
+  <label for="form-emt" class="form-section-emt">I am currently an EMT.</label>
+  -->
+  <div class="form-section-emt" style="padding-left: 25%; flex: 1 100%;">
+    <input type="checkbox" id="form-emt" name="emt" value="I am currently an EMT." />
+    <label for="form-emt" class="checkbox-label">I am currently an EMT.</label>
+  </div>
 
   <label for="form-name" class="form-section-name">Name</label>
   <input type="text" id="form-name" class="form-section-name" name="name" placeholder="Firstname Lastname" required="required" />
@@ -147,24 +157,36 @@
     <?= array_to_option_html($sources, get_referring_source()); ?>
   </select>
 
-  <label for="form-comments" class="form-section-comments">Questions and Comments</label>
+  <label for="form-questions" class="form-section-questions">Common Questions</label>
+
+  <input type="checkbox" id="form-questions-1" class="form-section-questions" name="questions[]" value="How much is tuition?">
+  <label for="form-questions-1" class="form-section-questions checkbox-label">How much is tuition?</label>
+
+  <input type="checkbox" id="form-questions-2" class="form-section-questions" name="questions[]" value="What payment plans are available?">
+  <label for="form-questions-2" class="form-section-questions checkbox-label">What payment plans are available?</label>
+
+  <input type="checkbox" id="form-questions-3" class="form-section-questions" name="questions[]" value="What are my career prospects?">
+  <label for="form-questions-3" class="form-section-questions checkbox-label">What are my career prospects?</label>
+
+  <input type="checkbox" id="form-questions-4" class="form-section-questions" name="questions[]" value="When does it start?">
+  <label for="form-questions-4" class="form-section-questions checkbox-label">When does it start?</label>
+
+
+  <label for="form-comments" class="form-section-comments">Other Questions and Comments</label>
   <div class="filler form-section-comments"></div>
   <textarea cols="28" rows="3" id="form-comments" class="form-section-comments" name="comments" style="vertical-align: top;"></textarea>
 
-  <div class="filler form-section-emt"></div>
-  <input type="checkbox" id="form-emt" class="form-section-emt" name="emt" value="I am currently an EMT." required="required" />
-  <label for="form-emt" class="form-section-emt">I am currently an EMT.</label>
-
-  <label id="loading" class="form-section-submit"></label>
-  <div id="output" class="form-section-submit"></div>
   <input type="submit" id="form-submit" class="form-section-submit" name="submit" title="Submit" value="Email Admissions" />
+
+  <div id="output" class="form-section-submit">
+    <div id="loading"></div>
+  </div>
 
   <input type="hidden" id="city" name="city" value="" />
 </form>
 
 <?php if (!$hide_form_call_button): ?>
 <form id="call-form" method="get" action="tel://1-800-637-7387">
-  <!--<button id="form-call" class="form-section-call" type="button">Call Admissions Now</button>-->
   <input type="submit" id="form-call" class="form-section-call" name="call" title="Call" value="Call Admissions Now&#x00A 800-637-7387 " />
 </form>
 <?php endif; ?>
@@ -191,19 +213,23 @@ var currently_submitting = false;
 
 $(document).ready(function() {
   var programid = '#form-program';
-  var emtid = '#form-section-emt';
 
   $(programid).change(function() {
+    var emtclass = '.form-section-emt';
+    var emtid = '#form-emt';
+
     if ($(this).val() == 'Paramedic') {
-      $(emtid).show();
-      $(emtid + ' input').attr("required", "required");
+      $(emtclass).show();
+      $(emtid).attr("required", "required");
     }
     else {
-      $(emtid).hide();
-      $(emtid + ' input').removeAttr("required");
+      $(emtclass).hide();
+      $(emtid).removeAttr("required");
     }
   });
+  $(programid).trigger('change');
 });
+
 $(document).ready(function() {
   var form = $(formid);
   var output = $('#output');
@@ -214,7 +240,7 @@ $(document).ready(function() {
   function displayOutput(htmlout) {
 	  $(loadingimgid).fadeOut(300, function() {
 	    $(this).remove(); // removes the loading image
-		  output.html(htmlout).slideDown(500);
+		  output.append(htmlout).slideDown(500);
 	  });
   }
 
@@ -230,11 +256,11 @@ $(document).ready(function() {
     currently_submitting = true;
 
     output.show();
-    output.html('');
+    //output.html('');
 
     loadingimgdiv.show();
-    loadingimgdiv.append(
-      '<img src="/images/ajax-loader.gif" alt="Currently Loading" id="' +
+    loadingimgdiv.html(
+      '<img src="<?= $incdir ?>img/ajax-loader.gif" alt="Currently Loading" id="' +
       loadingimgid.slice(1) + '" style="margin: 0 auto;" />'
     );
 
@@ -242,7 +268,7 @@ $(document).ready(function() {
 
     $.ajax({
 	    type: "POST",
-	    url: "/php/ajax/ajax.course_contact_emailer.php",
+	    url: "<?= $incdir ?>php/ajax.course_contact_emailer.php",
 	    data: formdata,
       dataType: 'json',
 
@@ -263,7 +289,7 @@ $(document).ready(function() {
         // on success, disable further input and track conversions
         if (data.success) {
           $(submitid).slideUp(500, function() {
-	          $('input,select,textarea').prop('disabled', true);
+	          $('input,select,textarea').not('#form-call').prop('disabled', true);
             $('label[for="' + submitid.slice(1) + '"]').hide();
             // in frlib2.js
             trackConversions();

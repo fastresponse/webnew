@@ -8,6 +8,21 @@
 <?php require_once($incdir . 'include/header.php'); ?>
 
 <div id="sidebar-primary">
+  <aside id="menu">
+    <header><h3>Student Resources Menu</h3></header>
+    <ul class="menu-links" data-default="#admissions">
+      <li class="menu-link" data-for="#admissions">Admissions</li>
+      <li class="menu-link" data-for="#career_services">Student Career Services</li>
+      <hr />
+      <li class="menu-link" data-for="#emt">Emergency Medical Technician</li>
+      <li class="menu-link" data-for="#phlebotomy">Phelbotomy</li>
+      <li class="menu-link" data-for="#medical_assistant">Medical Assistant</li>
+      <li class="menu-link" data-for="#pharm_tech">Pharmacy Technician</li>
+      <li class="menu-link" data-for="#sterile_processing">Sterile Processing</li>
+      <!--<li class="menu-link" data-for="#paramedic">Paramedic</li>-->
+    </ul>
+  </aside>
+
   <aside id="slideshow">
     <img src="/slideshow/frontpage/slide01.jpg" alt="" />
   </aside>
@@ -25,14 +40,13 @@
       </form>
     </div>
   </aside>
-
 </div>
 
 <section id="content">
 
-  <header><h1>Student Resources</h1></header>
+  <header class="hide-desktop hide-desktop-large"><h1>Student Resources</h1></header>
 
-  <article id="admissions" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+  <article id="admissions" class="collapsible-mobile collapsible-tablet">
     <header class="stay-open"><h1 class="trigger">Admissions</h1></header>
     <section>
       <dl>
@@ -63,7 +77,7 @@
     </section>
   </article>
 
-  <article id="career_services" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+  <article id="career_services" class="collapsible-mobile-start collapsible-tablet-start">
     <header class="stay-open"><h1 class="trigger">Student Career Services</h1></header>
     <section>
       <dl>
@@ -72,7 +86,9 @@
     </section>
   </article>
 
-  <article id="emt" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+  <hr class="hide-desktop hide-desktop-large" />
+
+  <article id="emt" class="collapsible-mobile-start collapsible-tablet-start">
     <header class="stay-open"><h1 class="trigger">Emergency Medical Technician</h1></header>
     <section class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
       <h3 class="trigger">Current Students</h3>
@@ -131,7 +147,7 @@
     </section>
   </article>
 
-  <article id="phlebotomy" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+  <article id="phlebotomy" class="collapsible-mobile-start collapsible-tablet-start">
     <header class="stay-open"><h1 class="trigger">Phlebotomy</h1></header>
     <section>
       <h3>Current Students</h3>
@@ -145,15 +161,9 @@
         <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
       </dl>
     </section>
-    <section>
-      <h3>Graduates</h3>
-      <dl>
-        <dt></dt>
-      </dl>
-    </section>
   </article>
 
-  <article id="medical_assistant" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+  <article id="medical_assistant" class="collapsible-mobile-start collapsible-tablet-start">
     <header class="stay-open"><h1 class="trigger">Medical Assistant</h1></header>
     <section>
       <h3>Current Students</h3>
@@ -167,15 +177,9 @@
         <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
       </dl>
     </section>
-    <section>
-      <h3>Graduates</h3>
-      <dl>
-        <dt></dt>
-      </dl>
-    </section>
   </article>
 
-  <article id="pharm_tech" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+  <article id="pharm_tech" class="collapsible-mobile-start collapsible-tablet-start">
     <header class="stay-open"><h1 class="trigger">Pharmacy Technician</h1></header>
     <section>
       <h3>Current Students</h3>
@@ -189,15 +193,9 @@
         <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
       </dl>
     </section>
-    <section>
-      <h3>Graduates</h3>
-      <dl>
-        <dt></dt>
-      </dl>
-    </section>
   </article>
 
-  <article id="sterile_processing" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+  <article id="sterile_processing" class="collapsible-mobile-start collapsible-tablet-start">
     <header class="stay-open"><h1 class="trigger">Sterile Processing</h1></header>
     <section>
       <h3>Current Students</h3>
@@ -211,15 +209,10 @@
         <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
       </dl>
     </section>
-    <section>
-      <h3>Graduates</h3>
-      <dl>
-        <dt></dt>
-      </dl>
-    </section>
   </article>
 
-  <article id="paramedic" class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+  <!--
+  <article id="paramedic" class="collapsible-mobile-start collapsible-tablet-start">
     <header class="stay-open"><h1 class="trigger">Paramedic</h1></header>
     <section>
       <h3>Current Students</h3>
@@ -233,13 +226,8 @@
         <dt></dt>
       </dl>
     </section>
-    <section>
-      <h3>Graduates</h3>
-      <dl>
-        <dt></dt>
-      </dl>
-    </section>
   </article>
+  -->
 
 </section>
 

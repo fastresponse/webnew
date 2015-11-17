@@ -95,6 +95,7 @@ HTML
 HTML
   ,
   
+  /*
   'faqs' => <<<'HTML'
 <dl>
   <dt>Question 1.</dt>
@@ -108,6 +109,7 @@ HTML
 </dl>
 HTML
   ,
+*/
 );
 
 ?>

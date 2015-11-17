@@ -68,12 +68,12 @@ function load_course_data() {
   <h3 style="width: 100%;">Career training in Berkeley, CA</h3>
   <div id="phone">
     <form action="tel:+18006377378" method="get" class="contact-btn">
-      <input type="submit" class="phone-btn" name="btn" value="800-637-7378" />
+      <input type="submit" class="phone-btn" value="800-637-7378" />
     </form>
   </div>
   <div id="email">
     <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
-      <input type="submit" class="email-btn" name="btn" value="Send an Email" />
+      <input type="submit" class="email-btn" value="Send an Email" />
       <input type="hidden" name="p" value="<?= urlencode($form_course_name) ?>" />
     </form>
   </div>
@@ -120,13 +120,13 @@ function load_course_data() {
     <div id="phone">
       <!--<div class="button"><a href="tel://510-849-4009"><span class="nowrap"><span class="hide-mobile">510-849-4009</span><span class="hide-tablet hide-desktop">Call</span></span></a></div>-->
       <form action="tel:+15108494009" method="get" class="contact-btn">
-        <input type="submit" class="phone-btn" name="btn" value="510-849-4009" />
+        <input type="submit" class="phone-btn" value="510-849-4009" />
       </form>
     </div>
     <div id="email">
       <!--<div class="button"><a href="<?= $incdir ?>contact/?p=<?= urlencode($form_course_name) ?>"><span class="nowrap"><span class="hide-mobile">Send an </span>Email</span></a></div>-->
       <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
-        <input type="submit" class="email-btn" name="btn" value="Send an Email" />
+        <input type="submit" class="email-btn" value="Send an Email" />
         <input type="hidden" name="p" value="<?= urlencode($form_course_name) ?>" />
       </form>
     </div>
@@ -210,13 +210,17 @@ function load_course_data() {
       <?php if (isset($sub_header)): ?><h4><?= $sub_header ?></h4><?php endif; ?>
     </header>
 
-    <?php if ($show_next_date): ?>
     <?php
+    if ($show_next_date) {
       include_once($incdir . 'php/course_dates.php');
       $nextdate = get_next_course_date($handle, $course_code)['date_display'];
+      if (strlen($nextdate)) {
     ?>
     <h4 class="stay-open red">Next class: <span class="nowrap"><?= $nextdate ?></span></h4>
-    <?php endif; ?>
+    <?php
+      }
+    }
+    ?>
 
     <?= $sections['above fold'] ?>
     <?php if (isset($sections['trigger'])): ?>

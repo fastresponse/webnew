@@ -11,10 +11,6 @@ dl > div > dt {
 }
 dl dl dt {
 }
-dl dl dd {
-  /*margin-left: 15px;*/
-  font-size: 82%;
-}
 
 dt {
   flex: 1;
@@ -107,8 +103,11 @@ section {
 @media only screen and (min-width: 480px) {
   .main > section {
     font-size: 125%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  dl dl dd {
+    font-size: 82%;
   }
   #contact_information {
     margin: 0;

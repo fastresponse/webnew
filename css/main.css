@@ -925,6 +925,9 @@ img.image-placeholder {
     #bottom-bar {
         margin-top: 10px;
     }
+    #sidebar-primary > *:first-child {
+        margin-top: 0;
+    }
     #bottom-bar > * {
       /*
         display: flex;

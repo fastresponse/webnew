@@ -62,8 +62,6 @@ var testimonialOpts = {
       "categories" : [course_code+",student"],
       "sliderOpts" : {
         "mode" : "vertical",
-        "minSlides" : 2,
-        "maxSlides" : 2
       }
     },
     "testimonial-sidebar-2" : {

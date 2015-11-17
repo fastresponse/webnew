@@ -18,7 +18,6 @@ function enable_collapse() {
   // in case this is called for window resizing
   triggers.unbind('click');
 
-  // create open/close icons
   /*
   * triangle up: &#x25B2;
   * triangle down: &#x25BC;
@@ -26,6 +25,7 @@ function enable_collapse() {
   * triangle left: &#x25C0;
   */
 
+  // populate trigger text and append open/close icons
   triggers.each(function() {
     var $opened = $('<span></span>').attr('class', 'collapsible-opened').append(' &#x25B2;');
     var $closed = $('<span></span>').attr('class', 'collapsible-closed').append(' &#x25B6;');
@@ -36,18 +36,27 @@ function enable_collapse() {
     $(this).append($opened, $closed);
   });
 
+  // hide things here instead of CSS so it's only hidden if JS is enabled to reshow it
+
+  // collapse elements inside collapsible-start blocks
+  collapsibles.filter('.collapsible-'+type+'-start').children(':not(.trigger, .stay-open)').hide();
+
+  // hide the open or close icons (for closed/open start states)
+  collapsibles.filter('.collapsible-'+type+'-start').find('.collapsible-opened').hide();
+  collapsibles.filter(':not(.collapsible-'+type+'-start)').find('.collapsible-closed').hide();
+
+  // set class based on starting state for styling
+  collapsibles.filter('.collapsible-'+type+'-start').addClass('closed').removeClass('opened');
+  collapsibles.filter(':not(.collapsible-'+type+'-start)').addClass('opened').removeClass('closed');
+
+  // create click events on all triggers to toggle visibility
   triggers.click(function() {
     var main = $(this).closest('.collapsible-'+type+', .collapsible-'+type+'-start');
     main.children(':not(.trigger, .stay-open)').slideToggle('fast');
+    main.toggleClass('opened closed');
     $(this).find('.collapsible-opened').toggle();
     $(this).find('.collapsible-closed').toggle();
   });
-
-  // process start-closed classes
-  // do this here instead of in CSS so it's only hidden if JS is enabled to reshow it
-  collapsibles.filter('.collapsible-'+type+'-start').children(':not(.trigger, .stay-open)').hide();
-  collapsibles.filter('.collapsible-'+type+'-start').find('.collapsible-opened').hide();
-  collapsibles.filter(':not(.collapsible-'+type+'-start)').find('.collapsible-closed').hide();
 }
 
 /*

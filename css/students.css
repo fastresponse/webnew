@@ -2,6 +2,12 @@ article *:last-child {
   margin-bottom: 0;
 }
 
+#menu ul {
+  font-size: 120%;
+  font-weight: bold;
+  line-height: 2em;
+}
+
 #content {
   display: block;
   /*flex: 1 100%;*/
@@ -18,8 +24,12 @@ article *:last-child {
 #content > article {
   padding: 10px;
   margin-bottom: 35px;
-  border: 2px dotted black;
+  border: 2px dotted grey;
   border-radius: 6px;
+}
+#content > article.opened {
+  border-color: black;
+  border-style: solid;
 }
 #content > article > header > h1 {
   margin: 0;
@@ -61,6 +71,11 @@ dl dl dt {
 dl dl dd {
   display: list-item;
   list-style-type: circle;
+}
+
+hr {
+  border-color: black;
+  border-width: 2px;
 }
 
 @media only screen and (max-width: 549px) {

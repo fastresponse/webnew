@@ -18,10 +18,11 @@
   width: 25%;
 }
 #contact-form-div label[for="form-source"],
-#contact-form-div label[for="form-comments"] {
+#contact-form-div label[for="form-comments"],
+#contact-form-div label[for="form-questions"] {
   text-align: left;
   padding-right: 0;
-  margin-top: 7px;
+  margin-top: 12px;
   width: 100%;
 }
 #contact-form-div input[type="text"],
@@ -37,15 +38,27 @@
   width: 70%;
 }
 
+#contact-form-div input[type="checkbox"] {
+  vertical-align: middle;
+  margin-top: 12px;
+  height: 1em;
+  width: 1em;
+}
+#contact-form-div label.checkbox-label {
+  vertical-align: middle;
+}
+
 #contact-form-div #form-source,
 #contact-form-div #form-comments {
   margin-top: 4px;
 }
 #contact-form-div .form-section-emt {
-  margin-top: 14px;
+  /*margin-top: 14px;*/
+  margin-bottom: 10px;
 }
 #contact-form-div label[for="form-emt"] {
   width: auto;
+  margin-left: 1%;
 }
 #contact-form-div input[type="submit"],
 #contact-form-div #form-call {
@@ -65,15 +78,42 @@
   text-align: center;
 }
 
-#contact-form-div #loading,
+#contact-form-div #loading {
+  display: none;
+}
 #contact-form-div #output {
   display: none;
+  flex: 1 100%;
+  margin: 25px auto;
+  font-size: 110%;
+  font-weight: bold;
+  text-align: center;
+}
+
+#contact-form-div .success {
+  padding: 5px;
+  border: 2px solid green;
+}
+#contact-form-div .error {
+  padding: 5px;
+  border: 2px solid red;
 }
 
 #contact-form-div .form-section-zip,
 #contact-form-div .form-section-emt,
 #contact-form-div .form-section-comments {
   display: none;
+}
+
+#contact-form-div input.form-section-questions {
+  margin-left: 5%;
+  margin-top: 12px;
+  width: 5%;
+}
+#contact-form-div label.form-section-questions.checkbox-label {
+  margin-left: 1%;
+  margin-top: 12px;
+  width: 87%;
 }
 
 /* intermediate */
@@ -85,6 +125,16 @@
   #contact-form-div input[type="submit"],
   #contact-form-div #form-call {
     height: 60px;
+  }
+  #contact-form-div input.form-section-questions {
+    margin-left: 25%;
+    margin-top: 12px;
+    width: 5%;
+  }
+  #contact-form-div label.form-section-questions.checkbox-label {
+    margin-left: 1%;
+    margin-top: 12px;
+    width: 67%;
   }
 }
 
@@ -124,7 +174,7 @@
   #contact-form-div label[for="form-comments"] {
     /*text-align: right;*/
     padding-right: 5px;
-    margin-top: 7px;
+    margin-top: 12px;
   }
   #contact-form-div label[for="form-emt"] {
   }
@@ -143,6 +193,19 @@
   }
   #contact-form-div input[type="submit"] {
   }
+  #contact-form-div input.form-section-questions {
+    flex: 1 5%;
+    margin-left: 25%;
+    margin-top: 7px;
+    width: 4%;
+  }
+  #contact-form-div label.form-section-questions.checkbox-label {
+    flex: 1 69%;
+    margin-left: 1%;
+    margin-top: 7px;
+    width: 68%;
+  }
+  
 
   /*
   #contact-form-div .form-section-name { order: 0; }

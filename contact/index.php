@@ -98,24 +98,24 @@
 
   <div id="google_directions" class="border">
     <header><h4>Google Directions</h4></header>
-    <form>
+    <form action="http://maps.google.com/maps" method="get" target="_blank">
       <label>From:</label>
-      <input type="text" placeholder="Starting address" />
+      <input type="text" name="saddr" placeholder="Starting address" />
       <br />
       <label>To:</label>
-      <input type="text" value="2075 Allston Way, Suite B, Berkeley, CA 94704" />
+      <input type="text" name="daddr" readonly="readonly" value="2075 Allston Way, Suite B, Berkeley, CA 94704" />
       <input type="submit" value="Get directions from Google" />
     </form>
   </div>
 
   <div id="mapquest_directions" class="border">
     <header><h4>Mapquest Directions</h4></header>
-    <form onSubmit="openMapquest();">
+    <form action="http://mapq.st/directions" method="get" target="_blank">
       <label>From:</label>
-      <input type="text" placeholder="Starting address" />
+      <input type="text" name="saddr" placeholder="Starting address" />
       <br />
       <label>To:</label>
-      <input type="text" value="2075 Allston Way, Suite B, Berkeley, CA 94704" />
+      <input type="text" name="daddr" readonly="readonly" value="2075 Allston Way, Suite B, Berkeley, CA 94704" />
       <input type="submit" value="Get directions from Mapquest" />
     </form>
   </div>

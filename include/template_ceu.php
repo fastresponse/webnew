@@ -32,7 +32,7 @@ else {
     <header><h3>Online Registration</h3></header>
     <div class="tablet-row-2">
       <form action="http://www.ssreg.com/fastresponse/calendar.asp?page=Calendar" method="get" class="registration-btn" target="_blank">
-        <input type="submit" class="calendar-btn" name="btn" value="View Calendar" />
+        <input type="submit" class="calendar-btn" value="View Calendar" />
         <input type="hidden" name="page" value="Calendar" />
       </form>
       <?= $sections['registration buttons'] ?>
@@ -69,7 +69,7 @@ else {
     <header><h3>Contact Us</h3></header>
     <div id="phone">
       <form action="tel: +15108494009" method="get" class="contact-btn">
-        <input type="submit" class="phone-btn" name="btn" value="510-849-4009" />
+        <input type="submit" class="phone-btn" value="510-849-4009" />
       </form>
     </div>
     <div id="email">
