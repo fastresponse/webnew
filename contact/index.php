@@ -43,7 +43,7 @@
 	  <dt>Admissions<br />Career Courses<br />Postsecondary Education</dt>
 	  <dd><dl>
 		  <dt>Hours</dt>
-        <dd>Mon - Thu: 8 AM - 7 PM</dd>
+        <dd>Mon - Thu: 8 AM - 6 PM</dd>
         <dd>Fri: 8 AM - 5 PM</dd>
         <dd>Sat: 9 AM - 5 PM</dd>
 		  <dt>Phone</dt>

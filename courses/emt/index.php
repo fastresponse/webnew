@@ -32,8 +32,8 @@ HTML
 <div class="tablet-row-2">
   <p class="underline">Part Time</p>
   <ul>
-    <li>Mon, Tue, Thu: 6:00 PM - 10:00 PM</li>
-    <li>Sat: 8:30 AM - 5:00 PM</li>
+    <li>Mon - Thu: 6:00 PM - 10:00 PM</li>
+    <li>Every Other Sat: 8:30 AM - 5:00 PM</li>
     <li>Mon: 1:00 PM - 5:00 PM Optional tutoring</li>
     <li>Nine weeks of instruction</li>
   </ul>

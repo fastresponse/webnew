@@ -826,6 +826,9 @@ img.image-placeholder {
   .collapsible-desktop-start .trigger {
       cursor: pointer;
   }
+  .menu-link {
+      cursor: pointer;
+  }
 }
 @media only screen and (min-width: 1000px) {
   .hide-desktop-large {
@@ -1116,6 +1119,10 @@ img.image-placeholder {
         flex: 1;
         display: flex;
         flex-flow: column-reverse;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        margin-top: 25px;
     }
     #slideshow {
         display: block;

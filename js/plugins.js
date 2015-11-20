@@ -34,28 +34,35 @@ $.fn.removeClassRegex = function(regex) {
   });
 };
 
-$.fn.enable_menulinks = function() {
+$.fn.enable_menulinks = function(default_selector) {
   return this.each(function() {
     var $links = $(this).children('.menu-link');
-    var $sections = $links.map(function() {
-      return $(this).attr('data-for');
-    });
-    $sections = $sections.map(function() {
-      return $( $(this) );
-    });
-    console.log($sections);
+    var $sections = $(
+      $links.map(function() {
+        return $(this).attr('data-for');
+      })
+      .toArray()
+      .join(',')
+    );
 
     $links.click(function() {
       var $elem = $( $(this).attr('data-for') );
-      console.log($(this));
-      console.log($elem);
       $sections.not($elem).slideUp();
       $elem.slideDown();
       $links.not($(this)).removeClass('menu-open');
       $(this).addClass('menu-open');
     });
 
-    $(this).find('[data-for="'+ $(this).attr('data-default') +'"]').click();
+    var $start_link;
+    if (default_selector != null) {
+      $start_link = $(this).find('[data-for="'+ default_selector +'"]');
+    }
+    if (!$start_link || $start_link.length == 0) {
+      $start_link = $(this).find('[data-for="'+ $(this).attr('data-default') +'"]');
+    }
+    if ($start_link) {
+      $start_link.click();
+    }
   });
 };
 

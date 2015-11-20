@@ -127,14 +127,9 @@
     <?= array_to_option_html($programs, $form_course_name); ?>
   </select>
 
-  <!--
-  <div class="filler form-section-emt"></div>
-  <input type="checkbox" id="form-emt" class="form-section-emt" name="emt" value="I am currently an EMT." />
-  <label for="form-emt" class="form-section-emt">I am currently an EMT.</label>
-  -->
   <div class="form-section-emt" style="padding-left: 25%; flex: 1 100%;">
-    <input type="checkbox" id="form-emt" name="emt" value="I am currently an EMT." />
-    <label for="form-emt" class="checkbox-label">I am currently an EMT.</label>
+    <input type="checkbox" id="form-emt" name="emt" value="I am a licensed EMT." />
+    <label for="form-emt" class="checkbox-label">I am a licensed EMT.</label>
   </div>
 
   <label for="form-name" class="form-section-name">Name</label>

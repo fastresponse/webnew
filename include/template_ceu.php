@@ -87,12 +87,18 @@ else {
     </ul>
   </aside>
   <?php endif; ?>
-  <aside id="promotions" class="tablet-row-1">
+  <aside id="promotions" class="tablet-row-2">
     <header><h3>Promotions</h3></header>
     <p class="underline">Active Military Personnel and Veterans</p>
     <div>10% off course price</div>
     <hr />
     <div class="small-print">Online registrations are not eligible for promotions. Please register by phone instead. Promotions may not be combined and do not apply to books.</div>
+  </aside>
+  <aside id="faqs" class="tablet-row-2">
+    <header><h3>Frequently Asked Questions</h3></header>
+    <ul>
+      <li><a href="<?= $incdir ?>students/?s=ceu">Please see the Student Resources section</a></li>
+    </ul>
   </aside>
 </div>
 

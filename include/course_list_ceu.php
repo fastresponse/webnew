@@ -33,6 +33,13 @@
     </ul>
   </section>
   <section>
+    <h3><a href="<?= $incdir ?>courses/ecg-12/">ECG 12-Lead</a></h3>
+    <ul>
+      <li>1 day, <span class="price">$112.00</span></li>
+      <li>7 CEUs</li>
+    </ul>
+  </section>
+  <section>
     <h3><a href="<?= $incdir ?>courses/ecg-t/">ECG Technician</a></h3>
     <ul>
       <li>5 days, <span class="price">$1300.00</span></li>

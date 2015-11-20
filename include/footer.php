@@ -14,7 +14,7 @@
 
     <div id="office-hours" class="">
       <span class="bold">Admissions Hours</span><br />
-      Mon - Thu: 8 - 7<br />
+      Mon - Thu: 8 - 6<br />
       Fri: 8 - 5<br />
       Sat: 9 - 5
     </div>

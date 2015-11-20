@@ -43,6 +43,9 @@ article *:last-child {
   margin-left: 4%;
 }
 
+#content > article > section > ul {
+  margin-top: 0;
+}
 #content > article > section > dl {
   margin-top: 0;
   padding-left: 20px;
@@ -76,6 +79,42 @@ dl dl dd {
 hr {
   border-color: black;
   border-width: 2px;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+.trigger {
+  display: inline-block;
+  width: auto;
+  padding-right: 50px;
+}
+
+li.opened > .trigger {
+  font-weight: bold;
+}
+
+.download-link {
+  font-size: 80%;
+  text-align: right;
+}
+
+.paper {
+  padding: 0 15px;
+  background: white;
+  border: 1px solid grey;
+}
+.paper hr {
+  margin: 0.2em 0;
+}
+.paper h3,
+.paper h5 {
+  text-align: center;
+}
+.paper .right {
+  float: right;
+  text-align: right;
 }
 
 @media only screen and (max-width: 549px) {
