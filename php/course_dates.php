@@ -1,6 +1,6 @@
 <?php
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/php/dbconn.php');
+require_once('dbconn.php');
 if (empty($handle)) $handle = db_connect();
 
 function get_course_dates($handle, $course_code, $course_type = null) {

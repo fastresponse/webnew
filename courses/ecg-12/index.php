@@ -12,7 +12,7 @@ $sections = array(
 
   'registration buttons' => <<<'HTML'
 <form action="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4118&pcatID=4117" method="get" class="registration-btn" target="_blank">
-  <input type="submit" class="register-btn" value="Register for ECG Basic" />
+  <input type="submit" class="register-btn" value="Register for ECG 12-Lead" />
   <input type="hidden" name="catID" value="4118" />
   <input type="hidden" name="pcatID" value="4117" />
 </form>

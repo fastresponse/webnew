@@ -45,10 +45,16 @@ $.fn.enable_menulinks = function(default_selector) {
       .join(',')
     );
 
-    $links.click(function() {
+    $links.click(function(event, instant) {
       var $elem = $( $(this).attr('data-for') );
-      $sections.not($elem).slideUp();
-      $elem.slideDown();
+      if (instant) {
+        $sections.not($elem).hide();
+        $elem.show();
+      }
+      else {
+        $sections.not($elem).slideUp();
+        $elem.slideDown();
+      }
       $links.not($(this)).removeClass('menu-open');
       $(this).addClass('menu-open');
     });
@@ -61,7 +67,7 @@ $.fn.enable_menulinks = function(default_selector) {
       $start_link = $(this).find('[data-for="'+ $(this).attr('data-default') +'"]');
     }
     if ($start_link) {
-      $start_link.click();
+      $start_link.trigger('click', true);
     }
   });
 };

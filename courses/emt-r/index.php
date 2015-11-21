@@ -68,15 +68,15 @@ HTML
 HTML
   ,
 
-  'extra' => <<<'HTML'
+  'extra' => <<<"HTML"
 <header class="stay-open"><h3 class="trigger">More EMT at Fast Response</h3></header>
 <div class="tablet-row-2">
-  <p class="bold"><a href="<?= $incdir ?>courses/emt/">EMT Program</a></p>
+  <p class="bold"><a href="{$incdir}courses/emt/">EMT Program</a></p>
   <div>Fast Response offers an accelerated EMT program, perfect for anyone looking for an entry-level medical responder course.</div>
 </div>
-<hr class="hide-tablet" />
+<hr class="hide-tablet">
 <div class="tablet-row-2">
-  <p class="bold"><a href="<?= $incdir ?>courses/emt-s/">EMT Skills Verification</a></p>
+  <p class="bold"><a href="{$incdir}courses/emt-s/">EMT Skills Verification</a></p>
   <div>A scenario-based skills test intended for EMTs who need to renew their certifications, and have already completed enough continuing education units.</div>
 </div>
 <hr class="tablet-row-1" />

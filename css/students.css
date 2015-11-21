@@ -2,6 +2,10 @@ article *:last-child {
   margin-bottom: 0;
 }
 
+#sidebar-primary {
+  display: none;
+}
+
 #menu ul {
   font-size: 120%;
   font-weight: bold;
@@ -11,7 +15,6 @@ article *:last-child {
 #content {
   display: block;
   /*flex: 1 100%;*/
-  margin-top: 3em;
 }
 #content > header {
   flex: 1 100%;
@@ -22,7 +25,7 @@ article *:last-child {
 }
 
 #content > article {
-  padding: 10px;
+  padding: 10px 7px;
   margin-bottom: 35px;
   border: 2px dotted grey;
   border-radius: 6px;
@@ -36,20 +39,20 @@ article *:last-child {
 }
 
 #admissions > section {
-  margin-top: 1em;
+  /*margin-top: 1em;*/
 }
 
 #content > article > section {
-  margin-left: 4%;
+  /*margin-left: 4%;*/
+  margin-left: 0;
+  margin-right: 0;
 }
 
-#content > article > section > ul {
-  margin-top: 0;
-}
+#content > article > section > ul,
 #content > article > section > dl {
   margin-top: 0;
   padding-left: 20px;
-  padding-right: 20px;
+  /*padding-right: 10px;*/
 }
 #content > article > section > dl > dt {
   margin-top: 10px;
@@ -64,6 +67,9 @@ article *:last-child {
   padding-left: 0;
 }
 
+ul {
+  padding-left: 20px;
+}
 dl dl {
   padding-left: 40px;
 }
@@ -88,7 +94,6 @@ h4 {
 .trigger {
   display: inline-block;
   width: auto;
-  padding-right: 50px;
 }
 
 li.opened > .trigger {
@@ -115,14 +120,21 @@ li.opened > .trigger {
 .paper .right {
   float: right;
   text-align: right;
+  margin-left: 20px;
 }
 
 @media only screen and (max-width: 549px) {
   #content > article > header > h1 {
-    font-size: 135%;
+    font-size: 125%;
   }
-  article > section {
-    margin-left: 2%;
+  ul {
+    padding-left: 15px;
+  }
+  .paper {
+    width: 100vw;
+    position: relative;
+    left: -50px;
+    font-size: 85%;
   }
 }
 
@@ -137,6 +149,7 @@ li.opened > .trigger {
 
 @media only screen and (min-width: 800px) {
   #sidebar-primary {
+    display: flex;
     padding: 0;
   }
   #content {

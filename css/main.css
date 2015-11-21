@@ -31,6 +31,7 @@ hr {
     border-top: 1px solid #ccc;
     margin: 1em 0;
     padding: 0;
+    flex: 1 100%;
 }
 
 audio,
@@ -714,6 +715,12 @@ p.trigger {
     text-align: center;
 }
 
+.opened > header > .trigger > .collapsible-closed,
+.closed > header> .trigger > .collapsible-opened,
+.opened > .trigger > .collapsible-closed,
+.closed > .trigger > .collapsible-opened {
+    display: none;
+}
 .collapsible-opened {
     font-size: 90%;
 }
@@ -816,6 +823,11 @@ img.image-placeholder {
   .tablet-row-2:nth-of-type(2n+0),
   .tablet-row-3:nth-of-type(3n+0) {
       margin-right: 0 !important;
+  }
+  #sidebar-primary > .tablet-row-3:first-child,
+  #sidebar-primary > .tablet-row-3:nth-child(2),
+  #sidebar-primary > .tablet-row-3:nth-child(3) {
+      margin-top: 0;
   }
 }
 @media only screen and (min-width: 800px) {
@@ -1283,6 +1295,9 @@ img.image-placeholder {
 }
 .small-print {
     font-size: 90%;
+}
+.center {
+    text-align: center;
 }
 
 

@@ -118,13 +118,11 @@ function load_course_data() {
   <aside id="contact-info" class="tablet-row-<?= $n ?>">
     <header><h3>Contact Us</h3></header>
     <div id="phone">
-      <!--<div class="button"><a href="tel://510-849-4009"><span class="nowrap"><span class="hide-mobile">510-849-4009</span><span class="hide-tablet hide-desktop">Call</span></span></a></div>-->
       <form action="tel:+15108494009" method="get" class="contact-btn">
         <input type="submit" class="phone-btn" value="510-849-4009" />
       </form>
     </div>
     <div id="email">
-      <!--<div class="button"><a href="<?= $incdir ?>contact/?p=<?= urlencode($form_course_name) ?>"><span class="nowrap"><span class="hide-mobile">Send an </span>Email</span></a></div>-->
       <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
         <input type="submit" class="email-btn" value="Send an Email" />
         <input type="hidden" name="p" value="<?= urlencode($form_course_name) ?>" />
@@ -160,12 +158,51 @@ function load_course_data() {
   <aside style="display: none;"></aside>
   <?php endif; ?>
 
+<?php if (false):?>
   <?php if ($sections['links']): ?>
   <aside id="links" class="tablet-row-2">
     <header><h3>Links</h3></header>
     <ul>
       <?= $sections['links'] ?>
     </ul>
+  </aside>
+  <?php endif; ?>
+<?php endif; ?>
+
+  <?php
+  include_once($incdir . 'php/dbconn.php');
+  if (!isset($handle)) $handle = db_connect();
+
+  $promo_results = basic_query($handle,
+    array('title', 'description', 'notes'),
+    'promotions',
+    array('active = 1', 'FIND_IN_SET(:course, courses)'),
+    'id ASC',
+    0,
+    array(':course' => $course_code)
+  );
+
+  if (isset($promo_results) && count($promo_results)):
+  ?>
+  <aside id="promotions" class="tablet-row-2">
+    <header><h3>Promotions</h3></header>
+    <?php
+    $i = 0;
+    foreach ($promo_results as $promo):
+    ?>
+      <?php if ($i++ > 0): ?>
+      <hr>
+      <?php endif; ?>
+      <p class="underline"><?= $promo['title'] ?></p>
+      <div><?= nl2br($promo['description']) ?></div>
+      <?php if (!empty($promo['notes'])): ?>
+      <ul>
+        <?= '<li>' . str_replace("\n", "</li>\n<li>", $promo['notes']) . '</li>' ?>
+      </ul>
+      <?php endif; ?>
+    <?php endforeach; ?>
+    <hr>
+    <div class="small-print">Online registrations are not eligible for promotions. Please register by phone instead. Promotions may not be combined and do not apply to books.</div>
   </aside>
   <?php endif; ?>
 

@@ -50,6 +50,7 @@
 	    <li><a href="<?= $incdir ?>courses/acls/">Advanced Cardiac Life Support (ACLS)</a></li>
 	    <li><a href="<?= $incdir ?>courses/pals/">Pediatric Advanced Life Support (PALS)</a></li>
 	    <li><a href="<?= $incdir ?>courses/ecg-b/">ECG Basic Arrhythmia Recognition</a></li>
+	    <li><a href="<?= $incdir ?>courses/ecg-12/">ECG 12-Lead</a></li>
 	    <li><a href="<?= $incdir ?>courses/ecg-t/">ECG Technician</a></li>
 	    <li><a href="<?= $incdir ?>courses/emt-r/">EMT Refresher</a></li>
       <li><a href="<?= $incdir ?>courses/emt-s/">EMT Skills Verification</a></li>

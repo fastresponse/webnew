@@ -42,8 +42,10 @@ function enable_collapse() {
   collapsibles.filter('.collapsible-'+type+'-start').children(':not(.trigger, .stay-open)').hide();
 
   // hide the open or close icons (for closed/open start states)
+  /*
   collapsibles.filter('.collapsible-'+type+'-start').find('.collapsible-opened').hide();
   collapsibles.filter(':not(.collapsible-'+type+'-start)').find('.collapsible-closed').hide();
+  */
 
   // set class based on starting state for styling
   collapsibles.filter('.collapsible-'+type+'-start').addClass('closed').removeClass('opened');
@@ -54,8 +56,8 @@ function enable_collapse() {
     var main = $(this).closest('.collapsible-'+type+', .collapsible-'+type+'-start');
     main.children(':not(.trigger, .stay-open)').slideToggle('fast');
     main.toggleClass('opened closed');
-    $(this).find('.collapsible-opened').toggle();
-    $(this).find('.collapsible-closed').toggle();
+    //$(this).find('.collapsible-opened').toggle();
+    //$(this).find('.collapsible-closed').toggle();
   });
 }
 

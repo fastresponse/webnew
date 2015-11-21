@@ -67,9 +67,22 @@
 
   <header class="hide-desktop hide-desktop-large"><h1>Student Resources</h1></header>
 
-  <article id="admissions" class="collapsible-mobile collapsible-tablet">
+  <article id="admissions" class="collapsible-mobile-start collapsible-tablet">
     <header class="stay-open"><h1 class="trigger">Admissions</h1></header>
-    <section>
+    <section class="collapsible-mobile-start collapsible-tablet collapsible-desktop">
+      <h3 class="trigger">School Course Information </h3>
+      <ul>
+        <li><a href="">School Catalog 2015</a></li>
+        <li><a href="">EMT Course Info Packet</a></li>
+        <li><a href="">Phlebotomy Course Info Packet</a></li>
+        <li><a href="">Pharmacy Technician Course Info Packet</a></li>
+        <li><a href="">Medical Assisting Course Info Packet</a></li>
+        <li><a href="">Sterile Processing Course Info Packet</a></li>
+        <li><a href="">Paramedic Course Info Packet</a></li>
+      </ul>
+    </section>
+    <section class="collapsible-mobile-start collapsible-tablet collapsible-desktop">
+      <h3 class="trigger">Forms</h3>
       <dl>
         <dt><a href="/pdf/admissions/Immunization Form - All Classes.pdf" target="_blank">Immunization Form - General</a></dt>
         <dd>Checklist for required immunizations. To be filled out by a licensed nurse or physician.</dd>
@@ -150,7 +163,7 @@
 
   <article id="career_services" class="collapsible-mobile-start collapsible-tablet-start">
     <header class="stay-open"><h1 class="trigger">Student Career Services</h1></header>
-    <section class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop">
+    <section class="collapsible-mobile collapsible-tablet collapsible-desktop">
       <h3 class="trigger">Career Services Department</h3>
       <dl>
         <dt>Phone</dt>
@@ -236,7 +249,7 @@
             <li>
               <div>EMT</div>
               <ul>
-                <li>California State Emergency Medical Technician, EMT - B, <span class="nowrap">(Certificate Number: E289758),</span> Expiration date</li>
+                <li>California State Emergency Medical Technician, EMT-B, <span class="nowrap">(Certificate Number: E289758),</span> Expiration date</li>
                 <li>BLS - American Heart Association Certification, Expiration date</li>
                 <li>Externships - locations, departments, hours, responsibilities</li>
                 <li>Additional related trainings - Wilderness, ACLS</li>
@@ -363,7 +376,7 @@
               <div class="download-link"><a href="<?= $incdir ?>documents/career_services/Sample Resume - EMT.doc">Download</a></div>
             <div class="paper">
               <h3>John L. Doe</h3>
-              <div class="center">7676 Fairview Dr., Berkeley, CA 94704 510-849-7658, johndoe@gmail.com</div>
+              <div class="center">7676 Fairview Dr., Berkeley, CA 94704<br>510-849-7658, johndoe@gmail.com</div>
 
               <h4>SUMMARY OF QUALIFICATIONS</h4>
               <hr />
@@ -450,7 +463,7 @@
               <div class="download-link"><a href="<?= $incdir ?>documents/career_services/Sample Resume - Phlebotomy.doc">Download</a></div>
               <div class="paper">
               <h3>Karen L. Smith</h3>
-                <div class="center">9251 Oak Drive, Berkeley, CA 94704 (510) 849-8792, karenlsmith@gmail.com</div>
+                <div class="center">9251 Oak Drive, Berkeley, CA 94704<br>(510) 849-8792, karenlsmith@gmail.com</div>
 
                 <h4>Objective</h4>
                 <hr>
@@ -523,7 +536,7 @@
               <div class="download-link"><a href="<?= $incdir ?>documents/career_services/Sample Resume - Medical Assisting.doc">Download</a></div>
               <div class="paper">
                 <h3>Oscar L. Lopez</h3>
-                <div class="center">7976 Fairview Drive, Berkeley, CA 94704 (510) 849-8792, oscarlopez@gmail.com</div>
+                <div class="center">7976 Fairview Drive, Berkeley, CA 94704<br>(510) 849-8792, oscarlopez@gmail.com</div>
 
                 <h4>Objective</h4>
                 <hr>
@@ -610,7 +623,7 @@
               <div class="download-link"><a href="<?= $incdir ?>documents/career_services/Sample Resume - Sterile Processing.doc">Download</a></div>
               <div class="paper">
               <h3>Rick M. Kantor</h3>
-                <div class="center">7976 Fairview Drive, Berkeley, CA 94704, C (510) 543-8792 H (510) 846-2876, rickmkantor@gmail.com</div>
+                <div class="center">7976 Fairview Drive, Berkeley, CA 94704<br>C (510) 543-8792 H (510) 846-2876, rickmkantor@gmail.com</div>
 
                 <h4>Objective</h4>
                 <hr>
@@ -1133,7 +1146,24 @@
 
 <script>
 $(document).ready(function() {
-  $('#menu > ul').enable_menulinks(<?= isset($section) ? "'$section'" : "" ?>);
+  var width = $(window).width();
+  var type;
+
+  if (width >= 800) {
+    type = 'desktop';
+  }
+  else if (width >= 550) {
+    type = 'tablet';
+  }
+  else {
+    type = 'mobile';
+  }
+
+  switch (type) {
+  case 'desktop':
+    $('#menu > ul').enable_menulinks(<?= isset($section) ? "'$section'" : "" ?>);
+  default:
+  }
 });
 </script>
 

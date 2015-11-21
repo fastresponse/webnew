@@ -87,14 +87,42 @@ else {
     </ul>
   </aside>
   <?php endif; ?>
-  <aside id="promotions" class="tablet-row-2">
+  <?php
+    include_once($incdir . 'php/dbconn.php');
+    if (!isset($handle)) $handle = db_connect();
+    $promo_results = basic_query($handle,
+      array('title', 'description', 'notes'),
+      'promotions',
+      array('active = 1', 'FIND_IN_SET(:course, courses)'),
+      'id ASC',
+      0,
+      array(':course' => $course_code)
+    );
+
+  if (isset($promo_results) && count($promo_results)):
+  ?>
+  <aside id="promotions" class="tablet-row-1">
     <header><h3>Promotions</h3></header>
-    <p class="underline">Active Military Personnel and Veterans</p>
-    <div>10% off course price</div>
-    <hr />
+    <?php
+    $i = 0;
+    foreach ($promo_results as $promo):
+    ?>
+      <?php if ($i++ > 0): ?>
+      <hr>
+      <?php endif; ?>
+      <p class="underline"><?= $promo['title'] ?></p>
+      <div><?= nl2br($promo['description']) ?></div>
+      <?php if (!empty($promo['notes'])): ?>
+      <ul>
+        <?= '<li>' . str_replace("\n", "</li>\n<li>", $promo['notes']) . '</li>' ?>
+      </ul>
+      <?php endif; ?>
+    <?php endforeach; ?>
+    <hr>
     <div class="small-print">Online registrations are not eligible for promotions. Please register by phone instead. Promotions may not be combined and do not apply to books.</div>
   </aside>
-  <aside id="faqs" class="tablet-row-2">
+  <?php endif; ?>
+  <aside id="faqs" class="tablet-row-1">
     <header><h3>Frequently Asked Questions</h3></header>
     <ul>
       <li><a href="<?= $incdir ?>students/?s=ceu">Please see the Student Resources section</a></li>
