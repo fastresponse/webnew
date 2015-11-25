@@ -7,6 +7,7 @@ $page_header = 'Pharmacy Technician';
 $description = '';
 $course_code = 'PHM';
 $form_course_name = 'PHM';
+$show_links = true;
 
 $sections = array(
 
@@ -30,9 +31,6 @@ HTML
   ,
 
   'links' => <<<'HTML'
-<li><a href="#">Pharmacy Course Information Packet</a></li>
-<li><a href="#">School Catalog</a></li>
-<li><a href="#">Immunizations Requirements</a></li>
 <li><a href="http://www.pharmacy.ca.gov/">CA Board of Pharmacy</a></li>
 <li><a href="http://www.ptcb.org/">Pharmacy Technician Certification Board</a></li>
 HTML

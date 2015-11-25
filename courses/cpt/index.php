@@ -8,6 +8,13 @@ $description = '';
 $course_code = 'CPT';
 $form_course_name = 'CPT';
 
+if (false && empty($landing_page)) {
+$config = <<<'HTML'
+testimonialOpts['desktop']['testimonial-sidebar-1']['load'] = 'none';
+testimonialOpts['desktop']['testimonial-sidebar-2']['load'] = 'none';
+HTML;
+}
+
 $sections = array(
 
   'test results' => <<<'HTML'
@@ -47,9 +54,6 @@ HTML
   ,
 
   'links' => <<<'HTML'
-<li><a href="#">CPT Course Information Packet</a></li>
-<li><a href="#">School Catalog</a></li>
-<li><a href="#">Immunizations Requirements</a></li>
 HTML
   ,
 
@@ -76,7 +80,7 @@ HTML
   </div>
 </div>
 <p>Our program focuses on hands-on training to prepare you for a real career. After proper instruction, students practice drawing blood first from dummy training arms, and then from each other. We impose a maximum student to instructor ratio of 8:1 in the lab to ensure safety and quality learning.</p>
-<div id="image-placeholder-1" class="image-placeholder" data-src="{$incdir}img/fr-logo-black.png"></div>
+<div id="image-placeholder-1" class="image-placeholder"></div>
 <p>Every student receives a free CPR training class before being placed on a guaranteed clinical externship in a professional medical lab environment. This real-world experience also provides opportunities to make valuable contacts in the industry.</p>
 HTML
   ,

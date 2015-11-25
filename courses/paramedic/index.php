@@ -7,6 +7,7 @@ $sub_header = 'Advanced Skills for EMTs';
 $description = '';
 $course_code = 'Paramedic';
 $form_course_name = 'Paramedic';
+$show_links = true;
 
 $sections = array(
 
@@ -34,12 +35,9 @@ $sections = array(
 HTML
   ,
 
-  'links' => <<<'HTML'
-<li><a href="#">Paramedic Academy Information Packet</a></li>
-<li><a href="#">School Catalog</a></li>
-<li><a href="#">Immunizations Requirements</a></li>
-<li><a href="#">Paramedic Application Process</a></li>
-<li><a href="#">Paramedic Academy Application Form</a></li>
+  'links' => <<<"HTML"
+<li><a href="{$incdir}pdf/admissions/Paramedic Application Process.pdf">Paramedic Application Process</a></li>
+<li><a href="{$incdir}pdf/admissions/Paramedic Academy Application.pdf">Paramedic Academy Application Form</a></li>
 <li><a href="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4216">Online signup for Anatomy and Physiology</a></li>
 HTML
   ,

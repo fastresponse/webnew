@@ -70,7 +70,7 @@ HTML
 HTML
   ,
 
-  'books' => <<<'HTML'
+  'books' => <<<"HTML"
 <div class="tablet-row-2">
   <p class="underline">AHA ACLS Provider Manual with Pocket Reference Card Set</p>
   <ul>
@@ -89,7 +89,7 @@ HTML
   <ul>
     <li><span class="bold yellow">Recommended</span></li>
     <li>Provided <span class="price">free</span> by Fast Response.</li>
-    <li><a href="/pdfs/ACLS - Study Guide.pdf" target="_blank">Click here to download</a>.</li>
+    <li><a href="{$incdir}pdf/study_guides/ACLS - Study Guide.pdf" target="_blank">Click here to download</a>.</li>
   </ul>
 </div>
 HTML

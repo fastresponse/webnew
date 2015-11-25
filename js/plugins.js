@@ -34,6 +34,18 @@ $.fn.removeClassRegex = function(regex) {
   });
 };
 
+$.fn.even_out = function(compare, movements, threshold) {
+  if (!threshold) threshold = 200;
+  var bottom1 = $(this).offset().top + $(this).outerHeight(true);
+  var bottom2 = $(compare).offset().top + $(compare).outerHeight(true);
+
+  if (bottom1 > bottom2+threshold) {
+    for (move_sel in movements) {
+      $(move_sel).appendTo(movements[move_sel]);
+    }
+  }
+};
+
 $.fn.enable_menulinks = function(default_selector) {
   return this.each(function() {
     var $links = $(this).children('.menu-link');
@@ -265,7 +277,11 @@ $.fn.load_testimonials = function(opts) {
     var ajaxOpts;
     var domOb = $(this);
 
-    if (localOpts.load == 'none') return; // skip
+    // skip
+    if (localOpts.load == 'none') {
+      domOb.closest('.testimonial-column, .testimonial-row').hide();
+      return;
+    }
 
     if (localOpts.hasOwnProperty('sliderOpts') && localOpts.sliderOpts) {
       sliderOpts = $.extend({}, defaultSliderOpts, localOpts.sliderOpts);

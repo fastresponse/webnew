@@ -7,6 +7,7 @@ $sub_header = 'High quality education for an important role';
 $description = '';
 $course_code = 'SPT';
 $form_course_name = 'SPT';
+$show_links = true;
 
 $sections = array(
 
@@ -37,9 +38,6 @@ HTML
   ,
 
   'links' => <<<'HTML'
-<li><a href="#">SPT Course Information Packet</a></li>
-<li><a href="#">School Catalog</a></li>
-<li><a href="#">Immunizations Requirements</a></li>
 <li><a href="https://www.iahcsmm.org/certification-preparation/crcst-certification.html">IAHCSMM CRCST Information</a></li>
 HTML
   ,

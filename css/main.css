@@ -384,7 +384,7 @@ aside li.sub {
 #banner > div {
     display: inline-block;
     min-width: 80%;
-    margin: 0 auto;
+    margin: 1em auto 0;
     padding: 5px 8px;
     border: 2px solid red;
     border-radius: 7px;
@@ -392,6 +392,14 @@ aside li.sub {
     font-size: 120%;
     box-shadow: 5px 5px 15px red;
     background-color: white;
+}
+#banner > div:first-child {
+    margin-top: 0;
+}
+#banner > div.blue {
+    border-color: #0a1e3c;
+    box-shadow: none;
+    box-shadow: 5px 5px 15px #0a1e3c;
 }
 #banner a {
   color: red;
@@ -941,7 +949,7 @@ img.image-placeholder {
         margin-top: 10px;
     }
     #sidebar-primary > *:first-child {
-        margin-top: 0;
+        /*margin-top: 0;*/
     }
     #bottom-bar > * {
       /*
@@ -1126,6 +1134,9 @@ img.image-placeholder {
         /*flex: 1 1 100%;*/
         flex: 0;
         margin-right: 0;
+    }
+    #sidebar-primary > *:first-child {
+        margin-top: 0;
     }
     #sidebar-primary > .bottom-of-sidebar {
         flex: 1;

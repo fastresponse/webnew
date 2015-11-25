@@ -158,7 +158,7 @@ function load_course_data() {
   <aside style="display: none;"></aside>
   <?php endif; ?>
 
-<?php if (false):?>
+<?php if (isset($show_links)): ?>
   <?php if ($sections['links']): ?>
   <aside id="links" class="tablet-row-2">
     <header><h3>Links</h3></header>
@@ -264,6 +264,8 @@ function load_course_data() {
     <p class="hide-desktop hide-tablet trigger bold red underline" data-trigger-text="<?= $sections['trigger'] ?>"></p>
     <?php endif; ?>
     <?= $sections['below fold'] ?>
+
+    <div id="content-bottom"></div>
   </article>
 </section>
 
@@ -289,6 +291,12 @@ var piclist = [
 
 <script src="<?= $incdir ?>js/vendor/jquery.bxslider/jquery.bxslider.min.js"></script>
 
+<?php if (!empty($config)): ?>
+<script>
+<?= $config ?>
+</script>
+<?php endif; ?>
+
 <script>
 $(document).ready(function() {
   var width = $(window).width();
@@ -309,8 +317,31 @@ $(document).ready(function() {
     $('.testimonial-container').load_testimonials( testimonialOpts[type] )
   ).then(function() {
     $('.image-placeholder').load_placeholders( imageOpts[type], srclist );
+  }).then(function() {
+    if (type == 'desktop') {
+      $('#sidebar-primary').even_out(
+        '#content > article > *:last-child',
+        {
+          '#promotions' : '#content-bottom',
+          '#course_approvals' : '#content-bottom'
+        },
+        200
+      );
+    }
   });
 });
+
+function cleanup() {
+  var comp1 = '#sidebar-primary';
+  var comp2 = '#content > article > *:last-child';
+  var bottom1 = $(comp1).offset().top + $(comp1).outerHeight(true);
+  var bottom2 = $(comp2).offset().top + $(comp2).outerHeight(true);
+
+  if (bottom1 > bottom2+200) {
+    $('#promotions').appendTo('#content-bottom');
+    $('#course_approvals').appendTo('#content-bottom');
+  }
+}
 </script>
 
 <?php require_once($incdir . 'include/footer.php'); ?>

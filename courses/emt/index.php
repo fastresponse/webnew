@@ -11,9 +11,9 @@ $form_course_name = 'EMT';
 $sections = array(
 
   'test results' => <<<'HTML'
-<header><h3>Our Success Rate - <span class="testscore">93%</span></h3></header>
-<p>In 2015*, <span class="testscore">93%</span> of our graduates passed the National Registration licensing test, making them eligible for immediate employment.</p>
-<div>* As of October 2nd, 2015</div>
+<header><h3>Our Success Rate - <span class="testscore">94%</span></h3></header>
+<p>In 2015*, <span class="testscore">94%</span> of our graduates passed the National Registration licensing test, making them eligible for immediate employment.</p>
+<div>* As of November 17th, 2015</div>
 HTML
   ,
 
@@ -50,10 +50,6 @@ HTML
   ,
 
   'links' => <<<'HTML'
-<li><a href="#">EMT Course Information Packet</a></li>
-<li><a href="#">School Catalog</a></li>
-<li><a href="#">Immunizations Requirements</a></li>
-<li><a href="#">EMT Skills Videos</a></li>
 HTML
   ,
 
@@ -83,7 +79,7 @@ HTML
 </div>
 <p>Emergency Medical Technicians (EMTs) are health care professionals who critically assess, evaluate and treat medical and trauma patients. EMTs may work on ambulances, in fire departments or hospital emergency departments, or on search and rescue teams.</p>
 <p>EMT is considered an entry-level medical responder. While some EMTs may choose to remain at this level of certification, we view the EMT certification as the first step into a broad array of career options. An EMT certification is required prior to obtaining a paramedic license and also may be required for certain fire service positions. EMT patient contact experience is also considered highly desirable when applying for Physician's Assistant (PA) programs. EMT certification is a fast and accessible option for individuals who are interested in medicine but not sure where to start.</p>
-<div id="image-placeholder-1" class="image-placeholder" data-src="{$incdir}img/fr-logo-black.png"></div>
+<div id="image-placeholder-1" class="image-placeholder"></div>
 <p>Our extensive, five-week EMT course provides the most effective and expedient platform for our graduates to excel as compassionate, critical-thinking EMTs. Students immediately put their skills into practice in our simulated clinical, residential, and ambulance settings. Students will receive hands-on training with actual field medical equipment, supervised by an experienced cadre of paramedics and EMTs. These instructors bring a wide variety of EMT experience to the classroom and skills lab to expand our students' learning opportunities.</p>
 <div class="testimonial-row hide-mobile hide-desktop">
   <div class="testimonial-bg">

@@ -22,10 +22,10 @@
     <div id="phone-buttons">
       <div class="bold">Call Now</div>
       <!--
-      <div class="phone button"><a href="tel:510-849-4009">510-849-4009</a></div>
-      <div class="phone button"><a href="tel:800-637-7387">800-637-7387</a></div>
+      <div class="phone button"><a href="tel: +15108494009">510-849-4009</a></div>
+      <div class="phone button"><a href="tel: +18006377387">800-637-7387</a></div>
       -->
-      <form action="tel:+15108494009" method="get" class="contact-btn">
+      <form action="tel: +15108494009" method="get" class="contact-btn">
         <input type="submit" class="phone-btn" name="btn" value="510-849-4009" />
       </form>
       <form action="tel:+18006377387" method="get" class="contact-btn">
@@ -77,7 +77,7 @@
     "telephone" : "+1-800-637-7387",
     "email" : "admissions@fastresponse.org",
     "openingHours" : [
-      "Mo-Th 08:00-19:00",
+      "Mo-Th 08:00-18:00",
       "Fr 08:00-17:00",
       "Sa 09:00-17:00"
     ]

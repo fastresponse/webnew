@@ -187,7 +187,7 @@
 <?php endif; ?>
 
 <div id="privacyterms">
-  <a href="#">Privacy Policy</a> <span class="bold">|</span> <a href="#">Terms and Conditions</a>
+  <a href="<?= $incdir ?>policies/#privacy">Privacy Policy</a> <span class="bold">|</span> <a href="<?= $incdir ?>policies/#terms">Terms and Conditions</a>
 </div>
 
 </div>

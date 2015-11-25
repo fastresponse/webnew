@@ -33,7 +33,7 @@
       <li class="menu-link" data-for="#career_services">Student Career Services</li>
       <li><hr /></li>
       <li class="menu-link" data-for="#emt">Emergency Medical Technician</li>
-      <li class="menu-link" data-for="#phlebotomy">Phelbotomy</li>
+      <li class="menu-link" data-for="#phlebotomy">Phlebotomy</li>
       <li class="menu-link" data-for="#medical_assistant">Medical Assistant</li>
       <li class="menu-link" data-for="#pharm_tech">Pharmacy Technician</li>
       <li class="menu-link" data-for="#sterile_processing">Sterile Processing</li>
@@ -72,34 +72,34 @@
     <section class="collapsible-mobile-start collapsible-tablet collapsible-desktop">
       <h3 class="trigger">School Course Information </h3>
       <ul>
-        <li><a href="">School Catalog 2015</a></li>
-        <li><a href="">EMT Course Info Packet</a></li>
-        <li><a href="">Phlebotomy Course Info Packet</a></li>
-        <li><a href="">Pharmacy Technician Course Info Packet</a></li>
-        <li><a href="">Medical Assisting Course Info Packet</a></li>
-        <li><a href="">Sterile Processing Course Info Packet</a></li>
-        <li><a href="">Paramedic Course Info Packet</a></li>
+        <li><a href="<?= $incdir ?>pdf/Fast Response Catalog 2015.pdf">School Catalog 2015</a></li>
+        <li><a href="<?= $incdir ?>pdf/course_packets/EMT - Course Info Packet.pdf">EMT Course Info Packet</a></li>
+        <li><a href="<?= $incdir ?>pdf/course_packets/Phlebotomy - Course Info Packet.pdf">Phlebotomy Course Info Packet</a></li>
+        <li><a href="<?= $incdir ?>pdf/course_packets/Pharmacy Technician - Course Info Packet.pdf">Pharmacy Technician Course Info Packet</a></li>
+        <li><a href="<?= $incdir ?>pdf/course_packets/Medical Assistant - Course Info Packet.pdf">Medical Assistant Course Info Packet</a></li>
+        <li><a href="<?= $incdir ?>pdf/course_packets/Sterile Processing - Course Info Packet.pdf">Sterile Processing Course Info Packet</a></li>
+        <!--<li><a href="<?= $incdir ?>pdf/course_packets/Paramedic - Course Info Packet.pdf">Paramedic Course Info Packet</a></li>-->
       </ul>
     </section>
     <section class="collapsible-mobile-start collapsible-tablet collapsible-desktop">
       <h3 class="trigger">Forms</h3>
       <dl>
-        <dt><a href="/pdf/admissions/Immunization Form - All Classes.pdf" target="_blank">Immunization Form - General</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/admissions/Immunization Form - All Classes.pdf" target="_blank">Immunization Form - General</a></dt>
         <dd>Checklist for required immunizations. To be filled out by a licensed nurse or physician.</dd>
 
-        <dt><a href="/pdf/admissions/Immunization Form - EMT.pdf" target="_blank">Immunization Form - EMT</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/admissions/Immunization Form - EMT.pdf" target="_blank">Immunization Form - EMT</a></dt>
         <dd>Checklist for required immunizations. To be filled out by a licensed nurse or physician.</dd>
 
-        <dt><a href="/pdf/admissions/Immunization Requirements - Paramedic.pdf" target="_blank">Immunization Form - Paramedic</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/admissions/Immunization Requirements - Paramedic.pdf" target="_blank">Immunization Form - Paramedic</a></dt>
         <dd>Checklist for required immunizations. To be filled out by a licensed nurse or physician.</dd>
 
-        <dt><a href="/pdf/admissions/Drug Screen Form.pdf" target="_blank">Drug Screen Form</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/admissions/Drug Screen Form.pdf" target="_blank">Drug Screen Form</a></dt>
         <dd>Used to sign up for mandatory drug screening.</dd>
 
-        <dt><a href="/pdf/admissions/Registrar Request Form.pdf" target="_blank">Registrar Request Form</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/admissions/Registrar Request Form.pdf" target="_blank">Registrar Request Form</a></dt>
         <dd>Used for requesting copies of transcripts, immunization records, background checks, and other student information.</dd>
 
-        <dt><a href="/pdf/admissions/FERPA Form.pdf" target="_blank">FERPA Student Information Release Form</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/admissions/FERPA Form.pdf" target="_blank">FERPA Student Information Release Form</a></dt>
         <dd>Used to send a copy of your student information to a third party. Commonly used for academic and immunization records.</dd>
       </dl>
     </section>
@@ -1032,26 +1032,26 @@
     <section class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
       <h3 class="trigger">Externship</h3>
       <dl>
-        <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
 
-        <dt><a href="/pdf/externship/emt/EMT Externship Expectations.pdf" target="_blank">Externship Expectations</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/externship/emt/EMT Externship Expectations.pdf" target="_blank">Externship Expectations</a></dt>
 
-        <dt><a href="/pdf/externship/emt/Clinical_and_Field_Patient_Contact_Log.pdf" target="_blank">Clinical and Field Patient Contact Log</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/externship/emt/Clinical_and_Field_Patient_Contact_Log.pdf" target="_blank">Clinical and Field Patient Contact Log</a></dt>
         <dd>Minimum of 10 logged patient contacts. This form may be used for both clinical and field sites.</dd>
 
-        <dt><a href="/pdf/externship/emt/Evaluation_Form_of_Clinical_and_Field_Experience.pdf" target="_blank">Evaluation Form for Clinical and Field Experience</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/externship/emt/Evaluation_Form_of_Clinical_and_Field_Experience.pdf" target="_blank">Evaluation Form for Clinical and Field Experience</a></dt>
         <dd>Your evaluation of your clinical and field externship experience.</dd>
 
-        <dt><a href="/pdf/externship/emt/Evaluation_Form_of_Student.pdf" target="_blank">Evaluation Form of Student</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/externship/emt/Evaluation_Form_of_Student.pdf" target="_blank">Evaluation Form of Student</a></dt>
         <dd>Your supervisor must fill out this evaluation form at each site of your externship <span style="white-space: nowrap;">(minimum 2;</span> one for clinical site and one for ambulance ride-along).</dd>
 
-        <dt><a href="/pdf/externship/emt/Externship_Time_Log.pdf" target="_blank">Externship Time Log</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/externship/emt/Externship_Time_Log.pdf" target="_blank">Externship Time Log</a></dt>
         <dd>Log all hours during externship. You must have your supervisor for each site sign off on this sheet.</dd>
 
-        <dt><a href="/pdf/externship/emt/Patient_Care_Report.pdf" target="_blank">Patient Care Report</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/externship/emt/Patient_Care_Report.pdf" target="_blank">Patient Care Report</a></dt>
         <dd>You must have completed 4 PCRs minimum, including 2 from your clinical externship and 2 from your ambulance ride-along. It is highly recommended that you fill out additional PCRs, however, in the event that one of your reports is not accepted (incomplete, illegible, etc.).</dd>
 
-        <dt><a href="/pdf/externship/emt/Ride_Along_Student_Agreement.pdf" target="_blank">Ride Along Student Agreement</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/externship/emt/Ride_Along_Student_Agreement.pdf" target="_blank">Ride Along Student Agreement</a></dt>
         <dd>You must fill out a student agreement for each ride-along externship you attend.</dd>
       </dl>
     </section>
@@ -1062,13 +1062,12 @@
     <section>
       <h3>Current Students</h3>
       <dl>
-        <dt></dt>
       </dl>
     </section>
     <section>
       <h3>Externship</h3>
       <dl>
-        <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
       </dl>
     </section>
   </article>
@@ -1078,13 +1077,12 @@
     <section>
       <h3>Current Students</h3>
       <dl>
-        <dt></dt>
       </dl>
     </section>
     <section>
       <h3>Externship</h3>
       <dl>
-        <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
       </dl>
     </section>
   </article>
@@ -1094,13 +1092,12 @@
     <section>
       <h3>Current Students</h3>
       <dl>
-        <dt></dt>
       </dl>
     </section>
     <section>
       <h3>Externship</h3>
       <dl>
-        <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
       </dl>
     </section>
   </article>
@@ -1110,13 +1107,12 @@
     <section>
       <h3>Current Students</h3>
       <dl>
-        <dt></dt>
       </dl>
     </section>
     <section>
       <h3>Externship</h3>
       <dl>
-        <dt><a href="/pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
+        <dt><a href="<?= $incdir ?>pdf/externship/Externship_Requirements_Checklist.pdf" target="_blank">Externship Requirements Checklist</a></dt>
       </dl>
     </section>
   </article>
@@ -1127,13 +1123,11 @@
     <section>
       <h3>Current Students</h3>
       <dl>
-        <dt></dt>
       </dl>
     </section>
     <section>
       <h3>Externship</h3>
       <dl>
-        <dt></dt>
       </dl>
     </section>
   </article>

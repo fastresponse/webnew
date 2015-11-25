@@ -60,9 +60,6 @@ HTML
   ,
 
   'links' => <<<'HTML'
-<li><a href="#">CMA Course Information Packet</a></li>
-<li><a href="#">School Catalog</a></li>
-<li><a href="#">Immunizations Requirements</a></li>
 HTML
   ,
 

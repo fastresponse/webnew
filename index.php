@@ -16,13 +16,11 @@
   <aside id="contact-info">
     <header><h3>Contact Us</h3></header>
     <div id="phone">
-      <!--<div class="button"><a href="tel://510-849-4009"><span class="nowrap">510-849-4009</span></a></div>-->
       <form action="tel: +15108494009" method="get" class="contact-btn">
         <input type="submit" class="phone-btn" value="510-849-4009" />
       </form>
     </div>
     <div id="email">
-      <!--<div class="button"><a href="<?= $incdir ?>contact/"><span class="nowrap">Send an Email</span></a></div>-->
       <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
         <input type="submit" class="email-btn" value="Send an Email" />
       </form>
@@ -63,7 +61,8 @@
 <section id="content">
 
   <div id="banner" class="">
-    <div class="bold italic"><a href="courses/phm/">Pharmacy Technician classes - <span class="nowrap">Now Enrolling for 2016</span></a></div>
+  <?php if (false): ?><div class="bold italic blue">Fast Response will be closed Nov 26-27. Happy Thanksgiving!</div><?php endif; ?>
+    <div class="bold italic"><a href="<?= $incdir ?>courses/phm/">Pharmacy Technician classes - <span class="nowrap">Now Enrolling for 2016</span></a></div>
   </div>
 
 <?php include_once($incdir . 'include/course_list_postsec.php'); ?>

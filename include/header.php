@@ -1,4 +1,5 @@
 <?php
+  if (!isset($incdir)) $incdir = '/';
   if (!isset($title)) $title = '';
   if (!isset($page_header)) $page_header = '';
   if (!isset($description)) $description = '';

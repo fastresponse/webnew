@@ -65,22 +65,13 @@ HTML
   ,
 
   'books' => <<<'HTML'
-<div class="tablet-row-2">
+<div class="tablet-row-1">
   <p class="underline">ECGs Made Easy Book and Pocket Reference, 5th Edition</p>
   <ul>
     <li><span class="bold yellow">Recommended</span></li>
 	  <li><span class="isbn-label">ISBN:</span> 0323101062</li>
 	  <li><span class="isbn-label">ISBN-13:</span> 9780323101066</li>
     <li>Not available for purchase at Fast Response.</li>
-  </ul>
-</div>
-<hr class="hide-tablet" />
-<div class="tablet-row-2">
-  <p class="underline">Fast Response ECG Study Guide</p>
-  <ul>
-    <li><span class="bold yellow">Recommended</span></li>
-    <li>Provided <span class="price">free</span> by Fast Response.</li>
-    <li><a href="#" target="_blank">Click here to download</a>.</li>
   </ul>
 </div>
 HTML
