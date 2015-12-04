@@ -6,7 +6,7 @@ $page_header = 'ECG Technician';
 //$sub_header = '';
 $description = '';
 $course_code = 'ECG-T';
-$form_course_name = 'ECG-T';
+$form_course_name = 'ECG Technician';
 
 $sections = array(
 

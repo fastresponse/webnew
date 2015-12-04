@@ -211,7 +211,7 @@ section {
     flex: 1 50%;
   }
   #location > div {
-    flex: 0;
+    /*flex: 0;*/
   }
 }
 
@@ -233,6 +233,11 @@ section {
   #contact_information > dl > div {
     flex: 1 32%;
     margin-right: 1%;
+    font-size: 105%;
+    line-height: 1.3em;
+  }
+  #contact_information dl dl dt {
+    margin-top: 1em;
   }
   #contact_information > dl > div:nth-child(odd) {
     margin-right: 1%;

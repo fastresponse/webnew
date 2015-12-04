@@ -6,7 +6,7 @@ $page_header = 'ECG Basic Rhythm Recognition';
 //$sub_header = '';
 $description = '';
 $course_code = 'ECG-B';
-$form_course_name = 'ECG-B';
+$form_course_name = 'ECG Basic';
 
 $sections = array(
 

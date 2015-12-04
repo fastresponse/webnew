@@ -17,7 +17,7 @@
     </div>
     <div id="email">
       <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
-        <input type="submit" class="email-btn" name="btn" value="Send an Email" />
+        <input type="submit" class="email-btn" value="Send an Email" />
       </form>
     </div>
   </aside>

@@ -6,7 +6,7 @@ $page_header = 'ECG 12-Lead';
 //$sub_header = '';
 $description = '';
 $course_code = 'ECG-12';
-$form_course_name = 'ECG-12';
+$form_course_name = 'ECG 12-Lead';
 
 $sections = array(
 

@@ -6,7 +6,7 @@ $page_header = 'Certified Phlebotomy Technician';
 $sub_header = 'High-quality, Hands-on Training';
 $description = '';
 $course_code = 'CPT';
-$form_course_name = 'CPT';
+$form_course_name = 'Phlebotomy';
 
 if (false && empty($landing_page)) {
 $config = <<<'HTML'
@@ -18,9 +18,9 @@ HTML;
 $sections = array(
 
   'test results' => <<<'HTML'
-<header><h3>Our Success Rate - <span class="testscore">91%</span></h3></header>
-<p>In 2015*, <span class="testscore">91%</span> of our graduates passed the National Center for Competency Testing Phlebotomy Technician licensing test, making them eligible for immediate employment.</p>
-<div>* As of July 6th, 2015</div>
+<header><h3>Our Success Rate - <span class="testscore">89%</span></h3></header>
+<p>In 2015*, <span class="testscore">89%</span> of our graduates passed the National Center for Competency Testing Phlebotomy Technician licensing test, making them eligible for immediate employment.</p>
+<div>* As of December 1st, 2015</div>
 HTML
   ,
 

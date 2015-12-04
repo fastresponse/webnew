@@ -223,7 +223,7 @@
 
 @media only screen and (min-width: 800px) and (max-width: 999px) {
   #contact-form-div {
-    flex: 0;
+    /*flex: 0;*/
   }
 }
 

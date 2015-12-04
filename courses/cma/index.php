@@ -6,7 +6,7 @@ $page_header = 'Clinical Medical Assistant';
 $sub_header = 'Exciting and Multi-faceted Careers';
 $description = '';
 $course_code = 'CMA';
-$form_course_name = 'CMA';
+$form_course_name = 'Medical Assistant';
 $code_for_course_dates = 'CPT';
 
 $sections = array(

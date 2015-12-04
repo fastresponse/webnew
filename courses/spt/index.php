@@ -6,7 +6,7 @@ $page_header = 'Sterile Processing Technician';
 $sub_header = 'High quality education for an important role';
 $description = '';
 $course_code = 'SPT';
-$form_course_name = 'SPT';
+$form_course_name = 'Sterile Processing';
 $show_links = true;
 
 $sections = array(

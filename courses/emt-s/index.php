@@ -6,7 +6,7 @@ $page_header = 'EMT Skills Verification';
 //$sub_header = '';
 $description = '';
 $course_code = 'EMT-S';
-$form_course_name = 'EMT-S';
+$form_course_name = 'EMT Skills Verification';
 
 $sections = array(
 

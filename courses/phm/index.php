@@ -6,7 +6,7 @@ $page_header = 'Pharmacy Technician';
 //$sub_header = '';
 $description = '';
 $course_code = 'PHM';
-$form_course_name = 'PHM';
+$form_course_name = 'Pharmacy Technician';
 $show_links = true;
 
 $sections = array(

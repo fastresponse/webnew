@@ -21,7 +21,7 @@ else
     <ul>
       <li>Work in hospitals and laboratories</li>
       <li>Full-time: 2 weeks, Part-time: 4 weeks</li>
-      <li><span class="testscore">91%</span> student success rate on national exam</li>
+      <li><span class="testscore">89%</span> student success rate on national exam</li>
     </ul>
   </section>
   <section>

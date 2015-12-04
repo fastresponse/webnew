@@ -37,6 +37,10 @@ article h1 {
   margin-top: 0;
 }
 
+.video-container {
+  text-align: center;
+}
+
 @media only screen and (min-width: 550px) {
   #sidebar-primary,
   #bottom-bar {

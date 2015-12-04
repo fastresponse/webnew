@@ -6,7 +6,7 @@ $page_header = 'EMT Refresher';
 //$sub_header = '';
 $description = '';
 $course_code = 'EMT-R';
-$form_course_name = 'EMT-R';
+$form_course_name = 'EMT Refresher';
 
 $sections = array(
 

@@ -6,7 +6,7 @@ $page_header = 'First Aid';
 //$sub_header = '';
 $description = '';
 $course_code = 'First-Aid';
-$form_course_name = 'First-Aid';
+$form_course_name = 'First Aid';
 
 $sections = array(
 

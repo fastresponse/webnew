@@ -75,7 +75,7 @@ else {
     <div id="email">
       <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
         <input type="submit" class="email-btn" value="Send an Email" />
-        <input type="hidden" name="p" value="<?= urlencode($form_course_name) ?>" />
+        <input type="hidden" name="p" value="<?= $form_course_name ?>" />
       </form>
     </div>
   </aside> 

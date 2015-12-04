@@ -46,6 +46,61 @@ $.fn.even_out = function(compare, movements, threshold) {
   }
 };
 
+var all_players = [];
+function pause_all_players() {
+  for (var i = 0; i < all_players.length; i++) {
+    all_players[i].pause();
+  }
+}
+
+$.fn.enable_videolinks = function(default_selector) {
+  return this.each(function() {
+    var $links = $(this).children('.video-link');
+
+    $links.click(function(event) {
+      pause_all_players();
+
+      var $elem = $( $(this).attr('data-for') );
+      if ($elem.attr('data-loaded') != 'false') {
+        return;
+      }
+      $elem.attr('data-loaded', 'true');
+
+      var vidnum = $elem.attr('data-number');
+
+      $('<iframe/>', {
+        id: "vzvd-"+vidnum,
+        name: "vzvd-"+vidnum,
+        class: "vzaar-video-player",
+        height: "336",
+        width: "448",
+        src: "//view.vzaar.com/"+vidnum+"/player?apiOn=true",
+        title: "Video: "+ $(this).text(),
+        type: "text/html",
+        frameborder: "0",
+        allowTransparency: "true",
+        allowFullScreen: "allowFullScreen",
+        mozallowfullscreen: "mozallowfullscreen",
+        webkitAllowFullScreen: "webkitAllowFullScreen"
+      }).appendTo($elem);
+
+      var vzp = new vzPlayer('vzvd-'+vidnum);
+      all_players.push(vzp);
+    });
+
+    var $start_link;
+    if (default_selector != null) {
+      $start_link = $(this).find('[data-for="'+ default_selector +'"]');
+    }
+    if (!$start_link || $start_link.length == 0) {
+      $start_link = $(this).find('[data-for="'+ $(this).attr('data-default') +'"]');
+    }
+    if ($start_link) {
+      $start_link.trigger('click');
+    }
+  });
+};
+
 $.fn.enable_menulinks = function(default_selector) {
   return this.each(function() {
     var $links = $(this).children('.menu-link');
