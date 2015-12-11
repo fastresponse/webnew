@@ -10,7 +10,7 @@
 
 <div id="sidebar-primary">
   <aside id="slideshow">
-    <img src="/slideshow/frontpage/slide01.jpg" alt="" />
+    <img src="<?= $incdir ?>img/front.jpg" alt="" />
   </aside>
 
   <aside id="contact-info">

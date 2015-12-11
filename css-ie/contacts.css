@@ -1,0 +1,44 @@
+#contact_form,
+#location {
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+}
+
+#contact_information,
+#commuter {
+  display: inline-block;
+  width: 72%;
+  vertical-align: top;
+}
+
+#contact_information > dl > div {
+  display: inline-block;
+  width: 32%;
+  vertical-align: top;
+}
+
+#google_directions,
+#mapquest_directions {
+}
+
+#google_directions > form > label,
+#mapquest_directions > form > label {
+  width: 100px;
+  margin-right: 10px;
+}
+
+#google_directions > form > input[type='text'],
+#mapquest_directions > form > input[type='text'] {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#google_directions > form > input[type='submit'],
+#mapquest_directions > form > input[type='submit'] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

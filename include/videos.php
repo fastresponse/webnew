@@ -25,6 +25,11 @@ $videos = array(
     'tags' => array('emt','skills'),
     'id' => 'emt_bs_palpation_1003794',
   ),
+  'EMT C-Collar' => array(
+    'number' => 1462047,
+    'tags' => array('emt','skills'),
+    'id' => 'emt_c-collar_1462047',
+  ),
   'EMT Childbirth' => array(
     'number' => 1003797,
     'tags' => array('emt','skills'),
@@ -34,6 +39,11 @@ $videos = array(
     'number' => 1003799,
     'tags' => array('emt','skills'),
     'id' => 'emt_combitube_1003799',
+  ),
+  'EMT CPAP' => array(
+    'number' => 1462048,
+    'tags' => array('emt','skills'),
+    'id' => 'emt_cpap_1462048',
   ),
   'EMT Hare Traction Splint' => array(
     'number' => 1003800,
@@ -80,6 +90,13 @@ $videos = array(
     'tags' => array('emt','skills'),
     'id' => 'emt_opa_1004504',
   ),
+  /*
+  'EMT Primary Assessment' => array(
+    'number' => 1462000,
+    'tags' => array('emt','skills'),
+    'id' => 'emt_primary_assessment_1462000',
+  ),
+  */
   'EMT Sager Traction Splint' => array(
     'number' => 1004507,
     'tags' => array('emt','skills'),
@@ -95,23 +112,6 @@ $videos = array(
     'tags' => array('emt','skills'),
     'id' => 'emt_suctioning_1004509',
   ),
-  'EMT CPAP' => array(
-    'number' => 1462048,
-    'tags' => array('emt','skills'),
-    'id' => 'emt_cpap_1462048',
-  ),
-  'EMT C-Collar' => array(
-    'number' => 1462047,
-    'tags' => array('emt','skills'),
-    'id' => 'emt_c-collar_1462047',
-  ),
-  /*
-  'EMT Primary Assessment' => array(
-    'number' => 1462000,
-    'tags' => array('emt','skills'),
-    'id' => 'emt_primary_assessment_1462000',
-  ),
-  */
   'Sample Interview' => array(
     'number' => 1203780,
     'tags' => array('career services','interview'),

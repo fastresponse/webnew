@@ -3,7 +3,7 @@
   $title = 'EMT Skills Videos';
   $page_header = $title;
   $description = '';
-  $css = array('courses.css');
+  $css = array('students.css');
 ?>
 <?php require_once($incdir . 'include/header.php'); ?>
 
@@ -35,14 +35,14 @@
   <header class="hide-desktop hide-desktop-large"><h1><?= $page_header ?></h1></header>
 
   <?php foreach($skills_videos as $name => $data): ?>
-  <article id="<?= $data['id'] ?>" class="video-container" data-number="<?= $data['number'] ?>" data-loaded="false">
-    <header><h1><?= $name ?></h1></header>
+  <article id="<?= $data['id'] ?>" data-for="#<?= $data['id'] ?>" data-number="<?= $data['number'] ?>" data-loaded="false" class="video-container video-link collapsible-mobile-start collapsible-tablet-start">
+    <header class="stay-open"><h1 class="trigger"><?= $name ?></h1></header>
   </article>
   <?php endforeach; ?>
 
 </section>
 
-<script src="http://player.vzaar.com/libs/flashtakt/client.js"></script>
+<script src="<?= $incdir ?>js/vendor/vzaar-client.js"></script>
 
 <script>
 $(document).ready(function() {
@@ -65,6 +65,13 @@ $(document).ready(function() {
       .enable_menulinks()
       .enable_videolinks()
     ;
+    break;
+  case 'tablet':
+    $('#content').enable_videolinks();
+    break;
+  case 'mobile':
+    $('#content').enable_videolinks(null, "fit");
+    break;
   default:
   }
 });

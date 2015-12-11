@@ -17,10 +17,7 @@ article *:last-child {
   /*flex: 1 100%;*/
 }
 #content > header {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 100%;
-      -ms-flex: 1 100%;
-          flex: 1 100%;
+  flex: 1 100%;
   text-align: center;
 }
 #content > header > h1 {
@@ -126,13 +123,6 @@ li.opened > .trigger {
   margin-left: 20px;
 }
 
-.video-container {
-  text-align: center;
-}
-.vzaar-video-player {
-  margin: 20px 0;
-}
-
 @media only screen and (max-width: 549px) {
   #content > article > header > h1 {
     font-size: 125%;
@@ -155,16 +145,10 @@ li.opened > .trigger {
   #content > header > h1 {
     font-size: 300%;
   }
-  .vzaar-video-player {
-    margin: 20px !important;
-  }
 }
 
 @media only screen and (min-width: 800px) {
   #sidebar-primary {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     padding: 0;
   }

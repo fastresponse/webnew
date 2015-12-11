@@ -1,10 +1,7 @@
 /* default: mobile */
 
 #contact-form-div {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 auto;
-      -ms-flex: 1 auto;
-          flex: 1 auto;
+  flex: 1 auto;
 }
 
 #contact-form-div h2 {
@@ -86,10 +83,7 @@
 }
 #contact-form-div #output {
   display: none;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 100%;
-      -ms-flex: 1 100%;
-          flex: 1 100%;
+  flex: 1 100%;
   margin: 25px auto;
   font-size: 110%;
   font-weight: bold;
@@ -149,46 +143,20 @@
 @media only screen and (min-width: 800px) {
   #contact-form-div {
     font-size: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: column nowrap;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
+    flex-flow: column nowrap;
   }
   #contact-form-div > div {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 auto;
-        -ms-flex: 1 auto;
-            flex: 1 auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+    flex: 1 auto;
     display: flex;
-    -webkit-flex-flow: column nowrap;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
+    flex-flow: column nowrap;
   }
   #contact-form-div form {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 auto;
-        -ms-flex: 1 auto;
-            flex: 1 auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+    flex: 1 auto;
     display: flex;
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-align-content: space-between;
-        -ms-flex-line-pack: justify;
-            align-content: space-between;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: space-between;
   }
   #contact-form-div #contact-form > * {
     box-sizing: border-box;
@@ -218,10 +186,7 @@
   #contact-form-div select,
   #contact-form-div textarea,
   #contact-form-div #form-call {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 73%;
-        -ms-flex: 0 73%;
-            flex: 0 73%;
+    flex: 0 75%;
   }
   #contact-form-div #form-comments,
   #contact-form-div #form-source {
@@ -230,19 +195,13 @@
   #contact-form-div input[type="submit"] {
   }
   #contact-form-div input.form-section-questions {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 1 5%;
-        -ms-flex: 0 1 5%;
-            flex: 0 1 5%;
+    flex: 0 1 5%;
     margin-left: 23%;
     margin-top: 7px;
     width: 4%;
   }
   #contact-form-div label.form-section-questions.checkbox-label {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 68%;
-        -ms-flex: 1 68%;
-            flex: 1 68%;
+    flex: 1 68%;
     margin-left: 3%;
     margin-top: 7px;
     width: 68%;

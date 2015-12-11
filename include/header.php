@@ -46,12 +46,25 @@
 
     <link rel="stylesheet" href="<?= $incdir ?>css/normalize.min.css">
     <link rel="stylesheet" href="<?= $incdir ?>css/main.css">
-    <?php foreach ($css as $file): ?>
-      <link rel="stylesheet" href="<?= $incdir ?>css/<?= $file ?>">
-    <?php endforeach; ?>
-    <!--<link rel="stylesheet" href="<?= $incdir ?>js/vendor/jquery.bxslider/jquery.bxslider.css">-->
 
-    <script src="<?= $incdir ?>js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  <?php foreach ($css as $file): ?>
+    <link rel="stylesheet" href="<?= $incdir ?>css/<?= $file ?>">
+  <?php endforeach; ?>
+
+    <!--[if lte IE 9]>
+      <link rel="stylesheet" href="<?= $incdir ?>css-ie/main.css">
+    <?php foreach ($css as $file):
+      $inc = $incdir . 'css-ie/' . $file;
+      if (file_exists($inc)): ?>
+      <link rel="stylesheet" href="<?= $inc ?>">
+      <?php endif;
+    endforeach; ?>
+      <script src="<?= $incdir ?>js/vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--[if !IE]>
+    <![endif]-->
+
+    <!--<script src="<?= $incdir ?>js/vendor/modernizr.js"></script>-->
 
     <script src="<?= $incdir ?>js/vendor/jquery-1.11.3.min.js"></script>
 

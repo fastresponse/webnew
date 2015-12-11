@@ -42,7 +42,7 @@
     <div id="legal-footer">
       <div id="policy-footer"><a href="<?= $incdir ?>policies/">Fast Response school policies and terms.</a></div>
       <div id="approval-footer">This school has been approved by the <a href="http://www.bppe.ca.gov/about_us/contact.shtml"><span class="nowrap">Bureau of Private</span> and Postsecondary Education.</a></div>
-      <div id="copyright-footer">&copy; 2009-<?= date('Y') ?> Fast Response. All Rights Reserved. <span class="nowrap">All prices and</span> content subject to change.</span></div>
+      <div id="copyright-footer">&copy; 2009-<?= date('Y') ?> Fast Response. All Rights Reserved. <span class="nowrap">All prices and</span> content subject to change.</div>
     </div>
 
   </footer>

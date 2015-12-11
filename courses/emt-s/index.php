@@ -71,7 +71,6 @@ HTML
     <li><a href="https://www.nremt.org/nremt/about/reg_basic_history.asp#EMT_Recertification">NREMT Renewal Guidelines</a></li>
   </ul>
 </div>
-</div>
 HTML
   ,
 

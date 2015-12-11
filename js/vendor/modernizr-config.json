@@ -1,0 +1,15 @@
+{
+  "minify": true,
+  "options": [
+    "html5printshiv",
+    "html5shiv",
+    "setClasses"
+  ],
+  "classPrefix": "detect-",
+  "feature-detects": [
+    "test/css/flexbox",
+    "test/css/flexboxlegacy",
+    "test/css/flexboxtweener",
+    "test/css/flexwrap"
+  ]
+}

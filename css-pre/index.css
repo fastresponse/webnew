@@ -16,17 +16,12 @@
 
 @media only screen and (min-width: 550px) {
   #content article {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 49%;
-        -ms-flex: 1 0 49%;
-            flex: 1 0 49%;
+    flex: 1 0 49%;
   }
 }
 
 @media only screen and (min-width: 800px) {
   #bottom-bar {
-    -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 }

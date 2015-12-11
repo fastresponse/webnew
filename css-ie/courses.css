@@ -1,0 +1,37 @@
+#content article {
+  width: 100%;
+}
+
+#content-bottom {
+  clear: right;
+}
+#content-bottom > * {
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+}
+
+img.image-placeholder {
+  max-width: 30%;
+}
+
+#stop-sign {
+  background: no-repeat url('../img/stop.png');
+  width: 90px;
+  height: 90px;
+}
+
+#placeholder-box {
+  width: 98%;
+  text-align: center;
+}
+#placeholder-box > img.image-placeholder {
+  display: inline-block;
+  width: 25%;
+  max-width: 49%;
+  height: auto;
+  vertical-align: top;
+}
+#placeholder-box > img:first-child {
+  margin: 0 2% 0 0;
+}

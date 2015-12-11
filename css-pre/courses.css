@@ -1,0 +1,118 @@
+#content {
+  order: 0;
+}
+#sidebar-primary {
+  order: 1;
+}
+#bottom-bar {
+  order: 2;
+}
+
+#start_dates li,
+#links li,
+#course_approvals li,
+#promotions li,
+#postsec li,
+#ceu li {
+  margin-top: 8px;
+}
+#start_dates .class-type {
+  white-space: nowrap;
+}
+
+#registration .button {
+  margin: 10px auto 0;
+  width: 90%;
+}
+
+#promotions li {
+  list-style: inside disc;
+}
+
+article {
+  margin-top: 0;
+}
+article h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.video-container {
+  text-align: center;
+}
+
+@media only screen and (min-width: 550px) {
+  #sidebar-primary,
+  #bottom-bar {
+    padding: 0;
+  }
+  #sidebar-primary > *,
+  #bottom-bar > * {
+    flex: 1 49%;
+    margin-right: 1%;
+  }
+  #sidebar-primary > *:nth-child(even),
+  #bottom-bar > *:nth-child(even),
+  #sidebar-primary > *:last-child,
+  #bottom-bar > *:last-child {
+    margin-right: 0;
+  }
+
+  #content-bottom {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #contact-info {
+    flex-flow: column nowrap;
+  }
+  #details,
+  #books,
+  #extra,
+  #registration {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #sidebar-primary {
+    order: 0;
+  }
+  #content {
+    order: 1;
+  }
+  #bottom-bar {
+    order: 2;
+  }
+  #content-bottom {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #content-bottom > * {
+    flex: 1 49%;
+  }
+  #content-bottom > *:nth-of-type(2n+0) {
+    margin-left: 2%;
+  }
+  #contact-info {
+    flex-flow: row wrap;
+  }
+  #details,
+  #books,
+  #registration {
+    display: block;
+  }
+  #content > article > .testimonial-row {
+    display: none;
+  }
+  #testimonials {
+    flex-direction: column;
+  }
+  #testimonials > div {
+    margin-top: 5px;
+  }
+  #testimonials > div:first-of-type {
+    margin-top: 0;
+  }
+}

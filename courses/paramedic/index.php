@@ -69,7 +69,7 @@ HTML
 <div id="image-placeholder-1" class="image-placeholder"></div>
 <p>The FRSHCE/BAS EMS Consortium has developed strong relationships with Paramedics Plus, Kaiser Permanente Regional Medical Centers, and Eden Medical Center. Through contractual agreements with these facilities, the consortium is able to guarantee immediate access to both clinical and field internships.</p>
 <hr />
-<img src="{$incdir}img/stop.svg" alt="STOP" style="display: block; margin: 0 auto;" />
+<img id="stop-sign" src="{$incdir}img/stop.svg" alt="STOP" style="display: block; margin: 0 auto;" onerror="this.src='{$incdir}img/stop.png'; this.onerror=null;"/>
 <p id="paramedic_stop_msg" class="bold red">You must be a certified EMT with six months of experience before you can begin training as a paramedic. <span class="nowrap">Please click <a href="{$incdir}courses/emt/">here</a></span> to get information about our EMT program.</p>
 <hr />
 <h4 style="margin-bottom: 0;">Advanced Placement</h4>

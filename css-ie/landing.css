@@ -1,0 +1,35 @@
+#top-bar > h3 {
+  display: inline-block;
+  width: 50% !important;
+}
+
+#top-bar > div {
+  display: none;
+}
+
+.cta-bg {
+  background-color: red;
+}
+
+#content article {
+  width: 100%;
+}
+
+#content-bottom {
+  clear: right;
+}
+#content-bottom > * {
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+}
+
+img.image-placeholder {
+  max-width: 30%;
+}
+
+#stop-sign {
+  background: no-repeat url('../img/stop.png');
+  width: 90px;
+  height: 90px;
+}

@@ -780,7 +780,7 @@
         </li>
       </ul>
     </section>
-    <section class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+    <section class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start" id="interview_skills">
       <h3 class="trigger">Interview Skills</h3>
       <ul>
         <li class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
@@ -1002,8 +1002,10 @@
           </div>
         </li>
 
-        <li class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
+        <li class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start video-link" data-for="#sample_interview_video">
           <div class="trigger underline">Sample Interview Video</div>
+          <?php include_once($incdir . 'include/videos.php'); ?>
+          <div id="sample_interview_video" data-number="<?= $videos['Sample Interview']['number'] ?>" data-loaded="false"></div>
         </li>
       </ul>
     </section>
@@ -1151,6 +1153,8 @@
 <div id="bottom-bar">
 </div>
 
+<script src="http://player.vzaar.com/libs/flashtakt/client.js"></script>
+
 <script>
 $(document).ready(function() {
   var width = $(window).width();
@@ -1169,6 +1173,7 @@ $(document).ready(function() {
   switch (type) {
   case 'desktop':
     $('#menu > ul').enable_menulinks(<?= isset($section) ? "'$section'" : "" ?>);
+    $('#interview_skills > ul').enable_videolinks();
   default:
   }
 });
