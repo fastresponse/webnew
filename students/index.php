@@ -43,7 +43,7 @@
   </aside>
 
   <aside id="slideshow">
-    <img src="/slideshow/frontpage/slide01.jpg" alt="" />
+    <img src="<?= $incdir ?>img/interview.jpg" alt="" />
   </aside>
 
   <aside id="contact-info">
