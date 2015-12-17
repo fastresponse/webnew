@@ -46,19 +46,8 @@
     <img src="<?= $incdir ?>img/interview.jpg" alt="" />
   </aside>
 
-  <aside id="contact-info">
-    <header><h3>Contact Us</h3></header>
-    <div id="phone">
-      <form action="tel: +15108494009" method="get" class="contact-btn">
-        <input type="submit" class="phone-btn" value="510-849-4009" />
-      </form>
-    </div>
-    <div id="email">
-      <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
-        <input type="submit" class="email-btn" value="Send an Email" />
-      </form>
-    </div>
-  </aside>
+  <?php include($incdir . 'include/contact_info.php'); ?>
+
   <aside class="bottom-of-sidebar click-to-top">
     <div class="button"><a href="#top-of-page">Back to top</a></div>
   </aside>
@@ -171,7 +160,7 @@
       <h3 class="trigger">Career Services Department</h3>
       <dl>
         <dt>Phone</dt>
-        <dd><a href="tel: +15108494009,115">510-849-4009 x115</a></dd>
+        <dd><a href="tel:+1-510-849-4009,115">510-849-4009 x115</a></dd>
         <dt>Email</dt>
         <dd><a href="mailto: career.services@fastresponse.org">career.services@fastresponse.org</a></dd>
       </dl>
@@ -1153,30 +1142,19 @@
 <div id="bottom-bar">
 </div>
 
-<script src="http://player.vzaar.com/libs/flashtakt/client.js"></script>
+<script src="<?= $incdir ?>js/vendor/vzaar-client.js"></script>
 
 <script>
-$(document).ready(function() {
-  var width = $(window).width();
-  var type;
-
-  if (width >= 800) {
-    type = 'desktop';
+$FRvars.loadfuncs.push(
+  function() {
+    switch ($FRvars.type) {
+    case 'desktop':
+      $('#menu > ul').enable_menulinks(<?= isset($section) ? "'$section'" : "" ?>);
+      $('#interview_skills > ul').enable_videolinks();
+    default:
+    }
   }
-  else if (width >= 550) {
-    type = 'tablet';
-  }
-  else {
-    type = 'mobile';
-  }
-
-  switch (type) {
-  case 'desktop':
-    $('#menu > ul').enable_menulinks(<?= isset($section) ? "'$section'" : "" ?>);
-    $('#interview_skills > ul').enable_videolinks();
-  default:
-  }
-});
+);
 </script>
 
 <?php require_once($incdir . 'include/footer.php'); ?>

@@ -8,19 +8,7 @@
 <?php require_once($incdir . 'include/header.php'); ?>
 
 <div id="sidebar-primary">
-  <aside id="contact-info">
-    <header><h3>Contact Us</h3></header>
-    <div id="phone">
-      <form action="tel:+15108494009" method="get" class="contact-btn">
-        <input type="submit" class="phone-btn" name="btn" value="510-849-4009" />
-      </form>
-    </div>
-    <div id="email">
-      <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
-        <input type="submit" class="email-btn" value="Send an Email" />
-      </form>
-    </div>
-  </aside>
+  <?php include($incdir . 'include/contact_info.php'); ?>
   <aside id="links">
     <header><h3>Links</h3></header>
     <ul>

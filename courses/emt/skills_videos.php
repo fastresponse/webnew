@@ -45,36 +45,25 @@
 <script src="<?= $incdir ?>js/vendor/vzaar-client.js"></script>
 
 <script>
-$(document).ready(function() {
-  var width = $(window).width();
-  var type;
-
-  if (width >= 800) {
-    type = 'desktop';
+$FRvars.loadfuncs.push(
+  function() {
+    switch ($FRvars.type) {
+    case 'desktop':
+      $('#menu > ul')
+        .enable_menulinks()
+        .enable_videolinks()
+      ;
+      break;
+    case 'tablet':
+      $('#content').enable_videolinks();
+      break;
+    case 'mobile':
+      $('#content').enable_videolinks(null, "fit");
+      break;
+    default:
+    }
   }
-  else if (width >= 550) {
-    type = 'tablet';
-  }
-  else {
-    type = 'mobile';
-  }
-
-  switch (type) {
-  case 'desktop':
-    $('#menu > ul')
-      .enable_menulinks()
-      .enable_videolinks()
-    ;
-    break;
-  case 'tablet':
-    $('#content').enable_videolinks();
-    break;
-  case 'mobile':
-    $('#content').enable_videolinks(null, "fit");
-    break;
-  default:
-  }
-});
+);
 </script>
 
 <?php require_once($incdir . 'include/footer.php'); ?>

@@ -1,0 +1,114 @@
+include/header.php:
+  <html>
+    <head>
+      <if lte IE9: script js/vendor/html5shiv/html5shiv.min.js>
+      <script js/vendor/jquery-1.11.3.min.js>
+      <script init $FRvars, translate PHP to JS>
+    </head>
+    <body>
+      <header and menu/>
+
+include/footer.php:
+      <footer/>
+      <script JSON-LD microdata>
+      <script js/main.js async defer>
+      <script Google Analytics>
+    </body>
+  </html>
+
+index.php:
+  include/header.php
+  <sidebar>
+    include/contact_info.php
+  </sidebar
+  <content>
+    include/course_list_postsec.php
+    include/course_list_ceu.php
+  </content>
+  <bottom/>
+  <script config/index.js>
+  <script js/vendor/jquery.bxslider/jquery.bxslider.min.js>
+  include/footer.php
+
+include/template_postsec.php:
+  include/header.php
+  <if landing: top bar>
+  <sidebar>
+    <if landing: contact/contact_form.php>
+    <if !landing: include/contact_info.php>
+    <if !landing: php/course_dates.php>
+    php/dbconn.php
+  </sidebar>
+  <content>
+    <if $show_next_date(landing): php/course_dates.php>
+  </content>
+  <bottom/>
+  <script config/landing|postsec.js>
+  <script js/vendor/jquery.bxslider/jquery.bxslider.min.js>
+  <script course-specific config>
+  <script even_out() sidebar and content bottom>
+  include/footer.php
+
+include/template_ceu.php:
+  include/header.php
+  <sidebar>
+    include/contact_info.php
+    php/dbconn.php
+  </sidebar>
+  <content/>
+  <bottom/>
+  <script config/ceu.js>
+  include/footer.php
+
+postsecondary (i.e. courses/emt/index.php):
+  <php variable and content configuration>
+  include/template_postsec.php
+
+landing (i.e. get-info/emt/index.php):
+  <php set landing page true>
+  courses/$course/index.php
+
+ceu (i.e. courses/bls/index.php):
+  <php variable and content configuration>
+  include/template_ceu.php
+
+about/index.php:
+  include/header.php
+  <sidebar>
+    include/contact_info.php
+  </sidebar>
+  include/footer.php
+
+courses/index.php:
+  include/header.php
+  <sidebar (currently turned off)>
+    include/contact_info.php
+  </sidebar>
+  include/course_list_postsec.php
+  include/course_list_ceu.php
+  include/footer.php
+
+policies/index.php:
+  include/header.php
+  <sidebar>
+    include/contact_info.php
+  </sidebar>
+  policies/ceu.php
+  policies/privacy.php
+  policies/terms.php
+  include/footer.php
+
+students/index.php:
+  include/header.php
+  <sidebar>
+    include/contact_info.php
+  </sidebar>
+  include/videos.php
+  <script js/vendor/vzaar-client.js>
+  include/footer.php
+
+courses/emt/skills_videos.php:
+  include/header.php
+  include/videos.php
+  <script js/vendor/vzaar-client.js>
+  include/footer.php

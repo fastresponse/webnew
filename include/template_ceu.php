@@ -67,20 +67,21 @@ else {
     if (isset($sections['course approvals'])) $r = 2;
     else $r = 1;
   ?>
+<?php
+  $contact_info_class = 'tablet-row-'.$r;
+  include($incdir . 'include/contact_info.php');
+?>
+<?php if (false): ?>
   <aside id="contact-info" class="tablet-row-<?= $r ?>">
     <header><h3>Contact Us</h3></header>
     <div id="phone">
-      <form action="tel: +15108494009" method="get" class="contact-btn">
-        <input type="submit" class="phone-btn" value="510-849-4009" />
-      </form>
+      <a href="tel:+1-510-849-4009" class="phone-btn">510-849-4009</a>
     </div>
     <div id="email">
-      <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
-        <input type="submit" class="email-btn" value="Send an Email" />
-        <input type="hidden" name="p" value="<?= $form_course_name ?>" />
-      </form>
+      <a href="<?= $incdir ?>contact/?p=<?= $form_course_name ?>" class="phone-btn">Send an Email</a>
     </div>
   </aside> 
+<?php endif; ?>
   <?php if (isset($sections['course approvals'])): ?>
   <aside id="course_approvals" class="tablet-row-2">
     <header><h3>Approved By</h3></header>
