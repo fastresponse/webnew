@@ -1,4 +1,4 @@
-var testimonialOpts = {
+$FRvars.testimonialOpts = {
   "mobile" : {
     "testimonial-1" : {
       "load" : "none"
@@ -82,7 +82,7 @@ var testimonialOpts = {
   }
 };
 
-var imageOpts = {
+$FRvars.imageOpts = {
   "mobile" : {
   },
   "tablet" : {

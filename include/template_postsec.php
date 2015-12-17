@@ -4,6 +4,8 @@ if (!isset($incdir)) {
   $incdir = '../../';
 }
 
+$get_piclist = true;
+
 if (!isset($picdir) && isset($course_code)) {
   $picdir = $incdir . 'img/' . strtolower($course_code) . '/';
 }
@@ -67,9 +69,12 @@ function load_course_data() {
   <img src="<?= $incdir ?>img/fr-logo-darkblue.png" alt="Fast Response" />
   <h3 style="width: 100%;">Career training in Berkeley, CA</h3>
   <div id="phone">
+    <a href="tel:+1-800-637-7387" class="phone-btn">800-637-7387</a>
+    <!--
     <form action="tel:+18006377378" method="get" class="contact-btn">
       <input type="submit" class="phone-btn" value="800-637-7378" />
     </form>
+    -->
   </div>
   <div id="email">
     <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
@@ -103,6 +108,15 @@ function load_course_data() {
 
 <?php else: ?>
   <?php
+    $section_widths = array(
+      'contact-info' => 3,
+      'test_results' => 3,
+      'start_dates' => 3,
+      'details' => 1,
+      'links' => 2,
+      'promotions' => 2,
+      'course_approvals' => 2,
+    );
     $n = 3;
     $d = 1;
 
@@ -112,15 +126,26 @@ function load_course_data() {
 
     $show_test_results = ($sections['test results'] ? true : false);
 
+    if (!$show_test_results) {
+      $section_widths['contact-info'] = 2;
+      $section_widths['test_results'] = 0;
+    }
+    if (!$show_start_dates) {
+      $section_widths['contact-info'] = 2;
+      $section_widths['start_dates'] = 0;
+    }
     if (!$show_test_results || !$show_start_dates) { $n = 2; }
     if (!($show_test_results || $show_start_dates)) { $d = 2; }
   ?>
   <aside id="contact-info" class="tablet-row-<?= $n ?>">
     <header><h3>Contact Us</h3></header>
     <div id="phone">
+      <a href="tel:+1-510-849-4009" class="phone-btn">510-849-4009</a>
+      <!--
       <form action="tel:+15108494009" method="get" class="contact-btn">
         <input type="submit" class="phone-btn" value="510-849-4009" />
       </form>
+      -->
     </div>
     <div id="email">
       <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
@@ -149,7 +174,7 @@ function load_course_data() {
 
   <?php if ($sections['course details']): ?>
     <aside id="details" class="collapsible-mobile-start collapsible-tablet tablet-row-<?= $d ?>">
-    <header class="stay-open"><h3 class="trigger">Course Details</h3></header>
+    <header class="stay-open tablet-row-1"><h3 class="trigger">Course Details</h3></header>
     <?= $sections['course details'] ?>
   </aside>
   <?php endif; ?>
@@ -272,21 +297,6 @@ function load_course_data() {
 <div id="bottom-bar">
 </div>
 
-<script>
-<?php // variable translate section, PHP -> Javascript ?>
-var course_code = "<?= $course_code ?>";
-
-var piclist = [
-<?php 
-  require_once($incdir . 'php/file_list.php');
-  $piclist = get_file_list($picdir);
-  
-  foreach ($piclist as $piclink): ?>
-  "<?= $piclink ?>",
-<?php endforeach; ?>
-];
-</script>
-
 <script src="<?= $incdir ?>config/<?= ($landing_page ? 'landing' : 'postsec') ?>.js"></script>
 
 <script src="<?= $incdir ?>js/vendor/jquery.bxslider/jquery.bxslider.min.js"></script>
@@ -298,27 +308,9 @@ var piclist = [
 <?php endif; ?>
 
 <script>
-$(document).ready(function() {
-  var width = $(window).width();
-  var srclist = piclist.slice(0); // clones array
-  var type;
-
-  if (width >= 800) {
-    type = 'desktop';
-  }
-  else if (width >= 550) {
-    type = 'tablet';
-  }
-  else {
-    type = 'mobile';
-  }
-
-  $.when(
-    $('.testimonial-container').load_testimonials( testimonialOpts[type] )
-  ).then(function() {
-    $('.image-placeholder').load_placeholders( imageOpts[type], srclist );
-  }).then(function() {
-    if (type == 'desktop') {
+$FRvars.loadfuncs.push(
+  function() {
+    if ($FRvars.type == 'desktop') {
       $('#sidebar-primary').even_out(
         '#content > article > *:last-child',
         {
@@ -328,20 +320,8 @@ $(document).ready(function() {
         200
       );
     }
-  });
-});
-
-function cleanup() {
-  var comp1 = '#sidebar-primary';
-  var comp2 = '#content > article > *:last-child';
-  var bottom1 = $(comp1).offset().top + $(comp1).outerHeight(true);
-  var bottom2 = $(comp2).offset().top + $(comp2).outerHeight(true);
-
-  if (bottom1 > bottom2+200) {
-    $('#promotions').appendTo('#content-bottom');
-    $('#course_approvals').appendTo('#content-bottom');
   }
-}
+);
 </script>
 
 <?php require_once($incdir . 'include/footer.php'); ?>

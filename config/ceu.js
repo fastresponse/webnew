@@ -1,4 +1,4 @@
-var imageOpts = {
+$FRvars.imageOpts = {
   "mobile" : {
     "image-placeholder-1" : {
       "load" : "none"

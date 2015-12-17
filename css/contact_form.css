@@ -73,7 +73,20 @@
   box-shadow: rgb(140, 140, 140) 3px 5px;
 }
 #contact-form-div #form-call {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 10px;
+  color: buttontext;
+  background-color: buttonface;
 }
 
 #contact-form-div #privacyterms {
@@ -170,7 +183,8 @@
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
   }
-  #contact-form-div form {
+  #contact-form-div form,
+  #contact-form-div #call-form {
     -webkit-box-flex: 1;
     -webkit-flex: 1 auto;
         -ms-flex: 1 auto;

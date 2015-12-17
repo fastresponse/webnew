@@ -124,3 +124,10 @@ nav a {
 .hide-desktop-large {
   display: none;
 }
+
+input[type='submit'] {
+  background-color: buttonface;
+}
+a.phone-btn {
+  background-color: buttonface;
+}

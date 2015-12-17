@@ -4,6 +4,8 @@ if (!isset($incdir)) {
   $incdir = '../../';
 }
 
+$get_piclist = true;
+
 if (!isset($picdir) && isset($course_code)) {
   $picdir = $incdir . 'img/' . strtolower($course_code) . '/';
 }
@@ -227,41 +229,6 @@ else {
   <?php endif; ?>
 </div>
 
-<script>
-<?php // variable translate section, PHP -> Javascript ?>
-var course_code = "<?= $course_code ?>";
-
-var piclist = [
-<?php 
-  require_once($incdir . 'php/file_list.php');
-  $piclist = get_file_list($picdir);
-  
-  foreach ($piclist as $piclink): ?>
-  "<?= $piclink ?>",
-<?php endforeach; ?>
-];
-</script>
-
 <script src="<?= $incdir ?>config/ceu.js"></script>
-
-<script>
-$(document).ready(function() {
-  var width = $(window).width();
-  var srclist = piclist.slice(0); // clones array
-  var type;
-
-  if (width >= 800) {
-    type = 'desktop';
-  }
-  else if (width >= 550) {
-    type = 'tablet';
-  }
-  else {
-    type = 'mobile';
-  }
-
-  $('.image-placeholder').load_placeholders( imageOpts[type], srclist );
-});
-</script>
 
 <?php require_once($incdir . 'include/footer.php'); ?>

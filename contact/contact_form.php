@@ -181,9 +181,14 @@
 </form>
 
 <?php if (!$hide_form_call_button): ?>
+<div id="call-form">
+  <a id="form-call" class="form-section-call phone-btn" href="tel:+1-800-637-7387"><span>Call Admissions Now<br>800-637-7387</span></a>
+</div>
+<!--
 <form id="call-form" method="get" action="tel://1-800-637-7387">
   <input type="submit" id="form-call" class="form-section-call" name="call" title="Call" value="Call Admissions Now&#x00A 800-637-7387 " />
 </form>
+-->
 <?php endif; ?>
 
 <div id="privacyterms">

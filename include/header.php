@@ -5,6 +5,16 @@
   if (!isset($description)) $description = '';
   if (!isset($css)) $css = null;
   if (!isset($hide_header)) $hide_header = false;
+  if (!isset($course_code)) $course_code = 'no-course';
+  if (!isset($get_piclist)) $get_piclist = false;
+
+  if ($get_piclist) {
+    if (!isset($picdir)) $picdir = null;
+    require_once($incdir . 'php/file_list.php');
+    $piclist = get_file_list($picdir);
+  }
+
+  if (!isset($piclist)) $piclist = array();
 ?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -67,6 +77,26 @@
     <!--<script src="<?= $incdir ?>js/vendor/modernizr.js"></script>-->
 
     <script src="<?= $incdir ?>js/vendor/jquery-1.11.3.min.js"></script>
+
+    <script>
+      $FRvars = new Object();
+
+      <?php // translate PHP to Javascript ?>
+      $FRvars.incdir = '<?= $incdir ?>';
+      $FRvars.coursecode = '<?= $course_code ?>';
+      $FRvars.piclist = [
+      <?php foreach ($piclist as $piclink): ?>
+        '<?= $piclink ?>',
+      <?php endforeach; ?>
+      ];
+      <?php // end PHP translated vars ?>
+
+      $FRvars.type = 'mobile';
+      $FRvars.loadfuncs = [];
+      $FRvars.allplayers = [];
+      $FRvars.testimonialOpts = {};
+      $FRvars.imageOpts = {};
+    </script>      
 
   </head>
   <body>

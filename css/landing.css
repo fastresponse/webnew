@@ -133,7 +133,8 @@ p:last-child {
   #top-bar > h3 {
     font-size: 140%;
   }
-  #top-bar .contact-btn input {
+  #top-bar .contact-btn input,
+  #top-bar #phone a.phone-btn {
     font-weight: bold;
     font-size: 135%;
   }

@@ -21,16 +21,8 @@
 
     <div id="phone-buttons">
       <div class="bold">Call Now</div>
-      <!--
-      <div class="phone button"><a href="tel:+15108494009">510-849-4009</a></div>
-      <div class="phone button"><a href="tel:+18006377387">800-637-7387</a></div>
-      -->
-      <form action="tel:+15108494009" method="get" class="contact-btn">
-        <input type="submit" class="phone-btn" value="510-849-4009" />
-      </form>
-      <form action="tel:+18006377387" method="get" class="contact-btn">
-        <input type="submit" class="phone-btn" value="800-637-7387" />
-      </form>
+      <a href="tel:+1-510-849-4009" class="phone-btn">510-849-4009</a>
+      <a href="tel:+1-800-637-7387" class="phone-btn">800-637-7387</a>
     </div>
 
     <div id="social-media-footer">
@@ -47,18 +39,6 @@
 
   </footer>
 </div>
-
-<script>
-$(document).ready(function() {
-  $('.phone-btn').click(function() {
-    var origdest = $(this).parent().attr('action');
-    var dest = origdest.slice(4).trim(); // slice off protocol
-    //console.log('phone: '+dest);
-    window.location.href = origdest;
-    //window.open(origdest, '_system'); // for iOS
-  });
-});
-</script>
 
 <script type="application/ld+json">
 {
@@ -130,8 +110,7 @@ $(document).ready(function() {
 </script>
 <?php endif; ?>
 
-<script src="<?= $incdir ?>js/plugins.js"></script>
-<script src="<?= $incdir ?>js/main.js"></script>
+<script src="<?= $incdir ?>js/main.js" async defer></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

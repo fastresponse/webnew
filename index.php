@@ -16,14 +16,10 @@
   <aside id="contact-info">
     <header><h3>Contact Us</h3></header>
     <div id="phone">
-      <form action="tel: +15108494009" method="get" class="contact-btn">
-        <input type="submit" class="phone-btn" value="510-849-4009" />
-      </form>
+      <a href="tel:+1-510-849-4009" class="phone-btn">510-849-4009</a>
     </div>
     <div id="email">
-      <form action="<?= $incdir ?>contact/" method="get" class="contact-btn">
-        <input type="submit" class="email-btn" value="Send an Email" />
-      </form>
+      <a href="<?= $incdir ?>contact/" class="phone-btn">Send an Email</a>
     </div>
   </aside>
 
@@ -92,28 +88,5 @@
 <script src="<?= $incdir ?>config/index.js"></script>
 
 <script src="<?= $incdir ?>js/vendor/jquery.bxslider/jquery.bxslider.min.js"></script>
-
-<script>
-$(document).ready(function() {
-  var width = $(window).width();
-  var type;
-
-  if (width >= 800) {
-    type = 'desktop';
-  }
-  else if (width >= 550) {
-    type = 'tablet';
-  }
-  else {
-    type = 'mobile';
-  }
-
-  $.when(
-    $('.testimonial-container').load_testimonials( testimonialOpts[type] )
-  ).then(function() {
-    //$('.image-placeholder').load_placeholders( imageOpts[type], srclist );
-  });
-});
-</script>
 
 <?php require_once($incdir . 'include/footer.php'); ?>

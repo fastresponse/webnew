@@ -1,0 +1,44 @@
+ErrorDocument 404 /404.html
+ErrorDocument 403 /404.html
+
+# Course file redirects
+Redirect permanent /emt/files https://drive.google.com/folderview?id=0B7Ouhne2XskXbzhjUFBmRGVwdTg#list
+
+Redirect permanent /paramedic/A03 https://drive.google.com/folderview?id=0B7Ouhne2XskXNHVkemFhTDdHSlE#list
+Redirect permanent /paramedic/a03 https://drive.google.com/folderview?id=0B7Ouhne2XskXNHVkemFhTDdHSlE#list
+
+Redirect permanent /paramedic/A04 https://drive.google.com/folderview?id=0B5xDHdGgr69UQ3RDUmpiUWVKdnM#list
+Redirect permanent /paramedic/a04 https://drive.google.com/folderview?id=0B5xDHdGgr69UQ3RDUmpiUWVKdnM#list
+
+Redirect permanent /paramedic/A05 https://drive.google.com/folderview?id=0B5xDHdGgr69UT0ZPMmxZYTVMQnc#list
+Redirect permanent /paramedic/a05 https://drive.google.com/folderview?id=0B5xDHdGgr69UT0ZPMmxZYTVMQnc#list
+Redirect permanent /paramedic/files https://drive.google.com/folderview?id=0B5xDHdGgr69UT0ZPMmxZYTVMQnc#list
+
+Redirect permanent /cma/files https://drive.google.com/folderview?id=0B4M6JLuJqJU7MzRybHZsXzJ3X3M#list
+
+Redirect permanent /cpt/files https://drive.google.com/folderview?id=0B7Ouhne2XskXQWtaanRNejFma3M#list
+
+Redirect permanent /spt/files https://drive.google.com/folderview?id=0B7Ouhne2XskXX0gtaGZ2NDYtWVU#list
+Redirect permanent /spt/spt_student_files.zip https://drive.google.com/file/d/0B7Ouhne2XskXWjljNUFWSGNUWlU
+
+# Old site pages redirects
+Redirect permanent /acls /courses/acls
+Redirect permanent /classes/career_courses/emt /courses/emt
+Redirect permanent /classes/career_courses/phlebotomy /courses/cpt
+Redirect permanent /classes/career_courses/pharmacy_tech /courses/phm
+Redirect permanent /classes/career_courses/medical_assistant /courses/cma
+Redirect permanent /classes/career_courses/paramedic /courses/paramedic
+Redirect permanent /classes/career_courses/sterile_processing_tech /courses/spt
+Redirect permanent /classes/continuing_education/cpr /courses/bls
+Redirect permanent /classes/continuing_education/acls /courses/acls
+Redirect permanent /classes/continuing_education/pals /courses/pals
+Redirect permanent /classes/continuing_education/itls /courses/itls
+Redirect permanent /classes/continuing_education/ecg_basic /courses/ecg-b
+Redirect permanent /classes/continuing_education/ecg_tech /courses/ecg-t
+Redirect permanent /classes/continuing_education/12_lead_ecg /courses/ecg-12
+Redirect permanent /classes/continuing_education/emt_r /courses/emt-r
+Redirect permanent /classes/continuing_education/emt_skills /courses/emt-s
+Redirect permanent /community/first_aid /courses/first-aid
+Redirect permanent /community/cpr /courses/bls
+Redirect permanent /school/info /contact
+Redirect permanent /school/policies /policies

@@ -1,4 +1,4 @@
-var testimonialOpts = {
+$FRvars.testimonialOpts = {
   "mobile" : {
     "testimonial-sidebar-1" : {
       "load" : "none"
@@ -16,7 +16,7 @@ var testimonialOpts = {
       "load" : "click",
       "num" : 0,
       "orientation" : "vertical",
-      "categories" : [course_code],
+      "categories" : [$FRvars.coursecode],
       "sliderOpts" : {
         "mode" : "horizontal",
         "slideMargin" : 2
@@ -34,7 +34,7 @@ var testimonialOpts = {
       "load" : "auto",
       "num" : 0,
       "orientation" : "horizontal",
-      "categories" : [course_code+",employer"],
+      "categories" : [$FRvars.coursecode+",employer"],
       "sliderOpts" : {
         "mode" : "horizontal"
       }
@@ -43,7 +43,7 @@ var testimonialOpts = {
       "load" : "auto",
       "num" : 0,
       "orientation" : "horizontal",
-      "categories" : [course_code+",student"],
+      "categories" : [$FRvars.coursecode+",student"],
       "sliderOpts" : {
         "mode" : "horizontal"
       }
@@ -57,7 +57,7 @@ var testimonialOpts = {
       "load" : "auto",
       "num" : 0,
       "orientation" : "vertical",
-      "categories" : [course_code+",employer"],
+      "categories" : [$FRvars.coursecode+",employer"],
       "sliderOpts" : {
         "mode" : "horizontal"
         //"mode" : "vertical"
@@ -67,7 +67,7 @@ var testimonialOpts = {
       "load" : "auto",
       "num" : 0,
       "orientation" : "vertical",
-      "categories" : [course_code+",student"],
+      "categories" : [$FRvars.coursecode+",student"],
       "sliderOpts" : {
         "mode" : "horizontal"
         //"mode" : "vertical"
@@ -85,7 +85,7 @@ var testimonialOpts = {
   }
 };
 
-var imageOpts = {
+$FRvars.imageOpts = {
   "mobile" : {
     "image-placeholder-1" : {
       "load" : "none"
