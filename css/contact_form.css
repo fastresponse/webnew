@@ -12,6 +12,10 @@
   text-align: center;
 }
 
+#contact-form-div > .border {
+  border-color: red;
+}
+
 #contact-form-div label,
 #contact-form-div .filler {
   display: inline-block;

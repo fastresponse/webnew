@@ -60,7 +60,9 @@
           <li>National Registry of Emergency Medical Technicians</li>
           <li>National Center for Competency Testing</li>
           <li>California Department of Public Health, Laboratory Field Services</li>
+          <li>International Trauma Life Support</li>
           <li>American Heart Association</li>
+          <li>National EMPACT Training Center</li>
         </ul>
       </aside>
     </div>

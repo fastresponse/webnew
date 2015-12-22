@@ -116,7 +116,7 @@
 <div id="contact-form-div">
 <a name="contact-form-link"></a>
 <?php if (!$hide_form_title): ?>
-<h2>Program Inquiries</h2>
+<h2 class="red">Program Inquiries</h2>
 <?php endif; ?>
 <div class="border">
 <form id="contact-form" action="<?= $incdir ?>php/ajax.course_contact_emailer.php" method="post" onsubmit="return validate(this);">

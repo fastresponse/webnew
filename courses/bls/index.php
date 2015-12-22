@@ -8,25 +8,23 @@ $description = '';
 $course_code = 'BLS';
 $form_course_name = 'BLS';
 
+include_once($incdir . 'php/registration_form.php');
+
 $sections = array(
 
-  'registration buttons' => <<<'HTML'
-<form action="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4103&pcatID=4102" method="get" class="registration-btn" target="_blank">
-  <input type="submit" class="register-btn" name="btn" value="Initial Certification" />
-  <input type="hidden" name="catID" value="4103" />
-  <input type="hidden" name="pcatID" value="4102" />
-</form>
-<form action="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4104&pcatID=4102" method="get" class="registration-btn" target="_blank">
-  <input type="submit" class="register-btn" name="btn" value="Renewal" />
-  <input type="hidden" name="catID" value="4104" />
-  <input type="hidden" name="pcatID" value="4102" />
-</form>
-<form action="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4243&pcatID=4242" method="get" class="registration-btn" target="_blank">
-  <input type="submit" class="register-btn" name="btn" value="eLearning" />
-  <input type="hidden" name="catID" value="4243" />
-  <input type="hidden" name="pcatID" value="4242" />
-</form>
-HTML
+  'registration buttons' =>
+    registration_form('Initial Certification',
+      'http://www.ssreg.com/fastresponse/classes/classes.asp',
+      array('catID' => '4103', 'pcatID' => '4102')
+    ) . "\n" .
+    registration_form('Renewal',
+      'http://www.ssreg.com/fastresponse/classes/classes.asp',
+      array('catID' => '4104', 'pcatID' => '4102')
+    ) . "\n" .
+    registration_form('eLearning',
+      'http://www.ssreg.com/fastresponse/classes/classes.asp',
+      array('catID' => '4243', 'pcatID' => '4242')
+    )
   ,
 
   'required books' => true,

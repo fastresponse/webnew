@@ -8,18 +8,18 @@ $description = '';
 $course_code = 'ITLS';
 $form_course_name = 'ITLS';
 
+include_once($incdir . 'php/registration_form.php');
+
 $sections = array(
 
-  'registration buttons' => <<<'HTML'
-<form action="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4113&pcatID=4111" method="get" class="registration-btn" target="_blank">
-  <input type="submit" class="register-btn" value="Initial Certification" />
-  <input type="hidden" name="catID" value="4113" />
-  <input type="hidden" name="pcatID" value="4111" />
-</form>
-<form action="http://www.ssreg.com/fastresponse/" method="get" class="registration-btn" target="_blank">
-  <input type="submit" class="register-btn" value="Refresher" />
-</form>
-HTML
+  'registration buttons' =>
+    registration_form('Initial Certification',
+      'http://www.ssreg.com/fastresponse/classes/classes.asp',
+      array('catID' => '4113', 'pcatID' => '4111')
+    ) . "\n" .
+    registration_form('Refresher',
+      'http://www.ssreg.com/fastresponse/'
+    )
   ,
 
   'required books' => true,

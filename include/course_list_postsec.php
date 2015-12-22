@@ -44,7 +44,8 @@ else
     <h3><a href="<?= $dir ?>paramedic/">Paramedic</a></h3>
     <ul>
       <li>Work in an ambulance, fire department, or hospital emergency department</li>
-      <li>10 months of instruction</li>
+      <li>7 months of instruction</li>
+      <li>Guaranteed internship</li>
     </ul>
   </section>
   <section>

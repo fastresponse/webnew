@@ -8,14 +8,15 @@ $description = '';
 $course_code = 'ECG-B';
 $form_course_name = 'ECG Basic';
 
+include_once($incdir . 'php/registration_form.php');
+
 $sections = array(
 
-  'registration buttons' => <<<'HTML'
-<form action="http://www.ssreg.com/fastresponse/classes/classes.asp?catID=4116" method="get" class="registration-btn" target="_blank">
-  <input type="submit" class="register-btn" name="btn" value="Register for ECG Basic" />
-  <input type="hidden" name="catID" value="4116" />
-</form>
-HTML
+  'registration buttons' =>
+    registration_form('Register for ECG Basic',
+      'http://www.ssreg.com/fastresponse/classes/classes.asp',
+      array('catID' => '4116')
+    )
   ,
 
   'required books' => false,

@@ -24,6 +24,7 @@ else {
 }
 
 ?>
+<?php include_once($incdir . 'php/registration_form.php'); ?>
 <?php require_once($incdir . 'include/header.php'); ?>
 
 <div id="sidebar-primary">
@@ -33,10 +34,10 @@ else {
   <?php else: ?>
     <header><h3>Online Registration</h3></header>
     <div class="tablet-row-2">
-      <form action="http://www.ssreg.com/fastresponse/calendar.asp?page=Calendar" method="get" class="registration-btn" target="_blank">
-        <input type="submit" class="calendar-btn" value="View Calendar" />
-        <input type="hidden" name="page" value="Calendar" />
-      </form>
+      <?= registration_form('View Calendar',
+        'http://www.ssreg.com/fastresponse/calendar.asp',
+        array('page' => 'Calendar')
+      ); ?>
       <?= $sections['registration buttons'] ?>
       <?php if ($sections['required books']): ?>
       <hr />
