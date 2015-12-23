@@ -2,7 +2,8 @@
   $incdir = '../';
   $title = 'Courses at Fast Response';
   $page_header = 'Courses at Fast Response';
-  $description = '';
+  $description = 'Postsecondary and Continuing Education courses offered at Fast Response.';
+  $canonical = 'http://www.fastresponse.org/courses/';
   $css = array('index.css');
 ?>
 <?php require_once($incdir . 'include/header.php'); ?>

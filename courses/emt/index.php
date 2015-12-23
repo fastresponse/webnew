@@ -4,7 +4,8 @@ $incdir = '../../';
 $title = 'Emergency Medical Technician';
 $page_header = 'Emergency Medical Technician';
 $sub_header = 'Training that will set you <span class="nowrap">apart from the rest!</span>';
-$description = '';
+$description = 'The Emergency Medical Technician course at Fast Response is designed to teach students the skills needed to become exceptional certified EMTs.';
+$keywords = 'emergency medical technician, emt, emt school, emt course, emt class';
 $course_code = 'EMT';
 $form_course_name = 'EMT';
 

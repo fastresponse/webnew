@@ -4,7 +4,8 @@ $incdir = '../../';
 $title = 'EMT Refresher';
 $page_header = 'EMT Refresher';
 //$sub_header = '';
-$description = '';
+$description = 'Our EMT Refresher course is designed for current EMTs who need continuing education units and skills testing for recertification.';
+$keywords = 'emt, emergency medical technician, emt refresher, emt class, emt course';
 $course_code = 'EMT-R';
 $form_course_name = 'EMT Refresher';
 

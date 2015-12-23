@@ -4,7 +4,8 @@ $incdir = '../../';
 $title = 'Basic Life Support CPR';
 $page_header = 'Basic Life Support CPR';
 $sub_header = 'AHA Approved - for Healthcare Providers';
-$description = '';
+$description = 'Basic Life Support CPR for healthcare providers as approved by the AHA. We provide an upbeat environment and enthusiastic instructors.';
+$keywords = 'bls, basic life support, cpr, cardiopulmonary resuscitation, bls class, cpr class, bls course, cpr course, aha bls';
 $course_code = 'BLS';
 $form_course_name = 'BLS';
 

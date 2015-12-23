@@ -26,6 +26,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title><?= $title ?></title>
     <meta name="description" content="<?= $description ?>">
+    <?php if (isset($keywords)): ?>
+    <meta name="keywords" content="<?= $keywords ?>">
+    <?php endif; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <?php if (isset($canonical)): ?>

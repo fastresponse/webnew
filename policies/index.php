@@ -2,7 +2,8 @@
   $incdir = '../';
   $title = 'Fast Response Policies';
   $page_header = 'Fast Response Policies';
-  $description = '';
+  $description = 'Continuing education class policies, privacy policy, and website terms and conditions of use.';
+  $canonical = 'http://www.fastresponse.org/policies/';
   $css = array('policies.css');
 ?>
 <?php require_once($incdir . 'include/header.php'); ?>

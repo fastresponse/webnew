@@ -2,7 +2,8 @@
   $incdir = '../../';
   $title = 'EMT Skills Videos';
   $page_header = $title;
-  $description = '';
+  $description = 'Videos demonstrating several essential EMT skills.';
+  $keywords = 'emt, emergency medical technician, videos, emt skills';
   $css = array('students.css');
 ?>
 <?php require_once($incdir . 'include/header.php'); ?>

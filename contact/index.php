@@ -2,7 +2,8 @@
   $incdir = '../';
   $title = 'Contact Fast Response';
   $page_header = 'Contact Fast Response';
-  $description = '';
+  $description = 'Contact and Location information for Fast Response School of Health Care Education';
+  $canonical = 'http://www.fastresponse.org/contact/';
   $css = array('contact_form.css', 'contacts.css');
 ?>
 <?php require_once($incdir . 'include/header.php'); ?>

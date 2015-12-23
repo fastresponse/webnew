@@ -4,7 +4,8 @@ $incdir = '../../';
 $title = 'ECG Basic';
 $page_header = 'ECG Basic Rhythm Recognition';
 //$sub_header = '';
-$description = '';
+$description = 'Our Basic ECG course reviews the anatomy of the heart, then moves to ECG waveform recognition, lead placement, troubleshooting, and rhythm analysis.';
+$keywords = 'ecg, ekg, electrocardiogram, ecg basic, 3 lead, ecg class, ecg course';
 $course_code = 'ECG-B';
 $form_course_name = 'ECG Basic';
 

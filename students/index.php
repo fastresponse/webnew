@@ -2,7 +2,9 @@
   $incdir = '../';
   $title = 'Student Resources';
   $page_header = '';
-  $description = '';
+  $description = 'Student Resources including Admissions documents, Continuing Education FAQs, Career Services, and course-specific resources and information.';
+  $keywords = 'student resources, admissions, faqs, frequently asked questions, career services';
+  $canonical = 'http://www.fastresponse.org/students/';
   $css = array('students.css');
 
   $query_args = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);

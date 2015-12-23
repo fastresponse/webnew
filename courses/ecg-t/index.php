@@ -4,7 +4,8 @@ $incdir = '../../';
 $title = 'ECG Technician';
 $page_header = 'ECG Technician';
 //$sub_header = '';
-$description = '';
+$description = 'Our ECG Technician class offers thorough training including medical terminology, anatomy, diagnostic testing, and rhythm recognition.';
+$keywords = 'ecg, ekg, electrocardiogram, ecg technician, ecg tech, ecg tech class, ecg tech course, ecg class, ecg course, ekg class, ekg course';
 $course_code = 'ECG-T';
 $form_course_name = 'ECG Technician';
 

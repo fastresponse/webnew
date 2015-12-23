@@ -4,7 +4,8 @@ $incdir = '../../';
 $title = 'International Trauma Life Support';
 $page_header = 'International Trauma Life Support';
 //$sub_header = '';
-$description = '';
+$description = 'Our ITLS course combines classroom learning, hands-on skills, and assessment stations in simulated trauma scenarios.';
+$keywords = 'itls, international trauma life support, itls class, itls course';
 $course_code = 'ITLS';
 $form_course_name = 'ITLS';
 

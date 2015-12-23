@@ -4,7 +4,8 @@ $incdir = '../../';
 $title = 'First Aid';
 $page_header = 'First Aid';
 //$sub_header = '';
-$description = '';
+$description = 'Our First Aid course teaches a systematic approach for responding to most medical emergencies. Includes EMS-approved Pediatric First Aid.';
+$keywords = 'first aid, first aid class, first aid course';
 $course_code = 'First-Aid';
 $form_course_name = 'First Aid';
 

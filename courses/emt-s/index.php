@@ -4,7 +4,8 @@ $incdir = '../../';
 $title = 'EMT Skills Verification';
 $page_header = 'EMT Skills Verification';
 //$sub_header = '';
-$description = '';
+$description = 'Our EMT Skills Verification is intended for current EMTs who need skills testing in order to recertify. Includes 3 hours of scenario-based testing.';
+$keywords = 'emt, emergency medical technician, emt skills, emt class, emt course';
 $course_code = 'EMT-S';
 $form_course_name = 'EMT Skills Verification';
 

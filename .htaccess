@@ -38,7 +38,39 @@ Redirect permanent /classes/continuing_education/ecg_tech /courses/ecg-t
 Redirect permanent /classes/continuing_education/12_lead_ecg /courses/ecg-12
 Redirect permanent /classes/continuing_education/emt_r /courses/emt-r
 Redirect permanent /classes/continuing_education/emt_skills /courses/emt-s
+Redirect permanent /classes/continuing_education/NREMT /courses/emt-s
+Redirect permanent /classes /
 Redirect permanent /community/first_aid /courses/first-aid
 Redirect permanent /community/cpr /courses/bls
 Redirect permanent /school/info /contact
+Redirect permanent /school/location /contact
+Redirect permanent /school/location/transit.html /contact
+Redirect permanent /school/location/parking.html /contact
+Redirect permanent /school/location/directions.html /contact
+Redirect permanent /school/location/maps.html /contact
 Redirect permanent /school/policies /policies
+Redirect permanent /school/policies/privacy.php /policies
+Redirect permanent /school/policies/ceu.php /policies
+Redirect permanent /school/policies/terms.php /policies
+Redirect permanent /school/about.php /about
+Redirect permanent /school/sitemap.php /sitemap.php
+Redirect permanent /resources /students
+Redirect permanent /resources/emt /students
+Redirect permanent /resources/cpt /students
+Redirect permanent /resources/cma /students
+Redirect permanent /resources/spt /students
+Redirect permanent /gallery/index.php /
+Redirect permanent /gallery/index.php/Events /
+Redirect permanent /community /
+Redirect permanent "/pdfs/Immunization Form - All Classes.pdf" "/pdf/admissions/Immunization Form - All Classes.pdf"
+
+RewriteEngine On
+
+# Force www. in front of URL
+RewriteCond %{HTTP_HOST} ^fastresponse\.org$ [NC]
+RewriteRule ^ %{REQUEST_SCHEME}://www.%{HTTP_HOST}%{REQUEST_URI} [R=301]
+
+# Forward some year-specific PDF files to new dir
+RewriteCond %{REQUEST_URI} ^/pdfs/(BPPE Annual Report|BPPE Performance Fact Sheets|Fast Response Catalog) (20..)\.pdf$
+RewriteRule ^ %{REQUEST_SCHEME}://%{HTTP_HOST}/pdf/%1 %2.pdf [R=301]
+

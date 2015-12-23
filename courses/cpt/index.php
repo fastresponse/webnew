@@ -4,7 +4,8 @@ $incdir = '../../';
 $title = 'Phlebotomy';
 $page_header = 'Certified Phlebotomy Technician';
 $sub_header = 'High-quality, Hands-on Training';
-$description = '';
+$description = 'The Certified Phlebotomy Technician course at Fast Response focuses on hands-on training to prepare students for a real career as a phlebotomist.';
+$keywords = 'phlebotomy, certified phlebotomy technician, cpt, phlebotomist, phlebotomy school, phlebotomy course, phlebotomy class';
 $course_code = 'CPT';
 $form_course_name = 'Phlebotomy';
 

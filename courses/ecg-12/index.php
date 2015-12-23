@@ -4,7 +4,8 @@ $incdir = '../../';
 $title = 'ECG 12-Lead';
 $page_header = 'ECG 12-Lead';
 //$sub_header = '';
-$description = '';
+$description = 'Our 12-Lead ECG Interpretation course includes a systematic approach to interpreting 12-lead ECGs as well as anatomy, physiology, and lead placement.';
+$keywords = 'ecg, ekg, electrocardiogram, 12-lead, ecg class, ecg course';
 $course_code = 'ECG-12';
 $form_course_name = 'ECG 12-Lead';
 

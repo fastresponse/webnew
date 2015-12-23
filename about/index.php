@@ -2,7 +2,7 @@
   $incdir = '../';
   $title = 'About Fast Response';
   $page_header = '';
-  $description = '';
+  $description = 'Fast Response School of Health Care Education offers postsecondary and continuing education classes. Learn about us here.';
   $css = array('courses.css');
 ?>
 <?php require_once($incdir . 'include/header.php'); ?>

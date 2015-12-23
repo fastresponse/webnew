@@ -4,7 +4,8 @@ $incdir = '../../';
 $title = 'Advanced Cardiovascular Life Support';
 $page_header = 'Advanced Cardiovascular <span class="nowrap">Life Support</span>';
 //$sub_header = '';
-$description = '';
+$description = 'Advanced Cardiovascular Life Support as approved by the AHA. Low-stress classroom with a focus on a team approach to medical emergencies.';
+$keywords = 'acls, advanced life support, advanced cardiovascular life support, acls class, acls course, aha acls';
 $course_code = 'ACLS';
 $form_course_name = 'ACLS';
 

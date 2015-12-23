@@ -4,7 +4,8 @@ $incdir = '../../';
 $title = 'Pediatric Advanced Life Support';
 $page_header = 'Pediatric Advanced Life Support';
 //$sub_header = '';
-$description = '';
+$description = 'Pediatric Advanced Life Support as approved by the AHA. Learn to recognize and prevent cardiopulmonary arrest in infants and children.';
+$keywords = 'pals, pediatric advanced life support, pals class, pals course';
 $course_code = 'PALS';
 $form_course_name = 'PALS';
 
