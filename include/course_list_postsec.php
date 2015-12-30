@@ -13,7 +13,7 @@ else
     <ul>
       <li>Work in an ambulance, fire department, or hospital emergency department</li>
       <li>Full-time: 5 weeks, Part-time: 9 weeks</li>
-      <li><span class="testscore">94%</span> student success rate on national exam</li>
+      <li><span class="testscore">93%</span> student success rate on national exam</li>
     </ul>
   </section>
   <section>

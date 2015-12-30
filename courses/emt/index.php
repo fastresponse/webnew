@@ -12,9 +12,9 @@ $form_course_name = 'EMT';
 $sections = array(
 
   'test results' => <<<'HTML'
-<header><h3>Our Success Rate - <span class="testscore">94%</span></h3></header>
-<p>In 2015*, <span class="testscore">94%</span> of our graduates passed the National Registration licensing test, making them eligible for immediate employment.</p>
-<div>* As of December 1st, 2015</div>
+<header><h3>Our Success Rate - <span class="testscore">93%</span></h3></header>
+<p>In 2015*, <span class="testscore">93%</span> of our graduates passed the National Registration licensing test, making them eligible for immediate employment.</p>
+<div>* As of December 29th, 2015</div>
 HTML
   ,
 
