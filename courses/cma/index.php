@@ -17,6 +17,29 @@ $sections = array(
   'class start dates' => true,
 
   'course details' => <<<'HTML'
+<div class="tablet-row-2 stay-open" style="border: 2px solid red; padding: 5px;">
+  <p class="underline bold red">Medical Assistant Evening Class</p>
+  <ul>
+    <li>Phlebotomy Start Dates
+    <ul>
+      <li>Full-Time: May 16th, 2016</li>
+      <li>Part-Time: April 18th, 2016</li>
+    </ul>
+    </li>
+  </ul>
+  <ul style="margin-top: 5px; margin-bottom: 5px;">
+    <li>Evening Class Date And Hours
+    <ul>
+      <li>Start Date: June 14th, 2016</li>
+      <li>Mon: 6:00 PM - 9:00 PM</li>
+      <li>Tue - Thu: 6:00 PM - 10:00 PM</li>
+    </ul>
+    </li>
+  </ul>
+  <div>Contact us for more details</div>
+</div>
+<div class="tablet-row-2"></div>
+<hr class="tablet-row-1" />
 <div class="tablet-row-2">
   <p class="underline">Phlebotomy Full Time Hours</p>
   <ul>

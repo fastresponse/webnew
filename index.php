@@ -51,7 +51,8 @@
 
   <div id="banner" class="">
   <?php if (false): ?><div class="bold italic blue">Fast Response will be closed Nov 26-27. Happy Thanksgiving!</div><?php endif; ?>
-    <div class="bold italic"><a href="<?= $incdir ?>courses/phm/">Pharmacy Technician classes - <span class="nowrap">Now Enrolling for 2016</span></a></div>
+  <?php if (false): ?><div class="bold italic"><a href="<?= $incdir ?>courses/phm/">Pharmacy Technician classes - <span class="nowrap">Now Enrolling for 2016</span></a></div><?php endif; ?>
+    <div class="bold italic red">New AHA 2015 Guidelines Have Arrived For <span class="nowrap">BLS, ACLS, and PALS</span></div>
   </div>
 
 <?php include_once($incdir . 'include/course_list_postsec.php'); ?>

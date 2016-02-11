@@ -129,21 +129,11 @@ function load_course_data() {
     if (!$show_test_results || !$show_start_dates) { $n = 2; }
     if (!($show_test_results || $show_start_dates)) { $d = 2; }
   ?>
-<?php
-  $contact_info_class = 'tablet-row-'.$n;
-  include($incdir . 'include/contact_info.php');
-?>
-<?php if (false): ?>
-  <aside id="contact-info" class="tablet-row-<?= $n ?>">
-    <header><h3>Contact Us</h3></header>
-    <div id="phone">
-      <a href="tel:+1-510-849-4009" class="phone-btn">510-849-4009</a>
-    </div>
-    <div id="email">
-      <a href="<?= $incdir ?>contact/?p=<?= $form_course_name ?>" class="phone-btn">Send an Email</a>
-    </div>
-  </aside>
-<?php endif; ?>
+
+  <?php
+    $contact_info_class = 'tablet-row-'.$n;
+    include($incdir . 'include/contact_info.php');
+  ?>
 
   <?php if ($show_test_results): ?>
   <aside id="test_results" class="tablet-row-<?= $n ?>">
@@ -273,6 +263,10 @@ function load_course_data() {
       }
     }
     ?>
+
+    <?php if ($landing_page && isset($sections['below date'])): ?>
+    <h4 class="stay-open red"><?= $sections['below date'] ?></h4>
+    <?php endif; ?>
 
     <?= $sections['above fold'] ?>
     <?php if (isset($sections['trigger'])): ?>

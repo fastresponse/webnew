@@ -119,7 +119,7 @@ function format_course_dates($arr) {
     if (!isset($row['showdate'])) continue;
     $row['status_display'] = ($row['status'] ? ' ('.$row['status'].')' : '');
     //$row['full_display'] = $row['showdate'] . ' - ' . $row['type'] . $row['status_display'];
-    $row['full_display'] = "{$row['showdate']} - <span class='class-type'>{$row['type']}</span> <span class='class-status'>{$row['status_display']}</span>";
+    $row['full_display'] = "<span class='class-date'>{$row['showdate']}</span> - <span class='class-type-and-status'><span class='class-type'>{$row['type']}</span> <span class='class-status'>{$row['status_display']}</span></span>";
     $row['date_display'] = $row['showdate'] . $row['status_display'];
   }
   return $arr;

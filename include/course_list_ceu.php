@@ -3,8 +3,8 @@
   <section>
     <h3><a href="<?= $incdir ?>courses/bls/">Basic <span class="nowrap">Life Support</span></a></h3>
     <ul>
-      <li>Initial certification: 5 hours, <span class="price">$50.00</span></li>
-      <li>Renewal: 3.5 hours, <span class="price">$45.00</span></li>
+      <li>Initial certification: 5 hours, <span class="price">$55.00</span></li>
+      <li>Renewal: 3.5 hours, <span class="price">$50.00</span></li>
       <li>Online class w/ in-person skills testing available</li>
       <li>AHA BLS card provided at course completion</li>
     </ul>
@@ -12,16 +12,16 @@
   <section>
     <h3><a href="<?= $incdir ?>courses/acls/">Advanced Cardiovascular <span class="nowrap">Life Support</span></a></h3>
     <ul>
-      <li>Initial certification: 2 days, <span class="price">$245.00</span></li>
-      <li>Renewal: 1 day, <span class="price">$175.00</span></li>
+      <li>Initial certification: 2 days, <span class="price">$260.00</span></li>
+      <li>Renewal: 1 day, <span class="price">$190.00</span></li>
       <li>AHA ACLS card provided at course completion</li>
     </ul>
   </section>
   <section>
     <h3><a href="<?= $incdir ?>courses/pals/">Pediatric Advanced <span class="nowrap">Life Support</span></a></h3>
     <ul>
-      <li>Initial certification: 2 days, <span class="price">$245.00</span></li>
-      <li>Renewal: 1 day, <span class="price">$175.00</span></li>
+      <li>Initial certification: 2 days, <span class="price">$255.00</span></li>
+      <li>Renewal: 1 day, <span class="price">$190.00</span></li>
       <li>AHA PALS card provided at course completion</li>
     </ul>
   </section>

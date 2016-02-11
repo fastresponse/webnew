@@ -912,7 +912,7 @@ p.trigger {
 }
 #placeholder-box > img {
     margin: 0 0 0 2%;
-    width: 100%;
+    /*width: 100%;*/
 }
 #placeholder-box > img:first-child {
     margin: 0;

@@ -62,7 +62,7 @@ HTML
 <div class="tablet-row-2">
   <p class="underline">Renewal</p>
   <ul>
-    <li>For those with a current BLS card.</li>
+    <li>For those with a <span class="bold red">current</span> AHA BLS card.</li>
     <li>Current card <span class="bold red">must</span> be presented to instructor.</li>
     <li>Student Manual is <span class="bold red">required</span>.</li>
     <li>One day class, 3.5 hours in length.</li>

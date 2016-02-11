@@ -46,6 +46,7 @@ else
       <li>Work in an ambulance, fire department, or hospital emergency department</li>
       <li>7 months of instruction</li>
       <li>Guaranteed internship</li>
+      <li><span class="testscore">100%</span> student success rate on national exam</li>
     </ul>
   </section>
   <section>
