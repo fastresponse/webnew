@@ -3,7 +3,7 @@
 $incdir = '../../';
 $title = 'PharmacyTechnician';
 $page_header = 'Pharmacy Technician';
-//$sub_header = '';
+$sub_header = 'ASHP Accreditation Pending';
 $description = 'The Pharmacy Technician course at Fast Response prepares students for a career in pharmacy using a dynamic classroom and skills lab. Externship included!';
 $keywords = 'pharmacy technician, pharmacy tech, pharmacy technician course, pharmacy technician class, pharmacy technician school';
 $course_code = 'PHM';
@@ -25,7 +25,7 @@ $sections = array(
   </ul></p>
   <ul>
     <li>246 hours of instruction over 13 weeks</li>
-    <li>160+ hours of clinical externship</li>
+    <li>240 hours of externship over 6 weeks</li>
   </ul>
 </div>
 HTML

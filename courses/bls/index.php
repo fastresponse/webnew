@@ -14,15 +14,11 @@ include_once($incdir . 'php/registration_form.php');
 $sections = array(
 
   'registration buttons' =>
-    registration_form('Initial Certification',
+    registration_form('BLS Provider Course',
       'http://www.ssreg.com/fastresponse/classes/classes.asp',
       array('catID' => '4103', 'pcatID' => '4102')
     ) . "\n" .
-    registration_form('Renewal',
-      'http://www.ssreg.com/fastresponse/classes/classes.asp',
-      array('catID' => '4104', 'pcatID' => '4102')
-    ) . "\n" .
-    registration_form('eLearning',
+    registration_form('eLearning Course',
       'http://www.ssreg.com/fastresponse/classes/classes.asp',
       array('catID' => '4243', 'pcatID' => '4242')
     )
@@ -37,6 +33,14 @@ HTML
   ,
 
   'above fold' => <<<'HTML'
+<div class="stay-open red" id="new-bls-notice">
+  <div>The American Heart Association (AHA) has released their new 2015 Sciences and Guidelines update for Basic Life Support.</div>
+  <div>In order to provide classes that conform to these new guidelines, we have made the following changes.</div>
+  <div>There will no longer be separate 'Provider' and 'Renewal' courses.</div>
+  <div>The <span class="bold">BLS Provider</span> class now satisfies the requirements for both the initial certification and recertification. This course will be <span class="bold">4.5 - 5 hours</span> in length based on the student's experience level.</div>
+  <div>Please be advised that <span class="underline">all</span> students are required to bring the new <span class="bold">2015 Student Manual</span> to class in order to participate. The new Manual will be available for purchase at the Reception Desk.</div>
+</div>
+
 <p class="stay-open">Our Basic Life Support classes adhere to the American Heart Association curriculum. This class is intended for current healthcare professionals and anyone entering a medical or healthcare related field. Current BLS Certification is considered a basic employment qualification for many of these professions. Certification cards are provided at the end of class and are valid for 2 years.</p>
 HTML
   ,
@@ -49,36 +53,24 @@ HTML
   ,
 
   'course details' => <<<'HTML'
-<div class="tablet-row-2">
-  <p class="underline">Initial Certification</p>
+<div class="tablet-row-1">
+  <p class="underline">BLS Provider</p>
   <ul>
-    <li>For first time students and anyone with an expired BLS card.</li>
     <li>Student Manual is <span class="bold red">required</span>.</li>
-    <li>One day class, 10:00 AM to 3:00 PM.</li>
-    <li>Course price: <span class="price">$55.00</span></li>
-  </ul>
-</div>
-<hr class="hide-tablet" />
-<div class="tablet-row-2">
-  <p class="underline">Renewal</p>
-  <ul>
-    <li>For those with a <span class="bold red">current</span> AHA BLS card.</li>
-    <li>Current card <span class="bold red">must</span> be presented to instructor.</li>
-    <li>Student Manual is <span class="bold red">required</span>.</li>
-    <li>One day class, 3.5 hours in length.</li>
-    <li>Course price: <span class="price">$50.00</span></li>
+    <li>One day class, 5 hours in length.</li>
+    <li>Course price: <span class="price">$65.00</span></li>
   </ul>
 </div>
 HTML
   ,
 
   'extra' => <<<'HTML'
-<header class="stay-open"><h3 class="trigger">eLearning</h3></header>
+<header class="stay-open"><h3 class="trigger">eLearning Course</h3></header>
 <div class="tablet-row-1">
   <p>
   <ul>
     <li>Official AHA BLS Online Course.</li>
-    <li>Can be used for either initial certification or renewal.</li>
+    <li>Can be used for first time certification or recertification.</li>
     <li>More convenient for busy or dynamic schedules.</li>
     <li>eBook version of <span class="underline">Student Manual</span> is <span class="underline">included</span> in price.</li>
   </ul>
@@ -86,7 +78,7 @@ HTML
   <hr />
   <p class="underline">Part 1: Web-based classroom including case-based scenarios, interactive activities, and videos.</p>
   <ul class="sub">
-    <li>System requirements listed in <a href="http://www.heart.org/idc/groups/heart-public/@wcm/@ecc/documents/downloadable/ucm_426256.pdf" target="_blank">this FAQ document</a> by the AHA.</li>
+    <li>System requirements <a href="http://onlineaha.org/technical_requirements" target="_blank">listed here</a> by the AHA.</li>
     <li>Approximately 1-2 hours in length.</li>
     <li>Price: <span class="price">$22.00</span>.</li>
   </ul>
@@ -107,12 +99,12 @@ HTML
 <div class="tablet-row-1">
   <p class="underline">AHA BLS for Healthcare Providers Student Manual with Pocket Reference Card</p>
   <ul>
+    <li><span class="bold red">New 2015 AHA Guidelines</span></li>
     <li><span class="bold red">Required</span></li>
-	  <li><span class="isbn-label">AHA item #:</span> 901038</li>
-	  <li><span class="isbn-label">ISBN:</span> 1616690399</li>
-	  <li><span class="isbn-label">ISBN-13:</span> 9781616690397</li>
+	  <li><span class="isbn-label">AHA item #:</span> 15-1010</li>
+	  <li><span class="isbn-label">ISBN:</span> 1616694076</li>
+	  <li><span class="isbn-label">ISBN-13:</span> 9781616694074</li>
     <li>Our price: <span class="price">$20.00</span>.
-    <li>A previously purchased book can be used as long as it meets the current (2010) AHA guidelines.</li>
     <li class="red">This book must be used <span class="bold">during class</span>, per AHA requirements. Students without a book will not receive a certification card.</li>
   </ul>
 </div>

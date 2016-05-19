@@ -3,7 +3,7 @@
   $title = 'Fast Response School of Health Care Education';
   $page_header = 'Fast Response School of<br />Health Care Education';
   $description = "Fast Response offers the Bay Area's most comprehensive education and resources for healthcare professionals including entry-level courses, certifications, and continuing education units.";
-  $keywords = 'fast response, fast, response, health care, healthcare, emt, emergency medical technician, medical assistant, sterile processing, phlebotomy, phlebotomist, paramedic, continuing education, cpr, bls, basic life support, acls, advanced life support, ecg, ekg';
+  $keywords = 'fast response, fast, response, health care, healthcare, school, education, training, certification, emt, emergency medical technician, medical assistant, sterile processing, phlebotomy, phlebotomist, pharmacy tech, pharmacy technician, paramedic, continuing education, cpr, bls, basic life support, acls, advanced life support, ecg, ekg';
   $canonical = 'http://www.fastresponse.org/';
   $css = array('index.css');
 ?>
@@ -52,7 +52,8 @@
   <div id="banner" class="">
   <?php if (false): ?><div class="bold italic blue">Fast Response will be closed Nov 26-27. Happy Thanksgiving!</div><?php endif; ?>
   <?php if (false): ?><div class="bold italic"><a href="<?= $incdir ?>courses/phm/">Pharmacy Technician classes - <span class="nowrap">Now Enrolling for 2016</span></a></div><?php endif; ?>
-    <div class="bold italic red">New AHA 2015 Guidelines Have Arrived For <span class="nowrap">BLS, ACLS, and PALS</span></div>
+  <?php if (false): ?><div class="bold italic red">New AHA 2015 Guidelines Have Arrived For <span class="nowrap">BLS</span></div><?php endif; ?>
+    <div class="bold italic red"><a href="<?= $incdir ?>courses/cma/">Medical Assistant Evening Class Now Enrolling</a></div>
   </div>
 
 <?php include_once($incdir . 'include/course_list_postsec.php'); ?>

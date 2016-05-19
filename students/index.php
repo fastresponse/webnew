@@ -64,7 +64,7 @@
     <section class="collapsible-mobile-start collapsible-tablet collapsible-desktop">
       <h3 class="trigger">School Course Information </h3>
       <ul>
-        <li><a href="<?= $incdir ?>pdf/Fast Response Catalog 2015.pdf">School Catalog 2015</a></li>
+        <li><a href="<?= $incdir ?>pdf/Fast Response Catalog 2016.pdf">School Catalog 2016</a></li>
         <li><a href="<?= $incdir ?>pdf/course_packets/EMT - Course Info Packet.pdf">EMT Course Info Packet</a></li>
         <li><a href="<?= $incdir ?>pdf/course_packets/Phlebotomy - Course Info Packet.pdf">Phlebotomy Course Info Packet</a></li>
         <li><a href="<?= $incdir ?>pdf/course_packets/Pharmacy Technician - Course Info Packet.pdf">Pharmacy Technician Course Info Packet</a></li>

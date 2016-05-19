@@ -461,6 +461,14 @@ aside li.sub {
   text-decoration: none;
 }
 
+.sub-banner {
+  border: 2px dashed red;
+  margin: 10px auto;
+  padding: 5px 10px;
+  width: 60%;
+  display: inline-block;
+}
+
 .button a {
     text-decoration: none;
     font-size: 130%;
@@ -963,6 +971,9 @@ img.image-placeholder {
   .collapsible-mobile .opened,
   .collapsible-mobile-start .opened {
       margin-bottom: 1em;
+  }
+  .sub-banner {
+    width: 90%;
   }
   .footer-container > footer > div {
       -webkit-box-flex: 1;
@@ -1666,6 +1677,9 @@ img.image-placeholder {
 }
 .red {
     color: #ff0000;
+}
+.blue {
+    color: #0000b3;
 }
 .nowrap {
     white-space: nowrap;

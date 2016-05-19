@@ -20,7 +20,7 @@ $sections = array(
 <div class="tablet-row-2">
   <p class="underline">Part-Time Class Hours</p>
   <ul>
-    <li>Tue, Wed, Thu: 6:00 PM - 10:00 PM</li>
+    <li>Mon, Wed, Thu: 6:00 PM - 10:00 PM</li>
     <li>Sat: 9:00 AM - 6:00 PM</li>
   </ul>
 </div>

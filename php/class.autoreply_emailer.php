@@ -36,7 +36,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/php/phpmailer/class.phpmailer.php');
 
 class AutoreplyEmailer {
 
-  const AUTOREPLY_DIR = '/school/info/email_replies/';
+  const AUTOREPLY_DIR = '/php/emails/';
 
   private $variables = null;
   private $stripslashes = null;
@@ -252,7 +252,7 @@ class AutoreplyEmailer {
       // insert hyphens for AAA-PPP-SSSS format, then return it
       if (strlen($test) == 10) {
         $test =
-	        substr($test, 0, 3) . '-' .
+          substr($test, 0, 3) . '-' .
           substr($test, 3, 3) . '-' .
           substr($test, 6)
         ;
@@ -316,9 +316,10 @@ class AutoreplyEmailer {
     $mail->SetFrom($this->variables['email'], $this->variables['name']);
     $mail->AddAddress($to);
     $mail->Subject = "New Lead: {$this->variables['program']}";
-    $mail->Body = nl2br($messages);
+
     $mail->IsMail();
     $mail->IsHTML();
+    $mail->Body = nl2br($messages);
 
     $this->status_send_to_us = $mail->Send();
 

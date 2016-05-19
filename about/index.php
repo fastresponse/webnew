@@ -12,8 +12,8 @@
   <aside id="links">
     <header><h3>Links</h3></header>
     <ul>
+      <li><a href="<?= $incdir ?>pdf/Fast Response Catalog 2016.pdf">2016 School Catalog</a></li>
       <li><a href="<?= $incdir ?>pdf/Fast Response Catalog 2015.pdf">2015 School Catalog</a></li>
-      <li><a href="<?= $incdir ?>pdf/Fast Response Catalog 2014.pdf">2014 School Catalog</a></li>
       <li><a href="<?= $incdir ?>pdf/BPPE Annual Report 2013.pdf">BPPE Annual Report 2013</a></li>
       <li><a href="<?= $incdir ?>pdf/BPPE Annual Report 2014.pdf">BPPE Annual Report 2014</a></li>
       <li><a href="<?= $incdir ?>pdf/BPPE Performance Fact Sheets 2013.pdf">Performance Fact Sheets 2013</a></li>

@@ -119,6 +119,26 @@
 <h2 class="red">Program Inquiries</h2>
 <?php endif; ?>
 <div class="border">
+
+<?php if (false): ?>
+  <h3>We are currently experiencing technical difficulties with our contact form.</h3>
+  <h3>Please contact our Admissions Department</h3>
+  <dl style="width: 100%; margin-bottom: 20px;">
+    <dt style="text-decoration: underline;">Hours</dt>
+      <dd>Mon - Thu: 8 AM - 6 PM</dd>
+      <dd>Fri: 8 AM - 5 PM</dd>
+      <dd>Sat: 9 AM - 5 PM</dd>
+		<dt style="text-decoration: underline;">Phone</dt>
+      <dd><a href="tel: +15108093654" class="nowrap">510-809-3654</a></dd>
+		<dt style="text-decoration: underline;">Toll Free</dt>
+      <dd><a href="tel: +18006377387" class="nowrap">800-637-7387</a></dd>
+		<dt style="text-decoration: underline;">Fax</dt>
+      <dd>866-572-3363</dd>
+		<dt style="text-decoration: underline;">Email</dt>
+      <dd><a href="mailto: admissions@fastresponse.org">admissions@fastresponse.org</a></dd>
+  </dl>
+<?php endif; ?>
+
 <form id="contact-form" action="<?= $incdir ?>php/ajax.course_contact_emailer.php" method="post" onsubmit="return validate(this);">
 
   <label for="form-program" class="form-section-program">Program</label>
@@ -300,6 +320,11 @@ $(document).ready(function() {
       error: function(jqxhr, textStatus, errorThrown) {
 
         currently_submitting = false;
+
+        /*
+        console.log(':: '+textStatus+"\n:: "+errorThrown+"\n:: ");
+        console.log(jqxhr);
+         */
 
         displayOutput(
           "<div class=\"error\">There was a problem sending your message. " +

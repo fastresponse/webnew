@@ -3,8 +3,8 @@
   <section>
     <h3><a href="<?= $incdir ?>courses/bls/">Basic <span class="nowrap">Life Support</span></a></h3>
     <ul>
-      <li>Initial certification: 5 hours, <span class="price">$55.00</span></li>
-      <li>Renewal: 3.5 hours, <span class="price">$50.00</span></li>
+      <li>Provider Course: 5 hours, <span class="price">$65.00</span></li>
+      <li>New 2015 AHA Guidelines - One class for both initial certification and recertification</li>
       <li>Online class w/ in-person skills testing available</li>
       <li>AHA BLS card provided at course completion</li>
     </ul>

@@ -160,7 +160,81 @@ else {
 
 <?php if (false): ?>
       <?php
-        $order = array();
+
+      if (!isset($section_order)) {
+        $section_order = array(
+          array('course details', 'extra'),
+          array('books'),
+        );
+      }
+
+      $complete_sections = array();
+
+      if (isset($sections['course details'])) {
+        $complete_sections['course details'] = <<<"HTML"
+<aside id="details" class="collapsible-mobile-start collapsible-tablet tablet-row-1">
+  <header class="stay-open"><h3 class="trigger">Course Details</h3></header>
+  {$sections['course details']}
+</aside>
+HTML
+        ;
+      }
+
+      if (isset($sections['extra'])) {
+        $complete_sections['extra'] = <<<"HTML"
+<aside id="extra" class="collapsible-mobile-start collapsible-tablet tablet-row-1">
+  {$sections['extra']}
+</aside>
+HTML
+        ;
+      }
+
+      if (isset($sections['books'])) {
+        $complete_sections['books'] = <<<"HTML"
+<aside id="books" class="collapsible-mobile-start collapsible-tablet tablet-row-1">
+  <header class="stay-open"><h3 class="trigger">Books</h3></header>
+  {$sections['books']}
+  <hr class="tablet-row-1" />
+  <div class="small-print tablet-row-1">On-site book purchase is available Mon - Fri. Books may be purchased elsewhere at student discretion.</div>
+</aside>
+HTML
+        ;
+      }
+
+      foreach ($section_order as $row) {
+        foreach ($row as $col) {
+        }
+      }
+
+      $course_details = new Section($sections['course details']);
+      $course_details->set_name('course details');
+      $course_details->set_id('details');
+
+      $extra = new Section($sections['extra']);
+      $extra->set_auto_header(false);
+
+      $books = new Section($sections['books']);
+      $books->set_name('books', true);
+      $books->set_post( <<<"HTML"
+<hr class="tablet-row-1" />
+<div class="small-print tablet-row-1">On-site book purchase is available Mon - Fri. Books may be purchased elsewhere at student discretion.</div>
+HTML
+      );
+
+      $row1 = new Row(2);
+      foreach ($order[0] as $o) {
+        $row1->add_section($o);
+      }
+
+      $row2 = new Row(1);
+      foreach ($order[1] as $o) {
+        $row2->add_section($o);
+      }
+
+      $col = new Column();
+      $col->add_row($row1);
+      $col->add_row($row2);
+
         /*
          * $order = array(
          *   null,
