@@ -139,6 +139,15 @@
   width: 87%;
 }
 
+#zipcheck {
+  padding: 5px;
+  margin: 0 auto;
+  color: red;
+  font-size: 90%;
+  width: 100%;
+  text-align: center;
+}
+
 /* intermediate */
 @media only screen and (min-width: 550px) {
   #contact-form-div .form-section-zip,

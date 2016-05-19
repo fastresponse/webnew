@@ -49,20 +49,32 @@ function zipValidate(z, out_id, radius) {
 	// at 5, check the entered zip
 	if (z.value.length == 5) {
     $.ajax({
-			url: '/php/ajax/ajax.ziplookup.php',
+			url: '/php/ajax.ziplookup.php',
 			type: 'POST',
 			data: { zip: z.value },
-			dataType: 'html',
+			dataType: 'json',
 			success: function(data, txtStatus, jqxhr) {
-				if (data != null && data > radius) {
+        /*
+        console.log(txtStatus);
+        console.log(data);
+        console.log(jqxhr);
+        */
+				if (data != null && data.dist != null && data.dist > radius) {
 					$(out_id).html(
 						'This zip code is more than ' +
             '<span style="white-space: nowrap;">'+radius+' miles</span> ' +
             'from our campus.'
 					).slideDown();
+          if (data.city != null) {
+            $('#city').html(data.city);
+          }
 				}
 			},
 			error: function(jqxhr, txtStatus, txtError) {
+        /*
+        console.log('ZipLookup Error: '+txtStatus+' :: '+txtError);
+        console.log(jqxhr);
+        */
 			}
 		});
 	}

@@ -128,13 +128,13 @@
       <dd>Mon - Thu: 8 AM - 6 PM</dd>
       <dd>Fri: 8 AM - 5 PM</dd>
       <dd>Sat: 9 AM - 5 PM</dd>
-		<dt style="text-decoration: underline;">Phone</dt>
+    <dt style="text-decoration: underline;">Phone</dt>
       <dd><a href="tel: +15108093654" class="nowrap">510-809-3654</a></dd>
-		<dt style="text-decoration: underline;">Toll Free</dt>
+    <dt style="text-decoration: underline;">Toll Free</dt>
       <dd><a href="tel: +18006377387" class="nowrap">800-637-7387</a></dd>
-		<dt style="text-decoration: underline;">Fax</dt>
+    <dt style="text-decoration: underline;">Fax</dt>
       <dd>866-572-3363</dd>
-		<dt style="text-decoration: underline;">Email</dt>
+    <dt style="text-decoration: underline;">Email</dt>
       <dd><a href="mailto: admissions@fastresponse.org">admissions@fastresponse.org</a></dd>
   </dl>
 <?php endif; ?>
@@ -258,10 +258,10 @@ $(document).ready(function() {
   var submitid = '#form-submit';
 
   function displayOutput(htmlout) {
-	  $(loadingimgid).fadeOut(300, function() {
-	    $(this).remove(); // removes the loading image
-		  output.append(htmlout).slideDown(500);
-	  });
+    $(loadingimgid).fadeOut(300, function() {
+      $(this).remove(); // removes the loading image
+      output.append(htmlout).slideDown(500);
+    });
   }
 
   output.click(function() {
@@ -287,14 +287,14 @@ $(document).ready(function() {
     var formdata = $(this).serialize();
 
     $.ajax({
-	    type: "POST",
-	    url: "<?= $incdir ?>php/ajax.course_contact_emailer.php",
-	    data: formdata,
+      type: "POST",
+      url: "<?= $incdir ?>php/ajax.course_contact_emailer.php",
+      data: formdata,
       dataType: 'json',
 
       // data.success: true/false
       // data.output: html to display
-	    success: function(data, textStatus, jqxhr) {
+      success: function(data, textStatus, jqxhr) {
 
         currently_submitting = false;
 
@@ -309,13 +309,13 @@ $(document).ready(function() {
         // on success, disable further input and track conversions
         if (data.success) {
           $(submitid).slideUp(500, function() {
-	          $('input,select,textarea').not('#form-call').prop('disabled', true);
+            $('input,select,textarea').not('#form-call').prop('disabled', true);
             $('label[for="' + submitid.slice(1) + '"]').hide();
             // in frlib2.js
             trackConversions();
           });
         }
-	    },
+      },
 
       error: function(jqxhr, textStatus, errorThrown) {
 
