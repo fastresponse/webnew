@@ -456,6 +456,10 @@ aside li.sub {
     box-shadow: none;
     box-shadow: 5px 5px 15px #0a1e3c;
 }
+#banner > div > hr {
+  border-color: red;
+  margin: 0.5em 0;
+}
 #banner a {
   color: red;
   text-decoration: none;
@@ -971,6 +975,11 @@ img.image-placeholder {
   .collapsible-mobile .opened,
   .collapsible-mobile-start .opened {
       margin-bottom: 1em;
+  }
+  #banner {
+    font-size: 85%;
+    margin-left: 2%;
+    margin-right: 2%;
   }
   .sub-banner {
     width: 90%;
