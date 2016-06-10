@@ -17,7 +17,7 @@ $sections = array(
   'class start dates' => true,
 
   'course details' => <<<'HTML'
-<div class="tablet-row-2 stay-open" style="border: 2px solid red; padding: 5px;">
+<div class="tablet-row-2 stay-open" style="border: 2px solid red; padding: 5px; font-weight:bold;">
   <p class="underline bold red">Medical Assistant Evening Class</p>
   <ul>
     <li>Phlebotomy Start Dates
@@ -33,6 +33,7 @@ $sections = array(
       <li>Start Date: July 5th, 2016</li>
       <li>Mon: 6:00 PM - 9:00 PM</li>
       <li>Tue - Thu: 6:00 PM - 10:00 PM</li>
+      <li style="color: red;">Only four days per week!</li>
     </ul>
     </li>
   </ul>

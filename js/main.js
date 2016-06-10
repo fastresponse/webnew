@@ -345,7 +345,7 @@ $.fn.load_testimonials = function() {
         }
         else {
           this.domOb.html(data);
-          if (this.sliderOpts) {
+          if (data.length > 1 && this.sliderOpts) {
             this.domOb.bxSlider( this.sliderOpts );
           }
         }

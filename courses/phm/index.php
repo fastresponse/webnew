@@ -58,7 +58,7 @@ HTML
   </div>
 </div>
 <p>Pharmacy Technicians work in the retail, hospital and specialty areas of pharmacy services like Oncology, Pediatrics and Geriatrics. They work in community pharmacies, hospitals, in pharmaceutical production, pharmacy sales, prisons, primary care organizations, education and training and in veterinary services.</p>
-<p>According to the United States Bureau of Labor Statistics, Employment of pharmacy technicians is projected to grow 20 percent from 2012 to 2022, faster than the average for all occupations. It is a great time to get into heath care and get a career in a field you can count on.</p>
+<p>There is strong demand for competent, qualified, and well-trained Pharmacy Technicians in the Bay Area, as well as excellent job outlook. According to the United States Bureau of Labor Statistics, Employment of pharmacy technicians is projected to grow 20 percent from 2012 to 2022, faster than the average for all occupations. It is a great time to get into heath care and get a career in a field you can count on.</p>
 <div id="image-placeholder-1" class="image-placeholder"></div>
 <p>Our instructors are highly-trained and experienced California Registered Pharmacy Technicians. Come and learn in a dynamic and engaging classroom setting and in our up-to-date skills lab where you will train for both hospital and retail pharmacy jobs. On your clinical externship you will learn from pharmacists and gain confidence while interacting with real patients.</p>
 <div class="testimonial-row hide-mobile hide-desktop">

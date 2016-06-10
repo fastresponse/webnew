@@ -50,10 +50,17 @@
 <section id="content">
 
   <div id="banner" class="">
-  <?php if (false): ?><div class="bold italic blue">Fast Response will be closed Nov 26-27. Happy Thanksgiving!</div><?php endif; ?>
-  <?php if (false): ?><div class="bold italic"><a href="<?= $incdir ?>courses/phm/">Pharmacy Technician classes - <span class="nowrap">Now Enrolling for 2016</span></a></div><?php endif; ?>
-  <?php if (false): ?><div class="bold italic red">New AHA 2015 Guidelines Have Arrived For <span class="nowrap">BLS</span></div><?php endif; ?>
-    <div class="bold italic red"><a href="<?= $incdir ?>courses/cma/">Medical Assistant Evening Class <span class="nowrap">Now Enrolling</span></a><hr><span>Next student Drug Screening: <span class="nowrap">Tues May 24th,</span> <span class="nowrap">1:00 PM - 6:00 PM</span></span></div>
+    <div class="bold italic red">
+      <a href="<?= $incdir ?>courses/cma/">Medical Assistant Evening Class <span class="nowrap">Now Enrolling</span></a>
+    <?php
+      require_once($incdir . 'php/drug_screen_dates.php');
+      $drugscreen = get_next_drug_screen_date($handle);
+      if (is_array($drugscreen) && isset($drugscreen['full_display'])):
+    ?>
+      <hr>
+      <span>Next student Drug Screening: <?= $drugscreen['full_display'] ?></span>
+    <?php endif; ?>
+    </div>
   </div>
 
 <?php include_once($incdir . 'include/course_list_postsec.php'); ?>

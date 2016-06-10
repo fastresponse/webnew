@@ -3,7 +3,6 @@ include_once('dbconn.php');
 if (!isset($handle))
   $handle = db_connect();
 
-
 $num = filter_input(INPUT_POST, 'num', FILTER_SANITIZE_NUMBER_INT);
 $orientation = filter_input(INPUT_POST, 'orientation', FILTER_SANITIZE_STRING);
 $categories = filter_input(INPUT_POST, 'categories', FILTER_SANITIZE_STRING, FILTER_REQUIRE_ARRAY);
@@ -151,9 +150,11 @@ function get_testimonials($handle, $categories) {
     $combo_cats = explode(',', $combo);
 
     $rows = testimonial_query($handle, $combo_cats);
+
     if (!$rows || !count($rows)) continue;
 
-    $t = $t + $rows;
+    $t = array_merge($t, $rows);
+
   }
 
   shuffle($t);
