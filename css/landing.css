@@ -185,6 +185,13 @@ p:last-child {
             order: 2;
   }
 
+  #contact-form-div input[type="checkbox"] {
+    margin-left: 22% !important;
+  }
+  #contact-form-div label.checkbox-label {
+    margin-top: 4px !important;
+  }
+
   aside > img {
     width: 100%;
   }
