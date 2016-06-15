@@ -59,9 +59,10 @@
 #contact-form-div #form-comments {
   margin-top: 4px;
 }
-#contact-form-div .form-section-emt {
+#contact-form-div .form-section-emt,
+#contact-form-div #form-sms-ok {
   /*margin-top: 14px;*/
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 #contact-form-div label[for="form-emt"] {
   width: auto;
@@ -128,12 +129,13 @@
   display: none;
 }
 
-#contact-form-div input.form-section-questions {
+#contact-form-div input.form-section-questions,
+#contact-form-div input[type="checkbox"] {
   margin-left: 5%;
   margin-top: 12px;
   width: 5%;
 }
-#contact-form-div label.form-section-questions.checkbox-label {
+#contact-form-div label.checkbox-label {
   margin-left: 1%;
   margin-top: 12px;
   width: 87%;
@@ -158,12 +160,13 @@
   #contact-form-div #form-call {
     height: 60px;
   }
-  #contact-form-div input.form-section-questions {
+  #contact-form-div input.form-section-questions,
+  #contact-form-div input[type="checkbox"] {
     margin-left: 25%;
     margin-top: 12px;
     width: 5%;
   }
-  #contact-form-div label.form-section-questions.checkbox-label {
+  #contact-form-div label.checkbox-label {
     padding-right: 0;
     margin-left: 1%;
     margin-top: 12px;
@@ -256,7 +259,8 @@
   }
   #contact-form-div input[type="submit"] {
   }
-  #contact-form-div input.form-section-questions {
+  /*#contact-form-div input.form-section-questions {*/
+  #contact-form-div input[type="checkbox"] {
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 5%;
         -ms-flex: 0 1 5%;
@@ -265,7 +269,7 @@
     margin-top: 7px;
     width: 4%;
   }
-  #contact-form-div label.form-section-questions.checkbox-label {
+  #contact-form-div label.checkbox-label {
     -webkit-box-flex: 1;
     -webkit-flex: 1 68%;
         -ms-flex: 1 68%;

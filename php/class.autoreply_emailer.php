@@ -69,7 +69,8 @@ class AutoreplyEmailer {
 
     $this->variables = array(
       'program' => null, 'name' => null, 'email' => null,
-      'phone' => null, 'zip' => null, 'city' => null,
+      'phone' => null, 'sms-ok' => null,
+      'zip' => null, 'city' => null,
       'emt' => null, 'questions' => null, 'comments' => null,
       'source' => null, 'whenreachme' => null, 'timeframe' => null,
     );
@@ -276,6 +277,9 @@ class AutoreplyEmailer {
     $messages.= "<b>Name:</b> {$this->variables['name']}\n";
     $messages.= "<b>Email:</b> {$this->variables['email']}\n";
     $messages.= "<b>Phone:</b> {$this->variables['phone']}\n";
+
+    if ($this->variables['sms-ok'])
+      $messages .= "<ul><li><u><font color=\"#009900\">{$this->variables['sms-ok']}</font></u></li></ul>\n";
 
     if ($this->variables['city'])
       $messages .= "<b>City:</b> {$this->variables['city']}\n";

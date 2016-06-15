@@ -147,10 +147,8 @@
     <?= array_to_option_html($programs, $form_course_name); ?>
   </select>
 
-  <div class="form-section-emt" style="padding-left: 25%; flex: 1 100%;">
-    <input type="checkbox" id="form-emt" name="emt" value="I am a licensed EMT." />
-    <label for="form-emt" class="checkbox-label">I am a licensed EMT.</label>
-  </div>
+  <input type="checkbox" id="form-emt" class="form-section-emt" name="emt" value="I am a licensed EMT." />
+  <label for="form-emt" class="form-section-emt checkbox-label">I am a licensed EMT.</label>
 
   <label for="form-name" class="form-section-name">Name</label>
   <input type="text" id="form-name" class="form-section-name" name="name" placeholder="Firstname Lastname" required="required" />
@@ -160,6 +158,8 @@
 
   <label for="form-phone" class="form-section-phone">Phone</label>
   <input type="tel" id="form-phone" class="form-section-phone" name="phone" placeholder="555-555-5555" required="required" />
+  <input type="checkbox" id="form-sms-ok" name="sms-ok" class="form-section-phone" value="Please contact me via SMS.">
+  <label for="form-sms-ok" class="form-section-phone checkbox-label">Please contact me via SMS.</label>
 
   <label for="form-zip" class="form-section-zip">Zip Code</label>
   <input type="text" id="form-zip" class="form-section-zip" name="zip" placeholder="9XXXX" onkeyup="return zipValidate(this, '#zipcheck', <?= $zip_radius ?>);" />
@@ -239,7 +239,7 @@ $(document).ready(function() {
     var emtid = '#form-emt';
 
     if ($(this).val() == 'Paramedic') {
-      $(emtclass).show();
+      $(emtclass).show().css("display", "inline-block");
       $(emtid).attr("required", "required");
     }
     else {
