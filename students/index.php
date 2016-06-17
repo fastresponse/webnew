@@ -85,6 +85,9 @@
         <dt><a href="<?= $incdir ?>pdf/admissions/Immunization Requirements - Paramedic.pdf" target="_blank">Immunization Form - Paramedic</a></dt>
         <dd>Checklist for required immunizations. To be filled out by a licensed nurse or physician.</dd>
 
+        <dt><a href="<?= $incdir ?>pdf/admissions/Immunizations - Clinics in Alameda County.pdf" target="_blank">Immunizations - Clinics in Alameda County</a></dt>
+        <dd>A list of clinics in Alameda county that provide immunization services.</dd>
+
         <dt><a href="<?= $incdir ?>pdf/admissions/Drug Screen Form.pdf" target="_blank">Drug Screen Form</a></dt>
         <dd>Used to sign up for mandatory drug screening.</dd>
 
