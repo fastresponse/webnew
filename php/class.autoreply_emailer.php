@@ -32,7 +32,8 @@ else {
 }
 */
 
-require($_SERVER['DOCUMENT_ROOT'] . '/php/phpmailer/class.phpmailer.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/php/phpmailer/class.phpmailer.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/php/class.course_dates.php');
 
 class AutoreplyEmailer {
 
@@ -84,7 +85,8 @@ class AutoreplyEmailer {
     $this->send_to_them_subject = 'Welcome to Fast Response';
     $this->send_to_them_dir = $_SERVER['DOCUMENT_ROOT'] . self::AUTOREPLY_DIR;
 
-    $this->use_generic = true;
+    $this->use_generic = false;
+
     $this->course_settings = array(
       'Generic' => array(
         'email' => 'autoreply@fastresponse.org',
@@ -106,11 +108,11 @@ class AutoreplyEmailer {
       ),
       'Phlebotomy' => array(
         'email' => 'autoreply@fastresponse.org',
-        'page' => 'phl.html',
+        'page' => 'cpt.html',
       ),
       'Pharmacy Technician' => array(
         'email' => 'autoreply@fastresponse.org',
-        'page' => 'generic.html',
+        'page' => 'phm.html',
       ),
       'Paramedic' => array(
         'email' => 'autoreply@fastresponse.org',
@@ -349,6 +351,30 @@ class AutoreplyEmailer {
     $path .= $this->course_settings[ $program ]['page'];
 
     $messages = file_get_contents($path);
+
+    if (
+      $program != 'Generic' &&
+      strpos($messages, '<p class="course_date_list"></p>') !== FALSE
+    ) {
+      $course_date_ob = new CourseDateList(null, $program);
+      $course_date_ob->set_limits(0, 5);
+      $rows = $course_date_ob->get_course_dates();
+
+      if (count($rows)) {
+        $course_date_list = '';
+        foreach ($rows as $row) {
+          $course_date_list .= "<li>{$row['full_display']}</li>\n";
+        }
+
+        $messages = str_replace(
+          '<p class="course_date_list"></p>',
+          "<p>Upcoming $program class dates:\n<ul>\n$course_date_list</ul>\n</p>",
+          $messages
+        );
+      }
+
+      unset($course_date_ob);
+    }
 
     $mail = new PHPMailer(); 
 

@@ -112,8 +112,14 @@ function load_course_data() {
     $n = 3;
     $d = 1;
 
-    include_once($incdir . 'php/course_dates.php');
-    $course_dates_list = get_course_dates($handle, $code_for_course_dates);
+    include_once($incdir . 'php/class.course_dates.php');
+    if (empty($course_dates_ob)) {
+      $course_dates_ob = new CourseDateList(null, $code_for_course_dates);
+    }
+    else {
+      $course_dates_ob->set_course($code_for_course_dates);
+    }
+    $course_dates_list = $course_dates_ob->get_course_dates();
     $show_start_dates = (is_array($course_dates_list) && count($course_dates_list));
 
     $show_test_results = ($sections['test results'] ? true : false);
@@ -254,11 +260,17 @@ function load_course_data() {
 
     <?php
     if ($show_next_date) {
-      include_once($incdir . 'php/course_dates.php');
-      $nextdate = get_next_course_date($handle, $course_code)['date_display'];
-      if (strlen($nextdate)) {
+      include_once($incdir . 'php/class.course_dates.php');
+      if (empty($course_dates_ob)) {
+        $course_dates_ob = new CourseDateList(null, $course_code);
+      }
+      else {
+        $course_dates_ob->set_course($course_code);
+      }
+      $nextdate = $course_dates_ob->get_next_course_date();
+      if (!empty($nextdate['date_display'])) {
     ?>
-    <h4 class="stay-open red">Next class: <span class="nowrap"><?= $nextdate ?></span></h4>
+    <h4 class="stay-open red">Next class: <span class="nowrap"><?= $nextdate['date_display'] ?></span></h4>
     <?php
       }
     }

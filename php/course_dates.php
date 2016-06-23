@@ -1,6 +1,7 @@
 <?php
 
 require_once('dbconn.php');
+
 if (empty($handle)) $handle = db_connect();
 
 function get_course_dates($handle, $course_code, $course_type = null) {
@@ -70,6 +71,10 @@ function get_course_dates($handle, $course_code, $course_type = null) {
     $args
   );
 
+  if ($next === false) {
+    $next = array();
+  }
+
   $all = array_merge($prev, $next);
 
   return format_course_dates($all);
@@ -110,6 +115,10 @@ function get_next_course_date($handle, $course_code, $course_type = null) {
     $next_limit,
     $args
   );
+
+  if ($next === false) {
+    $next = array();
+  }
 
   return format_course_dates(array($next))[0];
 }
