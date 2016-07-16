@@ -58,6 +58,10 @@ article h1 {
   margin-bottom: 0.5em;
 }
 
+img.max-height-6em {
+  max-height: 6em;
+}
+
 @media only screen and (min-width: 550px) {
   #sidebar-primary,
   #bottom-bar {

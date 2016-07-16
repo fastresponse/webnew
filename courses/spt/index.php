@@ -28,11 +28,11 @@ $sections = array(
 <div class="tablet-row-2">
   <p>Course includes:</p>
   <dl>
-    <dt>Ten weeks of instruction and skills practice</dt>
-      <dd>Total of 200 hours</dd>
-    <dt>Ten weeks of field externship</dt>
+    <dt>Fifteen weeks of instruction and skills practice</dt>
+      <dd>Total of 300 hours</dd>
+    <dt>Six weeks of field externship</dt>
       <dd>Full-time, 8 hours per day, Mon - Fri</dd>
-      <dd>Total of 400 hours</dd>
+      <dd>Total of 228 hours</dd>
   </dl>
 </div>
 HTML

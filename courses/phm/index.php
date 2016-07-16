@@ -3,7 +3,7 @@
 $incdir = '../../';
 $title = 'PharmacyTechnician';
 $page_header = 'Pharmacy Technician';
-$sub_header = 'ASHP Accreditation Pending';
+$sub_header = '<span class="hide-tablet hide-desktop hide-desktop-large">ASHP Accredited Program</span><span class="image-placeholder max-height-6em" id="subheader-image" data-src="/img/ASHP-Accredited-Logo.jpg"></span>';
 $description = 'The Pharmacy Technician course at Fast Response prepares students for a career in pharmacy using a dynamic classroom and skills lab. Externship included!';
 $keywords = 'pharmacy technician, pharmacy tech, pharmacy technician course, pharmacy technician class, pharmacy technician school';
 $course_code = 'PHM';
@@ -34,6 +34,7 @@ HTML
   'links' => <<<'HTML'
 <li><a href="http://www.pharmacy.ca.gov/">CA Board of Pharmacy</a></li>
 <li><a href="http://www.ptcb.org/">Pharmacy Technician Certification Board</a></li>
+<li><a href="http://www.ashp.org">American Society of Health-System Pharmacists</a></li>
 HTML
   ,
 

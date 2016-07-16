@@ -1015,24 +1015,23 @@
         <dt><a href="<?= $incdir ?>courses/emt/skills_videos.php">EMT Skills Videos</a></dt>
 
         <dt>Ambulance Driver Certificate Information</dt>
-        <dd>
+        <dd>If you wish to drive an ambulance used commercially in emergency service, you may apply at any DMV office for an Ambulance Driver certificate. You may also purchase an 'Ambulance Driver Handbook' for $5.
           <dl>
-            <dt><a href="https://www.dmv.ca.gov/portal/dmv/?1dmy&urile=wcm:path:/dmv_content_en/dmv/dl/ambu_drvr_cert">CA DMV Ambulance Driver Certificate requirements</a></dt>
-            <dd>This link describes all the steps needed to obtain a California Ambulance Driver Certificate.</dd>
-
-            <dt><a href="https://www.dmv.ca.gov/portal/dmv/detail/forms/dl/dl51">Medical Examination Report DL-51</a></dt>
-            <dd><a href="https://www.dmv.ca.gov/portal/wcm/connect/fa2a514f-130a-4935-adba-e55ec36e234a/dl51.pdf?MOD=AJPERES">Direct link to Form DL-51</a>.</dd>
-            <dd>Medical evaluation form required to be filled out by an MD, DO, PA, NP, or DC. The examiner <strong>must be listed on the National Registry of Certified Medical Examiners</strong>.</dd>
-
-            <dt>Changes to the Medical Examiner Certificate</dt>
-            <dd>Effective January 1st, 2014, form DL-51A / Medical Examiner Certificate (the "Green Card") is obsolete. In lieu of this form, drivers must use the <a href="http://www.fmcsa.dot.gov/documents/safetyprograms/Medical-Examiners-Certificate.pdf">Federal Medical Examiner's Certificate</a>. You can bring in a printed copy, or the Medical Secretary at your physician's office may also have a copy. However, you should confirm that before your visit.</dd>
-            <dd>If you already have a valid DL-51A Green Card, then that card is still valid until its expiration date.</dd>
-            <dd><a href="http://apps.dmv.ca.gov/pubs/olin/14_olin/14olin02.pdf">This document</a> explains the changes.</dd>
+            <dt>The following requirements must be met before applying:</dt>
+            <dd>Be at least 18 years of age.</dd>
+            <dd>Hold a valid CA driver license that is not on departmental probation.</dd>
+            <dd>Pay an application fee of $25 for an original certificate or $12 for a renewal, duplicate, or name change.</dd>
+            <dd>Pass an Ambulance Driver written examination.</dd>
+            <dd>Submit a completed <a href="https://www.dmv.ca.gov/portal/dmv/?1dmy&urile=wcm:path:/dmv_content_en/dmv/dl/ambu_drvr_cert#livescan">Request For Live Scan Service</a> form.</dd>
+            <dd>Submit a <a href="https://www.fmcsa.dot.gov/sites/fmcsa.dot.gov/files/docs/MedicalExaminationReportFormMCSA5875.pdf">Medical Examination Report - MCSA-5875</a> with a revision date of Jan 2016 or later for medical examinations completed on or after April 21, 2016.</dd>
+            <dd>For further information, see <a href="https://www.dmv.ca.gov/portal/dmv/?1dmy&urile=wcm:path:/dmv_content_en/dmv/dl/ambu_drvr_cert">California Ambulance Driver Certificate</a>.</dd>
+            
+            <dt>Effective January 1st, 2014, form DL-51A / Medical Examiner Certificate (the "Green Card") is obsolete. If you already have a valid DL-51A Green Card, then that card is still valid until its expiration date.</dt>
 
             <dt>What we require for externships</dt>
-            <dd>We do NOT require the DL-51 to be completed in order to schedule externships. However, <strong>we highly recommend it</strong>, especially for students who will be seeking ambulance work.</dd>
+            <dd>We do NOT require an Ambulance Driver Certificate in order to schedule externships. However, <strong>we highly recommend it</strong>, especially for students who will be seeking ambulance work.</dd>
             <dd>What is required is a note from an MD, DO, PA, NP, DC, or RN stating that they have examined you and have found you physically fit for work in an emergency room in the capacity of an ED Technician, and that your vision is not seriously impaired (correctable to at least 20/40 vision and able to differentiate between standard traffic signal colors).</dd>
-            <dd>A photocopy of the completed DL-51, DL-51A ("Green Card"), the Federal Medical Examiner's Certificate, or a handwritten or typed note signed by the above medical professionals are all acceptable and sufficient to meet our externship requirements.</dd>
+            <dd>A photocopy of the completed Medical Examination Report, DL-51, DL-51A ("Green Card"), or a handwritten or typed note signed by the above medical professionals are all acceptable and sufficient to meet our externship requirements.</dd>
           </dl>
         </dd>
         </dt>

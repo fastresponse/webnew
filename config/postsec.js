@@ -87,6 +87,9 @@ $FRvars.testimonialOpts = {
 
 $FRvars.imageOpts = {
   "mobile" : {
+    "subheader-image" : {
+      "load" : "none"
+    },
     "image-placeholder-1" : {
       "load" : "none"
     },
@@ -95,6 +98,9 @@ $FRvars.imageOpts = {
     }
   },
   "tablet" : {
+    "subheader-image" : {
+      "load" : "auto"
+    },
     "image-placeholder-1" : {
       "load" : "none"
     },
@@ -103,6 +109,9 @@ $FRvars.imageOpts = {
     }
   },
   "desktop" : {
+    "subheader-image" : {
+      "load" : "auto"
+    },
     "image-placeholder-1" : {
       "load" : "auto"
     },
