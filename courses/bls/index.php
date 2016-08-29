@@ -80,7 +80,7 @@ HTML
   <ul class="sub">
     <li>System requirements <a href="http://onlineaha.org/technical_requirements" target="_blank">listed here</a> by the AHA.</li>
     <li>Approximately 1-2 hours in length.</li>
-    <li>Price: <span class="price">$22.00</span>.</li>
+    <li>Price: <span class="price">$27.50</span>.</li>
   </ul>
   <hr />
   <p class="underline">Parts 2 and 3: Skills practice and testing session.</p>

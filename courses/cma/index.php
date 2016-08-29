@@ -22,15 +22,15 @@ $sections = array(
   <ul>
     <li>Phlebotomy Start Dates
     <ul>
-      <li>Full-Time: June 20th, 2016</li>
-      <li>Part-Time: May 31st, 2016</li>
+      <li>Full-Time: October 3rd, 2016</li>
+      <li>Part-Time: August 29th, 2016</li>
     </ul>
     </li>
   </ul>
   <ul style="margin-top: 5px; margin-bottom: 5px;">
     <li>Evening Class Date And Hours
     <ul>
-      <li>Start Date: July 5th, 2016</li>
+      <li>Start Date: October 18th, 2016</li>
       <li>Mon: 6:00 PM - 9:00 PM</li>
       <li>Tue - Thu: 6:00 PM - 10:00 PM</li>
       <li style="color: red;">Only four days per week!</li>

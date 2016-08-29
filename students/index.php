@@ -69,8 +69,8 @@
         <li><a href="<?= $incdir ?>pdf/course_packets/Phlebotomy - Course Info Packet.pdf">Phlebotomy Course Info Packet</a></li>
         <li><a href="<?= $incdir ?>pdf/course_packets/Pharmacy Technician - Course Info Packet.pdf">Pharmacy Technician Course Info Packet</a></li>
         <li><a href="<?= $incdir ?>pdf/course_packets/Medical Assistant - Course Info Packet.pdf">Medical Assistant Course Info Packet</a></li>
-        <li><a href="<?= $incdir ?>pdf/course_packets/Sterile Processing - Course Info Packet.pdf">Sterile Processing Course Info Packet</a></li>
-        <!--<li><a href="<?= $incdir ?>pdf/course_packets/Paramedic - Course Info Packet.pdf">Paramedic Course Info Packet</a></li>-->
+        <?php if (false): ?><li><a href="<?= $incdir ?>pdf/course_packets/Sterile Processing - Course Info Packet.pdf">Sterile Processing Course Info Packet</a></li><?php endif; ?>
+        <?php if (false): ?><li><a href="<?= $incdir ?>pdf/course_packets/Paramedic - Course Info Packet.pdf">Paramedic Course Info Packet</a></li><?php endif; ?>
       </ul>
     </section>
     <section class="collapsible-mobile-start collapsible-tablet collapsible-desktop">
@@ -619,6 +619,7 @@
                 <h5>References Available Upon Request</h5>
               </div>
             </li>
+<?php if (false): ?>
             <li class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
               <div class="trigger">Sterile Processing</div>
               <div class="download-link"><a href="<?= $incdir ?>documents/career_services/Sample Resume - Sterile Processing.doc">Download</a></div>
@@ -684,6 +685,7 @@
                 <h5>References Available Upon Request</h5>
               </div>
             </li>
+<?php endif; ?>
           </ul>
         </li>
 

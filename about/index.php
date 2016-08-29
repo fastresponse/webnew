@@ -28,7 +28,6 @@
       <li><a href="<?= $incdir ?>courses/phm/">Pharmacy Technician</a></li>
       <li><a href="<?= $incdir ?>courses/cma/">Clinical Medical Assistant</a></li>
       <li><a href="<?= $incdir ?>courses/paramedic/">Paramedic</a></li>
-      <li><a href="<?= $incdir ?>courses/spt/">Sterile Processing Technician</a></li>
     </ul>
   </aside>
   <aside id="ceu">
@@ -58,6 +57,7 @@
           <li>CA Emergency Medical Services Authority</li>
           <li>Alameda County EMS Agency</li>
           <li>National Registry of Emergency Medical Technicians</li>
+          <li>American Society of Health-System Pharmacists</li>
           <li>National Center for Competency Testing</li>
           <li>California Department of Public Health, Laboratory Field Services</li>
           <li>International Trauma Life Support</li>

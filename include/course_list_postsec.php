@@ -49,6 +49,7 @@ else
       <li><span class="testscore">100%</span> student success rate on national exam</li>
     </ul>
   </section>
+<?php if (false): ?>
   <section>
     <h3><a href="<?= $dir ?>spt/">Sterile Processing Technician</a></h3>
     <ul>
@@ -56,4 +57,5 @@ else
       <li>10 weeks of instruction</li>
     </ul>
   </section>
+<?php endif; ?>
 </article>

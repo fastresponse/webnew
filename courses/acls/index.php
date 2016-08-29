@@ -37,6 +37,7 @@ HTML
   <div>The American Heart Association (AHA) has released the 2015 Guidelines Update for CPR and Emergency Cardiovascular Care.</div>
   <div>It is now required that students review, understand, and <span class="bold">COMPLETE</span> the Precourse Self-Assessment located on the <a href="http://www.heart.org/eccstudent">Student Website</a>. The code to access the student website is available at the beginning of the ACLS Provider Manual.</div>
   <div>Please be advised that <span class="bold">ALL</span> students are required to bring to class: <span class="bold">1)</span> the new 2015 ACLS Provider Manual and <span class="bold">2)</span> a printed certificate with a score of 70% or better from the Precourse Self-Assessment.</div>
+  <div class="underline">Precourse Assessment is <span class="bold">MANDATORY</span> and those without it will not be admitted into class. <span class="bold">NO EXCEPTIONS!</span></div>
   <div>On-site book sales are still available; however, this will require that students come to our campus on a separate day prior to their class date. Students will not be able to purchase books onsite on the day of their class.</div>
 </div>
 
@@ -97,7 +98,6 @@ HTML
     <li><span class="bold red">Required</span></li>
     <li><span class="bold blue">This book must be purchased <span class="underline">in advance</span> in order to take the <span class="underline">mandatory</span> precourse assessment test.</span>
     <li><br></li>
-    <li>Recommended purchase site: <a href="https://www.emergencystuff.com/2015-advanced-cardiovascular-life-support-acls-provider-manual/">EmergencyStuff.com</a></li>
 	  <li><span class="isbn-label">AHA item #:</span> 15-1005</li>
 	  <li><span class="isbn-label">ISBN:</span> 1-61669-017-8</li>
 	  <li><span class="isbn-label">ISBN-13:</span> 978-1-61669-400-5</li>

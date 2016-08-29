@@ -106,7 +106,7 @@
     <?php if (!$hide_header): ?>
     <div class="header-container">
       <header class="wrapper">
-      <a href="<?= $incdir ?>"><img src="<?= $incdir ?>img/fr-logo-transparent.png" alt="Fast Response School Of Health Care Education" id="logo-img" /></a>
+      <a href="<?= $incdir ?>"><img src="<?= $incdir ?>img/fr-logo-transparent-sm.png" alt="Fast Response School Of Health Care Education" id="logo-img" /></a>
         <div id="menu-button">
           <div></div>
           <div></div>

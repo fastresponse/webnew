@@ -24,7 +24,7 @@
     'Phlebotomy',
     'Pharmacy Technician',
     'Medical Assistant',
-    'Sterile Processing',
+    /*'Sterile Processing',*/
     'Paramedic',
     'Other',
   );
@@ -34,6 +34,7 @@
     'Facebook',
     'Yahoo / Bing',
     'Yelp',
+    'East Bay Express',
     'Friend / Relative',
     'Coworker / Employer',
     'Flyer / Brochure',
