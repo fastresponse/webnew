@@ -98,10 +98,6 @@ class AutoreplyEmailer {
         // the webpage (in $send_to_them_dir) to email to the user
         'page' => 'emt.html',
       ),
-      'Sterile Processing' => array(
-        'email' => 'autoreply@fastresponse.org',
-        'page' => 'spt.html',
-      ),
       'Medical Assistant' => array(
         'email' => 'autoreply@fastresponse.org',
         'page' => 'cma.html',
@@ -109,10 +105,6 @@ class AutoreplyEmailer {
       'Phlebotomy' => array(
         'email' => 'autoreply@fastresponse.org',
         'page' => 'cpt.html',
-      ),
-      'Pharmacy Technician' => array(
-        'email' => 'autoreply@fastresponse.org',
-        'page' => 'phm.html',
       ),
       'Paramedic' => array(
         'email' => 'autoreply@fastresponse.org',
@@ -122,6 +114,16 @@ class AutoreplyEmailer {
         'email' => 'autoreply@fastresponse.org',
         'page' => 'other.html',
       ),
+      /*
+      'Pharmacy Technician' => array(
+        'email' => 'autoreply@fastresponse.org',
+        'page' => 'phm.html',
+      ),
+      'Sterile Processing' => array(
+        'email' => 'autoreply@fastresponse.org',
+        'page' => 'spt.html',
+      ),
+      */
     );
 
     $this->variable_errors = array();

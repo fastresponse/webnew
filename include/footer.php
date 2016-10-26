@@ -33,7 +33,7 @@
 
     <div id="legal-footer">
       <div id="policy-footer"><a href="<?= $incdir ?>policies/">Fast Response school policies and terms.</a></div>
-      <div id="approval-footer">This school has been approved by the <a href="http://www.bppe.ca.gov/about_us/contact.shtml"><span class="nowrap">Bureau of Private</span> and Postsecondary Education.</a></div>
+      <div id="approval-footer"><a href="<?= $incdir ?>about/#bppe">This school has been approved by the <span class="nowrap">Bureau of Private</span> and Postsecondary Education.</a></div>
       <div id="copyright-footer">&copy; <?= date('Y') ?> Fast Response Safety Training Center, Inc. <span class="nowrap">All prices and</span> content subject to change.</div>
     </div>
 

@@ -62,8 +62,10 @@
     <tr class="level-3"> <td class="bold">cpt/</td> </tr>
     <tr class="level-3"> <td><a href="http://www.fastresponse.org/courses/cpt/">Certified Phlebotomy Technician</a></td> </tr>
 
+<?php if (false): ?>
     <tr class="level-3"> <td class="bold">phm/</td> </tr>
     <tr class="level-3"> <td><a href="http://www.fastresponse.org/courses/phm/">Pharmacy Technician</a></td> </tr>
+<?php endif; ?>
 
     <tr class="level-3"> <td class="bold">cma/</td> </tr>
     <tr class="level-3"> <td><a href="http://www.fastresponse.org/courses/cma/">Clinical Medical Assistant</a></td> </tr>
@@ -71,8 +73,10 @@
     <tr class="level-3"> <td class="bold">paramedic/</td> </tr>
     <tr class="level-3"> <td><a href="http://www.fastresponse.org/courses/paramedic/">Paramedic</a></td> </tr>
 
+<?php if (false): ?>
     <tr class="level-3"> <td class="bold">spt/</td> </tr>
     <tr class="level-3"> <td><a href="http://www.fastresponse.org/courses/spt/">Sterile Processing Technician</a></td> </tr>
+<?php endif; ?>
 
     <tr class="level-3"> <td class="bold">bls/</td> </tr>
     <tr class="level-3"> <td><a href="http://www.fastresponse.org/courses/bls/">Basic Life Support</a></td> </tr>

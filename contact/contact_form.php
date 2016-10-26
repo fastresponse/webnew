@@ -22,7 +22,7 @@
   $programs = array(
     'EMT',
     'Phlebotomy',
-    'Pharmacy Technician',
+    /*'Pharmacy Technician',*/
     'Medical Assistant',
     /*'Sterile Processing',*/
     'Paramedic',

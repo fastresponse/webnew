@@ -25,7 +25,7 @@
     <ul>
       <li><a href="<?= $incdir ?>courses/emt/">Emergency Medical Technician</a></li>
       <li><a href="<?= $incdir ?>courses/cpt/">Certified Phlebotomy Technician</a></li>
-      <li><a href="<?= $incdir ?>courses/phm/">Pharmacy Technician</a></li>
+      <?php if (false): ?><li><a href="<?= $incdir ?>courses/phm/">Pharmacy Technician</a></li><?php endif; ?>
       <li><a href="<?= $incdir ?>courses/cma/">Clinical Medical Assistant</a></li>
       <li><a href="<?= $incdir ?>courses/paramedic/">Paramedic</a></li>
     </ul>
@@ -57,7 +57,7 @@
           <li>CA Emergency Medical Services Authority</li>
           <li>Alameda County EMS Agency</li>
           <li>National Registry of Emergency Medical Technicians</li>
-          <li>American Society of Health-System Pharmacists</li>
+          <?php if (false): ?><li>American Society of Health-System Pharmacists</li><?php endif; ?>
           <li>National Center for Competency Testing</li>
           <li>California Department of Public Health, Laboratory Field Services</li>
           <li>International Trauma Life Support</li>
@@ -70,7 +70,8 @@
     <div class="collapsible-mobile-start collapsible-tablet">
       <header class="stay-open">
         <h1>About Fast Response</h1>
-        <h4>We are approved by the <a href="http://www.bppe.ca.gov/about_us/contact.shtml">Bureau of Private and Postsecondary Education</a></h4>
+        <h4><a name="bppe"></a>We are approved by the <a href="http://www.bppe.ca.gov/about_us/contact.shtml">Bureau of Private and Postsecondary Education</a></h4>
+        <blockquote style="text-align: left; font-size: 0.9em;">A student or any member of the public may contact the Bureau of Private Postsecondary Education at any time about this institution by calling toll free: <span class="nowrap">888-370-7589</span>, writing to Bureau for Private Postsecondary Education, <span class="nowrap">P.O. Box 980818,</span> West Sacramento, <span class="nowrap">CA 95798-0818</span> or <span class="nowrap">2535 Capitol Oaks Drive, Suite 400,</span> Sacramento, <span class="nowrap">CA 95833,</span> or by completing a complaint form, which can be obtained on the Bureau's internet website: <a href="http://www.bppe.ca.gov/">http://www.bppe.ca.gov</a>.</blockquote>
       </header>
       <p class="bold italic stay-open">Fast Response School of Health Care Education is a private postsecondary educational school.</p>
 	    <p class="stay-open">We are an American Heart Association (AHA), American Safety and Health Institute (ASHI) and American Academy of Pediatrics (AAP) affiliated training facility. We provide CEUs (Continuing Education Units) for EMS personnel, Nurses and other medical professionals.</p>

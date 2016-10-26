@@ -24,6 +24,7 @@ else
       <li><span class="testscore">89%</span> student success rate on national exam</li>
     </ul>
   </section>
+<?php if (false): ?>
   <section>
     <h3><a href="<?= $dir ?>phm/">Pharmacy Technician</a></h3>
     <ul>
@@ -31,6 +32,7 @@ else
       <li>13 weeks of instruction</li>
     </ul>
   </section>
+<?php endif; ?>
   <section>
     <h3><a href="<?= $dir ?>cma/">Clinical Medical Assistant</a></h3>
     <ul>

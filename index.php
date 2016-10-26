@@ -49,19 +49,17 @@
 
 <section id="content">
 
+  <?php
+    require_once($incdir . 'php/drug_screen_dates.php');
+    $drugscreen = get_next_drug_screen_date($handle);
+    if (is_array($drugscreen) && isset($drugscreen['full_display'])):
+  ?>
   <div id="banner" class="">
     <div class="bold italic red">
-      <a href="<?= $incdir ?>courses/cma/">Medical Assistant Evening Class <span class="nowrap">Now Enrolling</span></a>
-    <?php
-      require_once($incdir . 'php/drug_screen_dates.php');
-      $drugscreen = get_next_drug_screen_date($handle);
-      if (is_array($drugscreen) && isset($drugscreen['full_display'])):
-    ?>
-      <hr>
       <span>Next student Drug Screening: <?= $drugscreen['full_display'] ?></span>
-    <?php endif; ?>
     </div>
   </div>
+  <?php endif; ?>
 
 <?php include_once($incdir . 'include/course_list_postsec.php'); ?>
 

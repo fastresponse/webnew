@@ -67,8 +67,10 @@
         <dd><a href="mailto: phlebotomy@fastresponse.org">phlebotomy@fastresponse.org</a></dd></div>
 		  <div><dt>Paramedic</dt>
         <dd><a href="mailto: paramedic@fastresponse.org">paramedic@fastresponse.org</a></dd></div>
+<?php if (false): ?>
 		  <div><dt>Pharmacy Technician</dt>
         <dd><a href="mailto: pharmacy@fastresponse.org">pharmacy@fastresponse.org</a></dd></div>
+<?php endif; ?>
 		  <div><dt>Medical Assisting</dt>
         <dd><a href="mailto: ma@fastresponse.org">ma@fastresponse.org</a></dd></div>
 <?php if (false): ?>

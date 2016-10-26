@@ -50,7 +50,7 @@ HTML
     <li>Skills check-off included.</li>
     <li>Three day class, 9:00 AM to 6:00 PM.</li>
     <li>Continuing Education Units: 24.00</li>
-    <li>Course price: <span class="price">$350.00</span></li>
+    <li>Course price: <span class="price">$395.00</span></li>
   </ul>
 </div>
 HTML

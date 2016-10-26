@@ -48,7 +48,7 @@
   <section>
     <h3><a href="<?= $incdir ?>courses/emt-r/">EMT Refresher</a></h3>
     <ul>
-      <li>3 days, <span class="price">$350.00</span></li>
+      <li>3 days, <span class="price">$395.00</span></li>
       <li>Skills check-off included</li>
       <li>24 CEUs</li>
     </ul>

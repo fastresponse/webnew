@@ -67,7 +67,7 @@
         <li><a href="<?= $incdir ?>pdf/Fast Response Catalog 2016.pdf">School Catalog 2016</a></li>
         <li><a href="<?= $incdir ?>pdf/course_packets/EMT - Course Info Packet.pdf">EMT Course Info Packet</a></li>
         <li><a href="<?= $incdir ?>pdf/course_packets/Phlebotomy - Course Info Packet.pdf">Phlebotomy Course Info Packet</a></li>
-        <li><a href="<?= $incdir ?>pdf/course_packets/Pharmacy Technician - Course Info Packet.pdf">Pharmacy Technician Course Info Packet</a></li>
+        <?php if (false): ?><li><a href="<?= $incdir ?>pdf/course_packets/Pharmacy Technician - Course Info Packet.pdf">Pharmacy Technician Course Info Packet</a></li><?php endif; ?>
         <li><a href="<?= $incdir ?>pdf/course_packets/Medical Assistant - Course Info Packet.pdf">Medical Assistant Course Info Packet</a></li>
         <?php if (false): ?><li><a href="<?= $incdir ?>pdf/course_packets/Sterile Processing - Course Info Packet.pdf">Sterile Processing Course Info Packet</a></li><?php endif; ?>
         <?php if (false): ?><li><a href="<?= $incdir ?>pdf/course_packets/Paramedic - Course Info Packet.pdf">Paramedic Course Info Packet</a></li><?php endif; ?>
