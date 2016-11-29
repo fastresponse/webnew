@@ -15,8 +15,7 @@
     <div id="office-hours" class="">
       <span class="bold">Admissions Hours</span><br />
       Mon - Thu: 8 - 6<br />
-      Fri: 8 - 5<br />
-      Sat: 9 - 5
+      Fri: 8 - 5
     </div>
 
     <div id="phone-buttons">
@@ -33,7 +32,7 @@
 
     <div id="legal-footer">
       <div id="policy-footer"><a href="<?= $incdir ?>policies/">Fast Response school policies and terms.</a></div>
-      <div id="approval-footer"><a href="<?= $incdir ?>about/#bppe">This school has been approved by the <span class="nowrap">Bureau of Private</span> and Postsecondary Education.</a></div>
+      <div id="approval-footer"><a href="<?= $incdir ?>about/#bppe">This school has been approved by the <span class="nowrap">Bureau of Private</span> and Postsecondary Education.</a><br><a href="http://www.bppe.ca.gov/about_us/contact.shtml">Click here for the BPPE Website.</a></div>
       <div id="copyright-footer">&copy; <?= date('Y') ?> Fast Response Safety Training Center, Inc. <span class="nowrap">All prices and</span> content subject to change.</div>
     </div>
 

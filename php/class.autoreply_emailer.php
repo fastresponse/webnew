@@ -33,7 +33,7 @@ else {
 */
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/php/phpmailer/class.phpmailer.php');
-require_once($_SERVER['DOCUMENT_ROOT'] . '/php/class.course_dates.php');
+//require_once($_SERVER['DOCUMENT_ROOT'] . '/php/class.course_dates.php');
 
 class AutoreplyEmailer {
 
@@ -85,7 +85,7 @@ class AutoreplyEmailer {
     $this->send_to_them_subject = 'Welcome to Fast Response';
     $this->send_to_them_dir = $_SERVER['DOCUMENT_ROOT'] . self::AUTOREPLY_DIR;
 
-    $this->use_generic = false;
+    $this->use_generic = true;
 
     $this->course_settings = array(
       'Generic' => array(
@@ -354,6 +354,7 @@ class AutoreplyEmailer {
 
     $messages = file_get_contents($path);
 
+    /*
     if (
       $program != 'Generic' &&
       strpos($messages, '<p class="course_date_list"></p>') !== FALSE
@@ -377,6 +378,7 @@ class AutoreplyEmailer {
 
       unset($course_date_ob);
     }
+    */
 
     $mail = new PHPMailer(); 
 

@@ -10,8 +10,34 @@
 <?php require_once($incdir . 'include/header.php'); ?>
 
 <div id="sidebar-primary">
+<?php if (false): ?>
   <aside id="slideshow">
     <img src="<?= $incdir ?>img/front.jpg" alt="" />
+  </aside>
+<?php endif; ?>
+
+  <aside id="school-data">
+    <header class="stay-open"><h3 class="trigger">School Information</h3></header>
+    <div>
+      <ul>
+        <li><a href="">Fast Response School Catalog</a></li>
+        <li>Course Info Packets<ul>
+          <li><a href="">EMT</a></li>
+          <li><a href="">Phlebotomy</a></li>
+          <li><a href="">Medical Assistant</a></li>
+        </ul></li>
+        <li>Performance Fact Sheets<ul>
+          <li><a href="">EMT</a></li>
+          <li><a href="">Phlebotomy</a></li>
+          <li><a href="">Medical Assistant</a></li>
+          <li><a href="">Paramedic</a></li>
+        </ul></li>
+        <li>Bureau Of Private and<br>Postsecondary Education<ul>
+          <li><a href="">BPPE Website</a></li>
+          <li><a href="">BPPE Annual Report</a></li>
+        </ul></li>
+      </ul>
+    </div>
   </aside>
 
   <?php include($incdir . 'include/contact_info.php'); ?>
@@ -49,17 +75,19 @@
 
 <section id="content">
 
-  <?php
-    require_once($incdir . 'php/drug_screen_dates.php');
-    $drugscreen = get_next_drug_screen_date($handle);
-    if (is_array($drugscreen) && isset($drugscreen['full_display'])):
-  ?>
   <div id="banner" class="">
     <div class="bold italic red">
+      <span>Free ECG-Basic class with EMT November 28th - Call for details!</span>
+    <?php
+      require_once($incdir . 'php/drug_screen_dates.php');
+      $drugscreen = get_next_drug_screen_date($handle);
+      if (is_array($drugscreen) && isset($drugscreen['full_display'])):
+    ?>
+      <hr>
       <span>Next student Drug Screening: <?= $drugscreen['full_display'] ?></span>
+    <?php endif; ?>
     </div>
   </div>
-  <?php endif; ?>
 
 <?php include_once($incdir . 'include/course_list_postsec.php'); ?>
 

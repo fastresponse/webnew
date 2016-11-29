@@ -112,6 +112,7 @@ function load_course_data() {
     $n = 3;
     $d = 1;
 
+    /*
     include_once($incdir . 'php/class.course_dates.php');
     if (empty($course_dates_ob)) {
       $course_dates_ob = new CourseDateList(null, $code_for_course_dates);
@@ -121,6 +122,10 @@ function load_course_data() {
     }
     $course_dates_list = $course_dates_ob->get_course_dates();
     $show_start_dates = (is_array($course_dates_list) && count($course_dates_list));
+    */
+
+    $course_dates_list = array();
+    $show_start_dates = false;
 
     $show_test_results = ($sections['test results'] ? true : false);
 

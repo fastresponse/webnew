@@ -12,12 +12,9 @@
   <aside id="links">
     <header><h3>Links</h3></header>
     <ul>
-      <li><a href="<?= $incdir ?>pdf/Fast Response Catalog 2016.pdf">2016 School Catalog</a></li>
-      <li><a href="<?= $incdir ?>pdf/Fast Response Catalog 2015.pdf">2015 School Catalog</a></li>
-      <li><a href="<?= $incdir ?>pdf/BPPE Annual Report 2013.pdf">BPPE Annual Report 2013</a></li>
-      <li><a href="<?= $incdir ?>pdf/BPPE Annual Report 2014.pdf">BPPE Annual Report 2014</a></li>
-      <li><a href="<?= $incdir ?>pdf/BPPE Performance Fact Sheets 2013.pdf">Performance Fact Sheets 2013</a></li>
-      <li><a href="<?= $incdir ?>pdf/BPPE Performance Fact Sheets 2014.pdf">Performance Fact Sheets 2014</a></li>
+      <li><a href="<?= $incdir ?>pdf/Fast Response Catalog 2016.pdf">School Catalog</a></li>
+      <li><a href="<?= $incdir ?>pdf/BPPE Annual Report 2014.pdf">BPPE Annual Report</a></li>
+      <li><a href="<?= $incdir ?>pdf/BPPE Performance Fact Sheets 2014.pdf">Performance Fact Sheets</a></li>
     </ul>
   </aside>
   <aside id="postsec">
@@ -71,6 +68,8 @@
       <header class="stay-open">
         <h1>About Fast Response</h1>
         <h4><a name="bppe"></a>We are approved by the <a href="http://www.bppe.ca.gov/about_us/contact.shtml">Bureau of Private and Postsecondary Education</a></h4>
+        <blockquote style="text-align: left; font-size: 0.9em;">This institution is a private institution approved to operate by the California Bureau for Private Postsecondary Education. Approval to operate means the institution is compliant with the minimum standards contained in the California Private Postsecondary Education Act of 2009 (as amended) and Division 7.5 of Title 5 of the California Code of Regulations.
+        </blockquote>
         <blockquote style="text-align: left; font-size: 0.9em;">A student or any member of the public may contact the Bureau of Private Postsecondary Education at any time about this institution by calling toll free: <span class="nowrap">888-370-7589</span>, writing to Bureau for Private Postsecondary Education, <span class="nowrap">P.O. Box 980818,</span> West Sacramento, <span class="nowrap">CA 95798-0818</span> or <span class="nowrap">2535 Capitol Oaks Drive, Suite 400,</span> Sacramento, <span class="nowrap">CA 95833,</span> or by completing a complaint form, which can be obtained on the Bureau's internet website: <a href="http://www.bppe.ca.gov/">http://www.bppe.ca.gov</a>.</blockquote>
       </header>
       <p class="bold italic stay-open">Fast Response School of Health Care Education is a private postsecondary educational school.</p>

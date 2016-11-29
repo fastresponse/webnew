@@ -1,3 +1,14 @@
+#school-data li {
+  padding-left: 0;
+  text-indent: 0;
+}
+#school-data > div > ul > li {
+  margin-top: 10px;
+}
+#school-data > div > ul > li:first-child {
+  margin-top: 0px;
+}
+
 #career_courses > section > h3,
 #continuing_ed > section > h3 {
   margin-bottom: 0;

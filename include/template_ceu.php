@@ -34,11 +34,14 @@ else {
   <?php else: ?>
     <header><h3>Online Registration</h3></header>
     <div class="tablet-row-2">
+      <div class="bold red" style="text-align:center;">Registration is currently offline.</div>
+    <?php if (false): ?>
       <?= registration_form('View Calendar',
         'http://www.ssreg.com/fastresponse/calendar.asp',
         array('page' => 'Calendar')
       ); ?>
       <?= $sections['registration buttons'] ?>
+    <?php endif; ?>
       <?php if ($sections['required books']): ?>
       <hr />
       <div class="book-notice">

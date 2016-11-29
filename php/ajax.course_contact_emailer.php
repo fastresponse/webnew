@@ -2,7 +2,7 @@
 
 error_reporting (0);
 
-require('class.autoreply_emailer.php');
+require('./class.autoreply_emailer.php');
 
 $emailer_ob = new AutoreplyEmailer();
 
