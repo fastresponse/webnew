@@ -998,11 +998,13 @@
           </div>
         </li>
 
+        <?php if (false): ?>
         <li class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start video-link" data-for="#sample_interview_video">
           <div class="trigger underline">Sample Interview Video</div>
           <?php include_once($incdir . 'include/videos.php'); ?>
           <div id="sample_interview_video" data-number="<?= $videos['Sample Interview']['number'] ?>" data-loaded="false"></div>
         </li>
+        <?php endif; ?>
       </ul>
     </section>
   </article>
@@ -1014,7 +1016,7 @@
     <section class="collapsible-mobile-start collapsible-tablet-start collapsible-desktop-start">
       <h3 class="trigger">Current Students</h3>
       <dl>
-        <dt><a href="<?= $incdir ?>courses/emt/skills_videos.php">EMT Skills Videos</a></dt>
+      <?php if (false): ?><dt><a href="<?= $incdir ?>courses/emt/skills_videos.php">EMT Skills Videos</a></dt><?php endif; ?>
 
         <dt>Ambulance Driver Certificate Information</dt>
         <dd>If you wish to drive an ambulance used commercially in emergency service, you may apply at any DMV office for an Ambulance Driver certificate. You may also purchase an 'Ambulance Driver Handbook' for $5.
